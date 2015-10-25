@@ -1,0 +1,1 @@
+{"name":"SocialrequestService","version":"62","methods":[{"serviceName":"SocialrequestService","method":"POST","path":"/socialrequest/update-request","parameters":[{"name":"requestId","type":"long"},{"name":"status","type":"int"},{"name":"themeDisplay","type":"object<com.liferay.portal.theme.ThemeDisplay>"}],"actionName":"updateRequest"}]}

@@ -1,0 +1,1 @@
+{"name":"ImageService","version":"62","methods":[{"serviceName":"ImageService","method":"GET","path":"/image/get-image","parameters":[{"name":"imageId","type":"long"}],"actionName":"getImage"}]}

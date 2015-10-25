@@ -1,0 +1,16 @@
+{
+  "name": "liferay-mobile-sdk-angularjs",
+  "version": "0.0.1",
+  "description": "Generate AngularJS services for Liferay SDK Sercvices and Custom Services based on Lifray SDK",
+  "main": "src/index.js",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jasmine": "^2.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-wrap": "^0.11.0",
+    "handlebars": "^4.0.3",
+    "http-request": "^0.7.0",
+    "mkdirp": "^0.5.1",
+    "q": "^1.4.1"
+  }
+}

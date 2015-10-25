@@ -1,0 +1,1 @@
+{"name":"ThemeService","version":"62","methods":[{"serviceName":"ThemeService","method":"GET","path":"/theme/get-themes","parameters":[{"name":"companyId","type":"long"}],"actionName":"getThemes"},{"serviceName":"ThemeService","method":"GET","path":"/theme/get-war-themes","parameters":[],"actionName":"getWarThemes"}]}
