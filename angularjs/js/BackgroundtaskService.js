@@ -6,12 +6,12 @@
         var service = {};
         // Begin generated service methods
         service.getBackgroundTaskStatusJson = function(backgroundTaskId) {
-            return service.invoke('/backgroundtask/get-background-task-status-json',[{
+            return SessionService.invoke('/backgroundtask/get-background-task-status-json',[{
                 backgroundTaskId:backgroundTaskId
             }]);
         };
         service.getBackgroundTasksCount = function(groupId,taskExecutorClassName,completed) {
-            return service.invoke('/backgroundtask/get-background-tasks-count',[{
+            return SessionService.invoke('/backgroundtask/get-background-tasks-count',[{
                 groupId:groupId
                 ,taskExecutorClassName:taskExecutorClassName
                 ,completed:completed
@@ -21,4 +21,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

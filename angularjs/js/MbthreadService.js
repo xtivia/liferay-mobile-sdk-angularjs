@@ -6,12 +6,12 @@
         var service = {};
         // Begin generated service methods
         service.deleteThread = function(threadId) {
-            return service.invoke('/mbthread/delete-thread',[{
+            return SessionService.invoke('/mbthread/delete-thread',[{
                 threadId:threadId
             }]);
         };
         service.getGroupThreads = function(groupId,userId,status,start,end) {
-            return service.invoke('/mbthread/get-group-threads',[{
+            return SessionService.invoke('/mbthread/get-group-threads',[{
                 groupId:groupId
                 ,userId:userId
                 ,status:status
@@ -20,7 +20,7 @@
             }]);
         };
         service.getGroupThreads = function(groupId,userId,modifiedDate,status,start,end) {
-            return service.invoke('/mbthread/get-group-threads',[{
+            return SessionService.invoke('/mbthread/get-group-threads',[{
                 groupId:groupId
                 ,userId:userId
                 ,modifiedDate:modifiedDate
@@ -30,7 +30,7 @@
             }]);
         };
         service.getGroupThreads = function(groupId,userId,status,subscribed,start,end) {
-            return service.invoke('/mbthread/get-group-threads',[{
+            return SessionService.invoke('/mbthread/get-group-threads',[{
                 groupId:groupId
                 ,userId:userId
                 ,status:status
@@ -40,7 +40,7 @@
             }]);
         };
         service.getGroupThreads = function(groupId,userId,status,subscribed,includeAnonymous,start,end) {
-            return service.invoke('/mbthread/get-group-threads',[{
+            return SessionService.invoke('/mbthread/get-group-threads',[{
                 groupId:groupId
                 ,userId:userId
                 ,status:status
@@ -51,14 +51,14 @@
             }]);
         };
         service.getGroupThreadsCount = function(groupId,userId,status) {
-            return service.invoke('/mbthread/get-group-threads-count',[{
+            return SessionService.invoke('/mbthread/get-group-threads-count',[{
                 groupId:groupId
                 ,userId:userId
                 ,status:status
             }]);
         };
         service.getGroupThreadsCount = function(groupId,userId,modifiedDate,status) {
-            return service.invoke('/mbthread/get-group-threads-count',[{
+            return SessionService.invoke('/mbthread/get-group-threads-count',[{
                 groupId:groupId
                 ,userId:userId
                 ,modifiedDate:modifiedDate
@@ -66,7 +66,7 @@
             }]);
         };
         service.getGroupThreadsCount = function(groupId,userId,status,subscribed) {
-            return service.invoke('/mbthread/get-group-threads-count',[{
+            return SessionService.invoke('/mbthread/get-group-threads-count',[{
                 groupId:groupId
                 ,userId:userId
                 ,status:status
@@ -74,7 +74,7 @@
             }]);
         };
         service.getGroupThreadsCount = function(groupId,userId,status,subscribed,includeAnonymous) {
-            return service.invoke('/mbthread/get-group-threads-count',[{
+            return SessionService.invoke('/mbthread/get-group-threads-count',[{
                 groupId:groupId
                 ,userId:userId
                 ,status:status
@@ -83,7 +83,7 @@
             }]);
         };
         service.getThreads = function(groupId,categoryId,status,start,end) {
-            return service.invoke('/mbthread/get-threads',[{
+            return SessionService.invoke('/mbthread/get-threads',[{
                 groupId:groupId
                 ,categoryId:categoryId
                 ,status:status
@@ -92,41 +92,41 @@
             }]);
         };
         service.getThreadsCount = function(groupId,categoryId,status) {
-            return service.invoke('/mbthread/get-threads-count',[{
+            return SessionService.invoke('/mbthread/get-threads-count',[{
                 groupId:groupId
                 ,categoryId:categoryId
                 ,status:status
             }]);
         };
         service.lockThread = function(threadId) {
-            return service.invoke('/mbthread/lock-thread',[{
+            return SessionService.invoke('/mbthread/lock-thread',[{
                 threadId:threadId
             }]);
         };
         service.moveThread = function(categoryId,threadId) {
-            return service.invoke('/mbthread/move-thread',[{
+            return SessionService.invoke('/mbthread/move-thread',[{
                 categoryId:categoryId
                 ,threadId:threadId
             }]);
         };
         service.moveThreadFromTrash = function(categoryId,threadId) {
-            return service.invoke('/mbthread/move-thread-from-trash',[{
+            return SessionService.invoke('/mbthread/move-thread-from-trash',[{
                 categoryId:categoryId
                 ,threadId:threadId
             }]);
         };
         service.moveThreadToTrash = function(threadId) {
-            return service.invoke('/mbthread/move-thread-to-trash',[{
+            return SessionService.invoke('/mbthread/move-thread-to-trash',[{
                 threadId:threadId
             }]);
         };
         service.restoreThreadFromTrash = function(threadId) {
-            return service.invoke('/mbthread/restore-thread-from-trash',[{
+            return SessionService.invoke('/mbthread/restore-thread-from-trash',[{
                 threadId:threadId
             }]);
         };
         service.search = function(groupId,creatorUserId,status,start,end) {
-            return service.invoke('/mbthread/search',[{
+            return SessionService.invoke('/mbthread/search',[{
                 groupId:groupId
                 ,creatorUserId:creatorUserId
                 ,status:status
@@ -135,7 +135,7 @@
             }]);
         };
         service.search = function(groupId,creatorUserId,startDate,endDate,status,start,end) {
-            return service.invoke('/mbthread/search',[{
+            return SessionService.invoke('/mbthread/search',[{
                 groupId:groupId
                 ,creatorUserId:creatorUserId
                 ,startDate:startDate
@@ -146,14 +146,14 @@
             }]);
         };
         service.splitThread = function(messageId,subject,serviceContext) {
-            return service.invoke('/mbthread/split-thread',[{
+            return SessionService.invoke('/mbthread/split-thread',[{
                 messageId:messageId
                 ,subject:subject
                 ,serviceContext:serviceContext
             }]);
         };
         service.unlockThread = function(threadId) {
-            return service.invoke('/mbthread/unlock-thread',[{
+            return SessionService.invoke('/mbthread/unlock-thread',[{
                 threadId:threadId
             }]);
         };
@@ -161,4 +161,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

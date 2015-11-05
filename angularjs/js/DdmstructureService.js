@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addStructure = function(groupId,parentStructureId,classNameId,structureKey,nameMap,descriptionMap,xsd,storageType,type,serviceContext) {
-            return service.invoke('/ddmstructure/add-structure',[{
+            return SessionService.invoke('/ddmstructure/add-structure',[{
                 groupId:groupId
                 ,parentStructureId:parentStructureId
                 ,classNameId:classNameId
@@ -20,7 +20,7 @@
             }]);
         };
         service.addStructure = function(userId,groupId,parentStructureKey,classNameId,structureKey,nameMap,descriptionMap,xsd,storageType,type,serviceContext) {
-            return service.invoke('/ddmstructure/add-structure',[{
+            return SessionService.invoke('/ddmstructure/add-structure',[{
                 userId:userId
                 ,groupId:groupId
                 ,parentStructureKey:parentStructureKey
@@ -35,7 +35,7 @@
             }]);
         };
         service.addStructure = function(userId,groupId,classNameId,nameMap,descriptionMap,xsd,serviceContext) {
-            return service.invoke('/ddmstructure/add-structure',[{
+            return SessionService.invoke('/ddmstructure/add-structure',[{
                 userId:userId
                 ,groupId:groupId
                 ,classNameId:classNameId
@@ -46,13 +46,13 @@
             }]);
         };
         service.copyStructure = function(structureId,serviceContext) {
-            return service.invoke('/ddmstructure/copy-structure',[{
+            return SessionService.invoke('/ddmstructure/copy-structure',[{
                 structureId:structureId
                 ,serviceContext:serviceContext
             }]);
         };
         service.copyStructure = function(structureId,nameMap,descriptionMap,serviceContext) {
-            return service.invoke('/ddmstructure/copy-structure',[{
+            return SessionService.invoke('/ddmstructure/copy-structure',[{
                 structureId:structureId
                 ,nameMap:nameMap
                 ,descriptionMap:descriptionMap
@@ -60,31 +60,31 @@
             }]);
         };
         service.deleteStructure = function(structureId) {
-            return service.invoke('/ddmstructure/delete-structure',[{
+            return SessionService.invoke('/ddmstructure/delete-structure',[{
                 structureId:structureId
             }]);
         };
         service.fetchStructure = function(groupId,classNameId,structureKey) {
-            return service.invoke('/ddmstructure/fetch-structure',[{
+            return SessionService.invoke('/ddmstructure/fetch-structure',[{
                 groupId:groupId
                 ,classNameId:classNameId
                 ,structureKey:structureKey
             }]);
         };
         service.getStructure = function(structureId) {
-            return service.invoke('/ddmstructure/get-structure',[{
+            return SessionService.invoke('/ddmstructure/get-structure',[{
                 structureId:structureId
             }]);
         };
         service.getStructure = function(groupId,classNameId,structureKey) {
-            return service.invoke('/ddmstructure/get-structure',[{
+            return SessionService.invoke('/ddmstructure/get-structure',[{
                 groupId:groupId
                 ,classNameId:classNameId
                 ,structureKey:structureKey
             }]);
         };
         service.getStructure = function(groupId,classNameId,structureKey,includeGlobalStructures) {
-            return service.invoke('/ddmstructure/get-structure',[{
+            return SessionService.invoke('/ddmstructure/get-structure',[{
                 groupId:groupId
                 ,classNameId:classNameId
                 ,structureKey:structureKey
@@ -92,23 +92,23 @@
             }]);
         };
         service.getStructures = function(groupId) {
-            return service.invoke('/ddmstructure/get-structures',[{
+            return SessionService.invoke('/ddmstructure/get-structures',[{
                 groupId:groupId
             }]);
         };
         service.getStructures = function(groupIds) {
-            return service.invoke('/ddmstructure/get-structures',[{
+            return SessionService.invoke('/ddmstructure/get-structures',[{
                 groupIds:groupIds
             }]);
         };
         service.getStructures = function(groupIds,classNameId) {
-            return service.invoke('/ddmstructure/get-structures',[{
+            return SessionService.invoke('/ddmstructure/get-structures',[{
                 groupIds:groupIds
                 ,classNameId:classNameId
             }]);
         };
         service.getStructures = function(groupIds,classNameId,start,end) {
-            return service.invoke('/ddmstructure/get-structures',[{
+            return SessionService.invoke('/ddmstructure/get-structures',[{
                 groupIds:groupIds
                 ,classNameId:classNameId
                 ,start:start
@@ -116,7 +116,7 @@
             }]);
         };
         service.search = function(companyId,groupIds,classNameIds,name,description,storageType,type,andOperator,start,end,orderByComparator) {
-            return service.invoke('/ddmstructure/search',[{
+            return SessionService.invoke('/ddmstructure/search',[{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,classNameIds:classNameIds
@@ -131,7 +131,7 @@
             }]);
         };
         service.search = function(companyId,groupIds,classNameIds,keywords,start,end,orderByComparator) {
-            return service.invoke('/ddmstructure/search',[{
+            return SessionService.invoke('/ddmstructure/search',[{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,classNameIds:classNameIds
@@ -142,7 +142,7 @@
             }]);
         };
         service.searchCount = function(companyId,groupIds,classNameIds,keywords) {
-            return service.invoke('/ddmstructure/search-count',[{
+            return SessionService.invoke('/ddmstructure/search-count',[{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,classNameIds:classNameIds
@@ -150,7 +150,7 @@
             }]);
         };
         service.searchCount = function(companyId,groupIds,classNameIds,name,description,storageType,type,andOperator) {
-            return service.invoke('/ddmstructure/search-count',[{
+            return SessionService.invoke('/ddmstructure/search-count',[{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,classNameIds:classNameIds
@@ -162,7 +162,7 @@
             }]);
         };
         service.updateStructure = function(structureId,parentStructureId,nameMap,descriptionMap,xsd,serviceContext) {
-            return service.invoke('/ddmstructure/update-structure',[{
+            return SessionService.invoke('/ddmstructure/update-structure',[{
                 structureId:structureId
                 ,parentStructureId:parentStructureId
                 ,nameMap:nameMap
@@ -172,7 +172,7 @@
             }]);
         };
         service.updateStructure = function(groupId,parentStructureId,classNameId,structureKey,nameMap,descriptionMap,xsd,serviceContext) {
-            return service.invoke('/ddmstructure/update-structure',[{
+            return SessionService.invoke('/ddmstructure/update-structure',[{
                 groupId:groupId
                 ,parentStructureId:parentStructureId
                 ,classNameId:classNameId
@@ -187,4 +187,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

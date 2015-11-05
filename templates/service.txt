@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         <%_.forEach(contents.methods,function(method){%>service.<%=method.actionName%> = function(<%var c=false;_.forEach(method.parameters,function(parameter) {if(c){%>,<%};c=true;%><%=parameter.name%><%});%>) {
-            return service.invoke('<%=method.path%>',[{
+            return SessionService.invoke('<%=method.path%>',[{
                 <%var c=false;_.forEach(method.parameters,function(parameter) {if(c){%>
                 ,<%};c=true;%><%=parameter.name%>:<%=parameter.name%><%});%>
             }]);
@@ -15,4 +15,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

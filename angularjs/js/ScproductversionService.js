@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addProductVersion = function(productEntryId,version,changeLog,downloadPageURL,directDownloadURL,testDirectDownloadURL,repoStoreArtifact,frameworkVersionIds,serviceContext) {
-            return service.invoke('/scproductversion/add-product-version',[{
+            return SessionService.invoke('/scproductversion/add-product-version',[{
                 productEntryId:productEntryId
                 ,version:version
                 ,changeLog:changeLog
@@ -19,29 +19,29 @@
             }]);
         };
         service.deleteProductVersion = function(productVersionId) {
-            return service.invoke('/scproductversion/delete-product-version',[{
+            return SessionService.invoke('/scproductversion/delete-product-version',[{
                 productVersionId:productVersionId
             }]);
         };
         service.getProductVersion = function(productVersionId) {
-            return service.invoke('/scproductversion/get-product-version',[{
+            return SessionService.invoke('/scproductversion/get-product-version',[{
                 productVersionId:productVersionId
             }]);
         };
         service.getProductVersions = function(productEntryId,start,end) {
-            return service.invoke('/scproductversion/get-product-versions',[{
+            return SessionService.invoke('/scproductversion/get-product-versions',[{
                 productEntryId:productEntryId
                 ,start:start
                 ,end:end
             }]);
         };
         service.getProductVersionsCount = function(productEntryId) {
-            return service.invoke('/scproductversion/get-product-versions-count',[{
+            return SessionService.invoke('/scproductversion/get-product-versions-count',[{
                 productEntryId:productEntryId
             }]);
         };
         service.updateProductVersion = function(productVersionId,version,changeLog,downloadPageURL,directDownloadURL,testDirectDownloadURL,repoStoreArtifact,frameworkVersionIds) {
-            return service.invoke('/scproductversion/update-product-version',[{
+            return SessionService.invoke('/scproductversion/update-product-version',[{
                 productVersionId:productVersionId
                 ,version:version
                 ,changeLog:changeLog
@@ -56,4 +56,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

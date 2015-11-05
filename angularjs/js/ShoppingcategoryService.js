@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addCategory = function(parentCategoryId,name,description,serviceContext) {
-            return service.invoke('/shoppingcategory/add-category',[{
+            return SessionService.invoke('/shoppingcategory/add-category',[{
                 parentCategoryId:parentCategoryId
                 ,name:name
                 ,description:description
@@ -14,17 +14,17 @@
             }]);
         };
         service.deleteCategory = function(categoryId) {
-            return service.invoke('/shoppingcategory/delete-category',[{
+            return SessionService.invoke('/shoppingcategory/delete-category',[{
                 categoryId:categoryId
             }]);
         };
         service.getCategories = function(groupId) {
-            return service.invoke('/shoppingcategory/get-categories',[{
+            return SessionService.invoke('/shoppingcategory/get-categories',[{
                 groupId:groupId
             }]);
         };
         service.getCategories = function(groupId,parentCategoryId,start,end) {
-            return service.invoke('/shoppingcategory/get-categories',[{
+            return SessionService.invoke('/shoppingcategory/get-categories',[{
                 groupId:groupId
                 ,parentCategoryId:parentCategoryId
                 ,start:start
@@ -32,25 +32,25 @@
             }]);
         };
         service.getCategoriesCount = function(groupId,parentCategoryId) {
-            return service.invoke('/shoppingcategory/get-categories-count',[{
+            return SessionService.invoke('/shoppingcategory/get-categories-count',[{
                 groupId:groupId
                 ,parentCategoryId:parentCategoryId
             }]);
         };
         service.getCategory = function(categoryId) {
-            return service.invoke('/shoppingcategory/get-category',[{
+            return SessionService.invoke('/shoppingcategory/get-category',[{
                 categoryId:categoryId
             }]);
         };
         service.getSubcategoryIds = function(categoryIds,groupId,categoryId) {
-            return service.invoke('/shoppingcategory/get-subcategory-ids',[{
+            return SessionService.invoke('/shoppingcategory/get-subcategory-ids',[{
                 categoryIds:categoryIds
                 ,groupId:groupId
                 ,categoryId:categoryId
             }]);
         };
         service.updateCategory = function(categoryId,parentCategoryId,name,description,mergeWithParentCategory,serviceContext) {
-            return service.invoke('/shoppingcategory/update-category',[{
+            return SessionService.invoke('/shoppingcategory/update-category',[{
                 categoryId:categoryId
                 ,parentCategoryId:parentCategoryId
                 ,name:name
@@ -63,4 +63,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addDiscussionMessage = function(groupId,className,classPK,permissionClassName,permissionClassPK,permissionOwnerId,threadId,parentMessageId,subject,body,serviceContext) {
-            return service.invoke('/mbmessage/add-discussion-message',[{
+            return SessionService.invoke('/mbmessage/add-discussion-message',[{
                 groupId:groupId
                 ,className:className
                 ,classPK:classPK
@@ -21,7 +21,7 @@
             }]);
         };
         service.addMessage = function(groupId,categoryId,subject,body,format,inputStreamOVPs,anonymous,priority,allowPingbacks,serviceContext) {
-            return service.invoke('/mbmessage/add-message',[{
+            return SessionService.invoke('/mbmessage/add-message',[{
                 groupId:groupId
                 ,categoryId:categoryId
                 ,subject:subject
@@ -35,7 +35,7 @@
             }]);
         };
         service.addMessage = function(groupId,categoryId,threadId,parentMessageId,subject,body,format,inputStreamOVPs,anonymous,priority,allowPingbacks,serviceContext) {
-            return service.invoke('/mbmessage/add-message',[{
+            return SessionService.invoke('/mbmessage/add-message',[{
                 groupId:groupId
                 ,categoryId:categoryId
                 ,threadId:threadId
@@ -51,7 +51,7 @@
             }]);
         };
         service.addMessage = function(categoryId,subject,body,serviceContext) {
-            return service.invoke('/mbmessage/add-message',[{
+            return SessionService.invoke('/mbmessage/add-message',[{
                 categoryId:categoryId
                 ,subject:subject
                 ,body:body
@@ -59,7 +59,7 @@
             }]);
         };
         service.addMessage = function(parentMessageId,subject,body,format,inputStreamOVPs,anonymous,priority,allowPingbacks,serviceContext) {
-            return service.invoke('/mbmessage/add-message',[{
+            return SessionService.invoke('/mbmessage/add-message',[{
                 parentMessageId:parentMessageId
                 ,subject:subject
                 ,body:body
@@ -72,7 +72,7 @@
             }]);
         };
         service.deleteDiscussionMessage = function(groupId,className,classPK,permissionClassName,permissionClassPK,permissionOwnerId,messageId) {
-            return service.invoke('/mbmessage/delete-discussion-message',[{
+            return SessionService.invoke('/mbmessage/delete-discussion-message',[{
                 groupId:groupId
                 ,className:className
                 ,classPK:classPK
@@ -83,17 +83,17 @@
             }]);
         };
         service.deleteMessage = function(messageId) {
-            return service.invoke('/mbmessage/delete-message',[{
+            return SessionService.invoke('/mbmessage/delete-message',[{
                 messageId:messageId
             }]);
         };
         service.deleteMessageAttachments = function(messageId) {
-            return service.invoke('/mbmessage/delete-message-attachments',[{
+            return SessionService.invoke('/mbmessage/delete-message-attachments',[{
                 messageId:messageId
             }]);
         };
         service.getCategoryMessages = function(groupId,categoryId,status,start,end) {
-            return service.invoke('/mbmessage/get-category-messages',[{
+            return SessionService.invoke('/mbmessage/get-category-messages',[{
                 groupId:groupId
                 ,categoryId:categoryId
                 ,status:status
@@ -102,14 +102,14 @@
             }]);
         };
         service.getCategoryMessagesCount = function(groupId,categoryId,status) {
-            return service.invoke('/mbmessage/get-category-messages-count',[{
+            return SessionService.invoke('/mbmessage/get-category-messages-count',[{
                 groupId:groupId
                 ,categoryId:categoryId
                 ,status:status
             }]);
         };
         service.getCategoryMessagesRss = function(groupId,categoryId,status,max,type,version,displayStyle,feedURL,entryURL,themeDisplay) {
-            return service.invoke('/mbmessage/get-category-messages-rss',[{
+            return SessionService.invoke('/mbmessage/get-category-messages-rss',[{
                 groupId:groupId
                 ,categoryId:categoryId
                 ,status:status
@@ -123,7 +123,7 @@
             }]);
         };
         service.getCompanyMessagesRss = function(companyId,status,max,type,version,displayStyle,feedURL,entryURL,themeDisplay) {
-            return service.invoke('/mbmessage/get-company-messages-rss',[{
+            return SessionService.invoke('/mbmessage/get-company-messages-rss',[{
                 companyId:companyId
                 ,status:status
                 ,max:max
@@ -136,13 +136,13 @@
             }]);
         };
         service.getGroupMessagesCount = function(groupId,status) {
-            return service.invoke('/mbmessage/get-group-messages-count',[{
+            return SessionService.invoke('/mbmessage/get-group-messages-count',[{
                 groupId:groupId
                 ,status:status
             }]);
         };
         service.getGroupMessagesRss = function(groupId,userId,status,max,type,version,displayStyle,feedURL,entryURL,themeDisplay) {
-            return service.invoke('/mbmessage/get-group-messages-rss',[{
+            return SessionService.invoke('/mbmessage/get-group-messages-rss',[{
                 groupId:groupId
                 ,userId:userId
                 ,status:status
@@ -156,7 +156,7 @@
             }]);
         };
         service.getGroupMessagesRss = function(groupId,status,max,type,version,displayStyle,feedURL,entryURL,themeDisplay) {
-            return service.invoke('/mbmessage/get-group-messages-rss',[{
+            return SessionService.invoke('/mbmessage/get-group-messages-rss',[{
                 groupId:groupId
                 ,status:status
                 ,max:max
@@ -169,12 +169,12 @@
             }]);
         };
         service.getMessage = function(messageId) {
-            return service.invoke('/mbmessage/get-message',[{
+            return SessionService.invoke('/mbmessage/get-message',[{
                 messageId:messageId
             }]);
         };
         service.getMessageDisplay = function(messageId,status,threadView,includePrevAndNext) {
-            return service.invoke('/mbmessage/get-message-display',[{
+            return SessionService.invoke('/mbmessage/get-message-display',[{
                 messageId:messageId
                 ,status:status
                 ,threadView:threadView
@@ -182,14 +182,14 @@
             }]);
         };
         service.getThreadAnswersCount = function(groupId,categoryId,threadId) {
-            return service.invoke('/mbmessage/get-thread-answers-count',[{
+            return SessionService.invoke('/mbmessage/get-thread-answers-count',[{
                 groupId:groupId
                 ,categoryId:categoryId
                 ,threadId:threadId
             }]);
         };
         service.getThreadMessages = function(groupId,categoryId,threadId,status,start,end) {
-            return service.invoke('/mbmessage/get-thread-messages',[{
+            return SessionService.invoke('/mbmessage/get-thread-messages',[{
                 groupId:groupId
                 ,categoryId:categoryId
                 ,threadId:threadId
@@ -199,7 +199,7 @@
             }]);
         };
         service.getThreadMessagesCount = function(groupId,categoryId,threadId,status) {
-            return service.invoke('/mbmessage/get-thread-messages-count',[{
+            return SessionService.invoke('/mbmessage/get-thread-messages-count',[{
                 groupId:groupId
                 ,categoryId:categoryId
                 ,threadId:threadId
@@ -207,7 +207,7 @@
             }]);
         };
         service.getThreadMessagesRss = function(threadId,status,max,type,version,displayStyle,feedURL,entryURL,themeDisplay) {
-            return service.invoke('/mbmessage/get-thread-messages-rss',[{
+            return SessionService.invoke('/mbmessage/get-thread-messages-rss',[{
                 threadId:threadId
                 ,status:status
                 ,max:max
@@ -220,30 +220,30 @@
             }]);
         };
         service.restoreMessageAttachmentFromTrash = function(messageId,fileName) {
-            return service.invoke('/mbmessage/restore-message-attachment-from-trash',[{
+            return SessionService.invoke('/mbmessage/restore-message-attachment-from-trash',[{
                 messageId:messageId
                 ,fileName:fileName
             }]);
         };
         service.subscribeMessage = function(messageId) {
-            return service.invoke('/mbmessage/subscribe-message',[{
+            return SessionService.invoke('/mbmessage/subscribe-message',[{
                 messageId:messageId
             }]);
         };
         service.unsubscribeMessage = function(messageId) {
-            return service.invoke('/mbmessage/unsubscribe-message',[{
+            return SessionService.invoke('/mbmessage/unsubscribe-message',[{
                 messageId:messageId
             }]);
         };
         service.updateAnswer = function(messageId,answer,cascade) {
-            return service.invoke('/mbmessage/update-answer',[{
+            return SessionService.invoke('/mbmessage/update-answer',[{
                 messageId:messageId
                 ,answer:answer
                 ,cascade:cascade
             }]);
         };
         service.updateDiscussionMessage = function(className,classPK,permissionClassName,permissionClassPK,permissionOwnerId,messageId,subject,body,serviceContext) {
-            return service.invoke('/mbmessage/update-discussion-message',[{
+            return SessionService.invoke('/mbmessage/update-discussion-message',[{
                 className:className
                 ,classPK:classPK
                 ,permissionClassName:permissionClassName
@@ -256,7 +256,7 @@
             }]);
         };
         service.updateMessage = function(messageId,subject,body,inputStreamOVPs,existingFiles,priority,allowPingbacks,serviceContext) {
-            return service.invoke('/mbmessage/update-message',[{
+            return SessionService.invoke('/mbmessage/update-message',[{
                 messageId:messageId
                 ,subject:subject
                 ,body:body
@@ -271,4 +271,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

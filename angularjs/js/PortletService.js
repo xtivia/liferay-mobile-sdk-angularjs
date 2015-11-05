@@ -6,12 +6,12 @@
         var service = {};
         // Begin generated service methods
         service.getWarPortlets = function() {
-            return service.invoke('/portlet/get-war-portlets',[{
+            return SessionService.invoke('/portlet/get-war-portlets',[{
                 
             }]);
         };
         service.updatePortlet = function(companyId,portletId,roles,active) {
-            return service.invoke('/portlet/update-portlet',[{
+            return SessionService.invoke('/portlet/update-portlet',[{
                 companyId:companyId
                 ,portletId:portletId
                 ,roles:roles
@@ -22,4 +22,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

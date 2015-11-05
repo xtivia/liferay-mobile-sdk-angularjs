@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addLicense = function(name,url,openSource,active,recommended) {
-            return service.invoke('/sclicense/add-license',[{
+            return SessionService.invoke('/sclicense/add-license',[{
                 name:name
                 ,url:url
                 ,openSource:openSource
@@ -15,17 +15,17 @@
             }]);
         };
         service.deleteLicense = function(licenseId) {
-            return service.invoke('/sclicense/delete-license',[{
+            return SessionService.invoke('/sclicense/delete-license',[{
                 licenseId:licenseId
             }]);
         };
         service.getLicense = function(licenseId) {
-            return service.invoke('/sclicense/get-license',[{
+            return SessionService.invoke('/sclicense/get-license',[{
                 licenseId:licenseId
             }]);
         };
         service.updateLicense = function(licenseId,name,url,openSource,active,recommended) {
-            return service.invoke('/sclicense/update-license',[{
+            return SessionService.invoke('/sclicense/update-license',[{
                 licenseId:licenseId
                 ,name:name
                 ,url:url
@@ -38,4 +38,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

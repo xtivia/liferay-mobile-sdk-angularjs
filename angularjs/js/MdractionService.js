@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addAction = function(ruleGroupInstanceId,nameMap,descriptionMap,type,typeSettings,serviceContext) {
-            return service.invoke('/mdraction/add-action',[{
+            return SessionService.invoke('/mdraction/add-action',[{
                 ruleGroupInstanceId:ruleGroupInstanceId
                 ,nameMap:nameMap
                 ,descriptionMap:descriptionMap
@@ -16,7 +16,7 @@
             }]);
         };
         service.addAction = function(ruleGroupInstanceId,nameMap,descriptionMap,type,typeSettingsProperties,serviceContext) {
-            return service.invoke('/mdraction/add-action',[{
+            return SessionService.invoke('/mdraction/add-action',[{
                 ruleGroupInstanceId:ruleGroupInstanceId
                 ,nameMap:nameMap
                 ,descriptionMap:descriptionMap
@@ -26,22 +26,22 @@
             }]);
         };
         service.deleteAction = function(actionId) {
-            return service.invoke('/mdraction/delete-action',[{
+            return SessionService.invoke('/mdraction/delete-action',[{
                 actionId:actionId
             }]);
         };
         service.fetchAction = function(actionId) {
-            return service.invoke('/mdraction/fetch-action',[{
+            return SessionService.invoke('/mdraction/fetch-action',[{
                 actionId:actionId
             }]);
         };
         service.getAction = function(actionId) {
-            return service.invoke('/mdraction/get-action',[{
+            return SessionService.invoke('/mdraction/get-action',[{
                 actionId:actionId
             }]);
         };
         service.updateAction = function(actionId,nameMap,descriptionMap,type,typeSettings,serviceContext) {
-            return service.invoke('/mdraction/update-action',[{
+            return SessionService.invoke('/mdraction/update-action',[{
                 actionId:actionId
                 ,nameMap:nameMap
                 ,descriptionMap:descriptionMap
@@ -51,7 +51,7 @@
             }]);
         };
         service.updateAction = function(actionId,nameMap,descriptionMap,type,typeSettingsProperties,serviceContext) {
-            return service.invoke('/mdraction/update-action',[{
+            return SessionService.invoke('/mdraction/update-action',[{
                 actionId:actionId
                 ,nameMap:nameMap
                 ,descriptionMap:descriptionMap
@@ -64,4 +64,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

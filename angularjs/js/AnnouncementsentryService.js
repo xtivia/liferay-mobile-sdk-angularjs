@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addEntry = function(plid,classNameId,classPK,title,content,url,type,displayDateMonth,displayDateDay,displayDateYear,displayDateHour,displayDateMinute,expirationDateMonth,expirationDateDay,expirationDateYear,expirationDateHour,expirationDateMinute,priority,alert) {
-            return service.invoke('/announcementsentry/add-entry',[{
+            return SessionService.invoke('/announcementsentry/add-entry',[{
                 plid:plid
                 ,classNameId:classNameId
                 ,classPK:classPK
@@ -29,7 +29,7 @@
             }]);
         };
         service.addEntry = function(plid,classNameId,classPK,title,content,url,type,displayDateMonth,displayDateDay,displayDateYear,displayDateHour,displayDateMinute,displayImmediately,expirationDateMonth,expirationDateDay,expirationDateYear,expirationDateHour,expirationDateMinute,priority,alert) {
-            return service.invoke('/announcementsentry/add-entry',[{
+            return SessionService.invoke('/announcementsentry/add-entry',[{
                 plid:plid
                 ,classNameId:classNameId
                 ,classPK:classPK
@@ -53,17 +53,17 @@
             }]);
         };
         service.deleteEntry = function(entryId) {
-            return service.invoke('/announcementsentry/delete-entry',[{
+            return SessionService.invoke('/announcementsentry/delete-entry',[{
                 entryId:entryId
             }]);
         };
         service.getEntry = function(entryId) {
-            return service.invoke('/announcementsentry/get-entry',[{
+            return SessionService.invoke('/announcementsentry/get-entry',[{
                 entryId:entryId
             }]);
         };
         service.updateEntry = function(entryId,title,content,url,type,displayDateMonth,displayDateDay,displayDateYear,displayDateHour,displayDateMinute,displayImmediately,expirationDateMonth,expirationDateDay,expirationDateYear,expirationDateHour,expirationDateMinute,priority) {
-            return service.invoke('/announcementsentry/update-entry',[{
+            return SessionService.invoke('/announcementsentry/update-entry',[{
                 entryId:entryId
                 ,title:title
                 ,content:content
@@ -87,4 +87,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();
