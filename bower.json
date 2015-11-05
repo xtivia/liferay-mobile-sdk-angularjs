@@ -1,0 +1,27 @@
+{
+  "name": "liferay-mobile-sdk-angularjs",
+  "description": "Generate AngularJS services for Liferay SDK Services and Custom Services based on Liferay SDK",
+  "main": "dist/liferay.mobile.sdk.62.js",
+  "authors": [
+    "Donald Lamar Davis II <ddavis@xtivia.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "liferay",
+    "angularjs",
+    "mobile",
+    "framework",
+    "web",
+    "js",
+    "front-end"
+  ],
+  "homepage": "http://www.xtivia.com",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
