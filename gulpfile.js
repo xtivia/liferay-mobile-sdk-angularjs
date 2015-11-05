@@ -1,10 +1,16 @@
 var gulp = require('gulp');
 var jasmine = require('gulp-jasmine');
-var builder = require('./')({server:'http://liferaydemo.xtivia.com',root:'./angularjs'});
+var concat = require('gulp-concat');
 
 gulp.task('jasmine', function() {
-    gulp.src('spec/nodejs/*.js')
+    return gulp.src('spec/nodejs/*.js')
         .pipe(jasmine({verbose:true, includeStackTrace: true}));
+});
+
+gulp.task('package',['jasmine'],function() {
+   return gulp.src(['angularjs/js/*.js','js/sdk.62.js'])
+       .pipe(concat('liferay.mobile.sdk.62.js'))
+       .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('watch', function () {
