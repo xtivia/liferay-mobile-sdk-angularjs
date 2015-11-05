@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addValue = function(companyId,className,tableName,columnName,classPK,data) {
-            return service.invoke('/expandovalue/add-value',[{
+            return SessionService.invoke('/expandovalue/add-value',[{
                 companyId:companyId
                 ,className:className
                 ,tableName:tableName
@@ -16,7 +16,7 @@
             }]);
         };
         service.addValues = function(companyId,className,tableName,classPK,attributeValues) {
-            return service.invoke('/expandovalue/add-values',[{
+            return SessionService.invoke('/expandovalue/add-values',[{
                 companyId:companyId
                 ,className:className
                 ,tableName:tableName
@@ -25,7 +25,7 @@
             }]);
         };
         service.getData = function(companyId,className,tableName,columnName,classPK) {
-            return service.invoke('/expandovalue/get-data',[{
+            return SessionService.invoke('/expandovalue/get-data',[{
                 companyId:companyId
                 ,className:className
                 ,tableName:tableName
@@ -34,7 +34,7 @@
             }]);
         };
         service.getData = function(companyId,className,tableName,columnNames,classPK) {
-            return service.invoke('/expandovalue/get-data',[{
+            return SessionService.invoke('/expandovalue/get-data',[{
                 companyId:companyId
                 ,className:className
                 ,tableName:tableName
@@ -43,7 +43,7 @@
             }]);
         };
         service.getJsonData = function(companyId,className,tableName,columnName,classPK) {
-            return service.invoke('/expandovalue/get-json-data',[{
+            return SessionService.invoke('/expandovalue/get-json-data',[{
                 companyId:companyId
                 ,className:className
                 ,tableName:tableName
@@ -55,4 +55,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

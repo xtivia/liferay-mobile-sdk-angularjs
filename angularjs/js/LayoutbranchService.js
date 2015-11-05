@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addLayoutBranch = function(layoutRevisionId,name,description,master,serviceContext) {
-            return service.invoke('/layoutbranch/add-layout-branch',[{
+            return SessionService.invoke('/layoutbranch/add-layout-branch',[{
                 layoutRevisionId:layoutRevisionId
                 ,name:name
                 ,description:description
@@ -15,12 +15,12 @@
             }]);
         };
         service.deleteLayoutBranch = function(layoutBranchId) {
-            return service.invoke('/layoutbranch/delete-layout-branch',[{
+            return SessionService.invoke('/layoutbranch/delete-layout-branch',[{
                 layoutBranchId:layoutBranchId
             }]);
         };
         service.updateLayoutBranch = function(layoutBranchId,name,description,serviceContext) {
-            return service.invoke('/layoutbranch/update-layout-branch',[{
+            return SessionService.invoke('/layoutbranch/update-layout-branch',[{
                 layoutBranchId:layoutBranchId
                 ,name:name
                 ,description:description
@@ -31,4 +31,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

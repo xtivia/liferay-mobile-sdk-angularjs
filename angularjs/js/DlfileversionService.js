@@ -6,24 +6,24 @@
         var service = {};
         // Begin generated service methods
         service.getFileVersion = function(fileVersionId) {
-            return service.invoke('/dlfileversion/get-file-version',[{
+            return SessionService.invoke('/dlfileversion/get-file-version',[{
                 fileVersionId:fileVersionId
             }]);
         };
         service.getFileVersions = function(fileEntryId,status) {
-            return service.invoke('/dlfileversion/get-file-versions',[{
+            return SessionService.invoke('/dlfileversion/get-file-versions',[{
                 fileEntryId:fileEntryId
                 ,status:status
             }]);
         };
         service.getFileVersionsCount = function(fileEntryId,status) {
-            return service.invoke('/dlfileversion/get-file-versions-count',[{
+            return SessionService.invoke('/dlfileversion/get-file-versions-count',[{
                 fileEntryId:fileEntryId
                 ,status:status
             }]);
         };
         service.getLatestFileVersion = function(fileEntryId) {
-            return service.invoke('/dlfileversion/get-latest-file-version',[{
+            return SessionService.invoke('/dlfileversion/get-latest-file-version',[{
                 fileEntryId:fileEntryId
             }]);
         };
@@ -31,4 +31,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

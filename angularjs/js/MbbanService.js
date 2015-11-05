@@ -6,13 +6,13 @@
         var service = {};
         // Begin generated service methods
         service.addBan = function(banUserId,serviceContext) {
-            return service.invoke('/mbban/add-ban',[{
+            return SessionService.invoke('/mbban/add-ban',[{
                 banUserId:banUserId
                 ,serviceContext:serviceContext
             }]);
         };
         service.deleteBan = function(banUserId,serviceContext) {
-            return service.invoke('/mbban/delete-ban',[{
+            return SessionService.invoke('/mbban/delete-ban',[{
                 banUserId:banUserId
                 ,serviceContext:serviceContext
             }]);
@@ -21,4 +21,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

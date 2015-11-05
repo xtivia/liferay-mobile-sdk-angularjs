@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addResourcePermission = function(groupId,companyId,name,scope,primKey,roleId,actionId) {
-            return service.invoke('/resourcepermission/add-resource-permission',[{
+            return SessionService.invoke('/resourcepermission/add-resource-permission',[{
                 groupId:groupId
                 ,companyId:companyId
                 ,name:name
@@ -17,7 +17,7 @@
             }]);
         };
         service.removeResourcePermission = function(groupId,companyId,name,scope,primKey,roleId,actionId) {
-            return service.invoke('/resourcepermission/remove-resource-permission',[{
+            return SessionService.invoke('/resourcepermission/remove-resource-permission',[{
                 groupId:groupId
                 ,companyId:companyId
                 ,name:name
@@ -28,7 +28,7 @@
             }]);
         };
         service.removeResourcePermissions = function(groupId,companyId,name,scope,roleId,actionId) {
-            return service.invoke('/resourcepermission/remove-resource-permissions',[{
+            return SessionService.invoke('/resourcepermission/remove-resource-permissions',[{
                 groupId:groupId
                 ,companyId:companyId
                 ,name:name
@@ -38,7 +38,7 @@
             }]);
         };
         service.setIndividualResourcePermissions = function(groupId,companyId,name,primKey,roleIdsToActionIds) {
-            return service.invoke('/resourcepermission/set-individual-resource-permissions',[{
+            return SessionService.invoke('/resourcepermission/set-individual-resource-permissions',[{
                 groupId:groupId
                 ,companyId:companyId
                 ,name:name
@@ -47,7 +47,7 @@
             }]);
         };
         service.setIndividualResourcePermissions = function(groupId,companyId,name,primKey,roleId,actionIds) {
-            return service.invoke('/resourcepermission/set-individual-resource-permissions',[{
+            return SessionService.invoke('/resourcepermission/set-individual-resource-permissions',[{
                 groupId:groupId
                 ,companyId:companyId
                 ,name:name
@@ -60,4 +60,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

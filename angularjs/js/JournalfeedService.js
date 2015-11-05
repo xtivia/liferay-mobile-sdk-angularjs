@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addFeed = function(groupId,feedId,autoFeedId,name,description,type,structureId,templateId,rendererTemplateId,delta,orderByCol,orderByType,targetLayoutFriendlyUrl,targetPortletId,contentField,feedType,feedVersion,serviceContext) {
-            return service.invoke('/journalfeed/add-feed',[{
+            return SessionService.invoke('/journalfeed/add-feed',[{
                 groupId:groupId
                 ,feedId:feedId
                 ,autoFeedId:autoFeedId
@@ -28,29 +28,29 @@
             }]);
         };
         service.deleteFeed = function(feedId) {
-            return service.invoke('/journalfeed/delete-feed',[{
+            return SessionService.invoke('/journalfeed/delete-feed',[{
                 feedId:feedId
             }]);
         };
         service.deleteFeed = function(groupId,feedId) {
-            return service.invoke('/journalfeed/delete-feed',[{
+            return SessionService.invoke('/journalfeed/delete-feed',[{
                 groupId:groupId
                 ,feedId:feedId
             }]);
         };
         service.getFeed = function(feedId) {
-            return service.invoke('/journalfeed/get-feed',[{
+            return SessionService.invoke('/journalfeed/get-feed',[{
                 feedId:feedId
             }]);
         };
         service.getFeed = function(groupId,feedId) {
-            return service.invoke('/journalfeed/get-feed',[{
+            return SessionService.invoke('/journalfeed/get-feed',[{
                 groupId:groupId
                 ,feedId:feedId
             }]);
         };
         service.updateFeed = function(groupId,feedId,name,description,type,structureId,templateId,rendererTemplateId,delta,orderByCol,orderByType,targetLayoutFriendlyUrl,targetPortletId,contentField,feedType,feedVersion,serviceContext) {
-            return service.invoke('/journalfeed/update-feed',[{
+            return SessionService.invoke('/journalfeed/update-feed',[{
                 groupId:groupId
                 ,feedId:feedId
                 ,name:name
@@ -74,4 +74,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

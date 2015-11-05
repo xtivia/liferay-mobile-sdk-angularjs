@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addLayoutRevision = function(userId,layoutSetBranchId,layoutBranchId,parentLayoutRevisionId,head,plid,portletPreferencesPlid,privateLayout,name,title,description,keywords,robots,typeSettings,iconImage,iconImageId,themeId,colorSchemeId,wapThemeId,wapColorSchemeId,css,serviceContext) {
-            return service.invoke('/layoutrevision/add-layout-revision',[{
+            return SessionService.invoke('/layoutrevision/add-layout-revision',[{
                 userId:userId
                 ,layoutSetBranchId:layoutSetBranchId
                 ,layoutBranchId:layoutBranchId
@@ -35,4 +35,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

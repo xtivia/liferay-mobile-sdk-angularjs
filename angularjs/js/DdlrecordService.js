@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addRecord = function(groupId,recordSetId,displayIndex,fields,serviceContext) {
-            return service.invoke('/ddlrecord/add-record',[{
+            return SessionService.invoke('/ddlrecord/add-record',[{
                 groupId:groupId
                 ,recordSetId:recordSetId
                 ,displayIndex:displayIndex
@@ -15,7 +15,7 @@
             }]);
         };
         service.addRecord = function(groupId,recordSetId,displayIndex,fieldsMap,serviceContext) {
-            return service.invoke('/ddlrecord/add-record',[{
+            return SessionService.invoke('/ddlrecord/add-record',[{
                 groupId:groupId
                 ,recordSetId:recordSetId
                 ,displayIndex:displayIndex
@@ -24,31 +24,31 @@
             }]);
         };
         service.deleteRecord = function(recordId) {
-            return service.invoke('/ddlrecord/delete-record',[{
+            return SessionService.invoke('/ddlrecord/delete-record',[{
                 recordId:recordId
             }]);
         };
         service.deleteRecordLocale = function(recordId,locale,serviceContext) {
-            return service.invoke('/ddlrecord/delete-record-locale',[{
+            return SessionService.invoke('/ddlrecord/delete-record-locale',[{
                 recordId:recordId
                 ,locale:locale
                 ,serviceContext:serviceContext
             }]);
         };
         service.getRecord = function(recordId) {
-            return service.invoke('/ddlrecord/get-record',[{
+            return SessionService.invoke('/ddlrecord/get-record',[{
                 recordId:recordId
             }]);
         };
         service.revertRecordVersion = function(recordId,version,serviceContext) {
-            return service.invoke('/ddlrecord/revert-record-version',[{
+            return SessionService.invoke('/ddlrecord/revert-record-version',[{
                 recordId:recordId
                 ,version:version
                 ,serviceContext:serviceContext
             }]);
         };
         service.updateRecord = function(recordId,displayIndex,fieldsMap,mergeFields,serviceContext) {
-            return service.invoke('/ddlrecord/update-record',[{
+            return SessionService.invoke('/ddlrecord/update-record',[{
                 recordId:recordId
                 ,displayIndex:displayIndex
                 ,fieldsMap:fieldsMap
@@ -57,7 +57,7 @@
             }]);
         };
         service.updateRecord = function(recordId,majorVersion,displayIndex,fields,mergeFields,serviceContext) {
-            return service.invoke('/ddlrecord/update-record',[{
+            return SessionService.invoke('/ddlrecord/update-record',[{
                 recordId:recordId
                 ,majorVersion:majorVersion
                 ,displayIndex:displayIndex
@@ -70,4 +70,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

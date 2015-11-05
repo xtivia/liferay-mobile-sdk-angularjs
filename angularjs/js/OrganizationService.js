@@ -6,13 +6,13 @@
         var service = {};
         // Begin generated service methods
         service.addGroupOrganizations = function(groupId,organizationIds) {
-            return service.invoke('/organization/add-group-organizations',[{
+            return SessionService.invoke('/organization/add-group-organizations',[{
                 groupId:groupId
                 ,organizationIds:organizationIds
             }]);
         };
         service.addOrganization = function(parentOrganizationId,name,type,recursable,regionId,countryId,statusId,comments,site,serviceContext) {
-            return service.invoke('/organization/add-organization',[{
+            return SessionService.invoke('/organization/add-organization',[{
                 parentOrganizationId:parentOrganizationId
                 ,name:name
                 ,type:type
@@ -26,7 +26,7 @@
             }]);
         };
         service.addOrganization = function(parentOrganizationId,name,type,regionId,countryId,statusId,comments,site,addresses,emailAddresses,orgLabors,phones,websites,serviceContext) {
-            return service.invoke('/organization/add-organization',[{
+            return SessionService.invoke('/organization/add-organization',[{
                 parentOrganizationId:parentOrganizationId
                 ,name:name
                 ,type:type
@@ -44,7 +44,7 @@
             }]);
         };
         service.addOrganization = function(parentOrganizationId,name,type,recursable,regionId,countryId,statusId,comments,site,addresses,emailAddresses,orgLabors,phones,websites,serviceContext) {
-            return service.invoke('/organization/add-organization',[{
+            return SessionService.invoke('/organization/add-organization',[{
                 parentOrganizationId:parentOrganizationId
                 ,name:name
                 ,type:type
@@ -63,7 +63,7 @@
             }]);
         };
         service.addOrganization = function(parentOrganizationId,name,type,regionId,countryId,statusId,comments,site,serviceContext) {
-            return service.invoke('/organization/add-organization',[{
+            return SessionService.invoke('/organization/add-organization',[{
                 parentOrganizationId:parentOrganizationId
                 ,name:name
                 ,type:type
@@ -76,46 +76,46 @@
             }]);
         };
         service.addPasswordPolicyOrganizations = function(passwordPolicyId,organizationIds) {
-            return service.invoke('/organization/add-password-policy-organizations',[{
+            return SessionService.invoke('/organization/add-password-policy-organizations',[{
                 passwordPolicyId:passwordPolicyId
                 ,organizationIds:organizationIds
             }]);
         };
         service.deleteLogo = function(organizationId) {
-            return service.invoke('/organization/delete-logo',[{
+            return SessionService.invoke('/organization/delete-logo',[{
                 organizationId:organizationId
             }]);
         };
         service.deleteOrganization = function(organizationId) {
-            return service.invoke('/organization/delete-organization',[{
+            return SessionService.invoke('/organization/delete-organization',[{
                 organizationId:organizationId
             }]);
         };
         service.getManageableOrganizations = function(actionId,max) {
-            return service.invoke('/organization/get-manageable-organizations',[{
+            return SessionService.invoke('/organization/get-manageable-organizations',[{
                 actionId:actionId
                 ,max:max
             }]);
         };
         service.getOrganization = function(organizationId) {
-            return service.invoke('/organization/get-organization',[{
+            return SessionService.invoke('/organization/get-organization',[{
                 organizationId:organizationId
             }]);
         };
         service.getOrganizationId = function(companyId,name) {
-            return service.invoke('/organization/get-organization-id',[{
+            return SessionService.invoke('/organization/get-organization-id',[{
                 companyId:companyId
                 ,name:name
             }]);
         };
         service.getOrganizations = function(companyId,parentOrganizationId) {
-            return service.invoke('/organization/get-organizations',[{
+            return SessionService.invoke('/organization/get-organizations',[{
                 companyId:companyId
                 ,parentOrganizationId:parentOrganizationId
             }]);
         };
         service.getOrganizations = function(companyId,parentOrganizationId,start,end) {
-            return service.invoke('/organization/get-organizations',[{
+            return SessionService.invoke('/organization/get-organizations',[{
                 companyId:companyId
                 ,parentOrganizationId:parentOrganizationId
                 ,start:start
@@ -123,36 +123,36 @@
             }]);
         };
         service.getOrganizationsCount = function(companyId,parentOrganizationId) {
-            return service.invoke('/organization/get-organizations-count',[{
+            return SessionService.invoke('/organization/get-organizations-count',[{
                 companyId:companyId
                 ,parentOrganizationId:parentOrganizationId
             }]);
         };
         service.getUserOrganizations = function(userId) {
-            return service.invoke('/organization/get-user-organizations',[{
+            return SessionService.invoke('/organization/get-user-organizations',[{
                 userId:userId
             }]);
         };
         service.setGroupOrganizations = function(groupId,organizationIds) {
-            return service.invoke('/organization/set-group-organizations',[{
+            return SessionService.invoke('/organization/set-group-organizations',[{
                 groupId:groupId
                 ,organizationIds:organizationIds
             }]);
         };
         service.unsetGroupOrganizations = function(groupId,organizationIds) {
-            return service.invoke('/organization/unset-group-organizations',[{
+            return SessionService.invoke('/organization/unset-group-organizations',[{
                 groupId:groupId
                 ,organizationIds:organizationIds
             }]);
         };
         service.unsetPasswordPolicyOrganizations = function(passwordPolicyId,organizationIds) {
-            return service.invoke('/organization/unset-password-policy-organizations',[{
+            return SessionService.invoke('/organization/unset-password-policy-organizations',[{
                 passwordPolicyId:passwordPolicyId
                 ,organizationIds:organizationIds
             }]);
         };
         service.updateOrganization = function(organizationId,parentOrganizationId,name,type,regionId,countryId,statusId,comments,site,serviceContext) {
-            return service.invoke('/organization/update-organization',[{
+            return SessionService.invoke('/organization/update-organization',[{
                 organizationId:organizationId
                 ,parentOrganizationId:parentOrganizationId
                 ,name:name
@@ -166,7 +166,7 @@
             }]);
         };
         service.updateOrganization = function(organizationId,parentOrganizationId,name,type,recursable,regionId,countryId,statusId,comments,site,serviceContext) {
-            return service.invoke('/organization/update-organization',[{
+            return SessionService.invoke('/organization/update-organization',[{
                 organizationId:organizationId
                 ,parentOrganizationId:parentOrganizationId
                 ,name:name
@@ -181,7 +181,7 @@
             }]);
         };
         service.updateOrganization = function(organizationId,parentOrganizationId,name,type,regionId,countryId,statusId,comments,site,addresses,emailAddresses,orgLabors,phones,websites,serviceContext) {
-            return service.invoke('/organization/update-organization',[{
+            return SessionService.invoke('/organization/update-organization',[{
                 organizationId:organizationId
                 ,parentOrganizationId:parentOrganizationId
                 ,name:name
@@ -200,7 +200,7 @@
             }]);
         };
         service.updateOrganization = function(organizationId,parentOrganizationId,name,type,recursable,regionId,countryId,statusId,comments,site,addresses,emailAddresses,orgLabors,phones,websites,serviceContext) {
-            return service.invoke('/organization/update-organization',[{
+            return SessionService.invoke('/organization/update-organization',[{
                 organizationId:organizationId
                 ,parentOrganizationId:parentOrganizationId
                 ,name:name
@@ -223,4 +223,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

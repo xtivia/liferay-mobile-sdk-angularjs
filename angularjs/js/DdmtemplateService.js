@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addTemplate = function(groupId,classNameId,classPK,nameMap,descriptionMap,type,mode,language,script,serviceContext) {
-            return service.invoke('/ddmtemplate/add-template',[{
+            return SessionService.invoke('/ddmtemplate/add-template',[{
                 groupId:groupId
                 ,classNameId:classNameId
                 ,classPK:classPK
@@ -20,7 +20,7 @@
             }]);
         };
         service.addTemplate = function(groupId,classNameId,classPK,templateKey,nameMap,descriptionMap,type,mode,language,script,cacheable,smallImage,smallImageURL,smallImageFile,serviceContext) {
-            return service.invoke('/ddmtemplate/add-template',[{
+            return SessionService.invoke('/ddmtemplate/add-template',[{
                 groupId:groupId
                 ,classNameId:classNameId
                 ,classPK:classPK
@@ -39,13 +39,13 @@
             }]);
         };
         service.copyTemplate = function(templateId,serviceContext) {
-            return service.invoke('/ddmtemplate/copy-template',[{
+            return SessionService.invoke('/ddmtemplate/copy-template',[{
                 templateId:templateId
                 ,serviceContext:serviceContext
             }]);
         };
         service.copyTemplate = function(templateId,nameMap,descriptionMap,serviceContext) {
-            return service.invoke('/ddmtemplate/copy-template',[{
+            return SessionService.invoke('/ddmtemplate/copy-template',[{
                 templateId:templateId
                 ,nameMap:nameMap
                 ,descriptionMap:descriptionMap
@@ -53,7 +53,7 @@
             }]);
         };
         service.copyTemplates = function(classNameId,classPK,newClassPK,type,serviceContext) {
-            return service.invoke('/ddmtemplate/copy-templates',[{
+            return SessionService.invoke('/ddmtemplate/copy-templates',[{
                 classNameId:classNameId
                 ,classPK:classPK
                 ,newClassPK:newClassPK
@@ -62,31 +62,31 @@
             }]);
         };
         service.deleteTemplate = function(templateId) {
-            return service.invoke('/ddmtemplate/delete-template',[{
+            return SessionService.invoke('/ddmtemplate/delete-template',[{
                 templateId:templateId
             }]);
         };
         service.fetchTemplate = function(groupId,classNameId,templateKey) {
-            return service.invoke('/ddmtemplate/fetch-template',[{
+            return SessionService.invoke('/ddmtemplate/fetch-template',[{
                 groupId:groupId
                 ,classNameId:classNameId
                 ,templateKey:templateKey
             }]);
         };
         service.getTemplate = function(templateId) {
-            return service.invoke('/ddmtemplate/get-template',[{
+            return SessionService.invoke('/ddmtemplate/get-template',[{
                 templateId:templateId
             }]);
         };
         service.getTemplate = function(groupId,classNameId,templateKey) {
-            return service.invoke('/ddmtemplate/get-template',[{
+            return SessionService.invoke('/ddmtemplate/get-template',[{
                 groupId:groupId
                 ,classNameId:classNameId
                 ,templateKey:templateKey
             }]);
         };
         service.getTemplate = function(groupId,classNameId,templateKey,includeGlobalTemplates) {
-            return service.invoke('/ddmtemplate/get-template',[{
+            return SessionService.invoke('/ddmtemplate/get-template',[{
                 groupId:groupId
                 ,classNameId:classNameId
                 ,templateKey:templateKey
@@ -94,20 +94,20 @@
             }]);
         };
         service.getTemplates = function(groupId,classNameId) {
-            return service.invoke('/ddmtemplate/get-templates',[{
+            return SessionService.invoke('/ddmtemplate/get-templates',[{
                 groupId:groupId
                 ,classNameId:classNameId
             }]);
         };
         service.getTemplates = function(groupId,classNameId,classPK) {
-            return service.invoke('/ddmtemplate/get-templates',[{
+            return SessionService.invoke('/ddmtemplate/get-templates',[{
                 groupId:groupId
                 ,classNameId:classNameId
                 ,classPK:classPK
             }]);
         };
         service.getTemplates = function(groupId,classNameId,classPK,type) {
-            return service.invoke('/ddmtemplate/get-templates',[{
+            return SessionService.invoke('/ddmtemplate/get-templates',[{
                 groupId:groupId
                 ,classNameId:classNameId
                 ,classPK:classPK
@@ -115,7 +115,7 @@
             }]);
         };
         service.getTemplates = function(groupId,classNameId,classPK,type,mode) {
-            return service.invoke('/ddmtemplate/get-templates',[{
+            return SessionService.invoke('/ddmtemplate/get-templates',[{
                 groupId:groupId
                 ,classNameId:classNameId
                 ,classPK:classPK
@@ -124,13 +124,13 @@
             }]);
         };
         service.getTemplatesByClassPk = function(groupId,classPK) {
-            return service.invoke('/ddmtemplate/get-templates-by-class-pk',[{
+            return SessionService.invoke('/ddmtemplate/get-templates-by-class-pk',[{
                 groupId:groupId
                 ,classPK:classPK
             }]);
         };
         service.getTemplatesByStructureClassNameId = function(groupId,structureClassNameId,start,end,orderByComparator) {
-            return service.invoke('/ddmtemplate/get-templates-by-structure-class-name-id',[{
+            return SessionService.invoke('/ddmtemplate/get-templates-by-structure-class-name-id',[{
                 groupId:groupId
                 ,structureClassNameId:structureClassNameId
                 ,start:start
@@ -139,13 +139,13 @@
             }]);
         };
         service.getTemplatesByStructureClassNameIdCount = function(groupId,structureClassNameId) {
-            return service.invoke('/ddmtemplate/get-templates-by-structure-class-name-id-count',[{
+            return SessionService.invoke('/ddmtemplate/get-templates-by-structure-class-name-id-count',[{
                 groupId:groupId
                 ,structureClassNameId:structureClassNameId
             }]);
         };
         service.search = function(companyId,groupId,classNameId,classPK,keywords,type,mode,start,end,orderByComparator) {
-            return service.invoke('/ddmtemplate/search',[{
+            return SessionService.invoke('/ddmtemplate/search',[{
                 companyId:companyId
                 ,groupId:groupId
                 ,classNameId:classNameId
@@ -159,7 +159,7 @@
             }]);
         };
         service.search = function(companyId,groupIds,classNameIds,classPKs,keywords,type,mode,start,end,orderByComparator) {
-            return service.invoke('/ddmtemplate/search',[{
+            return SessionService.invoke('/ddmtemplate/search',[{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,classNameIds:classNameIds
@@ -173,7 +173,7 @@
             }]);
         };
         service.search = function(companyId,groupId,classNameId,classPK,name,description,type,mode,language,andOperator,start,end,orderByComparator) {
-            return service.invoke('/ddmtemplate/search',[{
+            return SessionService.invoke('/ddmtemplate/search',[{
                 companyId:companyId
                 ,groupId:groupId
                 ,classNameId:classNameId
@@ -190,7 +190,7 @@
             }]);
         };
         service.search = function(companyId,groupIds,classNameIds,classPKs,name,description,type,mode,language,andOperator,start,end,orderByComparator) {
-            return service.invoke('/ddmtemplate/search',[{
+            return SessionService.invoke('/ddmtemplate/search',[{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,classNameIds:classNameIds
@@ -207,7 +207,7 @@
             }]);
         };
         service.searchCount = function(companyId,groupId,classNameId,classPK,name,description,type,mode,language,andOperator) {
-            return service.invoke('/ddmtemplate/search-count',[{
+            return SessionService.invoke('/ddmtemplate/search-count',[{
                 companyId:companyId
                 ,groupId:groupId
                 ,classNameId:classNameId
@@ -221,7 +221,7 @@
             }]);
         };
         service.searchCount = function(companyId,groupIds,classNameIds,classPKs,name,description,type,mode,language,andOperator) {
-            return service.invoke('/ddmtemplate/search-count',[{
+            return SessionService.invoke('/ddmtemplate/search-count',[{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,classNameIds:classNameIds
@@ -235,7 +235,7 @@
             }]);
         };
         service.searchCount = function(companyId,groupId,classNameId,classPK,keywords,type,mode) {
-            return service.invoke('/ddmtemplate/search-count',[{
+            return SessionService.invoke('/ddmtemplate/search-count',[{
                 companyId:companyId
                 ,groupId:groupId
                 ,classNameId:classNameId
@@ -246,7 +246,7 @@
             }]);
         };
         service.searchCount = function(companyId,groupIds,classNameIds,classPKs,keywords,type,mode) {
-            return service.invoke('/ddmtemplate/search-count',[{
+            return SessionService.invoke('/ddmtemplate/search-count',[{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,classNameIds:classNameIds
@@ -257,7 +257,7 @@
             }]);
         };
         service.updateTemplate = function(templateId,classPK,nameMap,descriptionMap,type,mode,language,script,cacheable,smallImage,smallImageURL,smallImageFile,serviceContext) {
-            return service.invoke('/ddmtemplate/update-template',[{
+            return SessionService.invoke('/ddmtemplate/update-template',[{
                 templateId:templateId
                 ,classPK:classPK
                 ,nameMap:nameMap
@@ -277,4 +277,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

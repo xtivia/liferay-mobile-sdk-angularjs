@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.updatePluginSetting = function(companyId,pluginId,pluginType,roles,active) {
-            return service.invoke('/pluginsetting/update-plugin-setting',[{
+            return SessionService.invoke('/pluginsetting/update-plugin-setting',[{
                 companyId:companyId
                 ,pluginId:pluginId
                 ,pluginType:pluginType
@@ -18,4 +18,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();
