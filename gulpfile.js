@@ -8,7 +8,7 @@ gulp.task('jasmine', function() {
 });
 
 gulp.task('package',['jasmine'],function() {
-   return gulp.src(['angularjs/js/*.js','js/sdk.62.js'])
+   return gulp.src(['js/sdk.62.module.js','js/sdk.62.config.js','angularjs/js/*.js','js/sdk.62.js'])
        .pipe(concat('liferay.mobile.sdk.62.js'))
        .pipe(gulp.dest('./dist'));
 });
