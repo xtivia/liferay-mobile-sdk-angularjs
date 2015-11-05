@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addArticle = function(groupId,folderId,classNameId,classPK,articleId,autoArticleId,titleMap,descriptionMap,content,type,ddmStructureKey,ddmTemplateKey,layoutUuid,displayDateMonth,displayDateDay,displayDateYear,displayDateHour,displayDateMinute,expirationDateMonth,expirationDateDay,expirationDateYear,expirationDateHour,expirationDateMinute,neverExpire,reviewDateMonth,reviewDateDay,reviewDateYear,reviewDateHour,reviewDateMinute,neverReview,indexable,articleURL,serviceContext) {
-            return service.invoke('/journalarticle/add-article',[{
+            return SessionService.invoke('/journalarticle/add-article',[{
                 groupId:groupId
                 ,folderId:folderId
                 ,classNameId:classNameId
@@ -43,7 +43,7 @@
             }]);
         };
         service.addArticle = function(groupId,folderId,classNameId,classPK,articleId,autoArticleId,titleMap,descriptionMap,content,type,ddmStructureKey,ddmTemplateKey,layoutUuid,displayDateMonth,displayDateDay,displayDateYear,displayDateHour,displayDateMinute,expirationDateMonth,expirationDateDay,expirationDateYear,expirationDateHour,expirationDateMinute,neverExpire,reviewDateMonth,reviewDateDay,reviewDateYear,reviewDateHour,reviewDateMinute,neverReview,indexable,smallImage,smallImageURL,smallFile,images,articleURL,serviceContext) {
-            return service.invoke('/journalarticle/add-article',[{
+            return SessionService.invoke('/journalarticle/add-article',[{
                 groupId:groupId
                 ,folderId:folderId
                 ,classNameId:classNameId
@@ -84,7 +84,7 @@
             }]);
         };
         service.copyArticle = function(groupId,oldArticleId,newArticleId,autoArticleId,version) {
-            return service.invoke('/journalarticle/copy-article',[{
+            return SessionService.invoke('/journalarticle/copy-article',[{
                 groupId:groupId
                 ,oldArticleId:oldArticleId
                 ,newArticleId:newArticleId
@@ -93,7 +93,7 @@
             }]);
         };
         service.deleteArticle = function(groupId,articleId,articleURL,serviceContext) {
-            return service.invoke('/journalarticle/delete-article',[{
+            return SessionService.invoke('/journalarticle/delete-article',[{
                 groupId:groupId
                 ,articleId:articleId
                 ,articleURL:articleURL
@@ -101,7 +101,7 @@
             }]);
         };
         service.deleteArticle = function(groupId,articleId,version,articleURL,serviceContext) {
-            return service.invoke('/journalarticle/delete-article',[{
+            return SessionService.invoke('/journalarticle/delete-article',[{
                 groupId:groupId
                 ,articleId:articleId
                 ,version:version
@@ -110,7 +110,7 @@
             }]);
         };
         service.expireArticle = function(groupId,articleId,articleURL,serviceContext) {
-            return service.invoke('/journalarticle/expire-article',[{
+            return SessionService.invoke('/journalarticle/expire-article',[{
                 groupId:groupId
                 ,articleId:articleId
                 ,articleURL:articleURL
@@ -118,7 +118,7 @@
             }]);
         };
         service.expireArticle = function(groupId,articleId,version,articleURL,serviceContext) {
-            return service.invoke('/journalarticle/expire-article',[{
+            return SessionService.invoke('/journalarticle/expire-article',[{
                 groupId:groupId
                 ,articleId:articleId
                 ,version:version
@@ -127,38 +127,38 @@
             }]);
         };
         service.getArticle = function(id) {
-            return service.invoke('/journalarticle/get-article',[{
+            return SessionService.invoke('/journalarticle/get-article',[{
                 id:id
             }]);
         };
         service.getArticle = function(groupId,articleId) {
-            return service.invoke('/journalarticle/get-article',[{
+            return SessionService.invoke('/journalarticle/get-article',[{
                 groupId:groupId
                 ,articleId:articleId
             }]);
         };
         service.getArticle = function(groupId,articleId,version) {
-            return service.invoke('/journalarticle/get-article',[{
+            return SessionService.invoke('/journalarticle/get-article',[{
                 groupId:groupId
                 ,articleId:articleId
                 ,version:version
             }]);
         };
         service.getArticle = function(groupId,className,classPK) {
-            return service.invoke('/journalarticle/get-article',[{
+            return SessionService.invoke('/journalarticle/get-article',[{
                 groupId:groupId
                 ,className:className
                 ,classPK:classPK
             }]);
         };
         service.getArticleByUrlTitle = function(groupId,urlTitle) {
-            return service.invoke('/journalarticle/get-article-by-url-title',[{
+            return SessionService.invoke('/journalarticle/get-article-by-url-title',[{
                 groupId:groupId
                 ,urlTitle:urlTitle
             }]);
         };
         service.getArticleContent = function(groupId,articleId,languageId,themeDisplay) {
-            return service.invoke('/journalarticle/get-article-content',[{
+            return SessionService.invoke('/journalarticle/get-article-content',[{
                 groupId:groupId
                 ,articleId:articleId
                 ,languageId:languageId
@@ -166,7 +166,7 @@
             }]);
         };
         service.getArticleContent = function(groupId,articleId,version,languageId,themeDisplay) {
-            return service.invoke('/journalarticle/get-article-content',[{
+            return SessionService.invoke('/journalarticle/get-article-content',[{
                 groupId:groupId
                 ,articleId:articleId
                 ,version:version
@@ -175,13 +175,13 @@
             }]);
         };
         service.getArticles = function(groupId,folderId) {
-            return service.invoke('/journalarticle/get-articles',[{
+            return SessionService.invoke('/journalarticle/get-articles',[{
                 groupId:groupId
                 ,folderId:folderId
             }]);
         };
         service.getArticles = function(groupId,folderId,start,end,obc) {
-            return service.invoke('/journalarticle/get-articles',[{
+            return SessionService.invoke('/journalarticle/get-articles',[{
                 groupId:groupId
                 ,folderId:folderId
                 ,start:start
@@ -190,7 +190,7 @@
             }]);
         };
         service.getArticlesByArticleId = function(groupId,articleId,start,end,obc) {
-            return service.invoke('/journalarticle/get-articles-by-article-id',[{
+            return SessionService.invoke('/journalarticle/get-articles-by-article-id',[{
                 groupId:groupId
                 ,articleId:articleId
                 ,start:start
@@ -199,13 +199,13 @@
             }]);
         };
         service.getArticlesByLayoutUuid = function(groupId,layoutUuid) {
-            return service.invoke('/journalarticle/get-articles-by-layout-uuid',[{
+            return SessionService.invoke('/journalarticle/get-articles-by-layout-uuid',[{
                 groupId:groupId
                 ,layoutUuid:layoutUuid
             }]);
         };
         service.getArticlesByStructureId = function(groupId,ddmStructureKey,start,end,obc) {
-            return service.invoke('/journalarticle/get-articles-by-structure-id',[{
+            return SessionService.invoke('/journalarticle/get-articles-by-structure-id',[{
                 groupId:groupId
                 ,ddmStructureKey:ddmStructureKey
                 ,start:start
@@ -214,7 +214,7 @@
             }]);
         };
         service.getArticlesByStructureId = function(groupId,classNameId,ddmStructureKey,status,start,end,obc) {
-            return service.invoke('/journalarticle/get-articles-by-structure-id',[{
+            return SessionService.invoke('/journalarticle/get-articles-by-structure-id',[{
                 groupId:groupId
                 ,classNameId:classNameId
                 ,ddmStructureKey:ddmStructureKey
@@ -225,32 +225,32 @@
             }]);
         };
         service.getArticlesCount = function(groupId,folderId) {
-            return service.invoke('/journalarticle/get-articles-count',[{
+            return SessionService.invoke('/journalarticle/get-articles-count',[{
                 groupId:groupId
                 ,folderId:folderId
             }]);
         };
         service.getArticlesCount = function(groupId,folderId,status) {
-            return service.invoke('/journalarticle/get-articles-count',[{
+            return SessionService.invoke('/journalarticle/get-articles-count',[{
                 groupId:groupId
                 ,folderId:folderId
                 ,status:status
             }]);
         };
         service.getArticlesCountByArticleId = function(groupId,articleId) {
-            return service.invoke('/journalarticle/get-articles-count-by-article-id',[{
+            return SessionService.invoke('/journalarticle/get-articles-count-by-article-id',[{
                 groupId:groupId
                 ,articleId:articleId
             }]);
         };
         service.getArticlesCountByStructureId = function(groupId,ddmStructureKey) {
-            return service.invoke('/journalarticle/get-articles-count-by-structure-id',[{
+            return SessionService.invoke('/journalarticle/get-articles-count-by-structure-id',[{
                 groupId:groupId
                 ,ddmStructureKey:ddmStructureKey
             }]);
         };
         service.getArticlesCountByStructureId = function(groupId,classNameId,ddmStructureKey,status) {
-            return service.invoke('/journalarticle/get-articles-count-by-structure-id',[{
+            return SessionService.invoke('/journalarticle/get-articles-count-by-structure-id',[{
                 groupId:groupId
                 ,classNameId:classNameId
                 ,ddmStructureKey:ddmStructureKey
@@ -258,19 +258,19 @@
             }]);
         };
         service.getDisplayArticleByUrlTitle = function(groupId,urlTitle) {
-            return service.invoke('/journalarticle/get-display-article-by-url-title',[{
+            return SessionService.invoke('/journalarticle/get-display-article-by-url-title',[{
                 groupId:groupId
                 ,urlTitle:urlTitle
             }]);
         };
         service.getFoldersAndArticlesCount = function(groupId,folderIds) {
-            return service.invoke('/journalarticle/get-folders-and-articles-count',[{
+            return SessionService.invoke('/journalarticle/get-folders-and-articles-count',[{
                 groupId:groupId
                 ,folderIds:folderIds
             }]);
         };
         service.getGroupArticles = function(groupId,userId,rootFolderId,start,end,orderByComparator) {
-            return service.invoke('/journalarticle/get-group-articles',[{
+            return SessionService.invoke('/journalarticle/get-group-articles',[{
                 groupId:groupId
                 ,userId:userId
                 ,rootFolderId:rootFolderId
@@ -280,7 +280,7 @@
             }]);
         };
         service.getGroupArticles = function(groupId,userId,rootFolderId,status,start,end,orderByComparator) {
-            return service.invoke('/journalarticle/get-group-articles',[{
+            return SessionService.invoke('/journalarticle/get-group-articles',[{
                 groupId:groupId
                 ,userId:userId
                 ,rootFolderId:rootFolderId
@@ -291,14 +291,14 @@
             }]);
         };
         service.getGroupArticlesCount = function(groupId,userId,rootFolderId) {
-            return service.invoke('/journalarticle/get-group-articles-count',[{
+            return SessionService.invoke('/journalarticle/get-group-articles-count',[{
                 groupId:groupId
                 ,userId:userId
                 ,rootFolderId:rootFolderId
             }]);
         };
         service.getGroupArticlesCount = function(groupId,userId,rootFolderId,status) {
-            return service.invoke('/journalarticle/get-group-articles-count',[{
+            return SessionService.invoke('/journalarticle/get-group-articles-count',[{
                 groupId:groupId
                 ,userId:userId
                 ,rootFolderId:rootFolderId
@@ -306,33 +306,33 @@
             }]);
         };
         service.getLatestArticle = function(resourcePrimKey) {
-            return service.invoke('/journalarticle/get-latest-article',[{
+            return SessionService.invoke('/journalarticle/get-latest-article',[{
                 resourcePrimKey:resourcePrimKey
             }]);
         };
         service.getLatestArticle = function(groupId,articleId,status) {
-            return service.invoke('/journalarticle/get-latest-article',[{
+            return SessionService.invoke('/journalarticle/get-latest-article',[{
                 groupId:groupId
                 ,articleId:articleId
                 ,status:status
             }]);
         };
         service.getLatestArticle = function(groupId,className,classPK) {
-            return service.invoke('/journalarticle/get-latest-article',[{
+            return SessionService.invoke('/journalarticle/get-latest-article',[{
                 groupId:groupId
                 ,className:className
                 ,classPK:classPK
             }]);
         };
         service.moveArticle = function(groupId,articleId,newFolderId) {
-            return service.invoke('/journalarticle/move-article',[{
+            return SessionService.invoke('/journalarticle/move-article',[{
                 groupId:groupId
                 ,articleId:articleId
                 ,newFolderId:newFolderId
             }]);
         };
         service.moveArticleFromTrash = function(groupId,articleId,newFolderId,serviceContext) {
-            return service.invoke('/journalarticle/move-article-from-trash',[{
+            return SessionService.invoke('/journalarticle/move-article-from-trash',[{
                 groupId:groupId
                 ,articleId:articleId
                 ,newFolderId:newFolderId
@@ -340,7 +340,7 @@
             }]);
         };
         service.moveArticleFromTrash = function(groupId,resourcePrimKey,newFolderId,serviceContext) {
-            return service.invoke('/journalarticle/move-article-from-trash',[{
+            return SessionService.invoke('/journalarticle/move-article-from-trash',[{
                 groupId:groupId
                 ,resourcePrimKey:resourcePrimKey
                 ,newFolderId:newFolderId
@@ -348,19 +348,19 @@
             }]);
         };
         service.moveArticleToTrash = function(groupId,articleId) {
-            return service.invoke('/journalarticle/move-article-to-trash',[{
+            return SessionService.invoke('/journalarticle/move-article-to-trash',[{
                 groupId:groupId
                 ,articleId:articleId
             }]);
         };
         service.removeArticleLocale = function(companyId,languageId) {
-            return service.invoke('/journalarticle/remove-article-locale',[{
+            return SessionService.invoke('/journalarticle/remove-article-locale',[{
                 companyId:companyId
                 ,languageId:languageId
             }]);
         };
         service.removeArticleLocale = function(groupId,articleId,version,languageId) {
-            return service.invoke('/journalarticle/remove-article-locale',[{
+            return SessionService.invoke('/journalarticle/remove-article-locale',[{
                 groupId:groupId
                 ,articleId:articleId
                 ,version:version
@@ -368,18 +368,18 @@
             }]);
         };
         service.restoreArticleFromTrash = function(resourcePrimKey) {
-            return service.invoke('/journalarticle/restore-article-from-trash',[{
+            return SessionService.invoke('/journalarticle/restore-article-from-trash',[{
                 resourcePrimKey:resourcePrimKey
             }]);
         };
         service.restoreArticleFromTrash = function(groupId,articleId) {
-            return service.invoke('/journalarticle/restore-article-from-trash',[{
+            return SessionService.invoke('/journalarticle/restore-article-from-trash',[{
                 groupId:groupId
                 ,articleId:articleId
             }]);
         };
         service.search = function(companyId,groupId,folderIds,classNameId,keywords,version,type,ddmStructureKey,ddmTemplateKey,displayDateGT,displayDateLT,status,reviewDate,start,end,obc) {
-            return service.invoke('/journalarticle/search',[{
+            return SessionService.invoke('/journalarticle/search',[{
                 companyId:companyId
                 ,groupId:groupId
                 ,folderIds:folderIds
@@ -399,7 +399,7 @@
             }]);
         };
         service.search = function(companyId,groupId,folderIds,classNameId,articleId,version,title,description,content,type,ddmStructureKey,ddmTemplateKey,displayDateGT,displayDateLT,status,reviewDate,andOperator,start,end,obc) {
-            return service.invoke('/journalarticle/search',[{
+            return SessionService.invoke('/journalarticle/search',[{
                 companyId:companyId
                 ,groupId:groupId
                 ,folderIds:folderIds
@@ -423,7 +423,7 @@
             }]);
         };
         service.search = function(companyId,groupId,folderIds,classNameId,articleId,version,title,description,content,type,ddmStructureKeys,ddmTemplateKeys,displayDateGT,displayDateLT,status,reviewDate,andOperator,start,end,obc) {
-            return service.invoke('/journalarticle/search',[{
+            return SessionService.invoke('/journalarticle/search',[{
                 companyId:companyId
                 ,groupId:groupId
                 ,folderIds:folderIds
@@ -447,7 +447,7 @@
             }]);
         };
         service.search = function(groupId,creatorUserId,status,start,end) {
-            return service.invoke('/journalarticle/search',[{
+            return SessionService.invoke('/journalarticle/search',[{
                 groupId:groupId
                 ,creatorUserId:creatorUserId
                 ,status:status
@@ -456,7 +456,7 @@
             }]);
         };
         service.searchCount = function(companyId,groupId,folderIds,classNameId,keywords,version,type,ddmStructureKey,ddmTemplateKey,displayDateGT,displayDateLT,status,reviewDate) {
-            return service.invoke('/journalarticle/search-count',[{
+            return SessionService.invoke('/journalarticle/search-count',[{
                 companyId:companyId
                 ,groupId:groupId
                 ,folderIds:folderIds
@@ -473,7 +473,7 @@
             }]);
         };
         service.searchCount = function(companyId,groupId,folderIds,classNameId,articleId,version,title,description,content,type,ddmStructureKey,ddmTemplateKey,displayDateGT,displayDateLT,status,reviewDate,andOperator) {
-            return service.invoke('/journalarticle/search-count',[{
+            return SessionService.invoke('/journalarticle/search-count',[{
                 companyId:companyId
                 ,groupId:groupId
                 ,folderIds:folderIds
@@ -494,7 +494,7 @@
             }]);
         };
         service.searchCount = function(companyId,groupId,folderIds,classNameId,articleId,version,title,description,content,type,ddmStructureKeys,ddmTemplateKeys,displayDateGT,displayDateLT,status,reviewDate,andOperator) {
-            return service.invoke('/journalarticle/search-count',[{
+            return SessionService.invoke('/journalarticle/search-count',[{
                 companyId:companyId
                 ,groupId:groupId
                 ,folderIds:folderIds
@@ -515,17 +515,17 @@
             }]);
         };
         service.subscribe = function(groupId) {
-            return service.invoke('/journalarticle/subscribe',[{
+            return SessionService.invoke('/journalarticle/subscribe',[{
                 groupId:groupId
             }]);
         };
         service.unsubscribe = function(groupId) {
-            return service.invoke('/journalarticle/unsubscribe',[{
+            return SessionService.invoke('/journalarticle/unsubscribe',[{
                 groupId:groupId
             }]);
         };
         service.updateArticle = function(userId,groupId,folderId,articleId,version,titleMap,descriptionMap,content,layoutUuid,serviceContext) {
-            return service.invoke('/journalarticle/update-article',[{
+            return SessionService.invoke('/journalarticle/update-article',[{
                 userId:userId
                 ,groupId:groupId
                 ,folderId:folderId
@@ -539,7 +539,7 @@
             }]);
         };
         service.updateArticle = function(groupId,folderId,articleId,version,titleMap,descriptionMap,content,type,ddmStructureKey,ddmTemplateKey,layoutUuid,displayDateMonth,displayDateDay,displayDateYear,displayDateHour,displayDateMinute,expirationDateMonth,expirationDateDay,expirationDateYear,expirationDateHour,expirationDateMinute,neverExpire,reviewDateMonth,reviewDateDay,reviewDateYear,reviewDateHour,reviewDateMinute,neverReview,indexable,smallImage,smallImageURL,smallFile,images,articleURL,serviceContext) {
-            return service.invoke('/journalarticle/update-article',[{
+            return SessionService.invoke('/journalarticle/update-article',[{
                 groupId:groupId
                 ,folderId:folderId
                 ,articleId:articleId
@@ -578,7 +578,7 @@
             }]);
         };
         service.updateArticle = function(groupId,folderId,articleId,version,content,serviceContext) {
-            return service.invoke('/journalarticle/update-article',[{
+            return SessionService.invoke('/journalarticle/update-article',[{
                 groupId:groupId
                 ,folderId:folderId
                 ,articleId:articleId
@@ -588,7 +588,7 @@
             }]);
         };
         service.updateArticleTranslation = function(groupId,articleId,version,locale,title,description,content,images) {
-            return service.invoke('/journalarticle/update-article-translation',[{
+            return SessionService.invoke('/journalarticle/update-article-translation',[{
                 groupId:groupId
                 ,articleId:articleId
                 ,version:version
@@ -600,7 +600,7 @@
             }]);
         };
         service.updateArticleTranslation = function(groupId,articleId,version,locale,title,description,content,images,serviceContext) {
-            return service.invoke('/journalarticle/update-article-translation',[{
+            return SessionService.invoke('/journalarticle/update-article-translation',[{
                 groupId:groupId
                 ,articleId:articleId
                 ,version:version
@@ -613,7 +613,7 @@
             }]);
         };
         service.updateContent = function(groupId,articleId,version,content) {
-            return service.invoke('/journalarticle/update-content',[{
+            return SessionService.invoke('/journalarticle/update-content',[{
                 groupId:groupId
                 ,articleId:articleId
                 ,version:version
@@ -621,7 +621,7 @@
             }]);
         };
         service.updateStatus = function(groupId,articleId,version,status,articleURL,serviceContext) {
-            return service.invoke('/journalarticle/update-status',[{
+            return SessionService.invoke('/journalarticle/update-status',[{
                 groupId:groupId
                 ,articleId:articleId
                 ,version:version
@@ -634,4 +634,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

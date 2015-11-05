@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addRule = function(ruleGroupId,nameMap,descriptionMap,type,typeSettings,serviceContext) {
-            return service.invoke('/mdrrule/add-rule',[{
+            return SessionService.invoke('/mdrrule/add-rule',[{
                 ruleGroupId:ruleGroupId
                 ,nameMap:nameMap
                 ,descriptionMap:descriptionMap
@@ -16,22 +16,22 @@
             }]);
         };
         service.deleteRule = function(ruleId) {
-            return service.invoke('/mdrrule/delete-rule',[{
+            return SessionService.invoke('/mdrrule/delete-rule',[{
                 ruleId:ruleId
             }]);
         };
         service.fetchRule = function(ruleId) {
-            return service.invoke('/mdrrule/fetch-rule',[{
+            return SessionService.invoke('/mdrrule/fetch-rule',[{
                 ruleId:ruleId
             }]);
         };
         service.getRule = function(ruleId) {
-            return service.invoke('/mdrrule/get-rule',[{
+            return SessionService.invoke('/mdrrule/get-rule',[{
                 ruleId:ruleId
             }]);
         };
         service.updateRule = function(ruleId,nameMap,descriptionMap,type,typeSettings,serviceContext) {
-            return service.invoke('/mdrrule/update-rule',[{
+            return SessionService.invoke('/mdrrule/update-rule',[{
                 ruleId:ruleId
                 ,nameMap:nameMap
                 ,descriptionMap:descriptionMap
@@ -41,7 +41,7 @@
             }]);
         };
         service.updateRule = function(ruleId,nameMap,descriptionMap,type,typeSettingsProperties,serviceContext) {
-            return service.invoke('/mdrrule/update-rule',[{
+            return SessionService.invoke('/mdrrule/update-rule',[{
                 ruleId:ruleId
                 ,nameMap:nameMap
                 ,descriptionMap:descriptionMap
@@ -54,4 +54,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

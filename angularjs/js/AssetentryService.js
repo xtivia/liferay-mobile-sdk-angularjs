@@ -6,40 +6,40 @@
         var service = {};
         // Begin generated service methods
         service.getCompanyEntries = function(companyId,start,end) {
-            return service.invoke('/assetentry/get-company-entries',[{
+            return SessionService.invoke('/assetentry/get-company-entries',[{
                 companyId:companyId
                 ,start:start
                 ,end:end
             }]);
         };
         service.getCompanyEntriesCount = function(companyId) {
-            return service.invoke('/assetentry/get-company-entries-count',[{
+            return SessionService.invoke('/assetentry/get-company-entries-count',[{
                 companyId:companyId
             }]);
         };
         service.getEntries = function(entryQuery) {
-            return service.invoke('/assetentry/get-entries',[{
+            return SessionService.invoke('/assetentry/get-entries',[{
                 entryQuery:entryQuery
             }]);
         };
         service.getEntriesCount = function(entryQuery) {
-            return service.invoke('/assetentry/get-entries-count',[{
+            return SessionService.invoke('/assetentry/get-entries-count',[{
                 entryQuery:entryQuery
             }]);
         };
         service.getEntry = function(entryId) {
-            return service.invoke('/assetentry/get-entry',[{
+            return SessionService.invoke('/assetentry/get-entry',[{
                 entryId:entryId
             }]);
         };
         service.incrementViewCounter = function(className,classPK) {
-            return service.invoke('/assetentry/increment-view-counter',[{
+            return SessionService.invoke('/assetentry/increment-view-counter',[{
                 className:className
                 ,classPK:classPK
             }]);
         };
         service.updateEntry = function(groupId,className,classPK,classUuid,classTypeId,categoryIds,tagNames,visible,startDate,endDate,expirationDate,mimeType,title,description,summary,url,layoutUuid,height,width,priority,sync) {
-            return service.invoke('/assetentry/update-entry',[{
+            return SessionService.invoke('/assetentry/update-entry',[{
                 groupId:groupId
                 ,className:className
                 ,classPK:classPK
@@ -64,7 +64,7 @@
             }]);
         };
         service.updateEntry = function(groupId,className,classPK,classUuid,classTypeId,categoryIds,tagNames,visible,startDate,endDate,publishDate,expirationDate,mimeType,title,description,summary,url,layoutUuid,height,width,priority,sync) {
-            return service.invoke('/assetentry/update-entry',[{
+            return SessionService.invoke('/assetentry/update-entry',[{
                 groupId:groupId
                 ,className:className
                 ,classPK:classPK
@@ -90,7 +90,7 @@
             }]);
         };
         service.updateEntry = function(groupId,createDate,modifiedDate,className,classPK,classUuid,classTypeId,categoryIds,tagNames,visible,startDate,endDate,expirationDate,mimeType,title,description,summary,url,layoutUuid,height,width,priority,sync) {
-            return service.invoke('/assetentry/update-entry',[{
+            return SessionService.invoke('/assetentry/update-entry',[{
                 groupId:groupId
                 ,createDate:createDate
                 ,modifiedDate:modifiedDate
@@ -120,4 +120,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

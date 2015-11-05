@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addPhone = function(className,classPK,number,extension,typeId,primary) {
-            return service.invoke('/phone/add-phone',[{
+            return SessionService.invoke('/phone/add-phone',[{
                 className:className
                 ,classPK:classPK
                 ,number:number
@@ -16,7 +16,7 @@
             }]);
         };
         service.addPhone = function(className,classPK,number,extension,typeId,primary,serviceContext) {
-            return service.invoke('/phone/add-phone',[{
+            return SessionService.invoke('/phone/add-phone',[{
                 className:className
                 ,classPK:classPK
                 ,number:number
@@ -27,23 +27,23 @@
             }]);
         };
         service.deletePhone = function(phoneId) {
-            return service.invoke('/phone/delete-phone',[{
+            return SessionService.invoke('/phone/delete-phone',[{
                 phoneId:phoneId
             }]);
         };
         service.getPhone = function(phoneId) {
-            return service.invoke('/phone/get-phone',[{
+            return SessionService.invoke('/phone/get-phone',[{
                 phoneId:phoneId
             }]);
         };
         service.getPhones = function(className,classPK) {
-            return service.invoke('/phone/get-phones',[{
+            return SessionService.invoke('/phone/get-phones',[{
                 className:className
                 ,classPK:classPK
             }]);
         };
         service.updatePhone = function(phoneId,number,extension,typeId,primary) {
-            return service.invoke('/phone/update-phone',[{
+            return SessionService.invoke('/phone/update-phone',[{
                 phoneId:phoneId
                 ,number:number
                 ,extension:extension
@@ -55,4 +55,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

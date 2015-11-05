@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addLayout = function(groupId,privateLayout,parentLayoutId,name,title,description,type,hidden,friendlyURL,serviceContext) {
-            return service.invoke('/layout/add-layout',[{
+            return SessionService.invoke('/layout/add-layout',[{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,parentLayoutId:parentLayoutId
@@ -20,7 +20,7 @@
             }]);
         };
         service.addLayout = function(groupId,privateLayout,parentLayoutId,localeNamesMap,localeTitlesMap,descriptionMap,keywordsMap,robotsMap,type,hidden,friendlyURL,serviceContext) {
-            return service.invoke('/layout/add-layout',[{
+            return SessionService.invoke('/layout/add-layout',[{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,parentLayoutId:parentLayoutId
@@ -36,7 +36,7 @@
             }]);
         };
         service.addLayout = function(groupId,privateLayout,parentLayoutId,localeNamesMap,localeTitlesMap,descriptionMap,keywordsMap,robotsMap,type,typeSettings,hidden,friendlyURLMap,serviceContext) {
-            return service.invoke('/layout/add-layout',[{
+            return SessionService.invoke('/layout/add-layout',[{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,parentLayoutId:parentLayoutId
@@ -53,13 +53,13 @@
             }]);
         };
         service.deleteLayout = function(plid,serviceContext) {
-            return service.invoke('/layout/delete-layout',[{
+            return SessionService.invoke('/layout/delete-layout',[{
                 plid:plid
                 ,serviceContext:serviceContext
             }]);
         };
         service.deleteLayout = function(groupId,privateLayout,layoutId,serviceContext) {
-            return service.invoke('/layout/delete-layout',[{
+            return SessionService.invoke('/layout/delete-layout',[{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,layoutId:layoutId
@@ -67,14 +67,14 @@
             }]);
         };
         service.deleteTempFileEntry = function(groupId,fileName,tempFolderName) {
-            return service.invoke('/layout/delete-temp-file-entry',[{
+            return SessionService.invoke('/layout/delete-temp-file-entry',[{
                 groupId:groupId
                 ,fileName:fileName
                 ,tempFolderName:tempFolderName
             }]);
         };
         service.exportLayouts = function(groupId,privateLayout,parameterMap,startDate,endDate) {
-            return service.invoke('/layout/export-layouts',[{
+            return SessionService.invoke('/layout/export-layouts',[{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,parameterMap:parameterMap
@@ -83,7 +83,7 @@
             }]);
         };
         service.exportLayouts = function(groupId,privateLayout,layoutIds,parameterMap,startDate,endDate) {
-            return service.invoke('/layout/export-layouts',[{
+            return SessionService.invoke('/layout/export-layouts',[{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,layoutIds:layoutIds
@@ -93,7 +93,7 @@
             }]);
         };
         service.exportLayoutsAsFile = function(groupId,privateLayout,layoutIds,parameterMap,startDate,endDate) {
-            return service.invoke('/layout/export-layouts-as-file',[{
+            return SessionService.invoke('/layout/export-layouts-as-file',[{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,layoutIds:layoutIds
@@ -103,7 +103,7 @@
             }]);
         };
         service.exportLayoutsAsFileInBackground = function(taskName,groupId,privateLayout,layoutIds,parameterMap,startDate,endDate,fileName) {
-            return service.invoke('/layout/export-layouts-as-file-in-background',[{
+            return SessionService.invoke('/layout/export-layouts-as-file-in-background',[{
                 taskName:taskName
                 ,groupId:groupId
                 ,privateLayout:privateLayout
@@ -115,7 +115,7 @@
             }]);
         };
         service.exportPortletInfo = function(companyId,portletId,parameterMap,startDate,endDate) {
-            return service.invoke('/layout/export-portlet-info',[{
+            return SessionService.invoke('/layout/export-portlet-info',[{
                 companyId:companyId
                 ,portletId:portletId
                 ,parameterMap:parameterMap
@@ -124,7 +124,7 @@
             }]);
         };
         service.exportPortletInfo = function(plid,groupId,portletId,parameterMap,startDate,endDate) {
-            return service.invoke('/layout/export-portlet-info',[{
+            return SessionService.invoke('/layout/export-portlet-info',[{
                 plid:plid
                 ,groupId:groupId
                 ,portletId:portletId
@@ -134,7 +134,7 @@
             }]);
         };
         service.exportPortletInfoAsFile = function(portletId,parameterMap,startDate,endDate) {
-            return service.invoke('/layout/export-portlet-info-as-file',[{
+            return SessionService.invoke('/layout/export-portlet-info-as-file',[{
                 portletId:portletId
                 ,parameterMap:parameterMap
                 ,startDate:startDate
@@ -142,7 +142,7 @@
             }]);
         };
         service.exportPortletInfoAsFile = function(plid,groupId,portletId,parameterMap,startDate,endDate) {
-            return service.invoke('/layout/export-portlet-info-as-file',[{
+            return SessionService.invoke('/layout/export-portlet-info-as-file',[{
                 plid:plid
                 ,groupId:groupId
                 ,portletId:portletId
@@ -152,7 +152,7 @@
             }]);
         };
         service.exportPortletInfoAsFileInBackground = function(taskName,portletId,parameterMap,startDate,endDate,fileName) {
-            return service.invoke('/layout/export-portlet-info-as-file-in-background',[{
+            return SessionService.invoke('/layout/export-portlet-info-as-file-in-background',[{
                 taskName:taskName
                 ,portletId:portletId
                 ,parameterMap:parameterMap
@@ -162,7 +162,7 @@
             }]);
         };
         service.exportPortletInfoAsFileInBackground = function(taskName,plid,groupId,portletId,parameterMap,startDate,endDate,fileName) {
-            return service.invoke('/layout/export-portlet-info-as-file-in-background',[{
+            return SessionService.invoke('/layout/export-portlet-info-as-file-in-background',[{
                 taskName:taskName
                 ,plid:plid
                 ,groupId:groupId
@@ -174,19 +174,19 @@
             }]);
         };
         service.getAncestorLayouts = function(plid) {
-            return service.invoke('/layout/get-ancestor-layouts',[{
+            return SessionService.invoke('/layout/get-ancestor-layouts',[{
                 plid:plid
             }]);
         };
         service.getDefaultPlid = function(groupId,scopeGroupId,portletId) {
-            return service.invoke('/layout/get-default-plid',[{
+            return SessionService.invoke('/layout/get-default-plid',[{
                 groupId:groupId
                 ,scopeGroupId:scopeGroupId
                 ,portletId:portletId
             }]);
         };
         service.getDefaultPlid = function(groupId,scopeGroupId,privateLayout,portletId) {
-            return service.invoke('/layout/get-default-plid',[{
+            return SessionService.invoke('/layout/get-default-plid',[{
                 groupId:groupId
                 ,scopeGroupId:scopeGroupId
                 ,privateLayout:privateLayout
@@ -194,14 +194,14 @@
             }]);
         };
         service.getLayoutByUuidAndGroupId = function(uuid,groupId,privateLayout) {
-            return service.invoke('/layout/get-layout-by-uuid-and-group-id',[{
+            return SessionService.invoke('/layout/get-layout-by-uuid-and-group-id',[{
                 uuid:uuid
                 ,groupId:groupId
                 ,privateLayout:privateLayout
             }]);
         };
         service.getLayoutName = function(groupId,privateLayout,layoutId,languageId) {
-            return service.invoke('/layout/get-layout-name',[{
+            return SessionService.invoke('/layout/get-layout-name',[{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,layoutId:layoutId
@@ -209,7 +209,7 @@
             }]);
         };
         service.getLayoutReferences = function(companyId,portletId,preferencesKey,preferencesValue) {
-            return service.invoke('/layout/get-layout-references',[{
+            return SessionService.invoke('/layout/get-layout-references',[{
                 companyId:companyId
                 ,portletId:portletId
                 ,preferencesKey:preferencesKey
@@ -217,20 +217,20 @@
             }]);
         };
         service.getLayouts = function(groupId,privateLayout) {
-            return service.invoke('/layout/get-layouts',[{
+            return SessionService.invoke('/layout/get-layouts',[{
                 groupId:groupId
                 ,privateLayout:privateLayout
             }]);
         };
         service.getLayouts = function(groupId,privateLayout,parentLayoutId) {
-            return service.invoke('/layout/get-layouts',[{
+            return SessionService.invoke('/layout/get-layouts',[{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,parentLayoutId:parentLayoutId
             }]);
         };
         service.getLayouts = function(groupId,privateLayout,parentLayoutId,incomplete,start,end) {
-            return service.invoke('/layout/get-layouts',[{
+            return SessionService.invoke('/layout/get-layouts',[{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,parentLayoutId:parentLayoutId
@@ -240,20 +240,20 @@
             }]);
         };
         service.getLayoutsCount = function(groupId,privateLayout,parentLayoutId) {
-            return service.invoke('/layout/get-layouts-count',[{
+            return SessionService.invoke('/layout/get-layouts-count',[{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,parentLayoutId:parentLayoutId
             }]);
         };
         service.getTempFileEntryNames = function(groupId,tempFolderName) {
-            return service.invoke('/layout/get-temp-file-entry-names',[{
+            return SessionService.invoke('/layout/get-temp-file-entry-names',[{
                 groupId:groupId
                 ,tempFolderName:tempFolderName
             }]);
         };
         service.importLayouts = function(groupId,privateLayout,parameterMap,bytes) {
-            return service.invoke('/layout/import-layouts',[{
+            return SessionService.invoke('/layout/import-layouts',[{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,parameterMap:parameterMap
@@ -261,7 +261,7 @@
             }]);
         };
         service.importLayouts = function(groupId,privateLayout,parameterMap,file) {
-            return service.invoke('/layout/import-layouts',[{
+            return SessionService.invoke('/layout/import-layouts',[{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,parameterMap:parameterMap
@@ -269,7 +269,7 @@
             }]);
         };
         service.importLayoutsInBackground = function(taskName,groupId,privateLayout,parameterMap,file) {
-            return service.invoke('/layout/import-layouts-in-background',[{
+            return SessionService.invoke('/layout/import-layouts-in-background',[{
                 taskName:taskName
                 ,groupId:groupId
                 ,privateLayout:privateLayout
@@ -278,14 +278,14 @@
             }]);
         };
         service.importPortletInfo = function(portletId,parameterMap,file) {
-            return service.invoke('/layout/import-portlet-info',[{
+            return SessionService.invoke('/layout/import-portlet-info',[{
                 portletId:portletId
                 ,parameterMap:parameterMap
                 ,file:file
             }]);
         };
         service.importPortletInfo = function(plid,groupId,portletId,parameterMap,file) {
-            return service.invoke('/layout/import-portlet-info',[{
+            return SessionService.invoke('/layout/import-portlet-info',[{
                 plid:plid
                 ,groupId:groupId
                 ,portletId:portletId
@@ -294,7 +294,7 @@
             }]);
         };
         service.importPortletInfoInBackground = function(taskName,portletId,parameterMap,file) {
-            return service.invoke('/layout/import-portlet-info-in-background',[{
+            return SessionService.invoke('/layout/import-portlet-info-in-background',[{
                 taskName:taskName
                 ,portletId:portletId
                 ,parameterMap:parameterMap
@@ -302,7 +302,7 @@
             }]);
         };
         service.importPortletInfoInBackground = function(taskName,plid,groupId,portletId,parameterMap,file) {
-            return service.invoke('/layout/import-portlet-info-in-background',[{
+            return SessionService.invoke('/layout/import-portlet-info-in-background',[{
                 taskName:taskName
                 ,plid:plid
                 ,groupId:groupId
@@ -312,7 +312,7 @@
             }]);
         };
         service.schedulePublishToLive = function(sourceGroupId,targetGroupId,privateLayout,layoutIdMap,parameterMap,scope,startDate,endDate,groupName,cronText,schedulerStartDate,schedulerEndDate,description) {
-            return service.invoke('/layout/schedule-publish-to-live',[{
+            return SessionService.invoke('/layout/schedule-publish-to-live',[{
                 sourceGroupId:sourceGroupId
                 ,targetGroupId:targetGroupId
                 ,privateLayout:privateLayout
@@ -329,7 +329,7 @@
             }]);
         };
         service.schedulePublishToRemote = function(sourceGroupId,privateLayout,layoutIdMap,parameterMap,remoteAddress,remotePort,remotePathContext,secureConnection,remoteGroupId,remotePrivateLayout,startDate,endDate,groupName,cronText,schedulerStartDate,schedulerEndDate,description) {
-            return service.invoke('/layout/schedule-publish-to-remote',[{
+            return SessionService.invoke('/layout/schedule-publish-to-remote',[{
                 sourceGroupId:sourceGroupId
                 ,privateLayout:privateLayout
                 ,layoutIdMap:layoutIdMap
@@ -350,7 +350,7 @@
             }]);
         };
         service.setLayouts = function(groupId,privateLayout,parentLayoutId,layoutIds,serviceContext) {
-            return service.invoke('/layout/set-layouts',[{
+            return SessionService.invoke('/layout/set-layouts',[{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,parentLayoutId:parentLayoutId
@@ -359,21 +359,21 @@
             }]);
         };
         service.unschedulePublishToLive = function(groupId,jobName,groupName) {
-            return service.invoke('/layout/unschedule-publish-to-live',[{
+            return SessionService.invoke('/layout/unschedule-publish-to-live',[{
                 groupId:groupId
                 ,jobName:jobName
                 ,groupName:groupName
             }]);
         };
         service.unschedulePublishToRemote = function(groupId,jobName,groupName) {
-            return service.invoke('/layout/unschedule-publish-to-remote',[{
+            return SessionService.invoke('/layout/unschedule-publish-to-remote',[{
                 groupId:groupId
                 ,jobName:jobName
                 ,groupName:groupName
             }]);
         };
         service.updateLayout = function(groupId,privateLayout,layoutId,parentLayoutId,localeNamesMap,localeTitlesMap,descriptionMap,keywordsMap,robotsMap,type,hidden,friendlyURL,iconImage,iconBytes,serviceContext) {
-            return service.invoke('/layout/update-layout',[{
+            return SessionService.invoke('/layout/update-layout',[{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,layoutId:layoutId
@@ -392,7 +392,7 @@
             }]);
         };
         service.updateLayout = function(groupId,privateLayout,layoutId,parentLayoutId,localeNamesMap,localeTitlesMap,descriptionMap,keywordsMap,robotsMap,type,hidden,friendlyURLMap,iconImage,iconBytes,serviceContext) {
-            return service.invoke('/layout/update-layout',[{
+            return SessionService.invoke('/layout/update-layout',[{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,layoutId:layoutId
@@ -411,7 +411,7 @@
             }]);
         };
         service.updateLayout = function(groupId,privateLayout,layoutId,typeSettings) {
-            return service.invoke('/layout/update-layout',[{
+            return SessionService.invoke('/layout/update-layout',[{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,layoutId:layoutId
@@ -419,7 +419,7 @@
             }]);
         };
         service.updateLookAndFeel = function(groupId,privateLayout,layoutId,themeId,colorSchemeId,css,wapTheme) {
-            return service.invoke('/layout/update-look-and-feel',[{
+            return SessionService.invoke('/layout/update-look-and-feel',[{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,layoutId:layoutId
@@ -430,14 +430,14 @@
             }]);
         };
         service.updateName = function(plid,name,languageId) {
-            return service.invoke('/layout/update-name',[{
+            return SessionService.invoke('/layout/update-name',[{
                 plid:plid
                 ,name:name
                 ,languageId:languageId
             }]);
         };
         service.updateName = function(groupId,privateLayout,layoutId,name,languageId) {
-            return service.invoke('/layout/update-name',[{
+            return SessionService.invoke('/layout/update-name',[{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,layoutId:layoutId
@@ -446,13 +446,13 @@
             }]);
         };
         service.updateParentLayoutId = function(plid,parentPlid) {
-            return service.invoke('/layout/update-parent-layout-id',[{
+            return SessionService.invoke('/layout/update-parent-layout-id',[{
                 plid:plid
                 ,parentPlid:parentPlid
             }]);
         };
         service.updateParentLayoutId = function(groupId,privateLayout,layoutId,parentLayoutId) {
-            return service.invoke('/layout/update-parent-layout-id',[{
+            return SessionService.invoke('/layout/update-parent-layout-id',[{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,layoutId:layoutId
@@ -460,20 +460,20 @@
             }]);
         };
         service.updateParentLayoutIdAndPriority = function(plid,parentPlid,priority) {
-            return service.invoke('/layout/update-parent-layout-id-and-priority',[{
+            return SessionService.invoke('/layout/update-parent-layout-id-and-priority',[{
                 plid:plid
                 ,parentPlid:parentPlid
                 ,priority:priority
             }]);
         };
         service.updatePriority = function(plid,priority) {
-            return service.invoke('/layout/update-priority',[{
+            return SessionService.invoke('/layout/update-priority',[{
                 plid:plid
                 ,priority:priority
             }]);
         };
         service.updatePriority = function(groupId,privateLayout,layoutId,priority) {
-            return service.invoke('/layout/update-priority',[{
+            return SessionService.invoke('/layout/update-priority',[{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,layoutId:layoutId
@@ -481,7 +481,7 @@
             }]);
         };
         service.updatePriority = function(groupId,privateLayout,layoutId,nextLayoutId,previousLayoutId) {
-            return service.invoke('/layout/update-priority',[{
+            return SessionService.invoke('/layout/update-priority',[{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,layoutId:layoutId
@@ -490,7 +490,7 @@
             }]);
         };
         service.validateImportLayoutsFile = function(groupId,privateLayout,parameterMap,file) {
-            return service.invoke('/layout/validate-import-layouts-file',[{
+            return SessionService.invoke('/layout/validate-import-layouts-file',[{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,parameterMap:parameterMap
@@ -498,7 +498,7 @@
             }]);
         };
         service.validateImportPortletInfo = function(plid,groupId,portletId,parameterMap,file) {
-            return service.invoke('/layout/validate-import-portlet-info',[{
+            return SessionService.invoke('/layout/validate-import-portlet-info',[{
                 plid:plid
                 ,groupId:groupId
                 ,portletId:portletId
@@ -510,4 +510,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

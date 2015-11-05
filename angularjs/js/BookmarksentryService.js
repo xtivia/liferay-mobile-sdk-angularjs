@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addEntry = function(groupId,folderId,name,url,description,serviceContext) {
-            return service.invoke('/bookmarksentry/add-entry',[{
+            return SessionService.invoke('/bookmarksentry/add-entry',[{
                 groupId:groupId
                 ,folderId:folderId
                 ,name:name
@@ -16,12 +16,12 @@
             }]);
         };
         service.deleteEntry = function(entryId) {
-            return service.invoke('/bookmarksentry/delete-entry',[{
+            return SessionService.invoke('/bookmarksentry/delete-entry',[{
                 entryId:entryId
             }]);
         };
         service.getEntries = function(groupId,folderId,start,end) {
-            return service.invoke('/bookmarksentry/get-entries',[{
+            return SessionService.invoke('/bookmarksentry/get-entries',[{
                 groupId:groupId
                 ,folderId:folderId
                 ,start:start
@@ -29,7 +29,7 @@
             }]);
         };
         service.getEntries = function(groupId,folderId,start,end,orderByComparator) {
-            return service.invoke('/bookmarksentry/get-entries',[{
+            return SessionService.invoke('/bookmarksentry/get-entries',[{
                 groupId:groupId
                 ,folderId:folderId
                 ,start:start
@@ -38,38 +38,38 @@
             }]);
         };
         service.getEntriesCount = function(groupId,folderId) {
-            return service.invoke('/bookmarksentry/get-entries-count',[{
+            return SessionService.invoke('/bookmarksentry/get-entries-count',[{
                 groupId:groupId
                 ,folderId:folderId
             }]);
         };
         service.getEntriesCount = function(groupId,folderId,status) {
-            return service.invoke('/bookmarksentry/get-entries-count',[{
+            return SessionService.invoke('/bookmarksentry/get-entries-count',[{
                 groupId:groupId
                 ,folderId:folderId
                 ,status:status
             }]);
         };
         service.getEntry = function(entryId) {
-            return service.invoke('/bookmarksentry/get-entry',[{
+            return SessionService.invoke('/bookmarksentry/get-entry',[{
                 entryId:entryId
             }]);
         };
         service.getFoldersEntriesCount = function(groupId,folderIds) {
-            return service.invoke('/bookmarksentry/get-folders-entries-count',[{
+            return SessionService.invoke('/bookmarksentry/get-folders-entries-count',[{
                 groupId:groupId
                 ,folderIds:folderIds
             }]);
         };
         service.getGroupEntries = function(groupId,start,end) {
-            return service.invoke('/bookmarksentry/get-group-entries',[{
+            return SessionService.invoke('/bookmarksentry/get-group-entries',[{
                 groupId:groupId
                 ,start:start
                 ,end:end
             }]);
         };
         service.getGroupEntries = function(groupId,userId,start,end) {
-            return service.invoke('/bookmarksentry/get-group-entries',[{
+            return SessionService.invoke('/bookmarksentry/get-group-entries',[{
                 groupId:groupId
                 ,userId:userId
                 ,start:start
@@ -77,7 +77,7 @@
             }]);
         };
         service.getGroupEntries = function(groupId,userId,rootFolderId,start,end) {
-            return service.invoke('/bookmarksentry/get-group-entries',[{
+            return SessionService.invoke('/bookmarksentry/get-group-entries',[{
                 groupId:groupId
                 ,userId:userId
                 ,rootFolderId:rootFolderId
@@ -86,57 +86,57 @@
             }]);
         };
         service.getGroupEntriesCount = function(groupId) {
-            return service.invoke('/bookmarksentry/get-group-entries-count',[{
+            return SessionService.invoke('/bookmarksentry/get-group-entries-count',[{
                 groupId:groupId
             }]);
         };
         service.getGroupEntriesCount = function(groupId,userId) {
-            return service.invoke('/bookmarksentry/get-group-entries-count',[{
+            return SessionService.invoke('/bookmarksentry/get-group-entries-count',[{
                 groupId:groupId
                 ,userId:userId
             }]);
         };
         service.getGroupEntriesCount = function(groupId,userId,rootFolderId) {
-            return service.invoke('/bookmarksentry/get-group-entries-count',[{
+            return SessionService.invoke('/bookmarksentry/get-group-entries-count',[{
                 groupId:groupId
                 ,userId:userId
                 ,rootFolderId:rootFolderId
             }]);
         };
         service.moveEntry = function(entryId,parentFolderId) {
-            return service.invoke('/bookmarksentry/move-entry',[{
+            return SessionService.invoke('/bookmarksentry/move-entry',[{
                 entryId:entryId
                 ,parentFolderId:parentFolderId
             }]);
         };
         service.moveEntryFromTrash = function(entryId,parentFolderId) {
-            return service.invoke('/bookmarksentry/move-entry-from-trash',[{
+            return SessionService.invoke('/bookmarksentry/move-entry-from-trash',[{
                 entryId:entryId
                 ,parentFolderId:parentFolderId
             }]);
         };
         service.moveEntryToTrash = function(entryId) {
-            return service.invoke('/bookmarksentry/move-entry-to-trash',[{
+            return SessionService.invoke('/bookmarksentry/move-entry-to-trash',[{
                 entryId:entryId
             }]);
         };
         service.openEntry = function(entry) {
-            return service.invoke('/bookmarksentry/open-entry',[{
+            return SessionService.invoke('/bookmarksentry/open-entry',[{
                 entry:entry
             }]);
         };
         service.openEntry = function(entryId) {
-            return service.invoke('/bookmarksentry/open-entry',[{
+            return SessionService.invoke('/bookmarksentry/open-entry',[{
                 entryId:entryId
             }]);
         };
         service.restoreEntryFromTrash = function(entryId) {
-            return service.invoke('/bookmarksentry/restore-entry-from-trash',[{
+            return SessionService.invoke('/bookmarksentry/restore-entry-from-trash',[{
                 entryId:entryId
             }]);
         };
         service.search = function(groupId,creatorUserId,status,start,end) {
-            return service.invoke('/bookmarksentry/search',[{
+            return SessionService.invoke('/bookmarksentry/search',[{
                 groupId:groupId
                 ,creatorUserId:creatorUserId
                 ,status:status
@@ -145,17 +145,17 @@
             }]);
         };
         service.subscribeEntry = function(entryId) {
-            return service.invoke('/bookmarksentry/subscribe-entry',[{
+            return SessionService.invoke('/bookmarksentry/subscribe-entry',[{
                 entryId:entryId
             }]);
         };
         service.unsubscribeEntry = function(entryId) {
-            return service.invoke('/bookmarksentry/unsubscribe-entry',[{
+            return SessionService.invoke('/bookmarksentry/unsubscribe-entry',[{
                 entryId:entryId
             }]);
         };
         service.updateEntry = function(entryId,groupId,folderId,name,url,description,serviceContext) {
-            return service.invoke('/bookmarksentry/update-entry',[{
+            return SessionService.invoke('/bookmarksentry/update-entry',[{
                 entryId:entryId
                 ,groupId:groupId
                 ,folderId:folderId
@@ -169,4 +169,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

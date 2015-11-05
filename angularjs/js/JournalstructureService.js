@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addStructure = function(groupId,structureId,autoStructureId,parentStructureId,nameMap,descriptionMap,xsd,serviceContext) {
-            return service.invoke('/journalstructure/add-structure',[{
+            return SessionService.invoke('/journalstructure/add-structure',[{
                 groupId:groupId
                 ,structureId:structureId
                 ,autoStructureId:autoStructureId
@@ -18,7 +18,7 @@
             }]);
         };
         service.copyStructure = function(groupId,oldStructureId,newStructureId,autoStructureId) {
-            return service.invoke('/journalstructure/copy-structure',[{
+            return SessionService.invoke('/journalstructure/copy-structure',[{
                 groupId:groupId
                 ,oldStructureId:oldStructureId
                 ,newStructureId:newStructureId
@@ -26,36 +26,36 @@
             }]);
         };
         service.deleteStructure = function(groupId,structureId) {
-            return service.invoke('/journalstructure/delete-structure',[{
+            return SessionService.invoke('/journalstructure/delete-structure',[{
                 groupId:groupId
                 ,structureId:structureId
             }]);
         };
         service.getStructure = function(groupId,structureId) {
-            return service.invoke('/journalstructure/get-structure',[{
+            return SessionService.invoke('/journalstructure/get-structure',[{
                 groupId:groupId
                 ,structureId:structureId
             }]);
         };
         service.getStructure = function(groupId,structureId,includeGlobalStructures) {
-            return service.invoke('/journalstructure/get-structure',[{
+            return SessionService.invoke('/journalstructure/get-structure',[{
                 groupId:groupId
                 ,structureId:structureId
                 ,includeGlobalStructures:includeGlobalStructures
             }]);
         };
         service.getStructures = function(groupId) {
-            return service.invoke('/journalstructure/get-structures',[{
+            return SessionService.invoke('/journalstructure/get-structures',[{
                 groupId:groupId
             }]);
         };
         service.getStructures = function(groupIds) {
-            return service.invoke('/journalstructure/get-structures',[{
+            return SessionService.invoke('/journalstructure/get-structures',[{
                 groupIds:groupIds
             }]);
         };
         service.search = function(companyId,groupIds,keywords,start,end,obc) {
-            return service.invoke('/journalstructure/search',[{
+            return SessionService.invoke('/journalstructure/search',[{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,keywords:keywords
@@ -65,7 +65,7 @@
             }]);
         };
         service.search = function(companyId,groupIds,structureId,name,description,andOperator,start,end,obc) {
-            return service.invoke('/journalstructure/search',[{
+            return SessionService.invoke('/journalstructure/search',[{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,structureId:structureId
@@ -78,14 +78,14 @@
             }]);
         };
         service.searchCount = function(companyId,groupIds,keywords) {
-            return service.invoke('/journalstructure/search-count',[{
+            return SessionService.invoke('/journalstructure/search-count',[{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,keywords:keywords
             }]);
         };
         service.searchCount = function(companyId,groupIds,structureId,name,description,andOperator) {
-            return service.invoke('/journalstructure/search-count',[{
+            return SessionService.invoke('/journalstructure/search-count',[{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,structureId:structureId
@@ -95,7 +95,7 @@
             }]);
         };
         service.updateStructure = function(groupId,structureId,parentStructureId,nameMap,descriptionMap,xsd,serviceContext) {
-            return service.invoke('/journalstructure/update-structure',[{
+            return SessionService.invoke('/journalstructure/update-structure',[{
                 groupId:groupId
                 ,structureId:structureId
                 ,parentStructureId:parentStructureId
@@ -109,4 +109,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

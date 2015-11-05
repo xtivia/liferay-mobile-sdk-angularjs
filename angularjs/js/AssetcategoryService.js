@@ -6,14 +6,14 @@
         var service = {};
         // Begin generated service methods
         service.addCategory = function(title,vocabularyId,serviceContext) {
-            return service.invoke('/assetcategory/add-category',[{
+            return SessionService.invoke('/assetcategory/add-category',[{
                 title:title
                 ,vocabularyId:vocabularyId
                 ,serviceContext:serviceContext
             }]);
         };
         service.addCategory = function(parentCategoryId,titleMap,descriptionMap,vocabularyId,categoryProperties,serviceContext) {
-            return service.invoke('/assetcategory/add-category',[{
+            return SessionService.invoke('/assetcategory/add-category',[{
                 parentCategoryId:parentCategoryId
                 ,titleMap:titleMap
                 ,descriptionMap:descriptionMap
@@ -23,39 +23,39 @@
             }]);
         };
         service.deleteCategories = function(categoryIds) {
-            return service.invoke('/assetcategory/delete-categories',[{
+            return SessionService.invoke('/assetcategory/delete-categories',[{
                 categoryIds:categoryIds
             }]);
         };
         service.deleteCategories = function(categoryIds,serviceContext) {
-            return service.invoke('/assetcategory/delete-categories',[{
+            return SessionService.invoke('/assetcategory/delete-categories',[{
                 categoryIds:categoryIds
                 ,serviceContext:serviceContext
             }]);
         };
         service.deleteCategory = function(categoryId) {
-            return service.invoke('/assetcategory/delete-category',[{
+            return SessionService.invoke('/assetcategory/delete-category',[{
                 categoryId:categoryId
             }]);
         };
         service.getCategories = function(className,classPK) {
-            return service.invoke('/assetcategory/get-categories',[{
+            return SessionService.invoke('/assetcategory/get-categories',[{
                 className:className
                 ,classPK:classPK
             }]);
         };
         service.getCategory = function(categoryId) {
-            return service.invoke('/assetcategory/get-category',[{
+            return SessionService.invoke('/assetcategory/get-category',[{
                 categoryId:categoryId
             }]);
         };
         service.getChildCategories = function(parentCategoryId) {
-            return service.invoke('/assetcategory/get-child-categories',[{
+            return SessionService.invoke('/assetcategory/get-child-categories',[{
                 parentCategoryId:parentCategoryId
             }]);
         };
         service.getChildCategories = function(parentCategoryId,start,end,obc) {
-            return service.invoke('/assetcategory/get-child-categories',[{
+            return SessionService.invoke('/assetcategory/get-child-categories',[{
                 parentCategoryId:parentCategoryId
                 ,start:start
                 ,end:end
@@ -63,7 +63,7 @@
             }]);
         };
         service.getJsonSearch = function(groupId,name,vocabularyIds,start,end) {
-            return service.invoke('/assetcategory/get-json-search',[{
+            return SessionService.invoke('/assetcategory/get-json-search',[{
                 groupId:groupId
                 ,name:name
                 ,vocabularyIds:vocabularyIds
@@ -72,7 +72,7 @@
             }]);
         };
         service.getJsonVocabularyCategories = function(vocabularyId,start,end,obc) {
-            return service.invoke('/assetcategory/get-json-vocabulary-categories',[{
+            return SessionService.invoke('/assetcategory/get-json-vocabulary-categories',[{
                 vocabularyId:vocabularyId
                 ,start:start
                 ,end:end
@@ -80,7 +80,7 @@
             }]);
         };
         service.getJsonVocabularyCategories = function(groupId,title,vocabularyId,start,end,obc) {
-            return service.invoke('/assetcategory/get-json-vocabulary-categories',[{
+            return SessionService.invoke('/assetcategory/get-json-vocabulary-categories',[{
                 groupId:groupId
                 ,title:title
                 ,vocabularyId:vocabularyId
@@ -90,7 +90,7 @@
             }]);
         };
         service.getVocabularyCategories = function(vocabularyId,start,end,obc) {
-            return service.invoke('/assetcategory/get-vocabulary-categories',[{
+            return SessionService.invoke('/assetcategory/get-vocabulary-categories',[{
                 vocabularyId:vocabularyId
                 ,start:start
                 ,end:end
@@ -98,7 +98,7 @@
             }]);
         };
         service.getVocabularyCategories = function(parentCategoryId,vocabularyId,start,end,obc) {
-            return service.invoke('/assetcategory/get-vocabulary-categories',[{
+            return SessionService.invoke('/assetcategory/get-vocabulary-categories',[{
                 parentCategoryId:parentCategoryId
                 ,vocabularyId:vocabularyId
                 ,start:start
@@ -107,7 +107,7 @@
             }]);
         };
         service.getVocabularyCategories = function(groupId,name,vocabularyId,start,end,obc) {
-            return service.invoke('/assetcategory/get-vocabulary-categories',[{
+            return SessionService.invoke('/assetcategory/get-vocabulary-categories',[{
                 groupId:groupId
                 ,name:name
                 ,vocabularyId:vocabularyId
@@ -117,20 +117,20 @@
             }]);
         };
         service.getVocabularyCategoriesCount = function(groupId,vocabularyId) {
-            return service.invoke('/assetcategory/get-vocabulary-categories-count',[{
+            return SessionService.invoke('/assetcategory/get-vocabulary-categories-count',[{
                 groupId:groupId
                 ,vocabularyId:vocabularyId
             }]);
         };
         service.getVocabularyCategoriesCount = function(groupId,name,vocabularyId) {
-            return service.invoke('/assetcategory/get-vocabulary-categories-count',[{
+            return SessionService.invoke('/assetcategory/get-vocabulary-categories-count',[{
                 groupId:groupId
                 ,name:name
                 ,vocabularyId:vocabularyId
             }]);
         };
         service.getVocabularyCategoriesDisplay = function(vocabularyId,start,end,obc) {
-            return service.invoke('/assetcategory/get-vocabulary-categories-display',[{
+            return SessionService.invoke('/assetcategory/get-vocabulary-categories-display',[{
                 vocabularyId:vocabularyId
                 ,start:start
                 ,end:end
@@ -138,7 +138,7 @@
             }]);
         };
         service.getVocabularyCategoriesDisplay = function(groupId,name,vocabularyId,start,end,obc) {
-            return service.invoke('/assetcategory/get-vocabulary-categories-display',[{
+            return SessionService.invoke('/assetcategory/get-vocabulary-categories-display',[{
                 groupId:groupId
                 ,name:name
                 ,vocabularyId:vocabularyId
@@ -148,7 +148,7 @@
             }]);
         };
         service.getVocabularyRootCategories = function(vocabularyId,start,end,obc) {
-            return service.invoke('/assetcategory/get-vocabulary-root-categories',[{
+            return SessionService.invoke('/assetcategory/get-vocabulary-root-categories',[{
                 vocabularyId:vocabularyId
                 ,start:start
                 ,end:end
@@ -156,7 +156,7 @@
             }]);
         };
         service.getVocabularyRootCategories = function(groupId,vocabularyId,start,end,obc) {
-            return service.invoke('/assetcategory/get-vocabulary-root-categories',[{
+            return SessionService.invoke('/assetcategory/get-vocabulary-root-categories',[{
                 groupId:groupId
                 ,vocabularyId:vocabularyId
                 ,start:start
@@ -165,13 +165,13 @@
             }]);
         };
         service.getVocabularyRootCategoriesCount = function(groupId,vocabularyId) {
-            return service.invoke('/assetcategory/get-vocabulary-root-categories-count',[{
+            return SessionService.invoke('/assetcategory/get-vocabulary-root-categories-count',[{
                 groupId:groupId
                 ,vocabularyId:vocabularyId
             }]);
         };
         service.moveCategory = function(categoryId,parentCategoryId,vocabularyId,serviceContext) {
-            return service.invoke('/assetcategory/move-category',[{
+            return SessionService.invoke('/assetcategory/move-category',[{
                 categoryId:categoryId
                 ,parentCategoryId:parentCategoryId
                 ,vocabularyId:vocabularyId
@@ -179,7 +179,7 @@
             }]);
         };
         service.search = function(groupId,name,categoryProperties,start,end) {
-            return service.invoke('/assetcategory/search',[{
+            return SessionService.invoke('/assetcategory/search',[{
                 groupId:groupId
                 ,name:name
                 ,categoryProperties:categoryProperties
@@ -188,7 +188,7 @@
             }]);
         };
         service.search = function(groupIds,title,vocabularyIds,start,end) {
-            return service.invoke('/assetcategory/search',[{
+            return SessionService.invoke('/assetcategory/search',[{
                 groupIds:groupIds
                 ,title:title
                 ,vocabularyIds:vocabularyIds
@@ -197,7 +197,7 @@
             }]);
         };
         service.search = function(groupId,keywords,vocabularyId,start,end,obc) {
-            return service.invoke('/assetcategory/search',[{
+            return SessionService.invoke('/assetcategory/search',[{
                 groupId:groupId
                 ,keywords:keywords
                 ,vocabularyId:vocabularyId
@@ -207,7 +207,7 @@
             }]);
         };
         service.updateCategory = function(categoryId,parentCategoryId,titleMap,descriptionMap,vocabularyId,categoryProperties,serviceContext) {
-            return service.invoke('/assetcategory/update-category',[{
+            return SessionService.invoke('/assetcategory/update-category',[{
                 categoryId:categoryId
                 ,parentCategoryId:parentCategoryId
                 ,titleMap:titleMap
@@ -221,4 +221,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

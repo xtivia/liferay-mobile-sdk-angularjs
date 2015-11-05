@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addProductEntry = function(name,type,tags,shortDescription,longDescription,pageURL,author,repoGroupId,repoArtifactId,licenseIds,thumbnails,fullImages,serviceContext) {
-            return service.invoke('/scproductentry/add-product-entry',[{
+            return SessionService.invoke('/scproductentry/add-product-entry',[{
                 name:name
                 ,type:type
                 ,tags:tags
@@ -23,17 +23,17 @@
             }]);
         };
         service.deleteProductEntry = function(productEntryId) {
-            return service.invoke('/scproductentry/delete-product-entry',[{
+            return SessionService.invoke('/scproductentry/delete-product-entry',[{
                 productEntryId:productEntryId
             }]);
         };
         service.getProductEntry = function(productEntryId) {
-            return service.invoke('/scproductentry/get-product-entry',[{
+            return SessionService.invoke('/scproductentry/get-product-entry',[{
                 productEntryId:productEntryId
             }]);
         };
         service.updateProductEntry = function(productEntryId,name,type,tags,shortDescription,longDescription,pageURL,author,repoGroupId,repoArtifactId,licenseIds,thumbnails,fullImages) {
-            return service.invoke('/scproductentry/update-product-entry',[{
+            return SessionService.invoke('/scproductentry/update-product-entry',[{
                 productEntryId:productEntryId
                 ,name:name
                 ,type:type
@@ -53,4 +53,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

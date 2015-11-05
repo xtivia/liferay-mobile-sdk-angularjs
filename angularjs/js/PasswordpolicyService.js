@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addPasswordPolicy = function(name,description,changeable,changeRequired,minAge,checkSyntax,allowDictionaryWords,minAlphanumeric,minLength,minLowerCase,minNumbers,minSymbols,minUpperCase,history,historyCount,expireable,maxAge,warningTime,graceLimit,lockout,maxFailure,lockoutDuration,resetFailureCount,resetTicketMaxAge) {
-            return service.invoke('/passwordpolicy/add-password-policy',[{
+            return SessionService.invoke('/passwordpolicy/add-password-policy',[{
                 name:name
                 ,description:description
                 ,changeable:changeable
@@ -34,7 +34,7 @@
             }]);
         };
         service.addPasswordPolicy = function(name,description,changeable,changeRequired,minAge,checkSyntax,allowDictionaryWords,minAlphanumeric,minLength,minLowerCase,minNumbers,minSymbols,minUpperCase,regex,history,historyCount,expireable,maxAge,warningTime,graceLimit,lockout,maxFailure,lockoutDuration,resetFailureCount,resetTicketMaxAge,serviceContext) {
-            return service.invoke('/passwordpolicy/add-password-policy',[{
+            return SessionService.invoke('/passwordpolicy/add-password-policy',[{
                 name:name
                 ,description:description
                 ,changeable:changeable
@@ -64,12 +64,12 @@
             }]);
         };
         service.deletePasswordPolicy = function(passwordPolicyId) {
-            return service.invoke('/passwordpolicy/delete-password-policy',[{
+            return SessionService.invoke('/passwordpolicy/delete-password-policy',[{
                 passwordPolicyId:passwordPolicyId
             }]);
         };
         service.updatePasswordPolicy = function(passwordPolicyId,name,description,changeable,changeRequired,minAge,checkSyntax,allowDictionaryWords,minAlphanumeric,minLength,minLowerCase,minNumbers,minSymbols,minUpperCase,history,historyCount,expireable,maxAge,warningTime,graceLimit,lockout,maxFailure,lockoutDuration,resetFailureCount,resetTicketMaxAge) {
-            return service.invoke('/passwordpolicy/update-password-policy',[{
+            return SessionService.invoke('/passwordpolicy/update-password-policy',[{
                 passwordPolicyId:passwordPolicyId
                 ,name:name
                 ,description:description
@@ -98,7 +98,7 @@
             }]);
         };
         service.updatePasswordPolicy = function(passwordPolicyId,name,description,changeable,changeRequired,minAge,checkSyntax,allowDictionaryWords,minAlphanumeric,minLength,minLowerCase,minNumbers,minSymbols,minUpperCase,regex,history,historyCount,expireable,maxAge,warningTime,graceLimit,lockout,maxFailure,lockoutDuration,resetFailureCount,resetTicketMaxAge,serviceContext) {
-            return service.invoke('/passwordpolicy/update-password-policy',[{
+            return SessionService.invoke('/passwordpolicy/update-password-policy',[{
                 passwordPolicyId:passwordPolicyId
                 ,name:name
                 ,description:description
@@ -132,4 +132,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

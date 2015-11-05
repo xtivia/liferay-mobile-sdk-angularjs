@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.updateDelivery = function(userId,type,email,sms,website) {
-            return service.invoke('/announcementsdelivery/update-delivery',[{
+            return SessionService.invoke('/announcementsdelivery/update-delivery',[{
                 userId:userId
                 ,type:type
                 ,email:email
@@ -18,4 +18,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

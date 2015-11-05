@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addCoupon = function(code,autoCode,name,description,startDateMonth,startDateDay,startDateYear,startDateHour,startDateMinute,endDateMonth,endDateDay,endDateYear,endDateHour,endDateMinute,neverExpire,active,limitCategories,limitSkus,minOrder,discount,discountType,serviceContext) {
-            return service.invoke('/shoppingcoupon/add-coupon',[{
+            return SessionService.invoke('/shoppingcoupon/add-coupon',[{
                 code:code
                 ,autoCode:autoCode
                 ,name:name
@@ -32,19 +32,19 @@
             }]);
         };
         service.deleteCoupon = function(groupId,couponId) {
-            return service.invoke('/shoppingcoupon/delete-coupon',[{
+            return SessionService.invoke('/shoppingcoupon/delete-coupon',[{
                 groupId:groupId
                 ,couponId:couponId
             }]);
         };
         service.getCoupon = function(groupId,couponId) {
-            return service.invoke('/shoppingcoupon/get-coupon',[{
+            return SessionService.invoke('/shoppingcoupon/get-coupon',[{
                 groupId:groupId
                 ,couponId:couponId
             }]);
         };
         service.search = function(groupId,companyId,code,active,discountType,andOperator,start,end) {
-            return service.invoke('/shoppingcoupon/search',[{
+            return SessionService.invoke('/shoppingcoupon/search',[{
                 groupId:groupId
                 ,companyId:companyId
                 ,code:code
@@ -56,7 +56,7 @@
             }]);
         };
         service.updateCoupon = function(couponId,name,description,startDateMonth,startDateDay,startDateYear,startDateHour,startDateMinute,endDateMonth,endDateDay,endDateYear,endDateHour,endDateMinute,neverExpire,active,limitCategories,limitSkus,minOrder,discount,discountType,serviceContext) {
-            return service.invoke('/shoppingcoupon/update-coupon',[{
+            return SessionService.invoke('/shoppingcoupon/update-coupon',[{
                 couponId:couponId
                 ,name:name
                 ,description:description
@@ -84,4 +84,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

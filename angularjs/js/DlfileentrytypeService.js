@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addFileEntryType = function(groupId,name,description,ddmStructureIds,serviceContext) {
-            return service.invoke('/dlfileentrytype/add-file-entry-type',[{
+            return SessionService.invoke('/dlfileentrytype/add-file-entry-type',[{
                 groupId:groupId
                 ,name:name
                 ,description:description
@@ -15,7 +15,7 @@
             }]);
         };
         service.addFileEntryType = function(groupId,fileEntryTypeKey,nameMap,descriptionMap,ddmStructureIds,serviceContext) {
-            return service.invoke('/dlfileentrytype/add-file-entry-type',[{
+            return SessionService.invoke('/dlfileentrytype/add-file-entry-type',[{
                 groupId:groupId
                 ,fileEntryTypeKey:fileEntryTypeKey
                 ,nameMap:nameMap
@@ -25,41 +25,41 @@
             }]);
         };
         service.deleteFileEntryType = function(fileEntryTypeId) {
-            return service.invoke('/dlfileentrytype/delete-file-entry-type',[{
+            return SessionService.invoke('/dlfileentrytype/delete-file-entry-type',[{
                 fileEntryTypeId:fileEntryTypeId
             }]);
         };
         service.getFileEntryType = function(fileEntryTypeId) {
-            return service.invoke('/dlfileentrytype/get-file-entry-type',[{
+            return SessionService.invoke('/dlfileentrytype/get-file-entry-type',[{
                 fileEntryTypeId:fileEntryTypeId
             }]);
         };
         service.getFileEntryTypes = function(groupIds) {
-            return service.invoke('/dlfileentrytype/get-file-entry-types',[{
+            return SessionService.invoke('/dlfileentrytype/get-file-entry-types',[{
                 groupIds:groupIds
             }]);
         };
         service.getFileEntryTypes = function(groupIds,start,end) {
-            return service.invoke('/dlfileentrytype/get-file-entry-types',[{
+            return SessionService.invoke('/dlfileentrytype/get-file-entry-types',[{
                 groupIds:groupIds
                 ,start:start
                 ,end:end
             }]);
         };
         service.getFileEntryTypesCount = function(groupIds) {
-            return service.invoke('/dlfileentrytype/get-file-entry-types-count',[{
+            return SessionService.invoke('/dlfileentrytype/get-file-entry-types-count',[{
                 groupIds:groupIds
             }]);
         };
         service.getFolderFileEntryTypes = function(groupIds,folderId,inherited) {
-            return service.invoke('/dlfileentrytype/get-folder-file-entry-types',[{
+            return SessionService.invoke('/dlfileentrytype/get-folder-file-entry-types',[{
                 groupIds:groupIds
                 ,folderId:folderId
                 ,inherited:inherited
             }]);
         };
         service.search = function(companyId,groupIds,keywords,includeBasicFileEntryType,start,end,orderByComparator) {
-            return service.invoke('/dlfileentrytype/search',[{
+            return SessionService.invoke('/dlfileentrytype/search',[{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,keywords:keywords
@@ -70,7 +70,7 @@
             }]);
         };
         service.searchCount = function(companyId,groupIds,keywords,includeBasicFileEntryType) {
-            return service.invoke('/dlfileentrytype/search-count',[{
+            return SessionService.invoke('/dlfileentrytype/search-count',[{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,keywords:keywords
@@ -78,7 +78,7 @@
             }]);
         };
         service.updateFileEntryType = function(fileEntryTypeId,name,description,ddmStructureIds,serviceContext) {
-            return service.invoke('/dlfileentrytype/update-file-entry-type',[{
+            return SessionService.invoke('/dlfileentrytype/update-file-entry-type',[{
                 fileEntryTypeId:fileEntryTypeId
                 ,name:name
                 ,description:description
@@ -87,7 +87,7 @@
             }]);
         };
         service.updateFileEntryType = function(fileEntryTypeId,nameMap,descriptionMap,ddmStructureIds,serviceContext) {
-            return service.invoke('/dlfileentrytype/update-file-entry-type',[{
+            return SessionService.invoke('/dlfileentrytype/update-file-entry-type',[{
                 fileEntryTypeId:fileEntryTypeId
                 ,nameMap:nameMap
                 ,descriptionMap:descriptionMap
@@ -99,4 +99,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

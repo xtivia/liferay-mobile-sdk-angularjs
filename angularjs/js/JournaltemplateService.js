@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addTemplate = function(groupId,templateId,autoTemplateId,structureId,nameMap,descriptionMap,xsl,formatXsl,langType,cacheable,serviceContext) {
-            return service.invoke('/journaltemplate/add-template',[{
+            return SessionService.invoke('/journaltemplate/add-template',[{
                 groupId:groupId
                 ,templateId:templateId
                 ,autoTemplateId:autoTemplateId
@@ -21,7 +21,7 @@
             }]);
         };
         service.addTemplate = function(groupId,templateId,autoTemplateId,structureId,nameMap,descriptionMap,xsl,formatXsl,langType,cacheable,smallImage,smallImageURL,smallFile,serviceContext) {
-            return service.invoke('/journaltemplate/add-template',[{
+            return SessionService.invoke('/journaltemplate/add-template',[{
                 groupId:groupId
                 ,templateId:templateId
                 ,autoTemplateId:autoTemplateId
@@ -39,7 +39,7 @@
             }]);
         };
         service.copyTemplate = function(groupId,oldTemplateId,newTemplateId,autoTemplateId) {
-            return service.invoke('/journaltemplate/copy-template',[{
+            return SessionService.invoke('/journaltemplate/copy-template',[{
                 groupId:groupId
                 ,oldTemplateId:oldTemplateId
                 ,newTemplateId:newTemplateId
@@ -47,32 +47,32 @@
             }]);
         };
         service.deleteTemplate = function(groupId,templateId) {
-            return service.invoke('/journaltemplate/delete-template',[{
+            return SessionService.invoke('/journaltemplate/delete-template',[{
                 groupId:groupId
                 ,templateId:templateId
             }]);
         };
         service.getStructureTemplates = function(groupId,structureId) {
-            return service.invoke('/journaltemplate/get-structure-templates',[{
+            return SessionService.invoke('/journaltemplate/get-structure-templates',[{
                 groupId:groupId
                 ,structureId:structureId
             }]);
         };
         service.getTemplate = function(groupId,templateId) {
-            return service.invoke('/journaltemplate/get-template',[{
+            return SessionService.invoke('/journaltemplate/get-template',[{
                 groupId:groupId
                 ,templateId:templateId
             }]);
         };
         service.getTemplate = function(groupId,templateId,includeGlobalTemplates) {
-            return service.invoke('/journaltemplate/get-template',[{
+            return SessionService.invoke('/journaltemplate/get-template',[{
                 groupId:groupId
                 ,templateId:templateId
                 ,includeGlobalTemplates:includeGlobalTemplates
             }]);
         };
         service.search = function(companyId,groupIds,templateId,structureId,structureIdComparator,name,description,andOperator,start,end,obc) {
-            return service.invoke('/journaltemplate/search',[{
+            return SessionService.invoke('/journaltemplate/search',[{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,templateId:templateId
@@ -87,7 +87,7 @@
             }]);
         };
         service.search = function(companyId,groupIds,keywords,structureId,structureIdComparator,start,end,obc) {
-            return service.invoke('/journaltemplate/search',[{
+            return SessionService.invoke('/journaltemplate/search',[{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,keywords:keywords
@@ -99,7 +99,7 @@
             }]);
         };
         service.searchCount = function(companyId,groupIds,keywords,structureId,structureIdComparator) {
-            return service.invoke('/journaltemplate/search-count',[{
+            return SessionService.invoke('/journaltemplate/search-count',[{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,keywords:keywords
@@ -108,7 +108,7 @@
             }]);
         };
         service.searchCount = function(companyId,groupIds,templateId,structureId,structureIdComparator,name,description,andOperator) {
-            return service.invoke('/journaltemplate/search-count',[{
+            return SessionService.invoke('/journaltemplate/search-count',[{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,templateId:templateId
@@ -120,7 +120,7 @@
             }]);
         };
         service.updateTemplate = function(groupId,templateId,structureId,nameMap,descriptionMap,xsl,formatXsl,langType,cacheable,serviceContext) {
-            return service.invoke('/journaltemplate/update-template',[{
+            return SessionService.invoke('/journaltemplate/update-template',[{
                 groupId:groupId
                 ,templateId:templateId
                 ,structureId:structureId
@@ -134,7 +134,7 @@
             }]);
         };
         service.updateTemplate = function(groupId,templateId,structureId,nameMap,descriptionMap,xsl,formatXsl,langType,cacheable,smallImage,smallImageURL,smallFile,serviceContext) {
-            return service.invoke('/journaltemplate/update-template',[{
+            return SessionService.invoke('/journaltemplate/update-template',[{
                 groupId:groupId
                 ,templateId:templateId
                 ,structureId:structureId
@@ -154,4 +154,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

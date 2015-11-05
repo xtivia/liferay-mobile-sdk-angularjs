@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addGroup = function(parentGroupId,liveGroupId,name,description,type,manualMembership,membershipRestriction,friendlyURL,site,active,serviceContext) {
-            return service.invoke('/group/add-group',[{
+            return SessionService.invoke('/group/add-group',[{
                 parentGroupId:parentGroupId
                 ,liveGroupId:liveGroupId
                 ,name:name
@@ -21,7 +21,7 @@
             }]);
         };
         service.addGroup = function(name,description,type,friendlyURL,site,active,serviceContext) {
-            return service.invoke('/group/add-group',[{
+            return SessionService.invoke('/group/add-group',[{
                 name:name
                 ,description:description
                 ,type:type
@@ -32,7 +32,7 @@
             }]);
         };
         service.addGroup = function(parentGroupId,name,description,type,friendlyURL,site,active,serviceContext) {
-            return service.invoke('/group/add-group',[{
+            return SessionService.invoke('/group/add-group',[{
                 parentGroupId:parentGroupId
                 ,name:name
                 ,description:description
@@ -44,104 +44,104 @@
             }]);
         };
         service.addRoleGroups = function(roleId,groupIds) {
-            return service.invoke('/group/add-role-groups',[{
+            return SessionService.invoke('/group/add-role-groups',[{
                 roleId:roleId
                 ,groupIds:groupIds
             }]);
         };
         service.checkRemoteStagingGroup = function(groupId) {
-            return service.invoke('/group/check-remote-staging-group',[{
+            return SessionService.invoke('/group/check-remote-staging-group',[{
                 groupId:groupId
             }]);
         };
         service.deleteGroup = function(groupId) {
-            return service.invoke('/group/delete-group',[{
+            return SessionService.invoke('/group/delete-group',[{
                 groupId:groupId
             }]);
         };
         service.disableStaging = function(groupId) {
-            return service.invoke('/group/disable-staging',[{
+            return SessionService.invoke('/group/disable-staging',[{
                 groupId:groupId
             }]);
         };
         service.enableStaging = function(groupId) {
-            return service.invoke('/group/enable-staging',[{
+            return SessionService.invoke('/group/enable-staging',[{
                 groupId:groupId
             }]);
         };
         service.getCompanyGroup = function(companyId) {
-            return service.invoke('/group/get-company-group',[{
+            return SessionService.invoke('/group/get-company-group',[{
                 companyId:companyId
             }]);
         };
         service.getGroup = function(groupId) {
-            return service.invoke('/group/get-group',[{
+            return SessionService.invoke('/group/get-group',[{
                 groupId:groupId
             }]);
         };
         service.getGroup = function(companyId,name) {
-            return service.invoke('/group/get-group',[{
+            return SessionService.invoke('/group/get-group',[{
                 companyId:companyId
                 ,name:name
             }]);
         };
         service.getGroups = function(companyId,parentGroupId,site) {
-            return service.invoke('/group/get-groups',[{
+            return SessionService.invoke('/group/get-groups',[{
                 companyId:companyId
                 ,parentGroupId:parentGroupId
                 ,site:site
             }]);
         };
         service.getManageableSiteGroups = function(portlets,max) {
-            return service.invoke('/group/get-manageable-site-groups',[{
+            return SessionService.invoke('/group/get-manageable-site-groups',[{
                 portlets:portlets
                 ,max:max
             }]);
         };
         service.getManageableSites = function(portlets,max) {
-            return service.invoke('/group/get-manageable-sites',[{
+            return SessionService.invoke('/group/get-manageable-sites',[{
                 portlets:portlets
                 ,max:max
             }]);
         };
         service.getOrganizationsGroups = function(organizations) {
-            return service.invoke('/group/get-organizations-groups',[{
+            return SessionService.invoke('/group/get-organizations-groups',[{
                 organizations:organizations
             }]);
         };
         service.getUserGroup = function(companyId,userId) {
-            return service.invoke('/group/get-user-group',[{
+            return SessionService.invoke('/group/get-user-group',[{
                 companyId:companyId
                 ,userId:userId
             }]);
         };
         service.getUserGroupsGroups = function(userGroups) {
-            return service.invoke('/group/get-user-groups-groups',[{
+            return SessionService.invoke('/group/get-user-groups-groups',[{
                 userGroups:userGroups
             }]);
         };
         service.getUserOrganizationsGroups = function(userId,start,end) {
-            return service.invoke('/group/get-user-organizations-groups',[{
+            return SessionService.invoke('/group/get-user-organizations-groups',[{
                 userId:userId
                 ,start:start
                 ,end:end
             }]);
         };
         service.getUserPlaces = function(classNames,max) {
-            return service.invoke('/group/get-user-places',[{
+            return SessionService.invoke('/group/get-user-places',[{
                 classNames:classNames
                 ,max:max
             }]);
         };
         service.getUserPlaces = function(userId,classNames,max) {
-            return service.invoke('/group/get-user-places',[{
+            return SessionService.invoke('/group/get-user-places',[{
                 userId:userId
                 ,classNames:classNames
                 ,max:max
             }]);
         };
         service.getUserPlaces = function(userId,classNames,includeControlPanel,max) {
-            return service.invoke('/group/get-user-places',[{
+            return SessionService.invoke('/group/get-user-places',[{
                 userId:userId
                 ,classNames:classNames
                 ,includeControlPanel:includeControlPanel
@@ -149,35 +149,35 @@
             }]);
         };
         service.getUserPlacesCount = function() {
-            return service.invoke('/group/get-user-places-count',[{
+            return SessionService.invoke('/group/get-user-places-count',[{
                 
             }]);
         };
         service.getUserSites = function() {
-            return service.invoke('/group/get-user-sites',[{
+            return SessionService.invoke('/group/get-user-sites',[{
                 
             }]);
         };
         service.getUserSitesGroups = function() {
-            return service.invoke('/group/get-user-sites-groups',[{
+            return SessionService.invoke('/group/get-user-sites-groups',[{
                 
             }]);
         };
         service.getUserSitesGroups = function(classNames,max) {
-            return service.invoke('/group/get-user-sites-groups',[{
+            return SessionService.invoke('/group/get-user-sites-groups',[{
                 classNames:classNames
                 ,max:max
             }]);
         };
         service.getUserSitesGroups = function(userId,classNames,max) {
-            return service.invoke('/group/get-user-sites-groups',[{
+            return SessionService.invoke('/group/get-user-sites-groups',[{
                 userId:userId
                 ,classNames:classNames
                 ,max:max
             }]);
         };
         service.getUserSitesGroups = function(userId,classNames,includeControlPanel,max) {
-            return service.invoke('/group/get-user-sites-groups',[{
+            return SessionService.invoke('/group/get-user-sites-groups',[{
                 userId:userId
                 ,classNames:classNames
                 ,includeControlPanel:includeControlPanel
@@ -185,18 +185,18 @@
             }]);
         };
         service.getUserSitesGroupsCount = function() {
-            return service.invoke('/group/get-user-sites-groups-count',[{
+            return SessionService.invoke('/group/get-user-sites-groups-count',[{
                 
             }]);
         };
         service.hasUserGroup = function(userId,groupId) {
-            return service.invoke('/group/has-user-group',[{
+            return SessionService.invoke('/group/has-user-group',[{
                 userId:userId
                 ,groupId:groupId
             }]);
         };
         service.search = function(companyId,name,description,params,start,end) {
-            return service.invoke('/group/search',[{
+            return SessionService.invoke('/group/search',[{
                 companyId:companyId
                 ,name:name
                 ,description:description
@@ -206,7 +206,7 @@
             }]);
         };
         service.search = function(companyId,classNameIds,keywords,params,start,end,obc) {
-            return service.invoke('/group/search',[{
+            return SessionService.invoke('/group/search',[{
                 companyId:companyId
                 ,classNameIds:classNameIds
                 ,keywords:keywords
@@ -217,7 +217,7 @@
             }]);
         };
         service.search = function(companyId,classNameIds,name,description,params,andOperator,start,end,obc) {
-            return service.invoke('/group/search',[{
+            return SessionService.invoke('/group/search',[{
                 companyId:companyId
                 ,classNameIds:classNameIds
                 ,name:name
@@ -230,7 +230,7 @@
             }]);
         };
         service.searchCount = function(companyId,name,description,params) {
-            return service.invoke('/group/search-count',[{
+            return SessionService.invoke('/group/search-count',[{
                 companyId:companyId
                 ,name:name
                 ,description:description
@@ -238,25 +238,25 @@
             }]);
         };
         service.setRoleGroups = function(roleId,groupIds) {
-            return service.invoke('/group/set-role-groups',[{
+            return SessionService.invoke('/group/set-role-groups',[{
                 roleId:roleId
                 ,groupIds:groupIds
             }]);
         };
         service.unsetRoleGroups = function(roleId,groupIds) {
-            return service.invoke('/group/unset-role-groups',[{
+            return SessionService.invoke('/group/unset-role-groups',[{
                 roleId:roleId
                 ,groupIds:groupIds
             }]);
         };
         service.updateFriendlyUrl = function(groupId,friendlyURL) {
-            return service.invoke('/group/update-friendly-url',[{
+            return SessionService.invoke('/group/update-friendly-url',[{
                 groupId:groupId
                 ,friendlyURL:friendlyURL
             }]);
         };
         service.updateGroup = function(groupId,parentGroupId,name,description,type,manualMembership,membershipRestriction,friendlyURL,active,serviceContext) {
-            return service.invoke('/group/update-group',[{
+            return SessionService.invoke('/group/update-group',[{
                 groupId:groupId
                 ,parentGroupId:parentGroupId
                 ,name:name
@@ -270,13 +270,13 @@
             }]);
         };
         service.updateGroup = function(groupId,typeSettings) {
-            return service.invoke('/group/update-group',[{
+            return SessionService.invoke('/group/update-group',[{
                 groupId:groupId
                 ,typeSettings:typeSettings
             }]);
         };
         service.updateStagedPortlets = function(groupId,stagedPortletIds) {
-            return service.invoke('/group/update-staged-portlets',[{
+            return SessionService.invoke('/group/update-staged-portlets',[{
                 groupId:groupId
                 ,stagedPortletIds:stagedPortletIds
             }]);
@@ -285,4 +285,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

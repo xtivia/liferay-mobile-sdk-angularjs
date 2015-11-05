@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.updateLayoutSetPrototypeLinkEnabled = function(groupId,privateLayout,layoutSetPrototypeLinkEnabled,layoutSetPrototypeUuid) {
-            return service.invoke('/layoutset/update-layout-set-prototype-link-enabled',[{
+            return SessionService.invoke('/layoutset/update-layout-set-prototype-link-enabled',[{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,layoutSetPrototypeLinkEnabled:layoutSetPrototypeLinkEnabled
@@ -14,7 +14,7 @@
             }]);
         };
         service.updateLogo = function(groupId,privateLayout,logo,bytes) {
-            return service.invoke('/layoutset/update-logo',[{
+            return SessionService.invoke('/layoutset/update-logo',[{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,logo:logo
@@ -22,7 +22,7 @@
             }]);
         };
         service.updateLogo = function(groupId,privateLayout,logo,file) {
-            return service.invoke('/layoutset/update-logo',[{
+            return SessionService.invoke('/layoutset/update-logo',[{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,logo:logo
@@ -30,7 +30,7 @@
             }]);
         };
         service.updateLookAndFeel = function(groupId,privateLayout,themeId,colorSchemeId,css,wapTheme) {
-            return service.invoke('/layoutset/update-look-and-feel',[{
+            return SessionService.invoke('/layoutset/update-look-and-feel',[{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,themeId:themeId
@@ -40,14 +40,14 @@
             }]);
         };
         service.updateSettings = function(groupId,privateLayout,settings) {
-            return service.invoke('/layoutset/update-settings',[{
+            return SessionService.invoke('/layoutset/update-settings',[{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,settings:settings
             }]);
         };
         service.updateVirtualHost = function(groupId,privateLayout,virtualHost) {
-            return service.invoke('/layoutset/update-virtual-host',[{
+            return SessionService.invoke('/layoutset/update-virtual-host',[{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,virtualHost:virtualHost
@@ -57,4 +57,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

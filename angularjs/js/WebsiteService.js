@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addWebsite = function(className,classPK,url,typeId,primary) {
-            return service.invoke('/website/add-website',[{
+            return SessionService.invoke('/website/add-website',[{
                 className:className
                 ,classPK:classPK
                 ,url:url
@@ -15,7 +15,7 @@
             }]);
         };
         service.addWebsite = function(className,classPK,url,typeId,primary,serviceContext) {
-            return service.invoke('/website/add-website',[{
+            return SessionService.invoke('/website/add-website',[{
                 className:className
                 ,classPK:classPK
                 ,url:url
@@ -25,23 +25,23 @@
             }]);
         };
         service.deleteWebsite = function(websiteId) {
-            return service.invoke('/website/delete-website',[{
+            return SessionService.invoke('/website/delete-website',[{
                 websiteId:websiteId
             }]);
         };
         service.getWebsite = function(websiteId) {
-            return service.invoke('/website/get-website',[{
+            return SessionService.invoke('/website/get-website',[{
                 websiteId:websiteId
             }]);
         };
         service.getWebsites = function(className,classPK) {
-            return service.invoke('/website/get-websites',[{
+            return SessionService.invoke('/website/get-websites',[{
                 className:className
                 ,classPK:classPK
             }]);
         };
         service.updateWebsite = function(websiteId,url,typeId,primary) {
-            return service.invoke('/website/update-website',[{
+            return SessionService.invoke('/website/update-website',[{
                 websiteId:websiteId
                 ,url:url
                 ,typeId:typeId
@@ -52,4 +52,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addCompanyScopePermission = function(scopeGroupId,companyId,name,roleId,actionId) {
-            return service.invoke('/resourceblock/add-company-scope-permission',[{
+            return SessionService.invoke('/resourceblock/add-company-scope-permission',[{
                 scopeGroupId:scopeGroupId
                 ,companyId:companyId
                 ,name:name
@@ -15,7 +15,7 @@
             }]);
         };
         service.addGroupScopePermission = function(scopeGroupId,companyId,groupId,name,roleId,actionId) {
-            return service.invoke('/resourceblock/add-group-scope-permission',[{
+            return SessionService.invoke('/resourceblock/add-group-scope-permission',[{
                 scopeGroupId:scopeGroupId
                 ,companyId:companyId
                 ,groupId:groupId
@@ -25,7 +25,7 @@
             }]);
         };
         service.addIndividualScopePermission = function(companyId,groupId,name,primKey,roleId,actionId) {
-            return service.invoke('/resourceblock/add-individual-scope-permission',[{
+            return SessionService.invoke('/resourceblock/add-individual-scope-permission',[{
                 companyId:companyId
                 ,groupId:groupId
                 ,name:name
@@ -35,7 +35,7 @@
             }]);
         };
         service.removeAllGroupScopePermissions = function(scopeGroupId,companyId,name,roleId,actionId) {
-            return service.invoke('/resourceblock/remove-all-group-scope-permissions',[{
+            return SessionService.invoke('/resourceblock/remove-all-group-scope-permissions',[{
                 scopeGroupId:scopeGroupId
                 ,companyId:companyId
                 ,name:name
@@ -44,7 +44,7 @@
             }]);
         };
         service.removeCompanyScopePermission = function(scopeGroupId,companyId,name,roleId,actionId) {
-            return service.invoke('/resourceblock/remove-company-scope-permission',[{
+            return SessionService.invoke('/resourceblock/remove-company-scope-permission',[{
                 scopeGroupId:scopeGroupId
                 ,companyId:companyId
                 ,name:name
@@ -53,7 +53,7 @@
             }]);
         };
         service.removeGroupScopePermission = function(scopeGroupId,companyId,groupId,name,roleId,actionId) {
-            return service.invoke('/resourceblock/remove-group-scope-permission',[{
+            return SessionService.invoke('/resourceblock/remove-group-scope-permission',[{
                 scopeGroupId:scopeGroupId
                 ,companyId:companyId
                 ,groupId:groupId
@@ -63,7 +63,7 @@
             }]);
         };
         service.removeIndividualScopePermission = function(companyId,groupId,name,primKey,roleId,actionId) {
-            return service.invoke('/resourceblock/remove-individual-scope-permission',[{
+            return SessionService.invoke('/resourceblock/remove-individual-scope-permission',[{
                 companyId:companyId
                 ,groupId:groupId
                 ,name:name
@@ -73,7 +73,7 @@
             }]);
         };
         service.setCompanyScopePermissions = function(scopeGroupId,companyId,name,roleId,actionIds) {
-            return service.invoke('/resourceblock/set-company-scope-permissions',[{
+            return SessionService.invoke('/resourceblock/set-company-scope-permissions',[{
                 scopeGroupId:scopeGroupId
                 ,companyId:companyId
                 ,name:name
@@ -82,7 +82,7 @@
             }]);
         };
         service.setGroupScopePermissions = function(scopeGroupId,companyId,groupId,name,roleId,actionIds) {
-            return service.invoke('/resourceblock/set-group-scope-permissions',[{
+            return SessionService.invoke('/resourceblock/set-group-scope-permissions',[{
                 scopeGroupId:scopeGroupId
                 ,companyId:companyId
                 ,groupId:groupId
@@ -92,7 +92,7 @@
             }]);
         };
         service.setIndividualScopePermissions = function(companyId,groupId,name,primKey,roleIdsToActionIds) {
-            return service.invoke('/resourceblock/set-individual-scope-permissions',[{
+            return SessionService.invoke('/resourceblock/set-individual-scope-permissions',[{
                 companyId:companyId
                 ,groupId:groupId
                 ,name:name
@@ -101,7 +101,7 @@
             }]);
         };
         service.setIndividualScopePermissions = function(companyId,groupId,name,primKey,roleId,actionIds) {
-            return service.invoke('/resourceblock/set-individual-scope-permissions',[{
+            return SessionService.invoke('/resourceblock/set-individual-scope-permissions',[{
                 companyId:companyId
                 ,groupId:groupId
                 ,name:name
@@ -114,4 +114,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();

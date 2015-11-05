@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addRecordSet = function(groupId,ddmStructureId,recordSetKey,nameMap,descriptionMap,minDisplayRows,scope,serviceContext) {
-            return service.invoke('/ddlrecordset/add-record-set',[{
+            return SessionService.invoke('/ddlrecordset/add-record-set',[{
                 groupId:groupId
                 ,ddmStructureId:ddmStructureId
                 ,recordSetKey:recordSetKey
@@ -18,17 +18,17 @@
             }]);
         };
         service.deleteRecordSet = function(recordSetId) {
-            return service.invoke('/ddlrecordset/delete-record-set',[{
+            return SessionService.invoke('/ddlrecordset/delete-record-set',[{
                 recordSetId:recordSetId
             }]);
         };
         service.getRecordSet = function(recordSetId) {
-            return service.invoke('/ddlrecordset/get-record-set',[{
+            return SessionService.invoke('/ddlrecordset/get-record-set',[{
                 recordSetId:recordSetId
             }]);
         };
         service.search = function(companyId,groupId,keywords,scope,start,end,orderByComparator) {
-            return service.invoke('/ddlrecordset/search',[{
+            return SessionService.invoke('/ddlrecordset/search',[{
                 companyId:companyId
                 ,groupId:groupId
                 ,keywords:keywords
@@ -39,7 +39,7 @@
             }]);
         };
         service.search = function(companyId,groupId,name,description,scope,andOperator,start,end,orderByComparator) {
-            return service.invoke('/ddlrecordset/search',[{
+            return SessionService.invoke('/ddlrecordset/search',[{
                 companyId:companyId
                 ,groupId:groupId
                 ,name:name
@@ -52,7 +52,7 @@
             }]);
         };
         service.searchCount = function(companyId,groupId,keywords,scope) {
-            return service.invoke('/ddlrecordset/search-count',[{
+            return SessionService.invoke('/ddlrecordset/search-count',[{
                 companyId:companyId
                 ,groupId:groupId
                 ,keywords:keywords
@@ -60,7 +60,7 @@
             }]);
         };
         service.searchCount = function(companyId,groupId,name,description,scope,andOperator) {
-            return service.invoke('/ddlrecordset/search-count',[{
+            return SessionService.invoke('/ddlrecordset/search-count',[{
                 companyId:companyId
                 ,groupId:groupId
                 ,name:name
@@ -70,14 +70,14 @@
             }]);
         };
         service.updateMinDisplayRows = function(recordSetId,minDisplayRows,serviceContext) {
-            return service.invoke('/ddlrecordset/update-min-display-rows',[{
+            return SessionService.invoke('/ddlrecordset/update-min-display-rows',[{
                 recordSetId:recordSetId
                 ,minDisplayRows:minDisplayRows
                 ,serviceContext:serviceContext
             }]);
         };
         service.updateRecordSet = function(recordSetId,ddmStructureId,nameMap,descriptionMap,minDisplayRows,serviceContext) {
-            return service.invoke('/ddlrecordset/update-record-set',[{
+            return SessionService.invoke('/ddlrecordset/update-record-set',[{
                 recordSetId:recordSetId
                 ,ddmStructureId:ddmStructureId
                 ,nameMap:nameMap
@@ -87,7 +87,7 @@
             }]);
         };
         service.updateRecordSet = function(groupId,ddmStructureId,recordSetKey,nameMap,descriptionMap,minDisplayRows,serviceContext) {
-            return service.invoke('/ddlrecordset/update-record-set',[{
+            return SessionService.invoke('/ddlrecordset/update-record-set',[{
                 groupId:groupId
                 ,ddmStructureId:ddmStructureId
                 ,recordSetKey:recordSetKey
@@ -101,4 +101,4 @@
         // End generated service methods
         return service;
     }])
-});
+})();
