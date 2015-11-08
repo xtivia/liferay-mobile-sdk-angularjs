@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addQuestion = function(titleMap,descriptionMap,expirationDateMonth,expirationDateDay,expirationDateYear,expirationDateHour,expirationDateMinute,neverExpire,choices,serviceContext) {
-            return SessionService.invoke('/pollsquestion/add-question',[{
+            return SessionService.invoke({'/pollsquestion/add-question':{
                 titleMap:titleMap
                 ,descriptionMap:descriptionMap
                 ,expirationDateMonth:expirationDateMonth
@@ -17,20 +17,20 @@
                 ,neverExpire:neverExpire
                 ,choices:choices
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteQuestion = function(questionId) {
-            return SessionService.invoke('/pollsquestion/delete-question',[{
+            return SessionService.invoke({'/pollsquestion/delete-question':{
                 questionId:questionId
-            }]);
+            }});
         };
         service.getQuestion = function(questionId) {
-            return SessionService.invoke('/pollsquestion/get-question',[{
+            return SessionService.invoke({'/pollsquestion/get-question':{
                 questionId:questionId
-            }]);
+            }});
         };
         service.updateQuestion = function(questionId,titleMap,descriptionMap,expirationDateMonth,expirationDateDay,expirationDateYear,expirationDateHour,expirationDateMinute,neverExpire,choices,serviceContext) {
-            return SessionService.invoke('/pollsquestion/update-question',[{
+            return SessionService.invoke({'/pollsquestion/update-question':{
                 questionId:questionId
                 ,titleMap:titleMap
                 ,descriptionMap:descriptionMap
@@ -42,7 +42,7 @@
                 ,neverExpire:neverExpire
                 ,choices:choices
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods

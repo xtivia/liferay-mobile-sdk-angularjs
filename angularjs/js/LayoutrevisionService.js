@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addLayoutRevision = function(userId,layoutSetBranchId,layoutBranchId,parentLayoutRevisionId,head,plid,portletPreferencesPlid,privateLayout,name,title,description,keywords,robots,typeSettings,iconImage,iconImageId,themeId,colorSchemeId,wapThemeId,wapColorSchemeId,css,serviceContext) {
-            return SessionService.invoke('/layoutrevision/add-layout-revision',[{
+            return SessionService.invoke({'/layoutrevision/add-layout-revision':{
                 userId:userId
                 ,layoutSetBranchId:layoutSetBranchId
                 ,layoutBranchId:layoutBranchId
@@ -29,7 +29,7 @@
                 ,wapColorSchemeId:wapColorSchemeId
                 ,css:css
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods

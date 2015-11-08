@@ -6,13 +6,13 @@
         var service = {};
         // Begin generated service methods
         service.updatePluginSetting = function(companyId,pluginId,pluginType,roles,active) {
-            return SessionService.invoke('/pluginsetting/update-plugin-setting',[{
+            return SessionService.invoke({'/pluginsetting/update-plugin-setting':{
                 companyId:companyId
                 ,pluginId:pluginId
                 ,pluginType:pluginType
                 ,roles:roles
                 ,active:active
-            }]);
+            }});
         };
         
         // End generated service methods

@@ -213,7 +213,7 @@
         var service = {};
         // Begin generated service methods
         service.addAddress = function(className,classPK,street1,street2,street3,city,zip,regionId,countryId,typeId,mailing,primary) {
-            return SessionService.invoke('/address/add-address',[{
+            return SessionService.invoke({'/address/add-address':{
                 className:className
                 ,classPK:classPK
                 ,street1:street1
@@ -226,10 +226,10 @@
                 ,typeId:typeId
                 ,mailing:mailing
                 ,primary:primary
-            }]);
+            }});
         };
         service.addAddress = function(className,classPK,street1,street2,street3,city,zip,regionId,countryId,typeId,mailing,primary,serviceContext) {
-            return SessionService.invoke('/address/add-address',[{
+            return SessionService.invoke({'/address/add-address':{
                 className:className
                 ,classPK:classPK
                 ,street1:street1
@@ -243,26 +243,26 @@
                 ,mailing:mailing
                 ,primary:primary
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteAddress = function(addressId) {
-            return SessionService.invoke('/address/delete-address',[{
+            return SessionService.invoke({'/address/delete-address':{
                 addressId:addressId
-            }]);
+            }});
         };
         service.getAddress = function(addressId) {
-            return SessionService.invoke('/address/get-address',[{
+            return SessionService.invoke({'/address/get-address':{
                 addressId:addressId
-            }]);
+            }});
         };
         service.getAddresses = function(className,classPK) {
-            return SessionService.invoke('/address/get-addresses',[{
+            return SessionService.invoke({'/address/get-addresses':{
                 className:className
                 ,classPK:classPK
-            }]);
+            }});
         };
         service.updateAddress = function(addressId,street1,street2,street3,city,zip,regionId,countryId,typeId,mailing,primary) {
-            return SessionService.invoke('/address/update-address',[{
+            return SessionService.invoke({'/address/update-address':{
                 addressId:addressId
                 ,street1:street1
                 ,street2:street2
@@ -274,7 +274,7 @@
                 ,typeId:typeId
                 ,mailing:mailing
                 ,primary:primary
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -289,109 +289,20 @@
         var service = {};
         // Begin generated service methods
         service.updateDelivery = function(userId,type,email,sms,website) {
-            return SessionService.invoke('/announcementsdelivery/update-delivery',[{
+            return SessionService.invoke({'/announcementsdelivery/update-delivery':{
                 userId:userId
                 ,type:type
                 ,email:email
                 ,sms:sms
                 ,website:website
-            }]);
+            }});
         };
         
         // End generated service methods
         return service;
     }])
 })();
-(function() {
-    'use strict';
-    angular
-    .module('mobile.sdk.v62')
-    .factory('AnnouncementsentryService', ['SessionService', function (SessionService) {
-        var service = {};
-        // Begin generated service methods
-        service.addEntry = function(plid,classNameId,classPK,title,content,url,type,displayDateMonth,displayDateDay,displayDateYear,displayDateHour,displayDateMinute,expirationDateMonth,expirationDateDay,expirationDateYear,expirationDateHour,expirationDateMinute,priority,alert) {
-            return SessionService.invoke('/announcementsentry/add-entry',[{
-                plid:plid
-                ,classNameId:classNameId
-                ,classPK:classPK
-                ,title:title
-                ,content:content
-                ,url:url
-                ,type:type
-                ,displayDateMonth:displayDateMonth
-                ,displayDateDay:displayDateDay
-                ,displayDateYear:displayDateYear
-                ,displayDateHour:displayDateHour
-                ,displayDateMinute:displayDateMinute
-                ,expirationDateMonth:expirationDateMonth
-                ,expirationDateDay:expirationDateDay
-                ,expirationDateYear:expirationDateYear
-                ,expirationDateHour:expirationDateHour
-                ,expirationDateMinute:expirationDateMinute
-                ,priority:priority
-                ,alert:alert
-            }]);
-        };
-        service.addEntry = function(plid,classNameId,classPK,title,content,url,type,displayDateMonth,displayDateDay,displayDateYear,displayDateHour,displayDateMinute,displayImmediately,expirationDateMonth,expirationDateDay,expirationDateYear,expirationDateHour,expirationDateMinute,priority,alert) {
-            return SessionService.invoke('/announcementsentry/add-entry',[{
-                plid:plid
-                ,classNameId:classNameId
-                ,classPK:classPK
-                ,title:title
-                ,content:content
-                ,url:url
-                ,type:type
-                ,displayDateMonth:displayDateMonth
-                ,displayDateDay:displayDateDay
-                ,displayDateYear:displayDateYear
-                ,displayDateHour:displayDateHour
-                ,displayDateMinute:displayDateMinute
-                ,displayImmediately:displayImmediately
-                ,expirationDateMonth:expirationDateMonth
-                ,expirationDateDay:expirationDateDay
-                ,expirationDateYear:expirationDateYear
-                ,expirationDateHour:expirationDateHour
-                ,expirationDateMinute:expirationDateMinute
-                ,priority:priority
-                ,alert:alert
-            }]);
-        };
-        service.deleteEntry = function(entryId) {
-            return SessionService.invoke('/announcementsentry/delete-entry',[{
-                entryId:entryId
-            }]);
-        };
-        service.getEntry = function(entryId) {
-            return SessionService.invoke('/announcementsentry/get-entry',[{
-                entryId:entryId
-            }]);
-        };
-        service.updateEntry = function(entryId,title,content,url,type,displayDateMonth,displayDateDay,displayDateYear,displayDateHour,displayDateMinute,displayImmediately,expirationDateMonth,expirationDateDay,expirationDateYear,expirationDateHour,expirationDateMinute,priority) {
-            return SessionService.invoke('/announcementsentry/update-entry',[{
-                entryId:entryId
-                ,title:title
-                ,content:content
-                ,url:url
-                ,type:type
-                ,displayDateMonth:displayDateMonth
-                ,displayDateDay:displayDateDay
-                ,displayDateYear:displayDateYear
-                ,displayDateHour:displayDateHour
-                ,displayDateMinute:displayDateMinute
-                ,displayImmediately:displayImmediately
-                ,expirationDateMonth:expirationDateMonth
-                ,expirationDateDay:expirationDateDay
-                ,expirationDateYear:expirationDateYear
-                ,expirationDateHour:expirationDateHour
-                ,expirationDateMinute:expirationDateMinute
-                ,priority:priority
-            }]);
-        };
-        
-        // End generated service methods
-        return service;
-    }])
-})();
+
 (function() {
     'use strict';
     angular
@@ -400,21 +311,21 @@
         var service = {};
         // Begin generated service methods
         service.addFlag = function(entryId,value) {
-            return SessionService.invoke('/announcementsflag/add-flag',[{
+            return SessionService.invoke({'/announcementsflag/add-flag':{
                 entryId:entryId
                 ,value:value
-            }]);
+            }});
         };
         service.deleteFlag = function(flagId) {
-            return SessionService.invoke('/announcementsflag/delete-flag',[{
+            return SessionService.invoke({'/announcementsflag/delete-flag':{
                 flagId:flagId
-            }]);
+            }});
         };
         service.getFlag = function(entryId,value) {
-            return SessionService.invoke('/announcementsflag/get-flag',[{
+            return SessionService.invoke({'/announcementsflag/get-flag':{
                 entryId:entryId
                 ,value:value
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -429,208 +340,208 @@
         var service = {};
         // Begin generated service methods
         service.addCategory = function(title,vocabularyId,serviceContext) {
-            return SessionService.invoke('/assetcategory/add-category',[{
+            return SessionService.invoke({'/assetcategory/add-category':{
                 title:title
                 ,vocabularyId:vocabularyId
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addCategory = function(parentCategoryId,titleMap,descriptionMap,vocabularyId,categoryProperties,serviceContext) {
-            return SessionService.invoke('/assetcategory/add-category',[{
+            return SessionService.invoke({'/assetcategory/add-category':{
                 parentCategoryId:parentCategoryId
                 ,titleMap:titleMap
                 ,descriptionMap:descriptionMap
                 ,vocabularyId:vocabularyId
                 ,categoryProperties:categoryProperties
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteCategories = function(categoryIds) {
-            return SessionService.invoke('/assetcategory/delete-categories',[{
+            return SessionService.invoke({'/assetcategory/delete-categories':{
                 categoryIds:categoryIds
-            }]);
+            }});
         };
         service.deleteCategories = function(categoryIds,serviceContext) {
-            return SessionService.invoke('/assetcategory/delete-categories',[{
+            return SessionService.invoke({'/assetcategory/delete-categories':{
                 categoryIds:categoryIds
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteCategory = function(categoryId) {
-            return SessionService.invoke('/assetcategory/delete-category',[{
+            return SessionService.invoke({'/assetcategory/delete-category':{
                 categoryId:categoryId
-            }]);
+            }});
         };
         service.getCategories = function(className,classPK) {
-            return SessionService.invoke('/assetcategory/get-categories',[{
+            return SessionService.invoke({'/assetcategory/get-categories':{
                 className:className
                 ,classPK:classPK
-            }]);
+            }});
         };
         service.getCategory = function(categoryId) {
-            return SessionService.invoke('/assetcategory/get-category',[{
+            return SessionService.invoke({'/assetcategory/get-category':{
                 categoryId:categoryId
-            }]);
+            }});
         };
         service.getChildCategories = function(parentCategoryId) {
-            return SessionService.invoke('/assetcategory/get-child-categories',[{
+            return SessionService.invoke({'/assetcategory/get-child-categories':{
                 parentCategoryId:parentCategoryId
-            }]);
+            }});
         };
         service.getChildCategories = function(parentCategoryId,start,end,obc) {
-            return SessionService.invoke('/assetcategory/get-child-categories',[{
+            return SessionService.invoke({'/assetcategory/get-child-categories':{
                 parentCategoryId:parentCategoryId
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getJsonSearch = function(groupId,name,vocabularyIds,start,end) {
-            return SessionService.invoke('/assetcategory/get-json-search',[{
+            return SessionService.invoke({'/assetcategory/get-json-search':{
                 groupId:groupId
                 ,name:name
                 ,vocabularyIds:vocabularyIds
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getJsonVocabularyCategories = function(vocabularyId,start,end,obc) {
-            return SessionService.invoke('/assetcategory/get-json-vocabulary-categories',[{
+            return SessionService.invoke({'/assetcategory/get-json-vocabulary-categories':{
                 vocabularyId:vocabularyId
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getJsonVocabularyCategories = function(groupId,title,vocabularyId,start,end,obc) {
-            return SessionService.invoke('/assetcategory/get-json-vocabulary-categories',[{
+            return SessionService.invoke({'/assetcategory/get-json-vocabulary-categories':{
                 groupId:groupId
                 ,title:title
                 ,vocabularyId:vocabularyId
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getVocabularyCategories = function(vocabularyId,start,end,obc) {
-            return SessionService.invoke('/assetcategory/get-vocabulary-categories',[{
+            return SessionService.invoke({'/assetcategory/get-vocabulary-categories':{
                 vocabularyId:vocabularyId
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getVocabularyCategories = function(parentCategoryId,vocabularyId,start,end,obc) {
-            return SessionService.invoke('/assetcategory/get-vocabulary-categories',[{
+            return SessionService.invoke({'/assetcategory/get-vocabulary-categories':{
                 parentCategoryId:parentCategoryId
                 ,vocabularyId:vocabularyId
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getVocabularyCategories = function(groupId,name,vocabularyId,start,end,obc) {
-            return SessionService.invoke('/assetcategory/get-vocabulary-categories',[{
+            return SessionService.invoke({'/assetcategory/get-vocabulary-categories':{
                 groupId:groupId
                 ,name:name
                 ,vocabularyId:vocabularyId
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getVocabularyCategoriesCount = function(groupId,vocabularyId) {
-            return SessionService.invoke('/assetcategory/get-vocabulary-categories-count',[{
+            return SessionService.invoke({'/assetcategory/get-vocabulary-categories-count':{
                 groupId:groupId
                 ,vocabularyId:vocabularyId
-            }]);
+            }});
         };
         service.getVocabularyCategoriesCount = function(groupId,name,vocabularyId) {
-            return SessionService.invoke('/assetcategory/get-vocabulary-categories-count',[{
+            return SessionService.invoke({'/assetcategory/get-vocabulary-categories-count':{
                 groupId:groupId
                 ,name:name
                 ,vocabularyId:vocabularyId
-            }]);
+            }});
         };
         service.getVocabularyCategoriesDisplay = function(vocabularyId,start,end,obc) {
-            return SessionService.invoke('/assetcategory/get-vocabulary-categories-display',[{
+            return SessionService.invoke({'/assetcategory/get-vocabulary-categories-display':{
                 vocabularyId:vocabularyId
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getVocabularyCategoriesDisplay = function(groupId,name,vocabularyId,start,end,obc) {
-            return SessionService.invoke('/assetcategory/get-vocabulary-categories-display',[{
+            return SessionService.invoke({'/assetcategory/get-vocabulary-categories-display':{
                 groupId:groupId
                 ,name:name
                 ,vocabularyId:vocabularyId
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getVocabularyRootCategories = function(vocabularyId,start,end,obc) {
-            return SessionService.invoke('/assetcategory/get-vocabulary-root-categories',[{
+            return SessionService.invoke({'/assetcategory/get-vocabulary-root-categories':{
                 vocabularyId:vocabularyId
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getVocabularyRootCategories = function(groupId,vocabularyId,start,end,obc) {
-            return SessionService.invoke('/assetcategory/get-vocabulary-root-categories',[{
+            return SessionService.invoke({'/assetcategory/get-vocabulary-root-categories':{
                 groupId:groupId
                 ,vocabularyId:vocabularyId
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getVocabularyRootCategoriesCount = function(groupId,vocabularyId) {
-            return SessionService.invoke('/assetcategory/get-vocabulary-root-categories-count',[{
+            return SessionService.invoke({'/assetcategory/get-vocabulary-root-categories-count':{
                 groupId:groupId
                 ,vocabularyId:vocabularyId
-            }]);
+            }});
         };
         service.moveCategory = function(categoryId,parentCategoryId,vocabularyId,serviceContext) {
-            return SessionService.invoke('/assetcategory/move-category',[{
+            return SessionService.invoke({'/assetcategory/move-category':{
                 categoryId:categoryId
                 ,parentCategoryId:parentCategoryId
                 ,vocabularyId:vocabularyId
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.search = function(groupId,name,categoryProperties,start,end) {
-            return SessionService.invoke('/assetcategory/search',[{
+            return SessionService.invoke({'/assetcategory/search':{
                 groupId:groupId
                 ,name:name
                 ,categoryProperties:categoryProperties
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.search = function(groupIds,title,vocabularyIds,start,end) {
-            return SessionService.invoke('/assetcategory/search',[{
+            return SessionService.invoke({'/assetcategory/search':{
                 groupIds:groupIds
                 ,title:title
                 ,vocabularyIds:vocabularyIds
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.search = function(groupId,keywords,vocabularyId,start,end,obc) {
-            return SessionService.invoke('/assetcategory/search',[{
+            return SessionService.invoke({'/assetcategory/search':{
                 groupId:groupId
                 ,keywords:keywords
                 ,vocabularyId:vocabularyId
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.updateCategory = function(categoryId,parentCategoryId,titleMap,descriptionMap,vocabularyId,categoryProperties,serviceContext) {
-            return SessionService.invoke('/assetcategory/update-category',[{
+            return SessionService.invoke({'/assetcategory/update-category':{
                 categoryId:categoryId
                 ,parentCategoryId:parentCategoryId
                 ,titleMap:titleMap
@@ -638,7 +549,7 @@
                 ,vocabularyId:vocabularyId
                 ,categoryProperties:categoryProperties
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -653,34 +564,34 @@
         var service = {};
         // Begin generated service methods
         service.addCategoryProperty = function(entryId,key,value) {
-            return SessionService.invoke('/assetcategoryproperty/add-category-property',[{
+            return SessionService.invoke({'/assetcategoryproperty/add-category-property':{
                 entryId:entryId
                 ,key:key
                 ,value:value
-            }]);
+            }});
         };
         service.deleteCategoryProperty = function(categoryPropertyId) {
-            return SessionService.invoke('/assetcategoryproperty/delete-category-property',[{
+            return SessionService.invoke({'/assetcategoryproperty/delete-category-property':{
                 categoryPropertyId:categoryPropertyId
-            }]);
+            }});
         };
         service.getCategoryProperties = function(entryId) {
-            return SessionService.invoke('/assetcategoryproperty/get-category-properties',[{
+            return SessionService.invoke({'/assetcategoryproperty/get-category-properties':{
                 entryId:entryId
-            }]);
+            }});
         };
         service.getCategoryPropertyValues = function(companyId,key) {
-            return SessionService.invoke('/assetcategoryproperty/get-category-property-values',[{
+            return SessionService.invoke({'/assetcategoryproperty/get-category-property-values':{
                 companyId:companyId
                 ,key:key
-            }]);
+            }});
         };
         service.updateCategoryProperty = function(categoryPropertyId,key,value) {
-            return SessionService.invoke('/assetcategoryproperty/update-category-property',[{
+            return SessionService.invoke({'/assetcategoryproperty/update-category-property':{
                 categoryPropertyId:categoryPropertyId
                 ,key:key
                 ,value:value
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -695,40 +606,40 @@
         var service = {};
         // Begin generated service methods
         service.getCompanyEntries = function(companyId,start,end) {
-            return SessionService.invoke('/assetentry/get-company-entries',[{
+            return SessionService.invoke({'/assetentry/get-company-entries':{
                 companyId:companyId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getCompanyEntriesCount = function(companyId) {
-            return SessionService.invoke('/assetentry/get-company-entries-count',[{
+            return SessionService.invoke({'/assetentry/get-company-entries-count':{
                 companyId:companyId
-            }]);
+            }});
         };
         service.getEntries = function(entryQuery) {
-            return SessionService.invoke('/assetentry/get-entries',[{
+            return SessionService.invoke({'/assetentry/get-entries':{
                 entryQuery:entryQuery
-            }]);
+            }});
         };
         service.getEntriesCount = function(entryQuery) {
-            return SessionService.invoke('/assetentry/get-entries-count',[{
+            return SessionService.invoke({'/assetentry/get-entries-count':{
                 entryQuery:entryQuery
-            }]);
+            }});
         };
         service.getEntry = function(entryId) {
-            return SessionService.invoke('/assetentry/get-entry',[{
+            return SessionService.invoke({'/assetentry/get-entry':{
                 entryId:entryId
-            }]);
+            }});
         };
         service.incrementViewCounter = function(className,classPK) {
-            return SessionService.invoke('/assetentry/increment-view-counter',[{
+            return SessionService.invoke({'/assetentry/increment-view-counter':{
                 className:className
                 ,classPK:classPK
-            }]);
+            }});
         };
         service.updateEntry = function(groupId,className,classPK,classUuid,classTypeId,categoryIds,tagNames,visible,startDate,endDate,expirationDate,mimeType,title,description,summary,url,layoutUuid,height,width,priority,sync) {
-            return SessionService.invoke('/assetentry/update-entry',[{
+            return SessionService.invoke({'/assetentry/update-entry':{
                 groupId:groupId
                 ,className:className
                 ,classPK:classPK
@@ -750,10 +661,10 @@
                 ,width:width
                 ,priority:priority
                 ,sync:sync
-            }]);
+            }});
         };
         service.updateEntry = function(groupId,className,classPK,classUuid,classTypeId,categoryIds,tagNames,visible,startDate,endDate,publishDate,expirationDate,mimeType,title,description,summary,url,layoutUuid,height,width,priority,sync) {
-            return SessionService.invoke('/assetentry/update-entry',[{
+            return SessionService.invoke({'/assetentry/update-entry':{
                 groupId:groupId
                 ,className:className
                 ,classPK:classPK
@@ -776,10 +687,10 @@
                 ,width:width
                 ,priority:priority
                 ,sync:sync
-            }]);
+            }});
         };
         service.updateEntry = function(groupId,createDate,modifiedDate,className,classPK,classUuid,classTypeId,categoryIds,tagNames,visible,startDate,endDate,expirationDate,mimeType,title,description,summary,url,layoutUuid,height,width,priority,sync) {
-            return SessionService.invoke('/assetentry/update-entry',[{
+            return SessionService.invoke({'/assetentry/update-entry':{
                 groupId:groupId
                 ,createDate:createDate
                 ,modifiedDate:modifiedDate
@@ -803,7 +714,7 @@
                 ,width:width
                 ,priority:priority
                 ,sync:sync
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -818,166 +729,166 @@
         var service = {};
         // Begin generated service methods
         service.addTag = function(name,tagProperties,serviceContext) {
-            return SessionService.invoke('/assettag/add-tag',[{
+            return SessionService.invoke({'/assettag/add-tag':{
                 name:name
                 ,tagProperties:tagProperties
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteTag = function(tagId) {
-            return SessionService.invoke('/assettag/delete-tag',[{
+            return SessionService.invoke({'/assettag/delete-tag':{
                 tagId:tagId
-            }]);
+            }});
         };
         service.deleteTags = function(tagIds) {
-            return SessionService.invoke('/assettag/delete-tags',[{
+            return SessionService.invoke({'/assettag/delete-tags':{
                 tagIds:tagIds
-            }]);
+            }});
         };
         service.getGroupTags = function(groupId) {
-            return SessionService.invoke('/assettag/get-group-tags',[{
+            return SessionService.invoke({'/assettag/get-group-tags':{
                 groupId:groupId
-            }]);
+            }});
         };
         service.getGroupTags = function(groupId,start,end,obc) {
-            return SessionService.invoke('/assettag/get-group-tags',[{
+            return SessionService.invoke({'/assettag/get-group-tags':{
                 groupId:groupId
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getGroupTagsCount = function(groupId) {
-            return SessionService.invoke('/assettag/get-group-tags-count',[{
+            return SessionService.invoke({'/assettag/get-group-tags-count':{
                 groupId:groupId
-            }]);
+            }});
         };
         service.getGroupTagsDisplay = function(groupId,name,start,end) {
-            return SessionService.invoke('/assettag/get-group-tags-display',[{
+            return SessionService.invoke({'/assettag/get-group-tags-display':{
                 groupId:groupId
                 ,name:name
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getGroupsTags = function(groupIds) {
-            return SessionService.invoke('/assettag/get-groups-tags',[{
+            return SessionService.invoke({'/assettag/get-groups-tags':{
                 groupIds:groupIds
-            }]);
+            }});
         };
         service.getJsonGroupTags = function(groupId,name,start,end) {
-            return SessionService.invoke('/assettag/get-json-group-tags',[{
+            return SessionService.invoke({'/assettag/get-json-group-tags':{
                 groupId:groupId
                 ,name:name
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getTag = function(tagId) {
-            return SessionService.invoke('/assettag/get-tag',[{
+            return SessionService.invoke({'/assettag/get-tag':{
                 tagId:tagId
-            }]);
+            }});
         };
         service.getTags = function(className,classPK) {
-            return SessionService.invoke('/assettag/get-tags',[{
+            return SessionService.invoke({'/assettag/get-tags':{
                 className:className
                 ,classPK:classPK
-            }]);
+            }});
         };
         service.getTags = function(groupId,classNameId,name) {
-            return SessionService.invoke('/assettag/get-tags',[{
+            return SessionService.invoke({'/assettag/get-tags':{
                 groupId:groupId
                 ,classNameId:classNameId
                 ,name:name
-            }]);
+            }});
         };
         service.getTags = function(groupId,name,tagProperties,start,end) {
-            return SessionService.invoke('/assettag/get-tags',[{
+            return SessionService.invoke({'/assettag/get-tags':{
                 groupId:groupId
                 ,name:name
                 ,tagProperties:tagProperties
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getTags = function(groupIds,name,tagProperties,start,end) {
-            return SessionService.invoke('/assettag/get-tags',[{
+            return SessionService.invoke({'/assettag/get-tags':{
                 groupIds:groupIds
                 ,name:name
                 ,tagProperties:tagProperties
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getTags = function(groupId,classNameId,name,start,end,obc) {
-            return SessionService.invoke('/assettag/get-tags',[{
+            return SessionService.invoke({'/assettag/get-tags':{
                 groupId:groupId
                 ,classNameId:classNameId
                 ,name:name
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getTagsCount = function(groupId,name) {
-            return SessionService.invoke('/assettag/get-tags-count',[{
+            return SessionService.invoke({'/assettag/get-tags-count':{
                 groupId:groupId
                 ,name:name
-            }]);
+            }});
         };
         service.getTagsCount = function(groupId,classNameId,name) {
-            return SessionService.invoke('/assettag/get-tags-count',[{
+            return SessionService.invoke({'/assettag/get-tags-count':{
                 groupId:groupId
                 ,classNameId:classNameId
                 ,name:name
-            }]);
+            }});
         };
         service.getTagsCount = function(groupId,name,tagProperties) {
-            return SessionService.invoke('/assettag/get-tags-count',[{
+            return SessionService.invoke({'/assettag/get-tags-count':{
                 groupId:groupId
                 ,name:name
                 ,tagProperties:tagProperties
-            }]);
+            }});
         };
         service.mergeTags = function(fromTagId,toTagId,overrideProperties) {
-            return SessionService.invoke('/assettag/merge-tags',[{
+            return SessionService.invoke({'/assettag/merge-tags':{
                 fromTagId:fromTagId
                 ,toTagId:toTagId
                 ,overrideProperties:overrideProperties
-            }]);
+            }});
         };
         service.mergeTags = function(fromTagIds,toTagId,overrideProperties) {
-            return SessionService.invoke('/assettag/merge-tags',[{
+            return SessionService.invoke({'/assettag/merge-tags':{
                 fromTagIds:fromTagIds
                 ,toTagId:toTagId
                 ,overrideProperties:overrideProperties
-            }]);
+            }});
         };
         service.search = function(groupId,name,tagProperties,start,end) {
-            return SessionService.invoke('/assettag/search',[{
+            return SessionService.invoke({'/assettag/search':{
                 groupId:groupId
                 ,name:name
                 ,tagProperties:tagProperties
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.search = function(groupIds,name,tagProperties,start,end) {
-            return SessionService.invoke('/assettag/search',[{
+            return SessionService.invoke({'/assettag/search':{
                 groupIds:groupIds
                 ,name:name
                 ,tagProperties:tagProperties
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.updateTag = function(tagId,name,tagProperties,serviceContext) {
-            return SessionService.invoke('/assettag/update-tag',[{
+            return SessionService.invoke({'/assettag/update-tag':{
                 tagId:tagId
                 ,name:name
                 ,tagProperties:tagProperties
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -992,34 +903,34 @@
         var service = {};
         // Begin generated service methods
         service.addTagProperty = function(tagId,key,value) {
-            return SessionService.invoke('/assettagproperty/add-tag-property',[{
+            return SessionService.invoke({'/assettagproperty/add-tag-property':{
                 tagId:tagId
                 ,key:key
                 ,value:value
-            }]);
+            }});
         };
         service.deleteTagProperty = function(tagPropertyId) {
-            return SessionService.invoke('/assettagproperty/delete-tag-property',[{
+            return SessionService.invoke({'/assettagproperty/delete-tag-property':{
                 tagPropertyId:tagPropertyId
-            }]);
+            }});
         };
         service.getTagProperties = function(tagId) {
-            return SessionService.invoke('/assettagproperty/get-tag-properties',[{
+            return SessionService.invoke({'/assettagproperty/get-tag-properties':{
                 tagId:tagId
-            }]);
+            }});
         };
         service.getTagPropertyValues = function(companyId,key) {
-            return SessionService.invoke('/assettagproperty/get-tag-property-values',[{
+            return SessionService.invoke({'/assettagproperty/get-tag-property-values':{
                 companyId:companyId
                 ,key:key
-            }]);
+            }});
         };
         service.updateTagProperty = function(tagPropertyId,key,value) {
-            return SessionService.invoke('/assettagproperty/update-tag-property',[{
+            return SessionService.invoke({'/assettagproperty/update-tag-property':{
                 tagPropertyId:tagPropertyId
                 ,key:key
                 ,value:value
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -1034,155 +945,155 @@
         var service = {};
         // Begin generated service methods
         service.addVocabulary = function(title,serviceContext) {
-            return SessionService.invoke('/assetvocabulary/add-vocabulary',[{
+            return SessionService.invoke({'/assetvocabulary/add-vocabulary':{
                 title:title
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addVocabulary = function(titleMap,descriptionMap,settings,serviceContext) {
-            return SessionService.invoke('/assetvocabulary/add-vocabulary',[{
+            return SessionService.invoke({'/assetvocabulary/add-vocabulary':{
                 titleMap:titleMap
                 ,descriptionMap:descriptionMap
                 ,settings:settings
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addVocabulary = function(title,titleMap,descriptionMap,settings,serviceContext) {
-            return SessionService.invoke('/assetvocabulary/add-vocabulary',[{
+            return SessionService.invoke({'/assetvocabulary/add-vocabulary':{
                 title:title
                 ,titleMap:titleMap
                 ,descriptionMap:descriptionMap
                 ,settings:settings
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteVocabularies = function(vocabularyIds) {
-            return SessionService.invoke('/assetvocabulary/delete-vocabularies',[{
+            return SessionService.invoke({'/assetvocabulary/delete-vocabularies':{
                 vocabularyIds:vocabularyIds
-            }]);
+            }});
         };
         service.deleteVocabularies = function(vocabularyIds,serviceContext) {
-            return SessionService.invoke('/assetvocabulary/delete-vocabularies',[{
+            return SessionService.invoke({'/assetvocabulary/delete-vocabularies':{
                 vocabularyIds:vocabularyIds
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteVocabulary = function(vocabularyId) {
-            return SessionService.invoke('/assetvocabulary/delete-vocabulary',[{
+            return SessionService.invoke({'/assetvocabulary/delete-vocabulary':{
                 vocabularyId:vocabularyId
-            }]);
+            }});
         };
         service.getCompanyVocabularies = function(companyId) {
-            return SessionService.invoke('/assetvocabulary/get-company-vocabularies',[{
+            return SessionService.invoke({'/assetvocabulary/get-company-vocabularies':{
                 companyId:companyId
-            }]);
+            }});
         };
         service.getGroupVocabularies = function(groupId) {
-            return SessionService.invoke('/assetvocabulary/get-group-vocabularies',[{
+            return SessionService.invoke({'/assetvocabulary/get-group-vocabularies':{
                 groupId:groupId
-            }]);
+            }});
         };
         service.getGroupVocabularies = function(groupId,createDefaultVocabulary) {
-            return SessionService.invoke('/assetvocabulary/get-group-vocabularies',[{
+            return SessionService.invoke({'/assetvocabulary/get-group-vocabularies':{
                 groupId:groupId
                 ,createDefaultVocabulary:createDefaultVocabulary
-            }]);
+            }});
         };
         service.getGroupVocabularies = function(groupId,start,end,obc) {
-            return SessionService.invoke('/assetvocabulary/get-group-vocabularies',[{
+            return SessionService.invoke({'/assetvocabulary/get-group-vocabularies':{
                 groupId:groupId
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getGroupVocabularies = function(groupId,name,start,end,obc) {
-            return SessionService.invoke('/assetvocabulary/get-group-vocabularies',[{
+            return SessionService.invoke({'/assetvocabulary/get-group-vocabularies':{
                 groupId:groupId
                 ,name:name
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getGroupVocabulariesCount = function(groupId) {
-            return SessionService.invoke('/assetvocabulary/get-group-vocabularies-count',[{
+            return SessionService.invoke({'/assetvocabulary/get-group-vocabularies-count':{
                 groupId:groupId
-            }]);
+            }});
         };
         service.getGroupVocabulariesCount = function(groupId,name) {
-            return SessionService.invoke('/assetvocabulary/get-group-vocabularies-count',[{
+            return SessionService.invoke({'/assetvocabulary/get-group-vocabularies-count':{
                 groupId:groupId
                 ,name:name
-            }]);
+            }});
         };
         service.getGroupVocabulariesDisplay = function(groupId,name,start,end,obc) {
-            return SessionService.invoke('/assetvocabulary/get-group-vocabularies-display',[{
+            return SessionService.invoke({'/assetvocabulary/get-group-vocabularies-display':{
                 groupId:groupId
                 ,name:name
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getGroupVocabulariesDisplay = function(groupId,title,start,end,addDefaultVocabulary,obc) {
-            return SessionService.invoke('/assetvocabulary/get-group-vocabularies-display',[{
+            return SessionService.invoke({'/assetvocabulary/get-group-vocabularies-display':{
                 groupId:groupId
                 ,title:title
                 ,start:start
                 ,end:end
                 ,addDefaultVocabulary:addDefaultVocabulary
                 ,obc:obc
-            }]);
+            }});
         };
         service.getGroupsVocabularies = function(groupIds) {
-            return SessionService.invoke('/assetvocabulary/get-groups-vocabularies',[{
+            return SessionService.invoke({'/assetvocabulary/get-groups-vocabularies':{
                 groupIds:groupIds
-            }]);
+            }});
         };
         service.getGroupsVocabularies = function(groupIds,className) {
-            return SessionService.invoke('/assetvocabulary/get-groups-vocabularies',[{
+            return SessionService.invoke({'/assetvocabulary/get-groups-vocabularies':{
                 groupIds:groupIds
                 ,className:className
-            }]);
+            }});
         };
         service.getJsonGroupVocabularies = function(groupId,name,start,end,obc) {
-            return SessionService.invoke('/assetvocabulary/get-json-group-vocabularies',[{
+            return SessionService.invoke({'/assetvocabulary/get-json-group-vocabularies':{
                 groupId:groupId
                 ,name:name
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getVocabularies = function(vocabularyIds) {
-            return SessionService.invoke('/assetvocabulary/get-vocabularies',[{
+            return SessionService.invoke({'/assetvocabulary/get-vocabularies':{
                 vocabularyIds:vocabularyIds
-            }]);
+            }});
         };
         service.getVocabulary = function(vocabularyId) {
-            return SessionService.invoke('/assetvocabulary/get-vocabulary',[{
+            return SessionService.invoke({'/assetvocabulary/get-vocabulary':{
                 vocabularyId:vocabularyId
-            }]);
+            }});
         };
         service.updateVocabulary = function(vocabularyId,titleMap,descriptionMap,settings,serviceContext) {
-            return SessionService.invoke('/assetvocabulary/update-vocabulary',[{
+            return SessionService.invoke({'/assetvocabulary/update-vocabulary':{
                 vocabularyId:vocabularyId
                 ,titleMap:titleMap
                 ,descriptionMap:descriptionMap
                 ,settings:settings
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.updateVocabulary = function(vocabularyId,title,titleMap,descriptionMap,settings,serviceContext) {
-            return SessionService.invoke('/assetvocabulary/update-vocabulary',[{
+            return SessionService.invoke({'/assetvocabulary/update-vocabulary':{
                 vocabularyId:vocabularyId
                 ,title:title
                 ,titleMap:titleMap
                 ,descriptionMap:descriptionMap
                 ,settings:settings
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -1197,16 +1108,16 @@
         var service = {};
         // Begin generated service methods
         service.getBackgroundTaskStatusJson = function(backgroundTaskId) {
-            return SessionService.invoke('/backgroundtask/get-background-task-status-json',[{
+            return SessionService.invoke({'/backgroundtask/get-background-task-status-json':{
                 backgroundTaskId:backgroundTaskId
-            }]);
+            }});
         };
         service.getBackgroundTasksCount = function(groupId,taskExecutorClassName,completed) {
-            return SessionService.invoke('/backgroundtask/get-background-tasks-count',[{
+            return SessionService.invoke({'/backgroundtask/get-background-tasks-count':{
                 groupId:groupId
                 ,taskExecutorClassName:taskExecutorClassName
                 ,completed:completed
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -1221,20 +1132,20 @@
         var service = {};
         // Begin generated service methods
         service.deleteEntry = function(entryId) {
-            return SessionService.invoke('/blogsentry/delete-entry',[{
+            return SessionService.invoke({'/blogsentry/delete-entry':{
                 entryId:entryId
-            }]);
+            }});
         };
         service.getCompanyEntries = function(companyId,displayDate,status,max) {
-            return SessionService.invoke('/blogsentry/get-company-entries',[{
+            return SessionService.invoke({'/blogsentry/get-company-entries':{
                 companyId:companyId
                 ,displayDate:displayDate
                 ,status:status
                 ,max:max
-            }]);
+            }});
         };
         service.getCompanyEntriesRss = function(companyId,displayDate,status,max,type,version,displayStyle,feedURL,entryURL,themeDisplay) {
-            return SessionService.invoke('/blogsentry/get-company-entries-rss',[{
+            return SessionService.invoke({'/blogsentry/get-company-entries-rss':{
                 companyId:companyId
                 ,displayDate:displayDate
                 ,status:status
@@ -1245,66 +1156,66 @@
                 ,feedURL:feedURL
                 ,entryURL:entryURL
                 ,themeDisplay:themeDisplay
-            }]);
+            }});
         };
         service.getEntry = function(entryId) {
-            return SessionService.invoke('/blogsentry/get-entry',[{
+            return SessionService.invoke({'/blogsentry/get-entry':{
                 entryId:entryId
-            }]);
+            }});
         };
         service.getEntry = function(groupId,urlTitle) {
-            return SessionService.invoke('/blogsentry/get-entry',[{
+            return SessionService.invoke({'/blogsentry/get-entry':{
                 groupId:groupId
                 ,urlTitle:urlTitle
-            }]);
+            }});
         };
         service.getGroupEntries = function(groupId,status,max) {
-            return SessionService.invoke('/blogsentry/get-group-entries',[{
+            return SessionService.invoke({'/blogsentry/get-group-entries':{
                 groupId:groupId
                 ,status:status
                 ,max:max
-            }]);
+            }});
         };
         service.getGroupEntries = function(groupId,displayDate,status,max) {
-            return SessionService.invoke('/blogsentry/get-group-entries',[{
+            return SessionService.invoke({'/blogsentry/get-group-entries':{
                 groupId:groupId
                 ,displayDate:displayDate
                 ,status:status
                 ,max:max
-            }]);
+            }});
         };
         service.getGroupEntries = function(groupId,status,start,end) {
-            return SessionService.invoke('/blogsentry/get-group-entries',[{
+            return SessionService.invoke({'/blogsentry/get-group-entries':{
                 groupId:groupId
                 ,status:status
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getGroupEntries = function(groupId,displayDate,status,start,end) {
-            return SessionService.invoke('/blogsentry/get-group-entries',[{
+            return SessionService.invoke({'/blogsentry/get-group-entries':{
                 groupId:groupId
                 ,displayDate:displayDate
                 ,status:status
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getGroupEntriesCount = function(groupId,status) {
-            return SessionService.invoke('/blogsentry/get-group-entries-count',[{
+            return SessionService.invoke({'/blogsentry/get-group-entries-count':{
                 groupId:groupId
                 ,status:status
-            }]);
+            }});
         };
         service.getGroupEntriesCount = function(groupId,displayDate,status) {
-            return SessionService.invoke('/blogsentry/get-group-entries-count',[{
+            return SessionService.invoke({'/blogsentry/get-group-entries-count':{
                 groupId:groupId
                 ,displayDate:displayDate
                 ,status:status
-            }]);
+            }});
         };
         service.getGroupEntriesRss = function(groupId,displayDate,status,max,type,version,displayStyle,feedURL,entryURL,themeDisplay) {
-            return SessionService.invoke('/blogsentry/get-group-entries-rss',[{
+            return SessionService.invoke({'/blogsentry/get-group-entries-rss':{
                 groupId:groupId
                 ,displayDate:displayDate
                 ,status:status
@@ -1315,27 +1226,27 @@
                 ,feedURL:feedURL
                 ,entryURL:entryURL
                 ,themeDisplay:themeDisplay
-            }]);
+            }});
         };
         service.getGroupsEntries = function(companyId,groupId,displayDate,status,max) {
-            return SessionService.invoke('/blogsentry/get-groups-entries',[{
+            return SessionService.invoke({'/blogsentry/get-groups-entries':{
                 companyId:companyId
                 ,groupId:groupId
                 ,displayDate:displayDate
                 ,status:status
                 ,max:max
-            }]);
+            }});
         };
         service.getOrganizationEntries = function(organizationId,displayDate,status,max) {
-            return SessionService.invoke('/blogsentry/get-organization-entries',[{
+            return SessionService.invoke({'/blogsentry/get-organization-entries':{
                 organizationId:organizationId
                 ,displayDate:displayDate
                 ,status:status
                 ,max:max
-            }]);
+            }});
         };
         service.getOrganizationEntriesRss = function(organizationId,displayDate,status,max,type,version,displayStyle,feedURL,entryURL,themeDisplay) {
-            return SessionService.invoke('/blogsentry/get-organization-entries-rss',[{
+            return SessionService.invoke({'/blogsentry/get-organization-entries-rss':{
                 organizationId:organizationId
                 ,displayDate:displayDate
                 ,status:status
@@ -1346,27 +1257,27 @@
                 ,feedURL:feedURL
                 ,entryURL:entryURL
                 ,themeDisplay:themeDisplay
-            }]);
+            }});
         };
         service.moveEntryToTrash = function(entryId) {
-            return SessionService.invoke('/blogsentry/move-entry-to-trash',[{
+            return SessionService.invoke({'/blogsentry/move-entry-to-trash':{
                 entryId:entryId
-            }]);
+            }});
         };
         service.restoreEntryFromTrash = function(entryId) {
-            return SessionService.invoke('/blogsentry/restore-entry-from-trash',[{
+            return SessionService.invoke({'/blogsentry/restore-entry-from-trash':{
                 entryId:entryId
-            }]);
+            }});
         };
         service.subscribe = function(groupId) {
-            return SessionService.invoke('/blogsentry/subscribe',[{
+            return SessionService.invoke({'/blogsentry/subscribe':{
                 groupId:groupId
-            }]);
+            }});
         };
         service.unsubscribe = function(groupId) {
-            return SessionService.invoke('/blogsentry/unsubscribe',[{
+            return SessionService.invoke({'/blogsentry/unsubscribe':{
                 groupId:groupId
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -1381,156 +1292,156 @@
         var service = {};
         // Begin generated service methods
         service.addEntry = function(groupId,folderId,name,url,description,serviceContext) {
-            return SessionService.invoke('/bookmarksentry/add-entry',[{
+            return SessionService.invoke({'/bookmarksentry/add-entry':{
                 groupId:groupId
                 ,folderId:folderId
                 ,name:name
                 ,url:url
                 ,description:description
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteEntry = function(entryId) {
-            return SessionService.invoke('/bookmarksentry/delete-entry',[{
+            return SessionService.invoke({'/bookmarksentry/delete-entry':{
                 entryId:entryId
-            }]);
+            }});
         };
         service.getEntries = function(groupId,folderId,start,end) {
-            return SessionService.invoke('/bookmarksentry/get-entries',[{
+            return SessionService.invoke({'/bookmarksentry/get-entries':{
                 groupId:groupId
                 ,folderId:folderId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getEntries = function(groupId,folderId,start,end,orderByComparator) {
-            return SessionService.invoke('/bookmarksentry/get-entries',[{
+            return SessionService.invoke({'/bookmarksentry/get-entries':{
                 groupId:groupId
                 ,folderId:folderId
                 ,start:start
                 ,end:end
                 ,orderByComparator:orderByComparator
-            }]);
+            }});
         };
         service.getEntriesCount = function(groupId,folderId) {
-            return SessionService.invoke('/bookmarksentry/get-entries-count',[{
+            return SessionService.invoke({'/bookmarksentry/get-entries-count':{
                 groupId:groupId
                 ,folderId:folderId
-            }]);
+            }});
         };
         service.getEntriesCount = function(groupId,folderId,status) {
-            return SessionService.invoke('/bookmarksentry/get-entries-count',[{
+            return SessionService.invoke({'/bookmarksentry/get-entries-count':{
                 groupId:groupId
                 ,folderId:folderId
                 ,status:status
-            }]);
+            }});
         };
         service.getEntry = function(entryId) {
-            return SessionService.invoke('/bookmarksentry/get-entry',[{
+            return SessionService.invoke({'/bookmarksentry/get-entry':{
                 entryId:entryId
-            }]);
+            }});
         };
         service.getFoldersEntriesCount = function(groupId,folderIds) {
-            return SessionService.invoke('/bookmarksentry/get-folders-entries-count',[{
+            return SessionService.invoke({'/bookmarksentry/get-folders-entries-count':{
                 groupId:groupId
                 ,folderIds:folderIds
-            }]);
+            }});
         };
         service.getGroupEntries = function(groupId,start,end) {
-            return SessionService.invoke('/bookmarksentry/get-group-entries',[{
+            return SessionService.invoke({'/bookmarksentry/get-group-entries':{
                 groupId:groupId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getGroupEntries = function(groupId,userId,start,end) {
-            return SessionService.invoke('/bookmarksentry/get-group-entries',[{
+            return SessionService.invoke({'/bookmarksentry/get-group-entries':{
                 groupId:groupId
                 ,userId:userId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getGroupEntries = function(groupId,userId,rootFolderId,start,end) {
-            return SessionService.invoke('/bookmarksentry/get-group-entries',[{
+            return SessionService.invoke({'/bookmarksentry/get-group-entries':{
                 groupId:groupId
                 ,userId:userId
                 ,rootFolderId:rootFolderId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getGroupEntriesCount = function(groupId) {
-            return SessionService.invoke('/bookmarksentry/get-group-entries-count',[{
+            return SessionService.invoke({'/bookmarksentry/get-group-entries-count':{
                 groupId:groupId
-            }]);
+            }});
         };
         service.getGroupEntriesCount = function(groupId,userId) {
-            return SessionService.invoke('/bookmarksentry/get-group-entries-count',[{
+            return SessionService.invoke({'/bookmarksentry/get-group-entries-count':{
                 groupId:groupId
                 ,userId:userId
-            }]);
+            }});
         };
         service.getGroupEntriesCount = function(groupId,userId,rootFolderId) {
-            return SessionService.invoke('/bookmarksentry/get-group-entries-count',[{
+            return SessionService.invoke({'/bookmarksentry/get-group-entries-count':{
                 groupId:groupId
                 ,userId:userId
                 ,rootFolderId:rootFolderId
-            }]);
+            }});
         };
         service.moveEntry = function(entryId,parentFolderId) {
-            return SessionService.invoke('/bookmarksentry/move-entry',[{
+            return SessionService.invoke({'/bookmarksentry/move-entry':{
                 entryId:entryId
                 ,parentFolderId:parentFolderId
-            }]);
+            }});
         };
         service.moveEntryFromTrash = function(entryId,parentFolderId) {
-            return SessionService.invoke('/bookmarksentry/move-entry-from-trash',[{
+            return SessionService.invoke({'/bookmarksentry/move-entry-from-trash':{
                 entryId:entryId
                 ,parentFolderId:parentFolderId
-            }]);
+            }});
         };
         service.moveEntryToTrash = function(entryId) {
-            return SessionService.invoke('/bookmarksentry/move-entry-to-trash',[{
+            return SessionService.invoke({'/bookmarksentry/move-entry-to-trash':{
                 entryId:entryId
-            }]);
+            }});
         };
         service.openEntry = function(entry) {
-            return SessionService.invoke('/bookmarksentry/open-entry',[{
+            return SessionService.invoke({'/bookmarksentry/open-entry':{
                 entry:entry
-            }]);
+            }});
         };
         service.openEntry = function(entryId) {
-            return SessionService.invoke('/bookmarksentry/open-entry',[{
+            return SessionService.invoke({'/bookmarksentry/open-entry':{
                 entryId:entryId
-            }]);
+            }});
         };
         service.restoreEntryFromTrash = function(entryId) {
-            return SessionService.invoke('/bookmarksentry/restore-entry-from-trash',[{
+            return SessionService.invoke({'/bookmarksentry/restore-entry-from-trash':{
                 entryId:entryId
-            }]);
+            }});
         };
         service.search = function(groupId,creatorUserId,status,start,end) {
-            return SessionService.invoke('/bookmarksentry/search',[{
+            return SessionService.invoke({'/bookmarksentry/search':{
                 groupId:groupId
                 ,creatorUserId:creatorUserId
                 ,status:status
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.subscribeEntry = function(entryId) {
-            return SessionService.invoke('/bookmarksentry/subscribe-entry',[{
+            return SessionService.invoke({'/bookmarksentry/subscribe-entry':{
                 entryId:entryId
-            }]);
+            }});
         };
         service.unsubscribeEntry = function(entryId) {
-            return SessionService.invoke('/bookmarksentry/unsubscribe-entry',[{
+            return SessionService.invoke({'/bookmarksentry/unsubscribe-entry':{
                 entryId:entryId
-            }]);
+            }});
         };
         service.updateEntry = function(entryId,groupId,folderId,name,url,description,serviceContext) {
-            return SessionService.invoke('/bookmarksentry/update-entry',[{
+            return SessionService.invoke({'/bookmarksentry/update-entry':{
                 entryId:entryId
                 ,groupId:groupId
                 ,folderId:folderId
@@ -1538,7 +1449,7 @@
                 ,url:url
                 ,description:description
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -1553,168 +1464,168 @@
         var service = {};
         // Begin generated service methods
         service.addFolder = function(parentFolderId,name,description,serviceContext) {
-            return SessionService.invoke('/bookmarksfolder/add-folder',[{
+            return SessionService.invoke({'/bookmarksfolder/add-folder':{
                 parentFolderId:parentFolderId
                 ,name:name
                 ,description:description
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteFolder = function(folderId) {
-            return SessionService.invoke('/bookmarksfolder/delete-folder',[{
+            return SessionService.invoke({'/bookmarksfolder/delete-folder':{
                 folderId:folderId
-            }]);
+            }});
         };
         service.deleteFolder = function(folderId,includeTrashedEntries) {
-            return SessionService.invoke('/bookmarksfolder/delete-folder',[{
+            return SessionService.invoke({'/bookmarksfolder/delete-folder':{
                 folderId:folderId
                 ,includeTrashedEntries:includeTrashedEntries
-            }]);
+            }});
         };
         service.getFolder = function(folderId) {
-            return SessionService.invoke('/bookmarksfolder/get-folder',[{
+            return SessionService.invoke({'/bookmarksfolder/get-folder':{
                 folderId:folderId
-            }]);
+            }});
         };
         service.getFolderIds = function(groupId,folderId) {
-            return SessionService.invoke('/bookmarksfolder/get-folder-ids',[{
+            return SessionService.invoke({'/bookmarksfolder/get-folder-ids':{
                 groupId:groupId
                 ,folderId:folderId
-            }]);
+            }});
         };
         service.getFolders = function(groupId) {
-            return SessionService.invoke('/bookmarksfolder/get-folders',[{
+            return SessionService.invoke({'/bookmarksfolder/get-folders':{
                 groupId:groupId
-            }]);
+            }});
         };
         service.getFolders = function(groupId,parentFolderId) {
-            return SessionService.invoke('/bookmarksfolder/get-folders',[{
+            return SessionService.invoke({'/bookmarksfolder/get-folders':{
                 groupId:groupId
                 ,parentFolderId:parentFolderId
-            }]);
+            }});
         };
         service.getFolders = function(groupId,parentFolderId,start,end) {
-            return SessionService.invoke('/bookmarksfolder/get-folders',[{
+            return SessionService.invoke({'/bookmarksfolder/get-folders':{
                 groupId:groupId
                 ,parentFolderId:parentFolderId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getFolders = function(groupId,parentFolderId,status,start,end) {
-            return SessionService.invoke('/bookmarksfolder/get-folders',[{
+            return SessionService.invoke({'/bookmarksfolder/get-folders':{
                 groupId:groupId
                 ,parentFolderId:parentFolderId
                 ,status:status
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getFoldersAndEntries = function(groupId,folderId) {
-            return SessionService.invoke('/bookmarksfolder/get-folders-and-entries',[{
+            return SessionService.invoke({'/bookmarksfolder/get-folders-and-entries':{
                 groupId:groupId
                 ,folderId:folderId
-            }]);
+            }});
         };
         service.getFoldersAndEntries = function(groupId,folderId,status) {
-            return SessionService.invoke('/bookmarksfolder/get-folders-and-entries',[{
+            return SessionService.invoke({'/bookmarksfolder/get-folders-and-entries':{
                 groupId:groupId
                 ,folderId:folderId
                 ,status:status
-            }]);
+            }});
         };
         service.getFoldersAndEntries = function(groupId,folderId,status,start,end) {
-            return SessionService.invoke('/bookmarksfolder/get-folders-and-entries',[{
+            return SessionService.invoke({'/bookmarksfolder/get-folders-and-entries':{
                 groupId:groupId
                 ,folderId:folderId
                 ,status:status
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getFoldersAndEntriesCount = function(groupId,folderId) {
-            return SessionService.invoke('/bookmarksfolder/get-folders-and-entries-count',[{
+            return SessionService.invoke({'/bookmarksfolder/get-folders-and-entries-count':{
                 groupId:groupId
                 ,folderId:folderId
-            }]);
+            }});
         };
         service.getFoldersAndEntriesCount = function(groupId,folderId,status) {
-            return SessionService.invoke('/bookmarksfolder/get-folders-and-entries-count',[{
+            return SessionService.invoke({'/bookmarksfolder/get-folders-and-entries-count':{
                 groupId:groupId
                 ,folderId:folderId
                 ,status:status
-            }]);
+            }});
         };
         service.getFoldersCount = function(groupId,parentFolderId) {
-            return SessionService.invoke('/bookmarksfolder/get-folders-count',[{
+            return SessionService.invoke({'/bookmarksfolder/get-folders-count':{
                 groupId:groupId
                 ,parentFolderId:parentFolderId
-            }]);
+            }});
         };
         service.getFoldersCount = function(groupId,parentFolderId,status) {
-            return SessionService.invoke('/bookmarksfolder/get-folders-count',[{
+            return SessionService.invoke({'/bookmarksfolder/get-folders-count':{
                 groupId:groupId
                 ,parentFolderId:parentFolderId
                 ,status:status
-            }]);
+            }});
         };
         service.getSubfolderIds = function(folderIds,groupId,folderId) {
-            return SessionService.invoke('/bookmarksfolder/get-subfolder-ids',[{
+            return SessionService.invoke({'/bookmarksfolder/get-subfolder-ids':{
                 folderIds:folderIds
                 ,groupId:groupId
                 ,folderId:folderId
-            }]);
+            }});
         };
         service.getSubfolderIds = function(groupId,folderId,recurse) {
-            return SessionService.invoke('/bookmarksfolder/get-subfolder-ids',[{
+            return SessionService.invoke({'/bookmarksfolder/get-subfolder-ids':{
                 groupId:groupId
                 ,folderId:folderId
                 ,recurse:recurse
-            }]);
+            }});
         };
         service.moveFolder = function(folderId,parentFolderId) {
-            return SessionService.invoke('/bookmarksfolder/move-folder',[{
+            return SessionService.invoke({'/bookmarksfolder/move-folder':{
                 folderId:folderId
                 ,parentFolderId:parentFolderId
-            }]);
+            }});
         };
         service.moveFolderFromTrash = function(folderId,parentFolderId) {
-            return SessionService.invoke('/bookmarksfolder/move-folder-from-trash',[{
+            return SessionService.invoke({'/bookmarksfolder/move-folder-from-trash':{
                 folderId:folderId
                 ,parentFolderId:parentFolderId
-            }]);
+            }});
         };
         service.moveFolderToTrash = function(folderId) {
-            return SessionService.invoke('/bookmarksfolder/move-folder-to-trash',[{
+            return SessionService.invoke({'/bookmarksfolder/move-folder-to-trash':{
                 folderId:folderId
-            }]);
+            }});
         };
         service.restoreFolderFromTrash = function(folderId) {
-            return SessionService.invoke('/bookmarksfolder/restore-folder-from-trash',[{
+            return SessionService.invoke({'/bookmarksfolder/restore-folder-from-trash':{
                 folderId:folderId
-            }]);
+            }});
         };
         service.subscribeFolder = function(groupId,folderId) {
-            return SessionService.invoke('/bookmarksfolder/subscribe-folder',[{
+            return SessionService.invoke({'/bookmarksfolder/subscribe-folder':{
                 groupId:groupId
                 ,folderId:folderId
-            }]);
+            }});
         };
         service.unsubscribeFolder = function(groupId,folderId) {
-            return SessionService.invoke('/bookmarksfolder/unsubscribe-folder',[{
+            return SessionService.invoke({'/bookmarksfolder/unsubscribe-folder':{
                 groupId:groupId
                 ,folderId:folderId
-            }]);
+            }});
         };
         service.updateFolder = function(folderId,parentFolderId,name,description,mergeWithParentFolder,serviceContext) {
-            return SessionService.invoke('/bookmarksfolder/update-folder',[{
+            return SessionService.invoke({'/bookmarksfolder/update-folder':{
                 folderId:folderId
                 ,parentFolderId:parentFolderId
                 ,name:name
                 ,description:description
                 ,mergeWithParentFolder:mergeWithParentFolder
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -1729,19 +1640,19 @@
         var service = {};
         // Begin generated service methods
         service.fetchClassName = function(value) {
-            return SessionService.invoke('/classname/fetch-class-name',[{
+            return SessionService.invoke({'/classname/fetch-class-name':{
                 value:value
-            }]);
+            }});
         };
         service.fetchClassNameId = function(clazz) {
-            return SessionService.invoke('/classname/fetch-class-name-id',[{
+            return SessionService.invoke({'/classname/fetch-class-name-id':{
                 clazz:clazz
-            }]);
+            }});
         };
         service.fetchClassNameId = function(value) {
-            return SessionService.invoke('/classname/fetch-class-name-id',[{
+            return SessionService.invoke({'/classname/fetch-class-name-id':{
                 value:value
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -1756,37 +1667,37 @@
         var service = {};
         // Begin generated service methods
         service.deleteLogo = function(companyId) {
-            return SessionService.invoke('/company/delete-logo',[{
+            return SessionService.invoke({'/company/delete-logo':{
                 companyId:companyId
-            }]);
+            }});
         };
         service.getCompanyById = function(companyId) {
-            return SessionService.invoke('/company/get-company-by-id',[{
+            return SessionService.invoke({'/company/get-company-by-id':{
                 companyId:companyId
-            }]);
+            }});
         };
         service.getCompanyByLogoId = function(logoId) {
-            return SessionService.invoke('/company/get-company-by-logo-id',[{
+            return SessionService.invoke({'/company/get-company-by-logo-id':{
                 logoId:logoId
-            }]);
+            }});
         };
         service.getCompanyByMx = function(mx) {
-            return SessionService.invoke('/company/get-company-by-mx',[{
+            return SessionService.invoke({'/company/get-company-by-mx':{
                 mx:mx
-            }]);
+            }});
         };
         service.getCompanyByVirtualHost = function(virtualHost) {
-            return SessionService.invoke('/company/get-company-by-virtual-host',[{
+            return SessionService.invoke({'/company/get-company-by-virtual-host':{
                 virtualHost:virtualHost
-            }]);
+            }});
         };
         service.getCompanyByWebId = function(webId) {
-            return SessionService.invoke('/company/get-company-by-web-id',[{
+            return SessionService.invoke({'/company/get-company-by-web-id':{
                 webId:webId
-            }]);
+            }});
         };
         service.updateCompany = function(companyId,virtualHost,mx,homeURL,name,legalName,legalId,legalType,sicCode,tickerSymbol,industry,type,size) {
-            return SessionService.invoke('/company/update-company',[{
+            return SessionService.invoke({'/company/update-company':{
                 companyId:companyId
                 ,virtualHost:virtualHost
                 ,mx:mx
@@ -1800,29 +1711,29 @@
                 ,industry:industry
                 ,type:type
                 ,size:size
-            }]);
+            }});
         };
         service.updateCompany = function(companyId,virtualHost,mx,maxUsers,active) {
-            return SessionService.invoke('/company/update-company',[{
+            return SessionService.invoke({'/company/update-company':{
                 companyId:companyId
                 ,virtualHost:virtualHost
                 ,mx:mx
                 ,maxUsers:maxUsers
                 ,active:active
-            }]);
+            }});
         };
         service.updateDisplay = function(companyId,languageId,timeZoneId) {
-            return SessionService.invoke('/company/update-display',[{
+            return SessionService.invoke({'/company/update-display':{
                 companyId:companyId
                 ,languageId:languageId
                 ,timeZoneId:timeZoneId
-            }]);
+            }});
         };
         service.updateLogo = function(companyId,bytes) {
-            return SessionService.invoke('/company/update-logo',[{
+            return SessionService.invoke({'/company/update-logo':{
                 companyId:companyId
                 ,bytes:bytes
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -1837,24 +1748,24 @@
         var service = {};
         // Begin generated service methods
         service.getContact = function(contactId) {
-            return SessionService.invoke('/contact/get-contact',[{
+            return SessionService.invoke({'/contact/get-contact':{
                 contactId:contactId
-            }]);
+            }});
         };
         service.getContacts = function(classNameId,classPK,start,end,orderByComparator) {
-            return SessionService.invoke('/contact/get-contacts',[{
+            return SessionService.invoke({'/contact/get-contacts':{
                 classNameId:classNameId
                 ,classPK:classPK
                 ,start:start
                 ,end:end
                 ,orderByComparator:orderByComparator
-            }]);
+            }});
         };
         service.getContactsCount = function(classNameId,classPK) {
-            return SessionService.invoke('/contact/get-contacts-count',[{
+            return SessionService.invoke({'/contact/get-contacts-count':{
                 classNameId:classNameId
                 ,classPK:classPK
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -1869,59 +1780,59 @@
         var service = {};
         // Begin generated service methods
         service.addCountry = function(name,a2,a3,number,idd,active) {
-            return SessionService.invoke('/country/add-country',[{
+            return SessionService.invoke({'/country/add-country':{
                 name:name
                 ,a2:a2
                 ,a3:a3
                 ,number:number
                 ,idd:idd
                 ,active:active
-            }]);
+            }});
         };
         service.fetchCountry = function(countryId) {
-            return SessionService.invoke('/country/fetch-country',[{
+            return SessionService.invoke({'/country/fetch-country':{
                 countryId:countryId
-            }]);
+            }});
         };
         service.fetchCountryByA2 = function(a2) {
-            return SessionService.invoke('/country/fetch-country-by-a2',[{
+            return SessionService.invoke({'/country/fetch-country-by-a2':{
                 a2:a2
-            }]);
+            }});
         };
         service.fetchCountryByA3 = function(a3) {
-            return SessionService.invoke('/country/fetch-country-by-a3',[{
+            return SessionService.invoke({'/country/fetch-country-by-a3':{
                 a3:a3
-            }]);
+            }});
         };
         service.getCountries = function() {
-            return SessionService.invoke('/country/get-countries',[{
+            return SessionService.invoke({'/country/get-countries':{
                 
-            }]);
+            }});
         };
         service.getCountries = function(active) {
-            return SessionService.invoke('/country/get-countries',[{
+            return SessionService.invoke({'/country/get-countries':{
                 active:active
-            }]);
+            }});
         };
         service.getCountry = function(countryId) {
-            return SessionService.invoke('/country/get-country',[{
+            return SessionService.invoke({'/country/get-country':{
                 countryId:countryId
-            }]);
+            }});
         };
         service.getCountryByA2 = function(a2) {
-            return SessionService.invoke('/country/get-country-by-a2',[{
+            return SessionService.invoke({'/country/get-country-by-a2':{
                 a2:a2
-            }]);
+            }});
         };
         service.getCountryByA3 = function(a3) {
-            return SessionService.invoke('/country/get-country-by-a3',[{
+            return SessionService.invoke({'/country/get-country-by-a3':{
                 a3:a3
-            }]);
+            }});
         };
         service.getCountryByName = function(name) {
-            return SessionService.invoke('/country/get-country-by-name',[{
+            return SessionService.invoke({'/country/get-country-by-name':{
                 name:name
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -1936,65 +1847,65 @@
         var service = {};
         // Begin generated service methods
         service.addRecord = function(groupId,recordSetId,displayIndex,fields,serviceContext) {
-            return SessionService.invoke('/ddlrecord/add-record',[{
+            return SessionService.invoke({'/ddlrecord/add-record':{
                 groupId:groupId
                 ,recordSetId:recordSetId
                 ,displayIndex:displayIndex
                 ,fields:fields
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addRecord = function(groupId,recordSetId,displayIndex,fieldsMap,serviceContext) {
-            return SessionService.invoke('/ddlrecord/add-record',[{
+            return SessionService.invoke({'/ddlrecord/add-record':{
                 groupId:groupId
                 ,recordSetId:recordSetId
                 ,displayIndex:displayIndex
                 ,fieldsMap:fieldsMap
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteRecord = function(recordId) {
-            return SessionService.invoke('/ddlrecord/delete-record',[{
+            return SessionService.invoke({'/ddlrecord/delete-record':{
                 recordId:recordId
-            }]);
+            }});
         };
         service.deleteRecordLocale = function(recordId,locale,serviceContext) {
-            return SessionService.invoke('/ddlrecord/delete-record-locale',[{
+            return SessionService.invoke({'/ddlrecord/delete-record-locale':{
                 recordId:recordId
                 ,locale:locale
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.getRecord = function(recordId) {
-            return SessionService.invoke('/ddlrecord/get-record',[{
+            return SessionService.invoke({'/ddlrecord/get-record':{
                 recordId:recordId
-            }]);
+            }});
         };
         service.revertRecordVersion = function(recordId,version,serviceContext) {
-            return SessionService.invoke('/ddlrecord/revert-record-version',[{
+            return SessionService.invoke({'/ddlrecord/revert-record-version':{
                 recordId:recordId
                 ,version:version
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.updateRecord = function(recordId,displayIndex,fieldsMap,mergeFields,serviceContext) {
-            return SessionService.invoke('/ddlrecord/update-record',[{
+            return SessionService.invoke({'/ddlrecord/update-record':{
                 recordId:recordId
                 ,displayIndex:displayIndex
                 ,fieldsMap:fieldsMap
                 ,mergeFields:mergeFields
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.updateRecord = function(recordId,majorVersion,displayIndex,fields,mergeFields,serviceContext) {
-            return SessionService.invoke('/ddlrecord/update-record',[{
+            return SessionService.invoke({'/ddlrecord/update-record':{
                 recordId:recordId
                 ,majorVersion:majorVersion
                 ,displayIndex:displayIndex
                 ,fields:fields
                 ,mergeFields:mergeFields
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -2009,7 +1920,7 @@
         var service = {};
         // Begin generated service methods
         service.addRecordSet = function(groupId,ddmStructureId,recordSetKey,nameMap,descriptionMap,minDisplayRows,scope,serviceContext) {
-            return SessionService.invoke('/ddlrecordset/add-record-set',[{
+            return SessionService.invoke({'/ddlrecordset/add-record-set':{
                 groupId:groupId
                 ,ddmStructureId:ddmStructureId
                 ,recordSetKey:recordSetKey
@@ -2018,20 +1929,20 @@
                 ,minDisplayRows:minDisplayRows
                 ,scope:scope
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteRecordSet = function(recordSetId) {
-            return SessionService.invoke('/ddlrecordset/delete-record-set',[{
+            return SessionService.invoke({'/ddlrecordset/delete-record-set':{
                 recordSetId:recordSetId
-            }]);
+            }});
         };
         service.getRecordSet = function(recordSetId) {
-            return SessionService.invoke('/ddlrecordset/get-record-set',[{
+            return SessionService.invoke({'/ddlrecordset/get-record-set':{
                 recordSetId:recordSetId
-            }]);
+            }});
         };
         service.search = function(companyId,groupId,keywords,scope,start,end,orderByComparator) {
-            return SessionService.invoke('/ddlrecordset/search',[{
+            return SessionService.invoke({'/ddlrecordset/search':{
                 companyId:companyId
                 ,groupId:groupId
                 ,keywords:keywords
@@ -2039,10 +1950,10 @@
                 ,start:start
                 ,end:end
                 ,orderByComparator:orderByComparator
-            }]);
+            }});
         };
         service.search = function(companyId,groupId,name,description,scope,andOperator,start,end,orderByComparator) {
-            return SessionService.invoke('/ddlrecordset/search',[{
+            return SessionService.invoke({'/ddlrecordset/search':{
                 companyId:companyId
                 ,groupId:groupId
                 ,name:name
@@ -2052,45 +1963,45 @@
                 ,start:start
                 ,end:end
                 ,orderByComparator:orderByComparator
-            }]);
+            }});
         };
         service.searchCount = function(companyId,groupId,keywords,scope) {
-            return SessionService.invoke('/ddlrecordset/search-count',[{
+            return SessionService.invoke({'/ddlrecordset/search-count':{
                 companyId:companyId
                 ,groupId:groupId
                 ,keywords:keywords
                 ,scope:scope
-            }]);
+            }});
         };
         service.searchCount = function(companyId,groupId,name,description,scope,andOperator) {
-            return SessionService.invoke('/ddlrecordset/search-count',[{
+            return SessionService.invoke({'/ddlrecordset/search-count':{
                 companyId:companyId
                 ,groupId:groupId
                 ,name:name
                 ,description:description
                 ,scope:scope
                 ,andOperator:andOperator
-            }]);
+            }});
         };
         service.updateMinDisplayRows = function(recordSetId,minDisplayRows,serviceContext) {
-            return SessionService.invoke('/ddlrecordset/update-min-display-rows',[{
+            return SessionService.invoke({'/ddlrecordset/update-min-display-rows':{
                 recordSetId:recordSetId
                 ,minDisplayRows:minDisplayRows
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.updateRecordSet = function(recordSetId,ddmStructureId,nameMap,descriptionMap,minDisplayRows,serviceContext) {
-            return SessionService.invoke('/ddlrecordset/update-record-set',[{
+            return SessionService.invoke({'/ddlrecordset/update-record-set':{
                 recordSetId:recordSetId
                 ,ddmStructureId:ddmStructureId
                 ,nameMap:nameMap
                 ,descriptionMap:descriptionMap
                 ,minDisplayRows:minDisplayRows
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.updateRecordSet = function(groupId,ddmStructureId,recordSetKey,nameMap,descriptionMap,minDisplayRows,serviceContext) {
-            return SessionService.invoke('/ddlrecordset/update-record-set',[{
+            return SessionService.invoke({'/ddlrecordset/update-record-set':{
                 groupId:groupId
                 ,ddmStructureId:ddmStructureId
                 ,recordSetKey:recordSetKey
@@ -2098,7 +2009,7 @@
                 ,descriptionMap:descriptionMap
                 ,minDisplayRows:minDisplayRows
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -2113,7 +2024,7 @@
         var service = {};
         // Begin generated service methods
         service.addStructure = function(groupId,parentStructureId,classNameId,structureKey,nameMap,descriptionMap,xsd,storageType,type,serviceContext) {
-            return SessionService.invoke('/ddmstructure/add-structure',[{
+            return SessionService.invoke({'/ddmstructure/add-structure':{
                 groupId:groupId
                 ,parentStructureId:parentStructureId
                 ,classNameId:classNameId
@@ -2124,10 +2035,10 @@
                 ,storageType:storageType
                 ,type:type
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addStructure = function(userId,groupId,parentStructureKey,classNameId,structureKey,nameMap,descriptionMap,xsd,storageType,type,serviceContext) {
-            return SessionService.invoke('/ddmstructure/add-structure',[{
+            return SessionService.invoke({'/ddmstructure/add-structure':{
                 userId:userId
                 ,groupId:groupId
                 ,parentStructureKey:parentStructureKey
@@ -2139,10 +2050,10 @@
                 ,storageType:storageType
                 ,type:type
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addStructure = function(userId,groupId,classNameId,nameMap,descriptionMap,xsd,serviceContext) {
-            return SessionService.invoke('/ddmstructure/add-structure',[{
+            return SessionService.invoke({'/ddmstructure/add-structure':{
                 userId:userId
                 ,groupId:groupId
                 ,classNameId:classNameId
@@ -2150,80 +2061,80 @@
                 ,descriptionMap:descriptionMap
                 ,xsd:xsd
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.copyStructure = function(structureId,serviceContext) {
-            return SessionService.invoke('/ddmstructure/copy-structure',[{
+            return SessionService.invoke({'/ddmstructure/copy-structure':{
                 structureId:structureId
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.copyStructure = function(structureId,nameMap,descriptionMap,serviceContext) {
-            return SessionService.invoke('/ddmstructure/copy-structure',[{
+            return SessionService.invoke({'/ddmstructure/copy-structure':{
                 structureId:structureId
                 ,nameMap:nameMap
                 ,descriptionMap:descriptionMap
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteStructure = function(structureId) {
-            return SessionService.invoke('/ddmstructure/delete-structure',[{
+            return SessionService.invoke({'/ddmstructure/delete-structure':{
                 structureId:structureId
-            }]);
+            }});
         };
         service.fetchStructure = function(groupId,classNameId,structureKey) {
-            return SessionService.invoke('/ddmstructure/fetch-structure',[{
+            return SessionService.invoke({'/ddmstructure/fetch-structure':{
                 groupId:groupId
                 ,classNameId:classNameId
                 ,structureKey:structureKey
-            }]);
+            }});
         };
         service.getStructure = function(structureId) {
-            return SessionService.invoke('/ddmstructure/get-structure',[{
+            return SessionService.invoke({'/ddmstructure/get-structure':{
                 structureId:structureId
-            }]);
+            }});
         };
         service.getStructure = function(groupId,classNameId,structureKey) {
-            return SessionService.invoke('/ddmstructure/get-structure',[{
+            return SessionService.invoke({'/ddmstructure/get-structure':{
                 groupId:groupId
                 ,classNameId:classNameId
                 ,structureKey:structureKey
-            }]);
+            }});
         };
         service.getStructure = function(groupId,classNameId,structureKey,includeGlobalStructures) {
-            return SessionService.invoke('/ddmstructure/get-structure',[{
+            return SessionService.invoke({'/ddmstructure/get-structure':{
                 groupId:groupId
                 ,classNameId:classNameId
                 ,structureKey:structureKey
                 ,includeGlobalStructures:includeGlobalStructures
-            }]);
+            }});
         };
         service.getStructures = function(groupId) {
-            return SessionService.invoke('/ddmstructure/get-structures',[{
+            return SessionService.invoke({'/ddmstructure/get-structures':{
                 groupId:groupId
-            }]);
+            }});
         };
         service.getStructures = function(groupIds) {
-            return SessionService.invoke('/ddmstructure/get-structures',[{
+            return SessionService.invoke({'/ddmstructure/get-structures':{
                 groupIds:groupIds
-            }]);
+            }});
         };
         service.getStructures = function(groupIds,classNameId) {
-            return SessionService.invoke('/ddmstructure/get-structures',[{
+            return SessionService.invoke({'/ddmstructure/get-structures':{
                 groupIds:groupIds
                 ,classNameId:classNameId
-            }]);
+            }});
         };
         service.getStructures = function(groupIds,classNameId,start,end) {
-            return SessionService.invoke('/ddmstructure/get-structures',[{
+            return SessionService.invoke({'/ddmstructure/get-structures':{
                 groupIds:groupIds
                 ,classNameId:classNameId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.search = function(companyId,groupIds,classNameIds,name,description,storageType,type,andOperator,start,end,orderByComparator) {
-            return SessionService.invoke('/ddmstructure/search',[{
+            return SessionService.invoke({'/ddmstructure/search':{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,classNameIds:classNameIds
@@ -2235,10 +2146,10 @@
                 ,start:start
                 ,end:end
                 ,orderByComparator:orderByComparator
-            }]);
+            }});
         };
         service.search = function(companyId,groupIds,classNameIds,keywords,start,end,orderByComparator) {
-            return SessionService.invoke('/ddmstructure/search',[{
+            return SessionService.invoke({'/ddmstructure/search':{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,classNameIds:classNameIds
@@ -2246,18 +2157,18 @@
                 ,start:start
                 ,end:end
                 ,orderByComparator:orderByComparator
-            }]);
+            }});
         };
         service.searchCount = function(companyId,groupIds,classNameIds,keywords) {
-            return SessionService.invoke('/ddmstructure/search-count',[{
+            return SessionService.invoke({'/ddmstructure/search-count':{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,classNameIds:classNameIds
                 ,keywords:keywords
-            }]);
+            }});
         };
         service.searchCount = function(companyId,groupIds,classNameIds,name,description,storageType,type,andOperator) {
-            return SessionService.invoke('/ddmstructure/search-count',[{
+            return SessionService.invoke({'/ddmstructure/search-count':{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,classNameIds:classNameIds
@@ -2266,20 +2177,20 @@
                 ,storageType:storageType
                 ,type:type
                 ,andOperator:andOperator
-            }]);
+            }});
         };
         service.updateStructure = function(structureId,parentStructureId,nameMap,descriptionMap,xsd,serviceContext) {
-            return SessionService.invoke('/ddmstructure/update-structure',[{
+            return SessionService.invoke({'/ddmstructure/update-structure':{
                 structureId:structureId
                 ,parentStructureId:parentStructureId
                 ,nameMap:nameMap
                 ,descriptionMap:descriptionMap
                 ,xsd:xsd
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.updateStructure = function(groupId,parentStructureId,classNameId,structureKey,nameMap,descriptionMap,xsd,serviceContext) {
-            return SessionService.invoke('/ddmstructure/update-structure',[{
+            return SessionService.invoke({'/ddmstructure/update-structure':{
                 groupId:groupId
                 ,parentStructureId:parentStructureId
                 ,classNameId:classNameId
@@ -2288,7 +2199,7 @@
                 ,descriptionMap:descriptionMap
                 ,xsd:xsd
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -2303,7 +2214,7 @@
         var service = {};
         // Begin generated service methods
         service.addTemplate = function(groupId,classNameId,classPK,nameMap,descriptionMap,type,mode,language,script,serviceContext) {
-            return SessionService.invoke('/ddmtemplate/add-template',[{
+            return SessionService.invoke({'/ddmtemplate/add-template':{
                 groupId:groupId
                 ,classNameId:classNameId
                 ,classPK:classPK
@@ -2314,10 +2225,10 @@
                 ,language:language
                 ,script:script
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addTemplate = function(groupId,classNameId,classPK,templateKey,nameMap,descriptionMap,type,mode,language,script,cacheable,smallImage,smallImageURL,smallImageFile,serviceContext) {
-            return SessionService.invoke('/ddmtemplate/add-template',[{
+            return SessionService.invoke({'/ddmtemplate/add-template':{
                 groupId:groupId
                 ,classNameId:classNameId
                 ,classPK:classPK
@@ -2333,116 +2244,116 @@
                 ,smallImageURL:smallImageURL
                 ,smallImageFile:smallImageFile
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.copyTemplate = function(templateId,serviceContext) {
-            return SessionService.invoke('/ddmtemplate/copy-template',[{
+            return SessionService.invoke({'/ddmtemplate/copy-template':{
                 templateId:templateId
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.copyTemplate = function(templateId,nameMap,descriptionMap,serviceContext) {
-            return SessionService.invoke('/ddmtemplate/copy-template',[{
+            return SessionService.invoke({'/ddmtemplate/copy-template':{
                 templateId:templateId
                 ,nameMap:nameMap
                 ,descriptionMap:descriptionMap
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.copyTemplates = function(classNameId,classPK,newClassPK,type,serviceContext) {
-            return SessionService.invoke('/ddmtemplate/copy-templates',[{
+            return SessionService.invoke({'/ddmtemplate/copy-templates':{
                 classNameId:classNameId
                 ,classPK:classPK
                 ,newClassPK:newClassPK
                 ,type:type
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteTemplate = function(templateId) {
-            return SessionService.invoke('/ddmtemplate/delete-template',[{
+            return SessionService.invoke({'/ddmtemplate/delete-template':{
                 templateId:templateId
-            }]);
+            }});
         };
         service.fetchTemplate = function(groupId,classNameId,templateKey) {
-            return SessionService.invoke('/ddmtemplate/fetch-template',[{
+            return SessionService.invoke({'/ddmtemplate/fetch-template':{
                 groupId:groupId
                 ,classNameId:classNameId
                 ,templateKey:templateKey
-            }]);
+            }});
         };
         service.getTemplate = function(templateId) {
-            return SessionService.invoke('/ddmtemplate/get-template',[{
+            return SessionService.invoke({'/ddmtemplate/get-template':{
                 templateId:templateId
-            }]);
+            }});
         };
         service.getTemplate = function(groupId,classNameId,templateKey) {
-            return SessionService.invoke('/ddmtemplate/get-template',[{
+            return SessionService.invoke({'/ddmtemplate/get-template':{
                 groupId:groupId
                 ,classNameId:classNameId
                 ,templateKey:templateKey
-            }]);
+            }});
         };
         service.getTemplate = function(groupId,classNameId,templateKey,includeGlobalTemplates) {
-            return SessionService.invoke('/ddmtemplate/get-template',[{
+            return SessionService.invoke({'/ddmtemplate/get-template':{
                 groupId:groupId
                 ,classNameId:classNameId
                 ,templateKey:templateKey
                 ,includeGlobalTemplates:includeGlobalTemplates
-            }]);
+            }});
         };
         service.getTemplates = function(groupId,classNameId) {
-            return SessionService.invoke('/ddmtemplate/get-templates',[{
+            return SessionService.invoke({'/ddmtemplate/get-templates':{
                 groupId:groupId
                 ,classNameId:classNameId
-            }]);
+            }});
         };
         service.getTemplates = function(groupId,classNameId,classPK) {
-            return SessionService.invoke('/ddmtemplate/get-templates',[{
+            return SessionService.invoke({'/ddmtemplate/get-templates':{
                 groupId:groupId
                 ,classNameId:classNameId
                 ,classPK:classPK
-            }]);
+            }});
         };
         service.getTemplates = function(groupId,classNameId,classPK,type) {
-            return SessionService.invoke('/ddmtemplate/get-templates',[{
+            return SessionService.invoke({'/ddmtemplate/get-templates':{
                 groupId:groupId
                 ,classNameId:classNameId
                 ,classPK:classPK
                 ,type:type
-            }]);
+            }});
         };
         service.getTemplates = function(groupId,classNameId,classPK,type,mode) {
-            return SessionService.invoke('/ddmtemplate/get-templates',[{
+            return SessionService.invoke({'/ddmtemplate/get-templates':{
                 groupId:groupId
                 ,classNameId:classNameId
                 ,classPK:classPK
                 ,type:type
                 ,mode:mode
-            }]);
+            }});
         };
         service.getTemplatesByClassPk = function(groupId,classPK) {
-            return SessionService.invoke('/ddmtemplate/get-templates-by-class-pk',[{
+            return SessionService.invoke({'/ddmtemplate/get-templates-by-class-pk':{
                 groupId:groupId
                 ,classPK:classPK
-            }]);
+            }});
         };
         service.getTemplatesByStructureClassNameId = function(groupId,structureClassNameId,start,end,orderByComparator) {
-            return SessionService.invoke('/ddmtemplate/get-templates-by-structure-class-name-id',[{
+            return SessionService.invoke({'/ddmtemplate/get-templates-by-structure-class-name-id':{
                 groupId:groupId
                 ,structureClassNameId:structureClassNameId
                 ,start:start
                 ,end:end
                 ,orderByComparator:orderByComparator
-            }]);
+            }});
         };
         service.getTemplatesByStructureClassNameIdCount = function(groupId,structureClassNameId) {
-            return SessionService.invoke('/ddmtemplate/get-templates-by-structure-class-name-id-count',[{
+            return SessionService.invoke({'/ddmtemplate/get-templates-by-structure-class-name-id-count':{
                 groupId:groupId
                 ,structureClassNameId:structureClassNameId
-            }]);
+            }});
         };
         service.search = function(companyId,groupId,classNameId,classPK,keywords,type,mode,start,end,orderByComparator) {
-            return SessionService.invoke('/ddmtemplate/search',[{
+            return SessionService.invoke({'/ddmtemplate/search':{
                 companyId:companyId
                 ,groupId:groupId
                 ,classNameId:classNameId
@@ -2453,10 +2364,10 @@
                 ,start:start
                 ,end:end
                 ,orderByComparator:orderByComparator
-            }]);
+            }});
         };
         service.search = function(companyId,groupIds,classNameIds,classPKs,keywords,type,mode,start,end,orderByComparator) {
-            return SessionService.invoke('/ddmtemplate/search',[{
+            return SessionService.invoke({'/ddmtemplate/search':{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,classNameIds:classNameIds
@@ -2467,10 +2378,10 @@
                 ,start:start
                 ,end:end
                 ,orderByComparator:orderByComparator
-            }]);
+            }});
         };
         service.search = function(companyId,groupId,classNameId,classPK,name,description,type,mode,language,andOperator,start,end,orderByComparator) {
-            return SessionService.invoke('/ddmtemplate/search',[{
+            return SessionService.invoke({'/ddmtemplate/search':{
                 companyId:companyId
                 ,groupId:groupId
                 ,classNameId:classNameId
@@ -2484,10 +2395,10 @@
                 ,start:start
                 ,end:end
                 ,orderByComparator:orderByComparator
-            }]);
+            }});
         };
         service.search = function(companyId,groupIds,classNameIds,classPKs,name,description,type,mode,language,andOperator,start,end,orderByComparator) {
-            return SessionService.invoke('/ddmtemplate/search',[{
+            return SessionService.invoke({'/ddmtemplate/search':{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,classNameIds:classNameIds
@@ -2501,10 +2412,10 @@
                 ,start:start
                 ,end:end
                 ,orderByComparator:orderByComparator
-            }]);
+            }});
         };
         service.searchCount = function(companyId,groupId,classNameId,classPK,name,description,type,mode,language,andOperator) {
-            return SessionService.invoke('/ddmtemplate/search-count',[{
+            return SessionService.invoke({'/ddmtemplate/search-count':{
                 companyId:companyId
                 ,groupId:groupId
                 ,classNameId:classNameId
@@ -2515,10 +2426,10 @@
                 ,mode:mode
                 ,language:language
                 ,andOperator:andOperator
-            }]);
+            }});
         };
         service.searchCount = function(companyId,groupIds,classNameIds,classPKs,name,description,type,mode,language,andOperator) {
-            return SessionService.invoke('/ddmtemplate/search-count',[{
+            return SessionService.invoke({'/ddmtemplate/search-count':{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,classNameIds:classNameIds
@@ -2529,10 +2440,10 @@
                 ,mode:mode
                 ,language:language
                 ,andOperator:andOperator
-            }]);
+            }});
         };
         service.searchCount = function(companyId,groupId,classNameId,classPK,keywords,type,mode) {
-            return SessionService.invoke('/ddmtemplate/search-count',[{
+            return SessionService.invoke({'/ddmtemplate/search-count':{
                 companyId:companyId
                 ,groupId:groupId
                 ,classNameId:classNameId
@@ -2540,10 +2451,10 @@
                 ,keywords:keywords
                 ,type:type
                 ,mode:mode
-            }]);
+            }});
         };
         service.searchCount = function(companyId,groupIds,classNameIds,classPKs,keywords,type,mode) {
-            return SessionService.invoke('/ddmtemplate/search-count',[{
+            return SessionService.invoke({'/ddmtemplate/search-count':{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,classNameIds:classNameIds
@@ -2551,10 +2462,10 @@
                 ,keywords:keywords
                 ,type:type
                 ,mode:mode
-            }]);
+            }});
         };
         service.updateTemplate = function(templateId,classPK,nameMap,descriptionMap,type,mode,language,script,cacheable,smallImage,smallImageURL,smallImageFile,serviceContext) {
-            return SessionService.invoke('/ddmtemplate/update-template',[{
+            return SessionService.invoke({'/ddmtemplate/update-template':{
                 templateId:templateId
                 ,classPK:classPK
                 ,nameMap:nameMap
@@ -2568,7 +2479,7 @@
                 ,smallImageURL:smallImageURL
                 ,smallImageFile:smallImageFile
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -2583,7 +2494,7 @@
         var service = {};
         // Begin generated service methods
         service.addFileEntry = function(repositoryId,folderId,sourceFileName,mimeType,title,description,changeLog,bytes,serviceContext) {
-            return SessionService.invoke('/dlapp/add-file-entry',[{
+            return SessionService.invoke({'/dlapp/add-file-entry':{
                 repositoryId:repositoryId
                 ,folderId:folderId
                 ,sourceFileName:sourceFileName
@@ -2593,10 +2504,10 @@
                 ,changeLog:changeLog
                 ,bytes:bytes
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addFileEntry = function(repositoryId,folderId,sourceFileName,mimeType,title,description,changeLog,file,serviceContext) {
-            return SessionService.invoke('/dlapp/add-file-entry',[{
+            return SessionService.invoke({'/dlapp/add-file-entry':{
                 repositoryId:repositoryId
                 ,folderId:folderId
                 ,sourceFileName:sourceFileName
@@ -2606,307 +2517,307 @@
                 ,changeLog:changeLog
                 ,file:file
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addFileShortcut = function(repositoryId,folderId,toFileEntryId,serviceContext) {
-            return SessionService.invoke('/dlapp/add-file-shortcut',[{
+            return SessionService.invoke({'/dlapp/add-file-shortcut':{
                 repositoryId:repositoryId
                 ,folderId:folderId
                 ,toFileEntryId:toFileEntryId
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addFolder = function(repositoryId,parentFolderId,name,description,serviceContext) {
-            return SessionService.invoke('/dlapp/add-folder',[{
+            return SessionService.invoke({'/dlapp/add-folder':{
                 repositoryId:repositoryId
                 ,parentFolderId:parentFolderId
                 ,name:name
                 ,description:description
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addTempFileEntry = function(groupId,folderId,fileName,tempFolderName,file,mimeType) {
-            return SessionService.invoke('/dlapp/add-temp-file-entry',[{
+            return SessionService.invoke({'/dlapp/add-temp-file-entry':{
                 groupId:groupId
                 ,folderId:folderId
                 ,fileName:fileName
                 ,tempFolderName:tempFolderName
                 ,file:file
                 ,mimeType:mimeType
-            }]);
+            }});
         };
         service.cancelCheckOut = function(fileEntryId) {
-            return SessionService.invoke('/dlapp/cancel-check-out',[{
+            return SessionService.invoke({'/dlapp/cancel-check-out':{
                 fileEntryId:fileEntryId
-            }]);
+            }});
         };
         service.checkInFileEntry = function(fileEntryId,lockUuid) {
-            return SessionService.invoke('/dlapp/check-in-file-entry',[{
+            return SessionService.invoke({'/dlapp/check-in-file-entry':{
                 fileEntryId:fileEntryId
                 ,lockUuid:lockUuid
-            }]);
+            }});
         };
         service.checkInFileEntry = function(fileEntryId,lockUuid,serviceContext) {
-            return SessionService.invoke('/dlapp/check-in-file-entry',[{
+            return SessionService.invoke({'/dlapp/check-in-file-entry':{
                 fileEntryId:fileEntryId
                 ,lockUuid:lockUuid
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.checkInFileEntry = function(fileEntryId,majorVersion,changeLog,serviceContext) {
-            return SessionService.invoke('/dlapp/check-in-file-entry',[{
+            return SessionService.invoke({'/dlapp/check-in-file-entry':{
                 fileEntryId:fileEntryId
                 ,majorVersion:majorVersion
                 ,changeLog:changeLog
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.checkOutFileEntry = function(fileEntryId,serviceContext) {
-            return SessionService.invoke('/dlapp/check-out-file-entry',[{
+            return SessionService.invoke({'/dlapp/check-out-file-entry':{
                 fileEntryId:fileEntryId
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.checkOutFileEntry = function(fileEntryId,owner,expirationTime,serviceContext) {
-            return SessionService.invoke('/dlapp/check-out-file-entry',[{
+            return SessionService.invoke({'/dlapp/check-out-file-entry':{
                 fileEntryId:fileEntryId
                 ,owner:owner
                 ,expirationTime:expirationTime
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.copyFolder = function(repositoryId,sourceFolderId,parentFolderId,name,description,serviceContext) {
-            return SessionService.invoke('/dlapp/copy-folder',[{
+            return SessionService.invoke({'/dlapp/copy-folder':{
                 repositoryId:repositoryId
                 ,sourceFolderId:sourceFolderId
                 ,parentFolderId:parentFolderId
                 ,name:name
                 ,description:description
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteFileEntry = function(fileEntryId) {
-            return SessionService.invoke('/dlapp/delete-file-entry',[{
+            return SessionService.invoke({'/dlapp/delete-file-entry':{
                 fileEntryId:fileEntryId
-            }]);
+            }});
         };
         service.deleteFileEntryByTitle = function(repositoryId,folderId,title) {
-            return SessionService.invoke('/dlapp/delete-file-entry-by-title',[{
+            return SessionService.invoke({'/dlapp/delete-file-entry-by-title':{
                 repositoryId:repositoryId
                 ,folderId:folderId
                 ,title:title
-            }]);
+            }});
         };
         service.deleteFileShortcut = function(fileShortcutId) {
-            return SessionService.invoke('/dlapp/delete-file-shortcut',[{
+            return SessionService.invoke({'/dlapp/delete-file-shortcut':{
                 fileShortcutId:fileShortcutId
-            }]);
+            }});
         };
         service.deleteFileVersion = function(fileEntryId,version) {
-            return SessionService.invoke('/dlapp/delete-file-version',[{
+            return SessionService.invoke({'/dlapp/delete-file-version':{
                 fileEntryId:fileEntryId
                 ,version:version
-            }]);
+            }});
         };
         service.deleteFolder = function(folderId) {
-            return SessionService.invoke('/dlapp/delete-folder',[{
+            return SessionService.invoke({'/dlapp/delete-folder':{
                 folderId:folderId
-            }]);
+            }});
         };
         service.deleteFolder = function(repositoryId,parentFolderId,name) {
-            return SessionService.invoke('/dlapp/delete-folder',[{
+            return SessionService.invoke({'/dlapp/delete-folder':{
                 repositoryId:repositoryId
                 ,parentFolderId:parentFolderId
                 ,name:name
-            }]);
+            }});
         };
         service.deleteTempFileEntry = function(groupId,folderId,fileName,tempFolderName) {
-            return SessionService.invoke('/dlapp/delete-temp-file-entry',[{
+            return SessionService.invoke({'/dlapp/delete-temp-file-entry':{
                 groupId:groupId
                 ,folderId:folderId
                 ,fileName:fileName
                 ,tempFolderName:tempFolderName
-            }]);
+            }});
         };
         service.getFileEntries = function(repositoryId,folderId) {
-            return SessionService.invoke('/dlapp/get-file-entries',[{
+            return SessionService.invoke({'/dlapp/get-file-entries':{
                 repositoryId:repositoryId
                 ,folderId:folderId
-            }]);
+            }});
         };
         service.getFileEntries = function(repositoryId,folderId,fileEntryTypeId) {
-            return SessionService.invoke('/dlapp/get-file-entries',[{
+            return SessionService.invoke({'/dlapp/get-file-entries':{
                 repositoryId:repositoryId
                 ,folderId:folderId
                 ,fileEntryTypeId:fileEntryTypeId
-            }]);
+            }});
         };
         service.getFileEntries = function(repositoryId,folderId,mimeTypes) {
-            return SessionService.invoke('/dlapp/get-file-entries',[{
+            return SessionService.invoke({'/dlapp/get-file-entries':{
                 repositoryId:repositoryId
                 ,folderId:folderId
                 ,mimeTypes:mimeTypes
-            }]);
+            }});
         };
         service.getFileEntries = function(repositoryId,folderId,start,end) {
-            return SessionService.invoke('/dlapp/get-file-entries',[{
+            return SessionService.invoke({'/dlapp/get-file-entries':{
                 repositoryId:repositoryId
                 ,folderId:folderId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getFileEntries = function(repositoryId,folderId,fileEntryTypeId,start,end) {
-            return SessionService.invoke('/dlapp/get-file-entries',[{
+            return SessionService.invoke({'/dlapp/get-file-entries':{
                 repositoryId:repositoryId
                 ,folderId:folderId
                 ,fileEntryTypeId:fileEntryTypeId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getFileEntries = function(repositoryId,folderId,start,end,obc) {
-            return SessionService.invoke('/dlapp/get-file-entries',[{
+            return SessionService.invoke({'/dlapp/get-file-entries':{
                 repositoryId:repositoryId
                 ,folderId:folderId
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getFileEntries = function(repositoryId,folderId,fileEntryTypeId,start,end,obc) {
-            return SessionService.invoke('/dlapp/get-file-entries',[{
+            return SessionService.invoke({'/dlapp/get-file-entries':{
                 repositoryId:repositoryId
                 ,folderId:folderId
                 ,fileEntryTypeId:fileEntryTypeId
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getFileEntriesAndFileShortcuts = function(repositoryId,folderId,status,start,end) {
-            return SessionService.invoke('/dlapp/get-file-entries-and-file-shortcuts',[{
+            return SessionService.invoke({'/dlapp/get-file-entries-and-file-shortcuts':{
                 repositoryId:repositoryId
                 ,folderId:folderId
                 ,status:status
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getFileEntriesAndFileShortcutsCount = function(repositoryId,folderId,status) {
-            return SessionService.invoke('/dlapp/get-file-entries-and-file-shortcuts-count',[{
+            return SessionService.invoke({'/dlapp/get-file-entries-and-file-shortcuts-count':{
                 repositoryId:repositoryId
                 ,folderId:folderId
                 ,status:status
-            }]);
+            }});
         };
         service.getFileEntriesAndFileShortcutsCount = function(repositoryId,folderId,status,mimeTypes) {
-            return SessionService.invoke('/dlapp/get-file-entries-and-file-shortcuts-count',[{
+            return SessionService.invoke({'/dlapp/get-file-entries-and-file-shortcuts-count':{
                 repositoryId:repositoryId
                 ,folderId:folderId
                 ,status:status
                 ,mimeTypes:mimeTypes
-            }]);
+            }});
         };
         service.getFileEntriesCount = function(repositoryId,folderId) {
-            return SessionService.invoke('/dlapp/get-file-entries-count',[{
+            return SessionService.invoke({'/dlapp/get-file-entries-count':{
                 repositoryId:repositoryId
                 ,folderId:folderId
-            }]);
+            }});
         };
         service.getFileEntriesCount = function(repositoryId,folderId,fileEntryTypeId) {
-            return SessionService.invoke('/dlapp/get-file-entries-count',[{
+            return SessionService.invoke({'/dlapp/get-file-entries-count':{
                 repositoryId:repositoryId
                 ,folderId:folderId
                 ,fileEntryTypeId:fileEntryTypeId
-            }]);
+            }});
         };
         service.getFileEntry = function(fileEntryId) {
-            return SessionService.invoke('/dlapp/get-file-entry',[{
+            return SessionService.invoke({'/dlapp/get-file-entry':{
                 fileEntryId:fileEntryId
-            }]);
+            }});
         };
         service.getFileEntry = function(groupId,folderId,title) {
-            return SessionService.invoke('/dlapp/get-file-entry',[{
+            return SessionService.invoke({'/dlapp/get-file-entry':{
                 groupId:groupId
                 ,folderId:folderId
                 ,title:title
-            }]);
+            }});
         };
         service.getFileEntryByUuidAndGroupId = function(uuid,groupId) {
-            return SessionService.invoke('/dlapp/get-file-entry-by-uuid-and-group-id',[{
+            return SessionService.invoke({'/dlapp/get-file-entry-by-uuid-and-group-id':{
                 uuid:uuid
                 ,groupId:groupId
-            }]);
+            }});
         };
         service.getFileShortcut = function(fileShortcutId) {
-            return SessionService.invoke('/dlapp/get-file-shortcut',[{
+            return SessionService.invoke({'/dlapp/get-file-shortcut':{
                 fileShortcutId:fileShortcutId
-            }]);
+            }});
         };
         service.getFolder = function(folderId) {
-            return SessionService.invoke('/dlapp/get-folder',[{
+            return SessionService.invoke({'/dlapp/get-folder':{
                 folderId:folderId
-            }]);
+            }});
         };
         service.getFolder = function(repositoryId,parentFolderId,name) {
-            return SessionService.invoke('/dlapp/get-folder',[{
+            return SessionService.invoke({'/dlapp/get-folder':{
                 repositoryId:repositoryId
                 ,parentFolderId:parentFolderId
                 ,name:name
-            }]);
+            }});
         };
         service.getFolders = function(repositoryId,parentFolderId) {
-            return SessionService.invoke('/dlapp/get-folders',[{
+            return SessionService.invoke({'/dlapp/get-folders':{
                 repositoryId:repositoryId
                 ,parentFolderId:parentFolderId
-            }]);
+            }});
         };
         service.getFolders = function(repositoryId,parentFolderId,includeMountFolders) {
-            return SessionService.invoke('/dlapp/get-folders',[{
+            return SessionService.invoke({'/dlapp/get-folders':{
                 repositoryId:repositoryId
                 ,parentFolderId:parentFolderId
                 ,includeMountFolders:includeMountFolders
-            }]);
+            }});
         };
         service.getFolders = function(repositoryId,parentFolderId,start,end) {
-            return SessionService.invoke('/dlapp/get-folders',[{
+            return SessionService.invoke({'/dlapp/get-folders':{
                 repositoryId:repositoryId
                 ,parentFolderId:parentFolderId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getFolders = function(repositoryId,parentFolderId,includeMountFolders,start,end) {
-            return SessionService.invoke('/dlapp/get-folders',[{
+            return SessionService.invoke({'/dlapp/get-folders':{
                 repositoryId:repositoryId
                 ,parentFolderId:parentFolderId
                 ,includeMountFolders:includeMountFolders
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getFolders = function(repositoryId,parentFolderId,start,end,obc) {
-            return SessionService.invoke('/dlapp/get-folders',[{
+            return SessionService.invoke({'/dlapp/get-folders':{
                 repositoryId:repositoryId
                 ,parentFolderId:parentFolderId
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getFolders = function(repositoryId,parentFolderId,includeMountFolders,start,end,obc) {
-            return SessionService.invoke('/dlapp/get-folders',[{
+            return SessionService.invoke({'/dlapp/get-folders':{
                 repositoryId:repositoryId
                 ,parentFolderId:parentFolderId
                 ,includeMountFolders:includeMountFolders
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getFolders = function(repositoryId,parentFolderId,status,includeMountFolders,start,end,obc) {
-            return SessionService.invoke('/dlapp/get-folders',[{
+            return SessionService.invoke({'/dlapp/get-folders':{
                 repositoryId:repositoryId
                 ,parentFolderId:parentFolderId
                 ,status:status
@@ -2914,20 +2825,20 @@
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getFoldersAndFileEntriesAndFileShortcuts = function(repositoryId,folderId,status,includeMountFolders,start,end) {
-            return SessionService.invoke('/dlapp/get-folders-and-file-entries-and-file-shortcuts',[{
+            return SessionService.invoke({'/dlapp/get-folders-and-file-entries-and-file-shortcuts':{
                 repositoryId:repositoryId
                 ,folderId:folderId
                 ,status:status
                 ,includeMountFolders:includeMountFolders
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getFoldersAndFileEntriesAndFileShortcuts = function(repositoryId,folderId,status,includeMountFolders,start,end,obc) {
-            return SessionService.invoke('/dlapp/get-folders-and-file-entries-and-file-shortcuts',[{
+            return SessionService.invoke({'/dlapp/get-folders-and-file-entries-and-file-shortcuts':{
                 repositoryId:repositoryId
                 ,folderId:folderId
                 ,status:status
@@ -2935,10 +2846,10 @@
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getFoldersAndFileEntriesAndFileShortcuts = function(repositoryId,folderId,status,mimeTypes,includeMountFolders,start,end,obc) {
-            return SessionService.invoke('/dlapp/get-folders-and-file-entries-and-file-shortcuts',[{
+            return SessionService.invoke({'/dlapp/get-folders-and-file-entries-and-file-shortcuts':{
                 repositoryId:repositoryId
                 ,folderId:folderId
                 ,status:status
@@ -2947,91 +2858,91 @@
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getFoldersAndFileEntriesAndFileShortcutsCount = function(repositoryId,folderId,status,includeMountFolders) {
-            return SessionService.invoke('/dlapp/get-folders-and-file-entries-and-file-shortcuts-count',[{
+            return SessionService.invoke({'/dlapp/get-folders-and-file-entries-and-file-shortcuts-count':{
                 repositoryId:repositoryId
                 ,folderId:folderId
                 ,status:status
                 ,includeMountFolders:includeMountFolders
-            }]);
+            }});
         };
         service.getFoldersAndFileEntriesAndFileShortcutsCount = function(repositoryId,folderId,status,mimeTypes,includeMountFolders) {
-            return SessionService.invoke('/dlapp/get-folders-and-file-entries-and-file-shortcuts-count',[{
+            return SessionService.invoke({'/dlapp/get-folders-and-file-entries-and-file-shortcuts-count':{
                 repositoryId:repositoryId
                 ,folderId:folderId
                 ,status:status
                 ,mimeTypes:mimeTypes
                 ,includeMountFolders:includeMountFolders
-            }]);
+            }});
         };
         service.getFoldersCount = function(repositoryId,parentFolderId) {
-            return SessionService.invoke('/dlapp/get-folders-count',[{
+            return SessionService.invoke({'/dlapp/get-folders-count':{
                 repositoryId:repositoryId
                 ,parentFolderId:parentFolderId
-            }]);
+            }});
         };
         service.getFoldersCount = function(repositoryId,parentFolderId,includeMountFolders) {
-            return SessionService.invoke('/dlapp/get-folders-count',[{
+            return SessionService.invoke({'/dlapp/get-folders-count':{
                 repositoryId:repositoryId
                 ,parentFolderId:parentFolderId
                 ,includeMountFolders:includeMountFolders
-            }]);
+            }});
         };
         service.getFoldersCount = function(repositoryId,parentFolderId,status,includeMountFolders) {
-            return SessionService.invoke('/dlapp/get-folders-count',[{
+            return SessionService.invoke({'/dlapp/get-folders-count':{
                 repositoryId:repositoryId
                 ,parentFolderId:parentFolderId
                 ,status:status
                 ,includeMountFolders:includeMountFolders
-            }]);
+            }});
         };
         service.getFoldersFileEntriesCount = function(repositoryId,folderIds,status) {
-            return SessionService.invoke('/dlapp/get-folders-file-entries-count',[{
+            return SessionService.invoke({'/dlapp/get-folders-file-entries-count':{
                 repositoryId:repositoryId
                 ,folderIds:folderIds
                 ,status:status
-            }]);
+            }});
         };
         service.getGroupFileEntries = function(groupId,userId,start,end) {
-            return SessionService.invoke('/dlapp/get-group-file-entries',[{
+            return SessionService.invoke({'/dlapp/get-group-file-entries':{
                 groupId:groupId
                 ,userId:userId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getGroupFileEntries = function(groupId,userId,rootFolderId,start,end) {
-            return SessionService.invoke('/dlapp/get-group-file-entries',[{
+            return SessionService.invoke({'/dlapp/get-group-file-entries':{
                 groupId:groupId
                 ,userId:userId
                 ,rootFolderId:rootFolderId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getGroupFileEntries = function(groupId,userId,start,end,obc) {
-            return SessionService.invoke('/dlapp/get-group-file-entries',[{
+            return SessionService.invoke({'/dlapp/get-group-file-entries':{
                 groupId:groupId
                 ,userId:userId
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getGroupFileEntries = function(groupId,userId,rootFolderId,start,end,obc) {
-            return SessionService.invoke('/dlapp/get-group-file-entries',[{
+            return SessionService.invoke({'/dlapp/get-group-file-entries':{
                 groupId:groupId
                 ,userId:userId
                 ,rootFolderId:rootFolderId
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getGroupFileEntries = function(groupId,userId,rootFolderId,mimeTypes,status,start,end,obc) {
-            return SessionService.invoke('/dlapp/get-group-file-entries',[{
+            return SessionService.invoke({'/dlapp/get-group-file-entries':{
                 groupId:groupId
                 ,userId:userId
                 ,rootFolderId:rootFolderId
@@ -3040,223 +2951,223 @@
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getGroupFileEntriesCount = function(groupId,userId) {
-            return SessionService.invoke('/dlapp/get-group-file-entries-count',[{
+            return SessionService.invoke({'/dlapp/get-group-file-entries-count':{
                 groupId:groupId
                 ,userId:userId
-            }]);
+            }});
         };
         service.getGroupFileEntriesCount = function(groupId,userId,rootFolderId) {
-            return SessionService.invoke('/dlapp/get-group-file-entries-count',[{
+            return SessionService.invoke({'/dlapp/get-group-file-entries-count':{
                 groupId:groupId
                 ,userId:userId
                 ,rootFolderId:rootFolderId
-            }]);
+            }});
         };
         service.getGroupFileEntriesCount = function(groupId,userId,rootFolderId,mimeTypes,status) {
-            return SessionService.invoke('/dlapp/get-group-file-entries-count',[{
+            return SessionService.invoke({'/dlapp/get-group-file-entries-count':{
                 groupId:groupId
                 ,userId:userId
                 ,rootFolderId:rootFolderId
                 ,mimeTypes:mimeTypes
                 ,status:status
-            }]);
+            }});
         };
         service.getMountFolders = function(repositoryId,parentFolderId) {
-            return SessionService.invoke('/dlapp/get-mount-folders',[{
+            return SessionService.invoke({'/dlapp/get-mount-folders':{
                 repositoryId:repositoryId
                 ,parentFolderId:parentFolderId
-            }]);
+            }});
         };
         service.getMountFolders = function(repositoryId,parentFolderId,start,end) {
-            return SessionService.invoke('/dlapp/get-mount-folders',[{
+            return SessionService.invoke({'/dlapp/get-mount-folders':{
                 repositoryId:repositoryId
                 ,parentFolderId:parentFolderId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getMountFolders = function(repositoryId,parentFolderId,start,end,obc) {
-            return SessionService.invoke('/dlapp/get-mount-folders',[{
+            return SessionService.invoke({'/dlapp/get-mount-folders':{
                 repositoryId:repositoryId
                 ,parentFolderId:parentFolderId
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getMountFoldersCount = function(repositoryId,parentFolderId) {
-            return SessionService.invoke('/dlapp/get-mount-folders-count',[{
+            return SessionService.invoke({'/dlapp/get-mount-folders-count':{
                 repositoryId:repositoryId
                 ,parentFolderId:parentFolderId
-            }]);
+            }});
         };
         service.getSubfolderIds = function(repositoryId,folderId) {
-            return SessionService.invoke('/dlapp/get-subfolder-ids',[{
+            return SessionService.invoke({'/dlapp/get-subfolder-ids':{
                 repositoryId:repositoryId
                 ,folderId:folderId
-            }]);
+            }});
         };
         service.getSubfolderIds = function(repositoryId,folderId,recurse) {
-            return SessionService.invoke('/dlapp/get-subfolder-ids',[{
+            return SessionService.invoke({'/dlapp/get-subfolder-ids':{
                 repositoryId:repositoryId
                 ,folderId:folderId
                 ,recurse:recurse
-            }]);
+            }});
         };
         service.getSubfolderIds = function(repositoryId,folderIds,folderId) {
-            return SessionService.invoke('/dlapp/get-subfolder-ids',[{
+            return SessionService.invoke({'/dlapp/get-subfolder-ids':{
                 repositoryId:repositoryId
                 ,folderIds:folderIds
                 ,folderId:folderId
-            }]);
+            }});
         };
         service.getTempFileEntryNames = function(groupId,folderId,tempFolderName) {
-            return SessionService.invoke('/dlapp/get-temp-file-entry-names',[{
+            return SessionService.invoke({'/dlapp/get-temp-file-entry-names':{
                 groupId:groupId
                 ,folderId:folderId
                 ,tempFolderName:tempFolderName
-            }]);
+            }});
         };
         service.lockFileEntry = function(fileEntryId) {
-            return SessionService.invoke('/dlapp/lock-file-entry',[{
+            return SessionService.invoke({'/dlapp/lock-file-entry':{
                 fileEntryId:fileEntryId
-            }]);
+            }});
         };
         service.lockFileEntry = function(fileEntryId,owner,expirationTime) {
-            return SessionService.invoke('/dlapp/lock-file-entry',[{
+            return SessionService.invoke({'/dlapp/lock-file-entry':{
                 fileEntryId:fileEntryId
                 ,owner:owner
                 ,expirationTime:expirationTime
-            }]);
+            }});
         };
         service.lockFolder = function(repositoryId,folderId) {
-            return SessionService.invoke('/dlapp/lock-folder',[{
+            return SessionService.invoke({'/dlapp/lock-folder':{
                 repositoryId:repositoryId
                 ,folderId:folderId
-            }]);
+            }});
         };
         service.lockFolder = function(repositoryId,folderId,owner,inheritable,expirationTime) {
-            return SessionService.invoke('/dlapp/lock-folder',[{
+            return SessionService.invoke({'/dlapp/lock-folder':{
                 repositoryId:repositoryId
                 ,folderId:folderId
                 ,owner:owner
                 ,inheritable:inheritable
                 ,expirationTime:expirationTime
-            }]);
+            }});
         };
         service.moveFileEntry = function(fileEntryId,newFolderId,serviceContext) {
-            return SessionService.invoke('/dlapp/move-file-entry',[{
+            return SessionService.invoke({'/dlapp/move-file-entry':{
                 fileEntryId:fileEntryId
                 ,newFolderId:newFolderId
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.moveFileEntryFromTrash = function(fileEntryId,newFolderId,serviceContext) {
-            return SessionService.invoke('/dlapp/move-file-entry-from-trash',[{
+            return SessionService.invoke({'/dlapp/move-file-entry-from-trash':{
                 fileEntryId:fileEntryId
                 ,newFolderId:newFolderId
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.moveFileEntryToTrash = function(fileEntryId) {
-            return SessionService.invoke('/dlapp/move-file-entry-to-trash',[{
+            return SessionService.invoke({'/dlapp/move-file-entry-to-trash':{
                 fileEntryId:fileEntryId
-            }]);
+            }});
         };
         service.moveFileShortcutFromTrash = function(fileShortcutId,newFolderId,serviceContext) {
-            return SessionService.invoke('/dlapp/move-file-shortcut-from-trash',[{
+            return SessionService.invoke({'/dlapp/move-file-shortcut-from-trash':{
                 fileShortcutId:fileShortcutId
                 ,newFolderId:newFolderId
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.moveFileShortcutToTrash = function(fileShortcutId) {
-            return SessionService.invoke('/dlapp/move-file-shortcut-to-trash',[{
+            return SessionService.invoke({'/dlapp/move-file-shortcut-to-trash':{
                 fileShortcutId:fileShortcutId
-            }]);
+            }});
         };
         service.moveFolder = function(folderId,parentFolderId,serviceContext) {
-            return SessionService.invoke('/dlapp/move-folder',[{
+            return SessionService.invoke({'/dlapp/move-folder':{
                 folderId:folderId
                 ,parentFolderId:parentFolderId
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.moveFolderFromTrash = function(folderId,parentFolderId,serviceContext) {
-            return SessionService.invoke('/dlapp/move-folder-from-trash',[{
+            return SessionService.invoke({'/dlapp/move-folder-from-trash':{
                 folderId:folderId
                 ,parentFolderId:parentFolderId
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.moveFolderToTrash = function(folderId) {
-            return SessionService.invoke('/dlapp/move-folder-to-trash',[{
+            return SessionService.invoke({'/dlapp/move-folder-to-trash':{
                 folderId:folderId
-            }]);
+            }});
         };
         service.refreshFileEntryLock = function(lockUuid,companyId,expirationTime) {
-            return SessionService.invoke('/dlapp/refresh-file-entry-lock',[{
+            return SessionService.invoke({'/dlapp/refresh-file-entry-lock':{
                 lockUuid:lockUuid
                 ,companyId:companyId
                 ,expirationTime:expirationTime
-            }]);
+            }});
         };
         service.refreshFolderLock = function(lockUuid,companyId,expirationTime) {
-            return SessionService.invoke('/dlapp/refresh-folder-lock',[{
+            return SessionService.invoke({'/dlapp/refresh-folder-lock':{
                 lockUuid:lockUuid
                 ,companyId:companyId
                 ,expirationTime:expirationTime
-            }]);
+            }});
         };
         service.restoreFileEntryFromTrash = function(fileEntryId) {
-            return SessionService.invoke('/dlapp/restore-file-entry-from-trash',[{
+            return SessionService.invoke({'/dlapp/restore-file-entry-from-trash':{
                 fileEntryId:fileEntryId
-            }]);
+            }});
         };
         service.restoreFileShortcutFromTrash = function(fileShortcutId) {
-            return SessionService.invoke('/dlapp/restore-file-shortcut-from-trash',[{
+            return SessionService.invoke({'/dlapp/restore-file-shortcut-from-trash':{
                 fileShortcutId:fileShortcutId
-            }]);
+            }});
         };
         service.restoreFolderFromTrash = function(folderId) {
-            return SessionService.invoke('/dlapp/restore-folder-from-trash',[{
+            return SessionService.invoke({'/dlapp/restore-folder-from-trash':{
                 folderId:folderId
-            }]);
+            }});
         };
         service.revertFileEntry = function(fileEntryId,version,serviceContext) {
-            return SessionService.invoke('/dlapp/revert-file-entry',[{
+            return SessionService.invoke({'/dlapp/revert-file-entry':{
                 fileEntryId:fileEntryId
                 ,version:version
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.search = function(repositoryId,searchContext) {
-            return SessionService.invoke('/dlapp/search',[{
+            return SessionService.invoke({'/dlapp/search':{
                 repositoryId:repositoryId
                 ,searchContext:searchContext
-            }]);
+            }});
         };
         service.search = function(repositoryId,searchContext,query) {
-            return SessionService.invoke('/dlapp/search',[{
+            return SessionService.invoke({'/dlapp/search':{
                 repositoryId:repositoryId
                 ,searchContext:searchContext
                 ,query:query
-            }]);
+            }});
         };
         service.search = function(repositoryId,creatorUserId,status,start,end) {
-            return SessionService.invoke('/dlapp/search',[{
+            return SessionService.invoke({'/dlapp/search':{
                 repositoryId:repositoryId
                 ,creatorUserId:creatorUserId
                 ,status:status
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.search = function(repositoryId,creatorUserId,folderId,mimeTypes,status,start,end) {
-            return SessionService.invoke('/dlapp/search',[{
+            return SessionService.invoke({'/dlapp/search':{
                 repositoryId:repositoryId
                 ,creatorUserId:creatorUserId
                 ,folderId:folderId
@@ -3264,60 +3175,60 @@
                 ,status:status
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.subscribeFileEntryType = function(groupId,fileEntryTypeId) {
-            return SessionService.invoke('/dlapp/subscribe-file-entry-type',[{
+            return SessionService.invoke({'/dlapp/subscribe-file-entry-type':{
                 groupId:groupId
                 ,fileEntryTypeId:fileEntryTypeId
-            }]);
+            }});
         };
         service.subscribeFolder = function(groupId,folderId) {
-            return SessionService.invoke('/dlapp/subscribe-folder',[{
+            return SessionService.invoke({'/dlapp/subscribe-folder':{
                 groupId:groupId
                 ,folderId:folderId
-            }]);
+            }});
         };
         service.unlockFileEntry = function(fileEntryId) {
-            return SessionService.invoke('/dlapp/unlock-file-entry',[{
+            return SessionService.invoke({'/dlapp/unlock-file-entry':{
                 fileEntryId:fileEntryId
-            }]);
+            }});
         };
         service.unlockFileEntry = function(fileEntryId,lockUuid) {
-            return SessionService.invoke('/dlapp/unlock-file-entry',[{
+            return SessionService.invoke({'/dlapp/unlock-file-entry':{
                 fileEntryId:fileEntryId
                 ,lockUuid:lockUuid
-            }]);
+            }});
         };
         service.unlockFolder = function(repositoryId,folderId,lockUuid) {
-            return SessionService.invoke('/dlapp/unlock-folder',[{
+            return SessionService.invoke({'/dlapp/unlock-folder':{
                 repositoryId:repositoryId
                 ,folderId:folderId
                 ,lockUuid:lockUuid
-            }]);
+            }});
         };
         service.unlockFolder = function(repositoryId,parentFolderId,name,lockUuid) {
-            return SessionService.invoke('/dlapp/unlock-folder',[{
+            return SessionService.invoke({'/dlapp/unlock-folder':{
                 repositoryId:repositoryId
                 ,parentFolderId:parentFolderId
                 ,name:name
                 ,lockUuid:lockUuid
-            }]);
+            }});
         };
         service.unsubscribeFileEntryType = function(groupId,fileEntryTypeId) {
-            return SessionService.invoke('/dlapp/unsubscribe-file-entry-type',[{
+            return SessionService.invoke({'/dlapp/unsubscribe-file-entry-type':{
                 groupId:groupId
                 ,fileEntryTypeId:fileEntryTypeId
-            }]);
+            }});
         };
         service.unsubscribeFolder = function(groupId,folderId) {
-            return SessionService.invoke('/dlapp/unsubscribe-folder',[{
+            return SessionService.invoke({'/dlapp/unsubscribe-folder':{
                 groupId:groupId
                 ,folderId:folderId
-            }]);
+            }});
         };
         service.updateFileEntry = function(fileEntryId,sourceFileName,mimeType,title,description,changeLog,majorVersion,bytes,serviceContext) {
-            return SessionService.invoke('/dlapp/update-file-entry',[{
+            return SessionService.invoke({'/dlapp/update-file-entry':{
                 fileEntryId:fileEntryId
                 ,sourceFileName:sourceFileName
                 ,mimeType:mimeType
@@ -3327,10 +3238,10 @@
                 ,majorVersion:majorVersion
                 ,bytes:bytes
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.updateFileEntry = function(fileEntryId,sourceFileName,mimeType,title,description,changeLog,majorVersion,file,serviceContext) {
-            return SessionService.invoke('/dlapp/update-file-entry',[{
+            return SessionService.invoke({'/dlapp/update-file-entry':{
                 fileEntryId:fileEntryId
                 ,sourceFileName:sourceFileName
                 ,mimeType:mimeType
@@ -3340,10 +3251,10 @@
                 ,majorVersion:majorVersion
                 ,file:file
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.updateFileEntryAndCheckIn = function(fileEntryId,sourceFileName,mimeType,title,description,changeLog,majorVersion,file,serviceContext) {
-            return SessionService.invoke('/dlapp/update-file-entry-and-check-in',[{
+            return SessionService.invoke({'/dlapp/update-file-entry-and-check-in':{
                 fileEntryId:fileEntryId
                 ,sourceFileName:sourceFileName
                 ,mimeType:mimeType
@@ -3353,44 +3264,44 @@
                 ,majorVersion:majorVersion
                 ,file:file
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.updateFileShortcut = function(fileShortcutId,folderId,toFileEntryId,serviceContext) {
-            return SessionService.invoke('/dlapp/update-file-shortcut',[{
+            return SessionService.invoke({'/dlapp/update-file-shortcut':{
                 fileShortcutId:fileShortcutId
                 ,folderId:folderId
                 ,toFileEntryId:toFileEntryId
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.updateFolder = function(folderId,name,description,serviceContext) {
-            return SessionService.invoke('/dlapp/update-folder',[{
+            return SessionService.invoke({'/dlapp/update-folder':{
                 folderId:folderId
                 ,name:name
                 ,description:description
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.verifyFileEntryCheckOut = function(repositoryId,fileEntryId,lockUuid) {
-            return SessionService.invoke('/dlapp/verify-file-entry-check-out',[{
+            return SessionService.invoke({'/dlapp/verify-file-entry-check-out':{
                 repositoryId:repositoryId
                 ,fileEntryId:fileEntryId
                 ,lockUuid:lockUuid
-            }]);
+            }});
         };
         service.verifyFileEntryLock = function(repositoryId,fileEntryId,lockUuid) {
-            return SessionService.invoke('/dlapp/verify-file-entry-lock',[{
+            return SessionService.invoke({'/dlapp/verify-file-entry-lock':{
                 repositoryId:repositoryId
                 ,fileEntryId:fileEntryId
                 ,lockUuid:lockUuid
-            }]);
+            }});
         };
         service.verifyInheritableLock = function(repositoryId,folderId,lockUuid) {
-            return SessionService.invoke('/dlapp/verify-inheritable-lock',[{
+            return SessionService.invoke({'/dlapp/verify-inheritable-lock':{
                 repositoryId:repositoryId
                 ,folderId:folderId
                 ,lockUuid:lockUuid
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -3405,197 +3316,197 @@
         var service = {};
         // Begin generated service methods
         service.cancelCheckOut = function(fileEntryId) {
-            return SessionService.invoke('/dlfileentry/cancel-check-out',[{
+            return SessionService.invoke({'/dlfileentry/cancel-check-out':{
                 fileEntryId:fileEntryId
-            }]);
+            }});
         };
         service.checkInFileEntry = function(fileEntryId,lockUuid) {
-            return SessionService.invoke('/dlfileentry/check-in-file-entry',[{
+            return SessionService.invoke({'/dlfileentry/check-in-file-entry':{
                 fileEntryId:fileEntryId
                 ,lockUuid:lockUuid
-            }]);
+            }});
         };
         service.checkInFileEntry = function(fileEntryId,lockUuid,serviceContext) {
-            return SessionService.invoke('/dlfileentry/check-in-file-entry',[{
+            return SessionService.invoke({'/dlfileentry/check-in-file-entry':{
                 fileEntryId:fileEntryId
                 ,lockUuid:lockUuid
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.checkInFileEntry = function(fileEntryId,major,changeLog,serviceContext) {
-            return SessionService.invoke('/dlfileentry/check-in-file-entry',[{
+            return SessionService.invoke({'/dlfileentry/check-in-file-entry':{
                 fileEntryId:fileEntryId
                 ,major:major
                 ,changeLog:changeLog
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.checkOutFileEntry = function(fileEntryId) {
-            return SessionService.invoke('/dlfileentry/check-out-file-entry',[{
+            return SessionService.invoke({'/dlfileentry/check-out-file-entry':{
                 fileEntryId:fileEntryId
-            }]);
+            }});
         };
         service.checkOutFileEntry = function(fileEntryId,serviceContext) {
-            return SessionService.invoke('/dlfileentry/check-out-file-entry',[{
+            return SessionService.invoke({'/dlfileentry/check-out-file-entry':{
                 fileEntryId:fileEntryId
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.checkOutFileEntry = function(fileEntryId,owner,expirationTime) {
-            return SessionService.invoke('/dlfileentry/check-out-file-entry',[{
+            return SessionService.invoke({'/dlfileentry/check-out-file-entry':{
                 fileEntryId:fileEntryId
                 ,owner:owner
                 ,expirationTime:expirationTime
-            }]);
+            }});
         };
         service.checkOutFileEntry = function(fileEntryId,owner,expirationTime,serviceContext) {
-            return SessionService.invoke('/dlfileentry/check-out-file-entry',[{
+            return SessionService.invoke({'/dlfileentry/check-out-file-entry':{
                 fileEntryId:fileEntryId
                 ,owner:owner
                 ,expirationTime:expirationTime
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.copyFileEntry = function(groupId,repositoryId,fileEntryId,destFolderId,serviceContext) {
-            return SessionService.invoke('/dlfileentry/copy-file-entry',[{
+            return SessionService.invoke({'/dlfileentry/copy-file-entry':{
                 groupId:groupId
                 ,repositoryId:repositoryId
                 ,fileEntryId:fileEntryId
                 ,destFolderId:destFolderId
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteFileEntry = function(fileEntryId) {
-            return SessionService.invoke('/dlfileentry/delete-file-entry',[{
+            return SessionService.invoke({'/dlfileentry/delete-file-entry':{
                 fileEntryId:fileEntryId
-            }]);
+            }});
         };
         service.deleteFileEntry = function(groupId,folderId,title) {
-            return SessionService.invoke('/dlfileentry/delete-file-entry',[{
+            return SessionService.invoke({'/dlfileentry/delete-file-entry':{
                 groupId:groupId
                 ,folderId:folderId
                 ,title:title
-            }]);
+            }});
         };
         service.deleteFileVersion = function(fileEntryId,version) {
-            return SessionService.invoke('/dlfileentry/delete-file-version',[{
+            return SessionService.invoke({'/dlfileentry/delete-file-version':{
                 fileEntryId:fileEntryId
                 ,version:version
-            }]);
+            }});
         };
         service.fetchFileEntryByImageId = function(imageId) {
-            return SessionService.invoke('/dlfileentry/fetch-file-entry-by-image-id',[{
+            return SessionService.invoke({'/dlfileentry/fetch-file-entry-by-image-id':{
                 imageId:imageId
-            }]);
+            }});
         };
         service.getFileEntries = function(groupId,folderId,start,end,obc) {
-            return SessionService.invoke('/dlfileentry/get-file-entries',[{
+            return SessionService.invoke({'/dlfileentry/get-file-entries':{
                 groupId:groupId
                 ,folderId:folderId
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getFileEntries = function(groupId,folderId,fileEntryTypeId,start,end,obc) {
-            return SessionService.invoke('/dlfileentry/get-file-entries',[{
+            return SessionService.invoke({'/dlfileentry/get-file-entries':{
                 groupId:groupId
                 ,folderId:folderId
                 ,fileEntryTypeId:fileEntryTypeId
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getFileEntries = function(groupId,folderId,mimeTypes,start,end,obc) {
-            return SessionService.invoke('/dlfileentry/get-file-entries',[{
+            return SessionService.invoke({'/dlfileentry/get-file-entries':{
                 groupId:groupId
                 ,folderId:folderId
                 ,mimeTypes:mimeTypes
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getFileEntries = function(groupId,folderId,status,start,end,obc) {
-            return SessionService.invoke('/dlfileentry/get-file-entries',[{
+            return SessionService.invoke({'/dlfileentry/get-file-entries':{
                 groupId:groupId
                 ,folderId:folderId
                 ,status:status
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getFileEntriesCount = function(groupId,folderId) {
-            return SessionService.invoke('/dlfileentry/get-file-entries-count',[{
+            return SessionService.invoke({'/dlfileentry/get-file-entries-count':{
                 groupId:groupId
                 ,folderId:folderId
-            }]);
+            }});
         };
         service.getFileEntriesCount = function(groupId,folderId,fileEntryTypeId) {
-            return SessionService.invoke('/dlfileentry/get-file-entries-count',[{
+            return SessionService.invoke({'/dlfileentry/get-file-entries-count':{
                 groupId:groupId
                 ,folderId:folderId
                 ,fileEntryTypeId:fileEntryTypeId
-            }]);
+            }});
         };
         service.getFileEntriesCount = function(groupId,folderId,mimeTypes) {
-            return SessionService.invoke('/dlfileentry/get-file-entries-count',[{
+            return SessionService.invoke({'/dlfileentry/get-file-entries-count':{
                 groupId:groupId
                 ,folderId:folderId
                 ,mimeTypes:mimeTypes
-            }]);
+            }});
         };
         service.getFileEntriesCount = function(groupId,folderId,status) {
-            return SessionService.invoke('/dlfileentry/get-file-entries-count',[{
+            return SessionService.invoke({'/dlfileentry/get-file-entries-count':{
                 groupId:groupId
                 ,folderId:folderId
                 ,status:status
-            }]);
+            }});
         };
         service.getFileEntry = function(fileEntryId) {
-            return SessionService.invoke('/dlfileentry/get-file-entry',[{
+            return SessionService.invoke({'/dlfileentry/get-file-entry':{
                 fileEntryId:fileEntryId
-            }]);
+            }});
         };
         service.getFileEntry = function(groupId,folderId,title) {
-            return SessionService.invoke('/dlfileentry/get-file-entry',[{
+            return SessionService.invoke({'/dlfileentry/get-file-entry':{
                 groupId:groupId
                 ,folderId:folderId
                 ,title:title
-            }]);
+            }});
         };
         service.getFileEntryByUuidAndGroupId = function(uuid,groupId) {
-            return SessionService.invoke('/dlfileentry/get-file-entry-by-uuid-and-group-id',[{
+            return SessionService.invoke({'/dlfileentry/get-file-entry-by-uuid-and-group-id':{
                 uuid:uuid
                 ,groupId:groupId
-            }]);
+            }});
         };
         service.getFileEntryLock = function(fileEntryId) {
-            return SessionService.invoke('/dlfileentry/get-file-entry-lock',[{
+            return SessionService.invoke({'/dlfileentry/get-file-entry-lock':{
                 fileEntryId:fileEntryId
-            }]);
+            }});
         };
         service.getFoldersFileEntriesCount = function(groupId,folderIds,status) {
-            return SessionService.invoke('/dlfileentry/get-folders-file-entries-count',[{
+            return SessionService.invoke({'/dlfileentry/get-folders-file-entries-count':{
                 groupId:groupId
                 ,folderIds:folderIds
                 ,status:status
-            }]);
+            }});
         };
         service.getGroupFileEntries = function(groupId,userId,rootFolderId,start,end,obc) {
-            return SessionService.invoke('/dlfileentry/get-group-file-entries',[{
+            return SessionService.invoke({'/dlfileentry/get-group-file-entries':{
                 groupId:groupId
                 ,userId:userId
                 ,rootFolderId:rootFolderId
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getGroupFileEntries = function(groupId,userId,rootFolderId,mimeTypes,status,start,end,obc) {
-            return SessionService.invoke('/dlfileentry/get-group-file-entries',[{
+            return SessionService.invoke({'/dlfileentry/get-group-file-entries':{
                 groupId:groupId
                 ,userId:userId
                 ,rootFolderId:rootFolderId
@@ -3604,10 +3515,10 @@
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getGroupFileEntries = function(groupId,userId,repositoryId,rootFolderId,mimeTypes,status,start,end,obc) {
-            return SessionService.invoke('/dlfileentry/get-group-file-entries',[{
+            return SessionService.invoke({'/dlfileentry/get-group-file-entries':{
                 groupId:groupId
                 ,userId:userId
                 ,repositoryId:repositoryId
@@ -3617,76 +3528,76 @@
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getGroupFileEntriesCount = function(groupId,userId,rootFolderId) {
-            return SessionService.invoke('/dlfileentry/get-group-file-entries-count',[{
+            return SessionService.invoke({'/dlfileentry/get-group-file-entries-count':{
                 groupId:groupId
                 ,userId:userId
                 ,rootFolderId:rootFolderId
-            }]);
+            }});
         };
         service.getGroupFileEntriesCount = function(groupId,userId,rootFolderId,mimeTypes,status) {
-            return SessionService.invoke('/dlfileentry/get-group-file-entries-count',[{
+            return SessionService.invoke({'/dlfileentry/get-group-file-entries-count':{
                 groupId:groupId
                 ,userId:userId
                 ,rootFolderId:rootFolderId
                 ,mimeTypes:mimeTypes
                 ,status:status
-            }]);
+            }});
         };
         service.getGroupFileEntriesCount = function(groupId,userId,repositoryId,rootFolderId,mimeTypes,status) {
-            return SessionService.invoke('/dlfileentry/get-group-file-entries-count',[{
+            return SessionService.invoke({'/dlfileentry/get-group-file-entries-count':{
                 groupId:groupId
                 ,userId:userId
                 ,repositoryId:repositoryId
                 ,rootFolderId:rootFolderId
                 ,mimeTypes:mimeTypes
                 ,status:status
-            }]);
+            }});
         };
         service.hasFileEntryLock = function(fileEntryId) {
-            return SessionService.invoke('/dlfileentry/has-file-entry-lock',[{
+            return SessionService.invoke({'/dlfileentry/has-file-entry-lock':{
                 fileEntryId:fileEntryId
-            }]);
+            }});
         };
         service.isFileEntryCheckedOut = function(fileEntryId) {
-            return SessionService.invoke('/dlfileentry/is-file-entry-checked-out',[{
+            return SessionService.invoke({'/dlfileentry/is-file-entry-checked-out':{
                 fileEntryId:fileEntryId
-            }]);
+            }});
         };
         service.moveFileEntry = function(fileEntryId,newFolderId,serviceContext) {
-            return SessionService.invoke('/dlfileentry/move-file-entry',[{
+            return SessionService.invoke({'/dlfileentry/move-file-entry':{
                 fileEntryId:fileEntryId
                 ,newFolderId:newFolderId
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.refreshFileEntryLock = function(lockUuid,companyId,expirationTime) {
-            return SessionService.invoke('/dlfileentry/refresh-file-entry-lock',[{
+            return SessionService.invoke({'/dlfileentry/refresh-file-entry-lock':{
                 lockUuid:lockUuid
                 ,companyId:companyId
                 ,expirationTime:expirationTime
-            }]);
+            }});
         };
         service.revertFileEntry = function(fileEntryId,version,serviceContext) {
-            return SessionService.invoke('/dlfileentry/revert-file-entry',[{
+            return SessionService.invoke({'/dlfileentry/revert-file-entry':{
                 fileEntryId:fileEntryId
                 ,version:version
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.search = function(groupId,creatorUserId,status,start,end) {
-            return SessionService.invoke('/dlfileentry/search',[{
+            return SessionService.invoke({'/dlfileentry/search':{
                 groupId:groupId
                 ,creatorUserId:creatorUserId
                 ,status:status
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.search = function(groupId,creatorUserId,folderId,mimeTypes,status,start,end) {
-            return SessionService.invoke('/dlfileentry/search',[{
+            return SessionService.invoke({'/dlfileentry/search':{
                 groupId:groupId
                 ,creatorUserId:creatorUserId
                 ,folderId:folderId
@@ -3694,19 +3605,19 @@
                 ,status:status
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.verifyFileEntryCheckOut = function(fileEntryId,lockUuid) {
-            return SessionService.invoke('/dlfileentry/verify-file-entry-check-out',[{
+            return SessionService.invoke({'/dlfileentry/verify-file-entry-check-out':{
                 fileEntryId:fileEntryId
                 ,lockUuid:lockUuid
-            }]);
+            }});
         };
         service.verifyFileEntryLock = function(fileEntryId,lockUuid) {
-            return SessionService.invoke('/dlfileentry/verify-file-entry-lock',[{
+            return SessionService.invoke({'/dlfileentry/verify-file-entry-lock':{
                 fileEntryId:fileEntryId
                 ,lockUuid:lockUuid
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -3721,60 +3632,60 @@
         var service = {};
         // Begin generated service methods
         service.addFileEntryType = function(groupId,name,description,ddmStructureIds,serviceContext) {
-            return SessionService.invoke('/dlfileentrytype/add-file-entry-type',[{
+            return SessionService.invoke({'/dlfileentrytype/add-file-entry-type':{
                 groupId:groupId
                 ,name:name
                 ,description:description
                 ,ddmStructureIds:ddmStructureIds
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addFileEntryType = function(groupId,fileEntryTypeKey,nameMap,descriptionMap,ddmStructureIds,serviceContext) {
-            return SessionService.invoke('/dlfileentrytype/add-file-entry-type',[{
+            return SessionService.invoke({'/dlfileentrytype/add-file-entry-type':{
                 groupId:groupId
                 ,fileEntryTypeKey:fileEntryTypeKey
                 ,nameMap:nameMap
                 ,descriptionMap:descriptionMap
                 ,ddmStructureIds:ddmStructureIds
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteFileEntryType = function(fileEntryTypeId) {
-            return SessionService.invoke('/dlfileentrytype/delete-file-entry-type',[{
+            return SessionService.invoke({'/dlfileentrytype/delete-file-entry-type':{
                 fileEntryTypeId:fileEntryTypeId
-            }]);
+            }});
         };
         service.getFileEntryType = function(fileEntryTypeId) {
-            return SessionService.invoke('/dlfileentrytype/get-file-entry-type',[{
+            return SessionService.invoke({'/dlfileentrytype/get-file-entry-type':{
                 fileEntryTypeId:fileEntryTypeId
-            }]);
+            }});
         };
         service.getFileEntryTypes = function(groupIds) {
-            return SessionService.invoke('/dlfileentrytype/get-file-entry-types',[{
+            return SessionService.invoke({'/dlfileentrytype/get-file-entry-types':{
                 groupIds:groupIds
-            }]);
+            }});
         };
         service.getFileEntryTypes = function(groupIds,start,end) {
-            return SessionService.invoke('/dlfileentrytype/get-file-entry-types',[{
+            return SessionService.invoke({'/dlfileentrytype/get-file-entry-types':{
                 groupIds:groupIds
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getFileEntryTypesCount = function(groupIds) {
-            return SessionService.invoke('/dlfileentrytype/get-file-entry-types-count',[{
+            return SessionService.invoke({'/dlfileentrytype/get-file-entry-types-count':{
                 groupIds:groupIds
-            }]);
+            }});
         };
         service.getFolderFileEntryTypes = function(groupIds,folderId,inherited) {
-            return SessionService.invoke('/dlfileentrytype/get-folder-file-entry-types',[{
+            return SessionService.invoke({'/dlfileentrytype/get-folder-file-entry-types':{
                 groupIds:groupIds
                 ,folderId:folderId
                 ,inherited:inherited
-            }]);
+            }});
         };
         service.search = function(companyId,groupIds,keywords,includeBasicFileEntryType,start,end,orderByComparator) {
-            return SessionService.invoke('/dlfileentrytype/search',[{
+            return SessionService.invoke({'/dlfileentrytype/search':{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,keywords:keywords
@@ -3782,33 +3693,33 @@
                 ,start:start
                 ,end:end
                 ,orderByComparator:orderByComparator
-            }]);
+            }});
         };
         service.searchCount = function(companyId,groupIds,keywords,includeBasicFileEntryType) {
-            return SessionService.invoke('/dlfileentrytype/search-count',[{
+            return SessionService.invoke({'/dlfileentrytype/search-count':{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,keywords:keywords
                 ,includeBasicFileEntryType:includeBasicFileEntryType
-            }]);
+            }});
         };
         service.updateFileEntryType = function(fileEntryTypeId,name,description,ddmStructureIds,serviceContext) {
-            return SessionService.invoke('/dlfileentrytype/update-file-entry-type',[{
+            return SessionService.invoke({'/dlfileentrytype/update-file-entry-type':{
                 fileEntryTypeId:fileEntryTypeId
                 ,name:name
                 ,description:description
                 ,ddmStructureIds:ddmStructureIds
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.updateFileEntryType = function(fileEntryTypeId,nameMap,descriptionMap,ddmStructureIds,serviceContext) {
-            return SessionService.invoke('/dlfileentrytype/update-file-entry-type',[{
+            return SessionService.invoke({'/dlfileentrytype/update-file-entry-type':{
                 fileEntryTypeId:fileEntryTypeId
                 ,nameMap:nameMap
                 ,descriptionMap:descriptionMap
                 ,ddmStructureIds:ddmStructureIds
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -3823,30 +3734,30 @@
         var service = {};
         // Begin generated service methods
         service.addFileShortcut = function(groupId,folderId,toFileEntryId,serviceContext) {
-            return SessionService.invoke('/dlfileshortcut/add-file-shortcut',[{
+            return SessionService.invoke({'/dlfileshortcut/add-file-shortcut':{
                 groupId:groupId
                 ,folderId:folderId
                 ,toFileEntryId:toFileEntryId
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteFileShortcut = function(fileShortcutId) {
-            return SessionService.invoke('/dlfileshortcut/delete-file-shortcut',[{
+            return SessionService.invoke({'/dlfileshortcut/delete-file-shortcut':{
                 fileShortcutId:fileShortcutId
-            }]);
+            }});
         };
         service.getFileShortcut = function(fileShortcutId) {
-            return SessionService.invoke('/dlfileshortcut/get-file-shortcut',[{
+            return SessionService.invoke({'/dlfileshortcut/get-file-shortcut':{
                 fileShortcutId:fileShortcutId
-            }]);
+            }});
         };
         service.updateFileShortcut = function(fileShortcutId,folderId,toFileEntryId,serviceContext) {
-            return SessionService.invoke('/dlfileshortcut/update-file-shortcut',[{
+            return SessionService.invoke({'/dlfileshortcut/update-file-shortcut':{
                 fileShortcutId:fileShortcutId
                 ,folderId:folderId
                 ,toFileEntryId:toFileEntryId
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -3861,26 +3772,26 @@
         var service = {};
         // Begin generated service methods
         service.getFileVersion = function(fileVersionId) {
-            return SessionService.invoke('/dlfileversion/get-file-version',[{
+            return SessionService.invoke({'/dlfileversion/get-file-version':{
                 fileVersionId:fileVersionId
-            }]);
+            }});
         };
         service.getFileVersions = function(fileEntryId,status) {
-            return SessionService.invoke('/dlfileversion/get-file-versions',[{
+            return SessionService.invoke({'/dlfileversion/get-file-versions':{
                 fileEntryId:fileEntryId
                 ,status:status
-            }]);
+            }});
         };
         service.getFileVersionsCount = function(fileEntryId,status) {
-            return SessionService.invoke('/dlfileversion/get-file-versions-count',[{
+            return SessionService.invoke({'/dlfileversion/get-file-versions-count':{
                 fileEntryId:fileEntryId
                 ,status:status
-            }]);
+            }});
         };
         service.getLatestFileVersion = function(fileEntryId) {
-            return SessionService.invoke('/dlfileversion/get-latest-file-version',[{
+            return SessionService.invoke({'/dlfileversion/get-latest-file-version':{
                 fileEntryId:fileEntryId
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -3895,7 +3806,7 @@
         var service = {};
         // Begin generated service methods
         service.addFolder = function(groupId,repositoryId,mountPoint,parentFolderId,name,description,serviceContext) {
-            return SessionService.invoke('/dlfolder/add-folder',[{
+            return SessionService.invoke({'/dlfolder/add-folder':{
                 groupId:groupId
                 ,repositoryId:repositoryId
                 ,mountPoint:mountPoint
@@ -3903,79 +3814,79 @@
                 ,name:name
                 ,description:description
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteFolder = function(folderId) {
-            return SessionService.invoke('/dlfolder/delete-folder',[{
+            return SessionService.invoke({'/dlfolder/delete-folder':{
                 folderId:folderId
-            }]);
+            }});
         };
         service.deleteFolder = function(folderId,includeTrashedEntries) {
-            return SessionService.invoke('/dlfolder/delete-folder',[{
+            return SessionService.invoke({'/dlfolder/delete-folder':{
                 folderId:folderId
                 ,includeTrashedEntries:includeTrashedEntries
-            }]);
+            }});
         };
         service.deleteFolder = function(groupId,parentFolderId,name) {
-            return SessionService.invoke('/dlfolder/delete-folder',[{
+            return SessionService.invoke({'/dlfolder/delete-folder':{
                 groupId:groupId
                 ,parentFolderId:parentFolderId
                 ,name:name
-            }]);
+            }});
         };
         service.getFileEntriesAndFileShortcuts = function(groupId,folderId,status,start,end) {
-            return SessionService.invoke('/dlfolder/get-file-entries-and-file-shortcuts',[{
+            return SessionService.invoke({'/dlfolder/get-file-entries-and-file-shortcuts':{
                 groupId:groupId
                 ,folderId:folderId
                 ,status:status
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getFileEntriesAndFileShortcutsCount = function(groupId,folderId,status) {
-            return SessionService.invoke('/dlfolder/get-file-entries-and-file-shortcuts-count',[{
+            return SessionService.invoke({'/dlfolder/get-file-entries-and-file-shortcuts-count':{
                 groupId:groupId
                 ,folderId:folderId
                 ,status:status
-            }]);
+            }});
         };
         service.getFileEntriesAndFileShortcutsCount = function(groupId,folderId,status,mimeTypes) {
-            return SessionService.invoke('/dlfolder/get-file-entries-and-file-shortcuts-count',[{
+            return SessionService.invoke({'/dlfolder/get-file-entries-and-file-shortcuts-count':{
                 groupId:groupId
                 ,folderId:folderId
                 ,status:status
                 ,mimeTypes:mimeTypes
-            }]);
+            }});
         };
         service.getFolder = function(folderId) {
-            return SessionService.invoke('/dlfolder/get-folder',[{
+            return SessionService.invoke({'/dlfolder/get-folder':{
                 folderId:folderId
-            }]);
+            }});
         };
         service.getFolder = function(groupId,parentFolderId,name) {
-            return SessionService.invoke('/dlfolder/get-folder',[{
+            return SessionService.invoke({'/dlfolder/get-folder':{
                 groupId:groupId
                 ,parentFolderId:parentFolderId
                 ,name:name
-            }]);
+            }});
         };
         service.getFolderIds = function(groupId,folderId) {
-            return SessionService.invoke('/dlfolder/get-folder-ids',[{
+            return SessionService.invoke({'/dlfolder/get-folder-ids':{
                 groupId:groupId
                 ,folderId:folderId
-            }]);
+            }});
         };
         service.getFolders = function(groupId,parentFolderId,start,end,obc) {
-            return SessionService.invoke('/dlfolder/get-folders',[{
+            return SessionService.invoke({'/dlfolder/get-folders':{
                 groupId:groupId
                 ,parentFolderId:parentFolderId
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getFolders = function(groupId,parentFolderId,status,includeMountfolders,start,end,obc) {
-            return SessionService.invoke('/dlfolder/get-folders',[{
+            return SessionService.invoke({'/dlfolder/get-folders':{
                 groupId:groupId
                 ,parentFolderId:parentFolderId
                 ,status:status
@@ -3983,10 +3894,10 @@
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getFoldersAndFileEntriesAndFileShortcuts = function(groupId,folderId,status,includeMountFolders,start,end,obc) {
-            return SessionService.invoke('/dlfolder/get-folders-and-file-entries-and-file-shortcuts',[{
+            return SessionService.invoke({'/dlfolder/get-folders-and-file-entries-and-file-shortcuts':{
                 groupId:groupId
                 ,folderId:folderId
                 ,status:status
@@ -3994,10 +3905,10 @@
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getFoldersAndFileEntriesAndFileShortcuts = function(groupId,folderId,status,mimeTypes,includeMountFolders,start,end,obc) {
-            return SessionService.invoke('/dlfolder/get-folders-and-file-entries-and-file-shortcuts',[{
+            return SessionService.invoke({'/dlfolder/get-folders-and-file-entries-and-file-shortcuts':{
                 groupId:groupId
                 ,folderId:folderId
                 ,status:status
@@ -4006,126 +3917,126 @@
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getFoldersAndFileEntriesAndFileShortcutsCount = function(groupId,folderId,status,includeMountFolders) {
-            return SessionService.invoke('/dlfolder/get-folders-and-file-entries-and-file-shortcuts-count',[{
+            return SessionService.invoke({'/dlfolder/get-folders-and-file-entries-and-file-shortcuts-count':{
                 groupId:groupId
                 ,folderId:folderId
                 ,status:status
                 ,includeMountFolders:includeMountFolders
-            }]);
+            }});
         };
         service.getFoldersAndFileEntriesAndFileShortcutsCount = function(groupId,folderId,status,mimeTypes,includeMountFolders) {
-            return SessionService.invoke('/dlfolder/get-folders-and-file-entries-and-file-shortcuts-count',[{
+            return SessionService.invoke({'/dlfolder/get-folders-and-file-entries-and-file-shortcuts-count':{
                 groupId:groupId
                 ,folderId:folderId
                 ,status:status
                 ,mimeTypes:mimeTypes
                 ,includeMountFolders:includeMountFolders
-            }]);
+            }});
         };
         service.getFoldersCount = function(groupId,parentFolderId) {
-            return SessionService.invoke('/dlfolder/get-folders-count',[{
+            return SessionService.invoke({'/dlfolder/get-folders-count':{
                 groupId:groupId
                 ,parentFolderId:parentFolderId
-            }]);
+            }});
         };
         service.getFoldersCount = function(groupId,parentFolderId,status,includeMountfolders) {
-            return SessionService.invoke('/dlfolder/get-folders-count',[{
+            return SessionService.invoke({'/dlfolder/get-folders-count':{
                 groupId:groupId
                 ,parentFolderId:parentFolderId
                 ,status:status
                 ,includeMountfolders:includeMountfolders
-            }]);
+            }});
         };
         service.getMountFolders = function(groupId,parentFolderId,start,end,obc) {
-            return SessionService.invoke('/dlfolder/get-mount-folders',[{
+            return SessionService.invoke({'/dlfolder/get-mount-folders':{
                 groupId:groupId
                 ,parentFolderId:parentFolderId
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getMountFoldersCount = function(groupId,parentFolderId) {
-            return SessionService.invoke('/dlfolder/get-mount-folders-count',[{
+            return SessionService.invoke({'/dlfolder/get-mount-folders-count':{
                 groupId:groupId
                 ,parentFolderId:parentFolderId
-            }]);
+            }});
         };
         service.getSubfolderIds = function(folderIds,groupId,folderId) {
-            return SessionService.invoke('/dlfolder/get-subfolder-ids',[{
+            return SessionService.invoke({'/dlfolder/get-subfolder-ids':{
                 folderIds:folderIds
                 ,groupId:groupId
                 ,folderId:folderId
-            }]);
+            }});
         };
         service.getSubfolderIds = function(groupId,folderId,recurse) {
-            return SessionService.invoke('/dlfolder/get-subfolder-ids',[{
+            return SessionService.invoke({'/dlfolder/get-subfolder-ids':{
                 groupId:groupId
                 ,folderId:folderId
                 ,recurse:recurse
-            }]);
+            }});
         };
         service.hasFolderLock = function(folderId) {
-            return SessionService.invoke('/dlfolder/has-folder-lock',[{
+            return SessionService.invoke({'/dlfolder/has-folder-lock':{
                 folderId:folderId
-            }]);
+            }});
         };
         service.hasInheritableLock = function(folderId) {
-            return SessionService.invoke('/dlfolder/has-inheritable-lock',[{
+            return SessionService.invoke({'/dlfolder/has-inheritable-lock':{
                 folderId:folderId
-            }]);
+            }});
         };
         service.isFolderLocked = function(folderId) {
-            return SessionService.invoke('/dlfolder/is-folder-locked',[{
+            return SessionService.invoke({'/dlfolder/is-folder-locked':{
                 folderId:folderId
-            }]);
+            }});
         };
         service.lockFolder = function(folderId) {
-            return SessionService.invoke('/dlfolder/lock-folder',[{
+            return SessionService.invoke({'/dlfolder/lock-folder':{
                 folderId:folderId
-            }]);
+            }});
         };
         service.lockFolder = function(folderId,owner,inheritable,expirationTime) {
-            return SessionService.invoke('/dlfolder/lock-folder',[{
+            return SessionService.invoke({'/dlfolder/lock-folder':{
                 folderId:folderId
                 ,owner:owner
                 ,inheritable:inheritable
                 ,expirationTime:expirationTime
-            }]);
+            }});
         };
         service.moveFolder = function(folderId,parentFolderId,serviceContext) {
-            return SessionService.invoke('/dlfolder/move-folder',[{
+            return SessionService.invoke({'/dlfolder/move-folder':{
                 folderId:folderId
                 ,parentFolderId:parentFolderId
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.refreshFolderLock = function(lockUuid,companyId,expirationTime) {
-            return SessionService.invoke('/dlfolder/refresh-folder-lock',[{
+            return SessionService.invoke({'/dlfolder/refresh-folder-lock':{
                 lockUuid:lockUuid
                 ,companyId:companyId
                 ,expirationTime:expirationTime
-            }]);
+            }});
         };
         service.unlockFolder = function(folderId,lockUuid) {
-            return SessionService.invoke('/dlfolder/unlock-folder',[{
+            return SessionService.invoke({'/dlfolder/unlock-folder':{
                 folderId:folderId
                 ,lockUuid:lockUuid
-            }]);
+            }});
         };
         service.unlockFolder = function(groupId,parentFolderId,name,lockUuid) {
-            return SessionService.invoke('/dlfolder/unlock-folder',[{
+            return SessionService.invoke({'/dlfolder/unlock-folder':{
                 groupId:groupId
                 ,parentFolderId:parentFolderId
                 ,name:name
                 ,lockUuid:lockUuid
-            }]);
+            }});
         };
         service.updateFolder = function(folderId,name,description,defaultFileEntryTypeId,fileEntryTypeIds,overrideFileEntryTypes,serviceContext) {
-            return SessionService.invoke('/dlfolder/update-folder',[{
+            return SessionService.invoke({'/dlfolder/update-folder':{
                 folderId:folderId
                 ,name:name
                 ,description:description
@@ -4133,13 +4044,13 @@
                 ,fileEntryTypeIds:fileEntryTypeIds
                 ,overrideFileEntryTypes:overrideFileEntryTypes
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.verifyInheritableLock = function(folderId,lockUuid) {
-            return SessionService.invoke('/dlfolder/verify-inheritable-lock',[{
+            return SessionService.invoke({'/dlfolder/verify-inheritable-lock':{
                 folderId:folderId
                 ,lockUuid:lockUuid
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -4154,47 +4065,47 @@
         var service = {};
         // Begin generated service methods
         service.addEmailAddress = function(className,classPK,address,typeId,primary) {
-            return SessionService.invoke('/emailaddress/add-email-address',[{
+            return SessionService.invoke({'/emailaddress/add-email-address':{
                 className:className
                 ,classPK:classPK
                 ,address:address
                 ,typeId:typeId
                 ,primary:primary
-            }]);
+            }});
         };
         service.addEmailAddress = function(className,classPK,address,typeId,primary,serviceContext) {
-            return SessionService.invoke('/emailaddress/add-email-address',[{
+            return SessionService.invoke({'/emailaddress/add-email-address':{
                 className:className
                 ,classPK:classPK
                 ,address:address
                 ,typeId:typeId
                 ,primary:primary
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteEmailAddress = function(emailAddressId) {
-            return SessionService.invoke('/emailaddress/delete-email-address',[{
+            return SessionService.invoke({'/emailaddress/delete-email-address':{
                 emailAddressId:emailAddressId
-            }]);
+            }});
         };
         service.getEmailAddress = function(emailAddressId) {
-            return SessionService.invoke('/emailaddress/get-email-address',[{
+            return SessionService.invoke({'/emailaddress/get-email-address':{
                 emailAddressId:emailAddressId
-            }]);
+            }});
         };
         service.getEmailAddresses = function(className,classPK) {
-            return SessionService.invoke('/emailaddress/get-email-addresses',[{
+            return SessionService.invoke({'/emailaddress/get-email-addresses':{
                 className:className
                 ,classPK:classPK
-            }]);
+            }});
         };
         service.updateEmailAddress = function(emailAddressId,address,typeId,primary) {
-            return SessionService.invoke('/emailaddress/update-email-address',[{
+            return SessionService.invoke({'/emailaddress/update-email-address':{
                 emailAddressId:emailAddressId
                 ,address:address
                 ,typeId:typeId
                 ,primary:primary
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -4209,45 +4120,45 @@
         var service = {};
         // Begin generated service methods
         service.addColumn = function(tableId,name,type) {
-            return SessionService.invoke('/expandocolumn/add-column',[{
+            return SessionService.invoke({'/expandocolumn/add-column':{
                 tableId:tableId
                 ,name:name
                 ,type:type
-            }]);
+            }});
         };
         service.addColumn = function(tableId,name,type,defaultData) {
-            return SessionService.invoke('/expandocolumn/add-column',[{
+            return SessionService.invoke({'/expandocolumn/add-column':{
                 tableId:tableId
                 ,name:name
                 ,type:type
                 ,defaultData:defaultData
-            }]);
+            }});
         };
         service.deleteColumn = function(columnId) {
-            return SessionService.invoke('/expandocolumn/delete-column',[{
+            return SessionService.invoke({'/expandocolumn/delete-column':{
                 columnId:columnId
-            }]);
+            }});
         };
         service.updateColumn = function(columnId,name,type) {
-            return SessionService.invoke('/expandocolumn/update-column',[{
+            return SessionService.invoke({'/expandocolumn/update-column':{
                 columnId:columnId
                 ,name:name
                 ,type:type
-            }]);
+            }});
         };
         service.updateColumn = function(columnId,name,type,defaultData) {
-            return SessionService.invoke('/expandocolumn/update-column',[{
+            return SessionService.invoke({'/expandocolumn/update-column':{
                 columnId:columnId
                 ,name:name
                 ,type:type
                 ,defaultData:defaultData
-            }]);
+            }});
         };
         service.updateTypeSettings = function(columnId,typeSettings) {
-            return SessionService.invoke('/expandocolumn/update-type-settings',[{
+            return SessionService.invoke({'/expandocolumn/update-type-settings':{
                 columnId:columnId
                 ,typeSettings:typeSettings
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -4262,50 +4173,50 @@
         var service = {};
         // Begin generated service methods
         service.addValue = function(companyId,className,tableName,columnName,classPK,data) {
-            return SessionService.invoke('/expandovalue/add-value',[{
+            return SessionService.invoke({'/expandovalue/add-value':{
                 companyId:companyId
                 ,className:className
                 ,tableName:tableName
                 ,columnName:columnName
                 ,classPK:classPK
                 ,data:data
-            }]);
+            }});
         };
         service.addValues = function(companyId,className,tableName,classPK,attributeValues) {
-            return SessionService.invoke('/expandovalue/add-values',[{
+            return SessionService.invoke({'/expandovalue/add-values':{
                 companyId:companyId
                 ,className:className
                 ,tableName:tableName
                 ,classPK:classPK
                 ,attributeValues:attributeValues
-            }]);
+            }});
         };
         service.getData = function(companyId,className,tableName,columnName,classPK) {
-            return SessionService.invoke('/expandovalue/get-data',[{
+            return SessionService.invoke({'/expandovalue/get-data':{
                 companyId:companyId
                 ,className:className
                 ,tableName:tableName
                 ,columnName:columnName
                 ,classPK:classPK
-            }]);
+            }});
         };
         service.getData = function(companyId,className,tableName,columnNames,classPK) {
-            return SessionService.invoke('/expandovalue/get-data',[{
+            return SessionService.invoke({'/expandovalue/get-data':{
                 companyId:companyId
                 ,className:className
                 ,tableName:tableName
                 ,columnNames:columnNames
                 ,classPK:classPK
-            }]);
+            }});
         };
         service.getJsonData = function(companyId,className,tableName,columnName,classPK) {
-            return SessionService.invoke('/expandovalue/get-json-data',[{
+            return SessionService.invoke({'/expandovalue/get-json-data':{
                 companyId:companyId
                 ,className:className
                 ,tableName:tableName
                 ,columnName:columnName
                 ,classPK:classPK
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -4320,7 +4231,7 @@
         var service = {};
         // Begin generated service methods
         service.addEntry = function(className,classPK,reporterEmailAddress,reportedUserId,contentTitle,contentURL,reason,serviceContext) {
-            return SessionService.invoke('/flagsentry/add-entry',[{
+            return SessionService.invoke({'/flagsentry/add-entry':{
                 className:className
                 ,classPK:classPK
                 ,reporterEmailAddress:reporterEmailAddress
@@ -4329,7 +4240,7 @@
                 ,contentURL:contentURL
                 ,reason:reason
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -4344,7 +4255,7 @@
         var service = {};
         // Begin generated service methods
         service.addGroup = function(parentGroupId,liveGroupId,name,description,type,manualMembership,membershipRestriction,friendlyURL,site,active,serviceContext) {
-            return SessionService.invoke('/group/add-group',[{
+            return SessionService.invoke({'/group/add-group':{
                 parentGroupId:parentGroupId
                 ,liveGroupId:liveGroupId
                 ,name:name
@@ -4356,10 +4267,10 @@
                 ,site:site
                 ,active:active
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addGroup = function(name,description,type,friendlyURL,site,active,serviceContext) {
-            return SessionService.invoke('/group/add-group',[{
+            return SessionService.invoke({'/group/add-group':{
                 name:name
                 ,description:description
                 ,type:type
@@ -4367,10 +4278,10 @@
                 ,site:site
                 ,active:active
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addGroup = function(parentGroupId,name,description,type,friendlyURL,site,active,serviceContext) {
-            return SessionService.invoke('/group/add-group',[{
+            return SessionService.invoke({'/group/add-group':{
                 parentGroupId:parentGroupId
                 ,name:name
                 ,description:description
@@ -4379,172 +4290,172 @@
                 ,site:site
                 ,active:active
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addRoleGroups = function(roleId,groupIds) {
-            return SessionService.invoke('/group/add-role-groups',[{
+            return SessionService.invoke({'/group/add-role-groups':{
                 roleId:roleId
                 ,groupIds:groupIds
-            }]);
+            }});
         };
         service.checkRemoteStagingGroup = function(groupId) {
-            return SessionService.invoke('/group/check-remote-staging-group',[{
+            return SessionService.invoke({'/group/check-remote-staging-group':{
                 groupId:groupId
-            }]);
+            }});
         };
         service.deleteGroup = function(groupId) {
-            return SessionService.invoke('/group/delete-group',[{
+            return SessionService.invoke({'/group/delete-group':{
                 groupId:groupId
-            }]);
+            }});
         };
         service.disableStaging = function(groupId) {
-            return SessionService.invoke('/group/disable-staging',[{
+            return SessionService.invoke({'/group/disable-staging':{
                 groupId:groupId
-            }]);
+            }});
         };
         service.enableStaging = function(groupId) {
-            return SessionService.invoke('/group/enable-staging',[{
+            return SessionService.invoke({'/group/enable-staging':{
                 groupId:groupId
-            }]);
+            }});
         };
         service.getCompanyGroup = function(companyId) {
-            return SessionService.invoke('/group/get-company-group',[{
+            return SessionService.invoke({'/group/get-company-group':{
                 companyId:companyId
-            }]);
+            }});
         };
         service.getGroup = function(groupId) {
-            return SessionService.invoke('/group/get-group',[{
+            return SessionService.invoke({'/group/get-group':{
                 groupId:groupId
-            }]);
+            }});
         };
         service.getGroup = function(companyId,name) {
-            return SessionService.invoke('/group/get-group',[{
+            return SessionService.invoke({'/group/get-group':{
                 companyId:companyId
                 ,name:name
-            }]);
+            }});
         };
         service.getGroups = function(companyId,parentGroupId,site) {
-            return SessionService.invoke('/group/get-groups',[{
+            return SessionService.invoke({'/group/get-groups':{
                 companyId:companyId
                 ,parentGroupId:parentGroupId
                 ,site:site
-            }]);
+            }});
         };
         service.getManageableSiteGroups = function(portlets,max) {
-            return SessionService.invoke('/group/get-manageable-site-groups',[{
+            return SessionService.invoke({'/group/get-manageable-site-groups':{
                 portlets:portlets
                 ,max:max
-            }]);
+            }});
         };
         service.getManageableSites = function(portlets,max) {
-            return SessionService.invoke('/group/get-manageable-sites',[{
+            return SessionService.invoke({'/group/get-manageable-sites':{
                 portlets:portlets
                 ,max:max
-            }]);
+            }});
         };
         service.getOrganizationsGroups = function(organizations) {
-            return SessionService.invoke('/group/get-organizations-groups',[{
+            return SessionService.invoke({'/group/get-organizations-groups':{
                 organizations:organizations
-            }]);
+            }});
         };
         service.getUserGroup = function(companyId,userId) {
-            return SessionService.invoke('/group/get-user-group',[{
+            return SessionService.invoke({'/group/get-user-group':{
                 companyId:companyId
                 ,userId:userId
-            }]);
+            }});
         };
         service.getUserGroupsGroups = function(userGroups) {
-            return SessionService.invoke('/group/get-user-groups-groups',[{
+            return SessionService.invoke({'/group/get-user-groups-groups':{
                 userGroups:userGroups
-            }]);
+            }});
         };
         service.getUserOrganizationsGroups = function(userId,start,end) {
-            return SessionService.invoke('/group/get-user-organizations-groups',[{
+            return SessionService.invoke({'/group/get-user-organizations-groups':{
                 userId:userId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getUserPlaces = function(classNames,max) {
-            return SessionService.invoke('/group/get-user-places',[{
+            return SessionService.invoke({'/group/get-user-places':{
                 classNames:classNames
                 ,max:max
-            }]);
+            }});
         };
         service.getUserPlaces = function(userId,classNames,max) {
-            return SessionService.invoke('/group/get-user-places',[{
+            return SessionService.invoke({'/group/get-user-places':{
                 userId:userId
                 ,classNames:classNames
                 ,max:max
-            }]);
+            }});
         };
         service.getUserPlaces = function(userId,classNames,includeControlPanel,max) {
-            return SessionService.invoke('/group/get-user-places',[{
+            return SessionService.invoke({'/group/get-user-places':{
                 userId:userId
                 ,classNames:classNames
                 ,includeControlPanel:includeControlPanel
                 ,max:max
-            }]);
+            }});
         };
         service.getUserPlacesCount = function() {
-            return SessionService.invoke('/group/get-user-places-count',[{
+            return SessionService.invoke({'/group/get-user-places-count':{
                 
-            }]);
+            }});
         };
         service.getUserSites = function() {
-            return SessionService.invoke('/group/get-user-sites',[{
+            return SessionService.invoke({'/group/get-user-sites':{
                 
-            }]);
+            }});
         };
         service.getUserSitesGroups = function() {
-            return SessionService.invoke('/group/get-user-sites-groups',[{
+            return SessionService.invoke({'/group/get-user-sites-groups':{
                 
-            }]);
+            }});
         };
         service.getUserSitesGroups = function(classNames,max) {
-            return SessionService.invoke('/group/get-user-sites-groups',[{
+            return SessionService.invoke({'/group/get-user-sites-groups':{
                 classNames:classNames
                 ,max:max
-            }]);
+            }});
         };
         service.getUserSitesGroups = function(userId,classNames,max) {
-            return SessionService.invoke('/group/get-user-sites-groups',[{
+            return SessionService.invoke({'/group/get-user-sites-groups':{
                 userId:userId
                 ,classNames:classNames
                 ,max:max
-            }]);
+            }});
         };
         service.getUserSitesGroups = function(userId,classNames,includeControlPanel,max) {
-            return SessionService.invoke('/group/get-user-sites-groups',[{
+            return SessionService.invoke({'/group/get-user-sites-groups':{
                 userId:userId
                 ,classNames:classNames
                 ,includeControlPanel:includeControlPanel
                 ,max:max
-            }]);
+            }});
         };
         service.getUserSitesGroupsCount = function() {
-            return SessionService.invoke('/group/get-user-sites-groups-count',[{
+            return SessionService.invoke({'/group/get-user-sites-groups-count':{
                 
-            }]);
+            }});
         };
         service.hasUserGroup = function(userId,groupId) {
-            return SessionService.invoke('/group/has-user-group',[{
+            return SessionService.invoke({'/group/has-user-group':{
                 userId:userId
                 ,groupId:groupId
-            }]);
+            }});
         };
         service.search = function(companyId,name,description,params,start,end) {
-            return SessionService.invoke('/group/search',[{
+            return SessionService.invoke({'/group/search':{
                 companyId:companyId
                 ,name:name
                 ,description:description
                 ,params:params
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.search = function(companyId,classNameIds,keywords,params,start,end,obc) {
-            return SessionService.invoke('/group/search',[{
+            return SessionService.invoke({'/group/search':{
                 companyId:companyId
                 ,classNameIds:classNameIds
                 ,keywords:keywords
@@ -4552,10 +4463,10 @@
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.search = function(companyId,classNameIds,name,description,params,andOperator,start,end,obc) {
-            return SessionService.invoke('/group/search',[{
+            return SessionService.invoke({'/group/search':{
                 companyId:companyId
                 ,classNameIds:classNameIds
                 ,name:name
@@ -4565,36 +4476,36 @@
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.searchCount = function(companyId,name,description,params) {
-            return SessionService.invoke('/group/search-count',[{
+            return SessionService.invoke({'/group/search-count':{
                 companyId:companyId
                 ,name:name
                 ,description:description
                 ,params:params
-            }]);
+            }});
         };
         service.setRoleGroups = function(roleId,groupIds) {
-            return SessionService.invoke('/group/set-role-groups',[{
+            return SessionService.invoke({'/group/set-role-groups':{
                 roleId:roleId
                 ,groupIds:groupIds
-            }]);
+            }});
         };
         service.unsetRoleGroups = function(roleId,groupIds) {
-            return SessionService.invoke('/group/unset-role-groups',[{
+            return SessionService.invoke({'/group/unset-role-groups':{
                 roleId:roleId
                 ,groupIds:groupIds
-            }]);
+            }});
         };
         service.updateFriendlyUrl = function(groupId,friendlyURL) {
-            return SessionService.invoke('/group/update-friendly-url',[{
+            return SessionService.invoke({'/group/update-friendly-url':{
                 groupId:groupId
                 ,friendlyURL:friendlyURL
-            }]);
+            }});
         };
         service.updateGroup = function(groupId,parentGroupId,name,description,type,manualMembership,membershipRestriction,friendlyURL,active,serviceContext) {
-            return SessionService.invoke('/group/update-group',[{
+            return SessionService.invoke({'/group/update-group':{
                 groupId:groupId
                 ,parentGroupId:parentGroupId
                 ,name:name
@@ -4605,19 +4516,19 @@
                 ,friendlyURL:friendlyURL
                 ,active:active
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.updateGroup = function(groupId,typeSettings) {
-            return SessionService.invoke('/group/update-group',[{
+            return SessionService.invoke({'/group/update-group':{
                 groupId:groupId
                 ,typeSettings:typeSettings
-            }]);
+            }});
         };
         service.updateStagedPortlets = function(groupId,stagedPortletIds) {
-            return SessionService.invoke('/group/update-staged-portlets',[{
+            return SessionService.invoke({'/group/update-staged-portlets':{
                 groupId:groupId
                 ,stagedPortletIds:stagedPortletIds
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -4632,9 +4543,9 @@
         var service = {};
         // Begin generated service methods
         service.getImage = function(imageId) {
-            return SessionService.invoke('/image/get-image',[{
+            return SessionService.invoke({'/image/get-image':{
                 imageId:imageId
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -4649,7 +4560,7 @@
         var service = {};
         // Begin generated service methods
         service.addArticle = function(groupId,folderId,classNameId,classPK,articleId,autoArticleId,titleMap,descriptionMap,content,type,ddmStructureKey,ddmTemplateKey,layoutUuid,displayDateMonth,displayDateDay,displayDateYear,displayDateHour,displayDateMinute,expirationDateMonth,expirationDateDay,expirationDateYear,expirationDateHour,expirationDateMinute,neverExpire,reviewDateMonth,reviewDateDay,reviewDateYear,reviewDateHour,reviewDateMinute,neverReview,indexable,articleURL,serviceContext) {
-            return SessionService.invoke('/journalarticle/add-article',[{
+            return SessionService.invoke({'/journalarticle/add-article':{
                 groupId:groupId
                 ,folderId:folderId
                 ,classNameId:classNameId
@@ -4683,10 +4594,10 @@
                 ,indexable:indexable
                 ,articleURL:articleURL
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addArticle = function(groupId,folderId,classNameId,classPK,articleId,autoArticleId,titleMap,descriptionMap,content,type,ddmStructureKey,ddmTemplateKey,layoutUuid,displayDateMonth,displayDateDay,displayDateYear,displayDateHour,displayDateMinute,expirationDateMonth,expirationDateDay,expirationDateYear,expirationDateHour,expirationDateMinute,neverExpire,reviewDateMonth,reviewDateDay,reviewDateYear,reviewDateHour,reviewDateMinute,neverReview,indexable,smallImage,smallImageURL,smallFile,images,articleURL,serviceContext) {
-            return SessionService.invoke('/journalarticle/add-article',[{
+            return SessionService.invoke({'/journalarticle/add-article':{
                 groupId:groupId
                 ,folderId:folderId
                 ,classNameId:classNameId
@@ -4724,140 +4635,140 @@
                 ,images:images
                 ,articleURL:articleURL
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.copyArticle = function(groupId,oldArticleId,newArticleId,autoArticleId,version) {
-            return SessionService.invoke('/journalarticle/copy-article',[{
+            return SessionService.invoke({'/journalarticle/copy-article':{
                 groupId:groupId
                 ,oldArticleId:oldArticleId
                 ,newArticleId:newArticleId
                 ,autoArticleId:autoArticleId
                 ,version:version
-            }]);
+            }});
         };
         service.deleteArticle = function(groupId,articleId,articleURL,serviceContext) {
-            return SessionService.invoke('/journalarticle/delete-article',[{
+            return SessionService.invoke({'/journalarticle/delete-article':{
                 groupId:groupId
                 ,articleId:articleId
                 ,articleURL:articleURL
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteArticle = function(groupId,articleId,version,articleURL,serviceContext) {
-            return SessionService.invoke('/journalarticle/delete-article',[{
+            return SessionService.invoke({'/journalarticle/delete-article':{
                 groupId:groupId
                 ,articleId:articleId
                 ,version:version
                 ,articleURL:articleURL
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.expireArticle = function(groupId,articleId,articleURL,serviceContext) {
-            return SessionService.invoke('/journalarticle/expire-article',[{
+            return SessionService.invoke({'/journalarticle/expire-article':{
                 groupId:groupId
                 ,articleId:articleId
                 ,articleURL:articleURL
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.expireArticle = function(groupId,articleId,version,articleURL,serviceContext) {
-            return SessionService.invoke('/journalarticle/expire-article',[{
+            return SessionService.invoke({'/journalarticle/expire-article':{
                 groupId:groupId
                 ,articleId:articleId
                 ,version:version
                 ,articleURL:articleURL
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.getArticle = function(id) {
-            return SessionService.invoke('/journalarticle/get-article',[{
+            return SessionService.invoke({'/journalarticle/get-article':{
                 id:id
-            }]);
+            }});
         };
         service.getArticle = function(groupId,articleId) {
-            return SessionService.invoke('/journalarticle/get-article',[{
+            return SessionService.invoke({'/journalarticle/get-article':{
                 groupId:groupId
                 ,articleId:articleId
-            }]);
+            }});
         };
         service.getArticle = function(groupId,articleId,version) {
-            return SessionService.invoke('/journalarticle/get-article',[{
+            return SessionService.invoke({'/journalarticle/get-article':{
                 groupId:groupId
                 ,articleId:articleId
                 ,version:version
-            }]);
+            }});
         };
         service.getArticle = function(groupId,className,classPK) {
-            return SessionService.invoke('/journalarticle/get-article',[{
+            return SessionService.invoke({'/journalarticle/get-article':{
                 groupId:groupId
                 ,className:className
                 ,classPK:classPK
-            }]);
+            }});
         };
         service.getArticleByUrlTitle = function(groupId,urlTitle) {
-            return SessionService.invoke('/journalarticle/get-article-by-url-title',[{
+            return SessionService.invoke({'/journalarticle/get-article-by-url-title':{
                 groupId:groupId
                 ,urlTitle:urlTitle
-            }]);
+            }});
         };
         service.getArticleContent = function(groupId,articleId,languageId,themeDisplay) {
-            return SessionService.invoke('/journalarticle/get-article-content',[{
+            return SessionService.invoke({'/journalarticle/get-article-content':{
                 groupId:groupId
                 ,articleId:articleId
                 ,languageId:languageId
                 ,themeDisplay:themeDisplay
-            }]);
+            }});
         };
         service.getArticleContent = function(groupId,articleId,version,languageId,themeDisplay) {
-            return SessionService.invoke('/journalarticle/get-article-content',[{
+            return SessionService.invoke({'/journalarticle/get-article-content':{
                 groupId:groupId
                 ,articleId:articleId
                 ,version:version
                 ,languageId:languageId
                 ,themeDisplay:themeDisplay
-            }]);
+            }});
         };
         service.getArticles = function(groupId,folderId) {
-            return SessionService.invoke('/journalarticle/get-articles',[{
+            return SessionService.invoke({'/journalarticle/get-articles':{
                 groupId:groupId
                 ,folderId:folderId
-            }]);
+            }});
         };
         service.getArticles = function(groupId,folderId,start,end,obc) {
-            return SessionService.invoke('/journalarticle/get-articles',[{
+            return SessionService.invoke({'/journalarticle/get-articles':{
                 groupId:groupId
                 ,folderId:folderId
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getArticlesByArticleId = function(groupId,articleId,start,end,obc) {
-            return SessionService.invoke('/journalarticle/get-articles-by-article-id',[{
+            return SessionService.invoke({'/journalarticle/get-articles-by-article-id':{
                 groupId:groupId
                 ,articleId:articleId
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getArticlesByLayoutUuid = function(groupId,layoutUuid) {
-            return SessionService.invoke('/journalarticle/get-articles-by-layout-uuid',[{
+            return SessionService.invoke({'/journalarticle/get-articles-by-layout-uuid':{
                 groupId:groupId
                 ,layoutUuid:layoutUuid
-            }]);
+            }});
         };
         service.getArticlesByStructureId = function(groupId,ddmStructureKey,start,end,obc) {
-            return SessionService.invoke('/journalarticle/get-articles-by-structure-id',[{
+            return SessionService.invoke({'/journalarticle/get-articles-by-structure-id':{
                 groupId:groupId
                 ,ddmStructureKey:ddmStructureKey
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getArticlesByStructureId = function(groupId,classNameId,ddmStructureKey,status,start,end,obc) {
-            return SessionService.invoke('/journalarticle/get-articles-by-structure-id',[{
+            return SessionService.invoke({'/journalarticle/get-articles-by-structure-id':{
                 groupId:groupId
                 ,classNameId:classNameId
                 ,ddmStructureKey:ddmStructureKey
@@ -4865,65 +4776,65 @@
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getArticlesCount = function(groupId,folderId) {
-            return SessionService.invoke('/journalarticle/get-articles-count',[{
+            return SessionService.invoke({'/journalarticle/get-articles-count':{
                 groupId:groupId
                 ,folderId:folderId
-            }]);
+            }});
         };
         service.getArticlesCount = function(groupId,folderId,status) {
-            return SessionService.invoke('/journalarticle/get-articles-count',[{
+            return SessionService.invoke({'/journalarticle/get-articles-count':{
                 groupId:groupId
                 ,folderId:folderId
                 ,status:status
-            }]);
+            }});
         };
         service.getArticlesCountByArticleId = function(groupId,articleId) {
-            return SessionService.invoke('/journalarticle/get-articles-count-by-article-id',[{
+            return SessionService.invoke({'/journalarticle/get-articles-count-by-article-id':{
                 groupId:groupId
                 ,articleId:articleId
-            }]);
+            }});
         };
         service.getArticlesCountByStructureId = function(groupId,ddmStructureKey) {
-            return SessionService.invoke('/journalarticle/get-articles-count-by-structure-id',[{
+            return SessionService.invoke({'/journalarticle/get-articles-count-by-structure-id':{
                 groupId:groupId
                 ,ddmStructureKey:ddmStructureKey
-            }]);
+            }});
         };
         service.getArticlesCountByStructureId = function(groupId,classNameId,ddmStructureKey,status) {
-            return SessionService.invoke('/journalarticle/get-articles-count-by-structure-id',[{
+            return SessionService.invoke({'/journalarticle/get-articles-count-by-structure-id':{
                 groupId:groupId
                 ,classNameId:classNameId
                 ,ddmStructureKey:ddmStructureKey
                 ,status:status
-            }]);
+            }});
         };
         service.getDisplayArticleByUrlTitle = function(groupId,urlTitle) {
-            return SessionService.invoke('/journalarticle/get-display-article-by-url-title',[{
+            return SessionService.invoke({'/journalarticle/get-display-article-by-url-title':{
                 groupId:groupId
                 ,urlTitle:urlTitle
-            }]);
+            }});
         };
         service.getFoldersAndArticlesCount = function(groupId,folderIds) {
-            return SessionService.invoke('/journalarticle/get-folders-and-articles-count',[{
+            return SessionService.invoke({'/journalarticle/get-folders-and-articles-count':{
                 groupId:groupId
                 ,folderIds:folderIds
-            }]);
+            }});
         };
         service.getGroupArticles = function(groupId,userId,rootFolderId,start,end,orderByComparator) {
-            return SessionService.invoke('/journalarticle/get-group-articles',[{
+            return SessionService.invoke({'/journalarticle/get-group-articles':{
                 groupId:groupId
                 ,userId:userId
                 ,rootFolderId:rootFolderId
                 ,start:start
                 ,end:end
                 ,orderByComparator:orderByComparator
-            }]);
+            }});
         };
         service.getGroupArticles = function(groupId,userId,rootFolderId,status,start,end,orderByComparator) {
-            return SessionService.invoke('/journalarticle/get-group-articles',[{
+            return SessionService.invoke({'/journalarticle/get-group-articles':{
                 groupId:groupId
                 ,userId:userId
                 ,rootFolderId:rootFolderId
@@ -4931,98 +4842,98 @@
                 ,start:start
                 ,end:end
                 ,orderByComparator:orderByComparator
-            }]);
+            }});
         };
         service.getGroupArticlesCount = function(groupId,userId,rootFolderId) {
-            return SessionService.invoke('/journalarticle/get-group-articles-count',[{
+            return SessionService.invoke({'/journalarticle/get-group-articles-count':{
                 groupId:groupId
                 ,userId:userId
                 ,rootFolderId:rootFolderId
-            }]);
+            }});
         };
         service.getGroupArticlesCount = function(groupId,userId,rootFolderId,status) {
-            return SessionService.invoke('/journalarticle/get-group-articles-count',[{
+            return SessionService.invoke({'/journalarticle/get-group-articles-count':{
                 groupId:groupId
                 ,userId:userId
                 ,rootFolderId:rootFolderId
                 ,status:status
-            }]);
+            }});
         };
         service.getLatestArticle = function(resourcePrimKey) {
-            return SessionService.invoke('/journalarticle/get-latest-article',[{
+            return SessionService.invoke({'/journalarticle/get-latest-article':{
                 resourcePrimKey:resourcePrimKey
-            }]);
+            }});
         };
         service.getLatestArticle = function(groupId,articleId,status) {
-            return SessionService.invoke('/journalarticle/get-latest-article',[{
+            return SessionService.invoke({'/journalarticle/get-latest-article':{
                 groupId:groupId
                 ,articleId:articleId
                 ,status:status
-            }]);
+            }});
         };
         service.getLatestArticle = function(groupId,className,classPK) {
-            return SessionService.invoke('/journalarticle/get-latest-article',[{
+            return SessionService.invoke({'/journalarticle/get-latest-article':{
                 groupId:groupId
                 ,className:className
                 ,classPK:classPK
-            }]);
+            }});
         };
         service.moveArticle = function(groupId,articleId,newFolderId) {
-            return SessionService.invoke('/journalarticle/move-article',[{
+            return SessionService.invoke({'/journalarticle/move-article':{
                 groupId:groupId
                 ,articleId:articleId
                 ,newFolderId:newFolderId
-            }]);
+            }});
         };
         service.moveArticleFromTrash = function(groupId,articleId,newFolderId,serviceContext) {
-            return SessionService.invoke('/journalarticle/move-article-from-trash',[{
+            return SessionService.invoke({'/journalarticle/move-article-from-trash':{
                 groupId:groupId
                 ,articleId:articleId
                 ,newFolderId:newFolderId
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.moveArticleFromTrash = function(groupId,resourcePrimKey,newFolderId,serviceContext) {
-            return SessionService.invoke('/journalarticle/move-article-from-trash',[{
+            return SessionService.invoke({'/journalarticle/move-article-from-trash':{
                 groupId:groupId
                 ,resourcePrimKey:resourcePrimKey
                 ,newFolderId:newFolderId
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.moveArticleToTrash = function(groupId,articleId) {
-            return SessionService.invoke('/journalarticle/move-article-to-trash',[{
+            return SessionService.invoke({'/journalarticle/move-article-to-trash':{
                 groupId:groupId
                 ,articleId:articleId
-            }]);
+            }});
         };
         service.removeArticleLocale = function(companyId,languageId) {
-            return SessionService.invoke('/journalarticle/remove-article-locale',[{
+            return SessionService.invoke({'/journalarticle/remove-article-locale':{
                 companyId:companyId
                 ,languageId:languageId
-            }]);
+            }});
         };
         service.removeArticleLocale = function(groupId,articleId,version,languageId) {
-            return SessionService.invoke('/journalarticle/remove-article-locale',[{
+            return SessionService.invoke({'/journalarticle/remove-article-locale':{
                 groupId:groupId
                 ,articleId:articleId
                 ,version:version
                 ,languageId:languageId
-            }]);
+            }});
         };
         service.restoreArticleFromTrash = function(resourcePrimKey) {
-            return SessionService.invoke('/journalarticle/restore-article-from-trash',[{
+            return SessionService.invoke({'/journalarticle/restore-article-from-trash':{
                 resourcePrimKey:resourcePrimKey
-            }]);
+            }});
         };
         service.restoreArticleFromTrash = function(groupId,articleId) {
-            return SessionService.invoke('/journalarticle/restore-article-from-trash',[{
+            return SessionService.invoke({'/journalarticle/restore-article-from-trash':{
                 groupId:groupId
                 ,articleId:articleId
-            }]);
+            }});
         };
         service.search = function(companyId,groupId,folderIds,classNameId,keywords,version,type,ddmStructureKey,ddmTemplateKey,displayDateGT,displayDateLT,status,reviewDate,start,end,obc) {
-            return SessionService.invoke('/journalarticle/search',[{
+            return SessionService.invoke({'/journalarticle/search':{
                 companyId:companyId
                 ,groupId:groupId
                 ,folderIds:folderIds
@@ -5039,10 +4950,10 @@
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.search = function(companyId,groupId,folderIds,classNameId,articleId,version,title,description,content,type,ddmStructureKey,ddmTemplateKey,displayDateGT,displayDateLT,status,reviewDate,andOperator,start,end,obc) {
-            return SessionService.invoke('/journalarticle/search',[{
+            return SessionService.invoke({'/journalarticle/search':{
                 companyId:companyId
                 ,groupId:groupId
                 ,folderIds:folderIds
@@ -5063,10 +4974,10 @@
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.search = function(companyId,groupId,folderIds,classNameId,articleId,version,title,description,content,type,ddmStructureKeys,ddmTemplateKeys,displayDateGT,displayDateLT,status,reviewDate,andOperator,start,end,obc) {
-            return SessionService.invoke('/journalarticle/search',[{
+            return SessionService.invoke({'/journalarticle/search':{
                 companyId:companyId
                 ,groupId:groupId
                 ,folderIds:folderIds
@@ -5087,19 +4998,19 @@
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.search = function(groupId,creatorUserId,status,start,end) {
-            return SessionService.invoke('/journalarticle/search',[{
+            return SessionService.invoke({'/journalarticle/search':{
                 groupId:groupId
                 ,creatorUserId:creatorUserId
                 ,status:status
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.searchCount = function(companyId,groupId,folderIds,classNameId,keywords,version,type,ddmStructureKey,ddmTemplateKey,displayDateGT,displayDateLT,status,reviewDate) {
-            return SessionService.invoke('/journalarticle/search-count',[{
+            return SessionService.invoke({'/journalarticle/search-count':{
                 companyId:companyId
                 ,groupId:groupId
                 ,folderIds:folderIds
@@ -5113,10 +5024,10 @@
                 ,displayDateLT:displayDateLT
                 ,status:status
                 ,reviewDate:reviewDate
-            }]);
+            }});
         };
         service.searchCount = function(companyId,groupId,folderIds,classNameId,articleId,version,title,description,content,type,ddmStructureKey,ddmTemplateKey,displayDateGT,displayDateLT,status,reviewDate,andOperator) {
-            return SessionService.invoke('/journalarticle/search-count',[{
+            return SessionService.invoke({'/journalarticle/search-count':{
                 companyId:companyId
                 ,groupId:groupId
                 ,folderIds:folderIds
@@ -5134,10 +5045,10 @@
                 ,status:status
                 ,reviewDate:reviewDate
                 ,andOperator:andOperator
-            }]);
+            }});
         };
         service.searchCount = function(companyId,groupId,folderIds,classNameId,articleId,version,title,description,content,type,ddmStructureKeys,ddmTemplateKeys,displayDateGT,displayDateLT,status,reviewDate,andOperator) {
-            return SessionService.invoke('/journalarticle/search-count',[{
+            return SessionService.invoke({'/journalarticle/search-count':{
                 companyId:companyId
                 ,groupId:groupId
                 ,folderIds:folderIds
@@ -5155,20 +5066,20 @@
                 ,status:status
                 ,reviewDate:reviewDate
                 ,andOperator:andOperator
-            }]);
+            }});
         };
         service.subscribe = function(groupId) {
-            return SessionService.invoke('/journalarticle/subscribe',[{
+            return SessionService.invoke({'/journalarticle/subscribe':{
                 groupId:groupId
-            }]);
+            }});
         };
         service.unsubscribe = function(groupId) {
-            return SessionService.invoke('/journalarticle/unsubscribe',[{
+            return SessionService.invoke({'/journalarticle/unsubscribe':{
                 groupId:groupId
-            }]);
+            }});
         };
         service.updateArticle = function(userId,groupId,folderId,articleId,version,titleMap,descriptionMap,content,layoutUuid,serviceContext) {
-            return SessionService.invoke('/journalarticle/update-article',[{
+            return SessionService.invoke({'/journalarticle/update-article':{
                 userId:userId
                 ,groupId:groupId
                 ,folderId:folderId
@@ -5179,10 +5090,10 @@
                 ,content:content
                 ,layoutUuid:layoutUuid
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.updateArticle = function(groupId,folderId,articleId,version,titleMap,descriptionMap,content,type,ddmStructureKey,ddmTemplateKey,layoutUuid,displayDateMonth,displayDateDay,displayDateYear,displayDateHour,displayDateMinute,expirationDateMonth,expirationDateDay,expirationDateYear,expirationDateHour,expirationDateMinute,neverExpire,reviewDateMonth,reviewDateDay,reviewDateYear,reviewDateHour,reviewDateMinute,neverReview,indexable,smallImage,smallImageURL,smallFile,images,articleURL,serviceContext) {
-            return SessionService.invoke('/journalarticle/update-article',[{
+            return SessionService.invoke({'/journalarticle/update-article':{
                 groupId:groupId
                 ,folderId:folderId
                 ,articleId:articleId
@@ -5218,20 +5129,20 @@
                 ,images:images
                 ,articleURL:articleURL
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.updateArticle = function(groupId,folderId,articleId,version,content,serviceContext) {
-            return SessionService.invoke('/journalarticle/update-article',[{
+            return SessionService.invoke({'/journalarticle/update-article':{
                 groupId:groupId
                 ,folderId:folderId
                 ,articleId:articleId
                 ,version:version
                 ,content:content
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.updateArticleTranslation = function(groupId,articleId,version,locale,title,description,content,images) {
-            return SessionService.invoke('/journalarticle/update-article-translation',[{
+            return SessionService.invoke({'/journalarticle/update-article-translation':{
                 groupId:groupId
                 ,articleId:articleId
                 ,version:version
@@ -5240,10 +5151,10 @@
                 ,description:description
                 ,content:content
                 ,images:images
-            }]);
+            }});
         };
         service.updateArticleTranslation = function(groupId,articleId,version,locale,title,description,content,images,serviceContext) {
-            return SessionService.invoke('/journalarticle/update-article-translation',[{
+            return SessionService.invoke({'/journalarticle/update-article-translation':{
                 groupId:groupId
                 ,articleId:articleId
                 ,version:version
@@ -5253,25 +5164,25 @@
                 ,content:content
                 ,images:images
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.updateContent = function(groupId,articleId,version,content) {
-            return SessionService.invoke('/journalarticle/update-content',[{
+            return SessionService.invoke({'/journalarticle/update-content':{
                 groupId:groupId
                 ,articleId:articleId
                 ,version:version
                 ,content:content
-            }]);
+            }});
         };
         service.updateStatus = function(groupId,articleId,version,status,articleURL,serviceContext) {
-            return SessionService.invoke('/journalarticle/update-status',[{
+            return SessionService.invoke({'/journalarticle/update-status':{
                 groupId:groupId
                 ,articleId:articleId
                 ,version:version
                 ,status:status
                 ,articleURL:articleURL
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -5286,7 +5197,7 @@
         var service = {};
         // Begin generated service methods
         service.addFeed = function(groupId,feedId,autoFeedId,name,description,type,structureId,templateId,rendererTemplateId,delta,orderByCol,orderByType,targetLayoutFriendlyUrl,targetPortletId,contentField,feedType,feedVersion,serviceContext) {
-            return SessionService.invoke('/journalfeed/add-feed',[{
+            return SessionService.invoke({'/journalfeed/add-feed':{
                 groupId:groupId
                 ,feedId:feedId
                 ,autoFeedId:autoFeedId
@@ -5305,32 +5216,32 @@
                 ,feedType:feedType
                 ,feedVersion:feedVersion
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteFeed = function(feedId) {
-            return SessionService.invoke('/journalfeed/delete-feed',[{
+            return SessionService.invoke({'/journalfeed/delete-feed':{
                 feedId:feedId
-            }]);
+            }});
         };
         service.deleteFeed = function(groupId,feedId) {
-            return SessionService.invoke('/journalfeed/delete-feed',[{
+            return SessionService.invoke({'/journalfeed/delete-feed':{
                 groupId:groupId
                 ,feedId:feedId
-            }]);
+            }});
         };
         service.getFeed = function(feedId) {
-            return SessionService.invoke('/journalfeed/get-feed',[{
+            return SessionService.invoke({'/journalfeed/get-feed':{
                 feedId:feedId
-            }]);
+            }});
         };
         service.getFeed = function(groupId,feedId) {
-            return SessionService.invoke('/journalfeed/get-feed',[{
+            return SessionService.invoke({'/journalfeed/get-feed':{
                 groupId:groupId
                 ,feedId:feedId
-            }]);
+            }});
         };
         service.updateFeed = function(groupId,feedId,name,description,type,structureId,templateId,rendererTemplateId,delta,orderByCol,orderByType,targetLayoutFriendlyUrl,targetPortletId,contentField,feedType,feedVersion,serviceContext) {
-            return SessionService.invoke('/journalfeed/update-feed',[{
+            return SessionService.invoke({'/journalfeed/update-feed':{
                 groupId:groupId
                 ,feedId:feedId
                 ,name:name
@@ -5348,7 +5259,7 @@
                 ,feedType:feedType
                 ,feedVersion:feedVersion
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -5363,170 +5274,170 @@
         var service = {};
         // Begin generated service methods
         service.addFolder = function(groupId,parentFolderId,name,description,serviceContext) {
-            return SessionService.invoke('/journalfolder/add-folder',[{
+            return SessionService.invoke({'/journalfolder/add-folder':{
                 groupId:groupId
                 ,parentFolderId:parentFolderId
                 ,name:name
                 ,description:description
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteFolder = function(folderId) {
-            return SessionService.invoke('/journalfolder/delete-folder',[{
+            return SessionService.invoke({'/journalfolder/delete-folder':{
                 folderId:folderId
-            }]);
+            }});
         };
         service.deleteFolder = function(folderId,includeTrashedEntries) {
-            return SessionService.invoke('/journalfolder/delete-folder',[{
+            return SessionService.invoke({'/journalfolder/delete-folder':{
                 folderId:folderId
                 ,includeTrashedEntries:includeTrashedEntries
-            }]);
+            }});
         };
         service.getFolder = function(folderId) {
-            return SessionService.invoke('/journalfolder/get-folder',[{
+            return SessionService.invoke({'/journalfolder/get-folder':{
                 folderId:folderId
-            }]);
+            }});
         };
         service.getFolderIds = function(groupId,folderId) {
-            return SessionService.invoke('/journalfolder/get-folder-ids',[{
+            return SessionService.invoke({'/journalfolder/get-folder-ids':{
                 groupId:groupId
                 ,folderId:folderId
-            }]);
+            }});
         };
         service.getFolders = function(groupId) {
-            return SessionService.invoke('/journalfolder/get-folders',[{
+            return SessionService.invoke({'/journalfolder/get-folders':{
                 groupId:groupId
-            }]);
+            }});
         };
         service.getFolders = function(groupId,parentFolderId) {
-            return SessionService.invoke('/journalfolder/get-folders',[{
+            return SessionService.invoke({'/journalfolder/get-folders':{
                 groupId:groupId
                 ,parentFolderId:parentFolderId
-            }]);
+            }});
         };
         service.getFolders = function(groupId,parentFolderId,status) {
-            return SessionService.invoke('/journalfolder/get-folders',[{
+            return SessionService.invoke({'/journalfolder/get-folders':{
                 groupId:groupId
                 ,parentFolderId:parentFolderId
                 ,status:status
-            }]);
+            }});
         };
         service.getFolders = function(groupId,parentFolderId,start,end) {
-            return SessionService.invoke('/journalfolder/get-folders',[{
+            return SessionService.invoke({'/journalfolder/get-folders':{
                 groupId:groupId
                 ,parentFolderId:parentFolderId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getFolders = function(groupId,parentFolderId,status,start,end) {
-            return SessionService.invoke('/journalfolder/get-folders',[{
+            return SessionService.invoke({'/journalfolder/get-folders':{
                 groupId:groupId
                 ,parentFolderId:parentFolderId
                 ,status:status
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getFoldersAndArticles = function(groupId,folderId,start,end,obc) {
-            return SessionService.invoke('/journalfolder/get-folders-and-articles',[{
+            return SessionService.invoke({'/journalfolder/get-folders-and-articles':{
                 groupId:groupId
                 ,folderId:folderId
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getFoldersAndArticles = function(groupId,folderId,status,start,end,obc) {
-            return SessionService.invoke('/journalfolder/get-folders-and-articles',[{
+            return SessionService.invoke({'/journalfolder/get-folders-and-articles':{
                 groupId:groupId
                 ,folderId:folderId
                 ,status:status
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getFoldersAndArticlesCount = function(groupId,folderId) {
-            return SessionService.invoke('/journalfolder/get-folders-and-articles-count',[{
+            return SessionService.invoke({'/journalfolder/get-folders-and-articles-count':{
                 groupId:groupId
                 ,folderId:folderId
-            }]);
+            }});
         };
         service.getFoldersAndArticlesCount = function(groupId,folderId,status) {
-            return SessionService.invoke('/journalfolder/get-folders-and-articles-count',[{
+            return SessionService.invoke({'/journalfolder/get-folders-and-articles-count':{
                 groupId:groupId
                 ,folderId:folderId
                 ,status:status
-            }]);
+            }});
         };
         service.getFoldersAndArticlesCount = function(groupId,folderIds,status) {
-            return SessionService.invoke('/journalfolder/get-folders-and-articles-count',[{
+            return SessionService.invoke({'/journalfolder/get-folders-and-articles-count':{
                 groupId:groupId
                 ,folderIds:folderIds
                 ,status:status
-            }]);
+            }});
         };
         service.getFoldersCount = function(groupId,parentFolderId) {
-            return SessionService.invoke('/journalfolder/get-folders-count',[{
+            return SessionService.invoke({'/journalfolder/get-folders-count':{
                 groupId:groupId
                 ,parentFolderId:parentFolderId
-            }]);
+            }});
         };
         service.getFoldersCount = function(groupId,parentFolderId,status) {
-            return SessionService.invoke('/journalfolder/get-folders-count',[{
+            return SessionService.invoke({'/journalfolder/get-folders-count':{
                 groupId:groupId
                 ,parentFolderId:parentFolderId
                 ,status:status
-            }]);
+            }});
         };
         service.getSubfolderIds = function(folderIds,groupId,folderId) {
-            return SessionService.invoke('/journalfolder/get-subfolder-ids',[{
+            return SessionService.invoke({'/journalfolder/get-subfolder-ids':{
                 folderIds:folderIds
                 ,groupId:groupId
                 ,folderId:folderId
-            }]);
+            }});
         };
         service.getSubfolderIds = function(groupId,folderId,recurse) {
-            return SessionService.invoke('/journalfolder/get-subfolder-ids',[{
+            return SessionService.invoke({'/journalfolder/get-subfolder-ids':{
                 groupId:groupId
                 ,folderId:folderId
                 ,recurse:recurse
-            }]);
+            }});
         };
         service.moveFolder = function(folderId,parentFolderId,serviceContext) {
-            return SessionService.invoke('/journalfolder/move-folder',[{
+            return SessionService.invoke({'/journalfolder/move-folder':{
                 folderId:folderId
                 ,parentFolderId:parentFolderId
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.moveFolderFromTrash = function(folderId,parentFolderId,serviceContext) {
-            return SessionService.invoke('/journalfolder/move-folder-from-trash',[{
+            return SessionService.invoke({'/journalfolder/move-folder-from-trash':{
                 folderId:folderId
                 ,parentFolderId:parentFolderId
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.moveFolderToTrash = function(folderId) {
-            return SessionService.invoke('/journalfolder/move-folder-to-trash',[{
+            return SessionService.invoke({'/journalfolder/move-folder-to-trash':{
                 folderId:folderId
-            }]);
+            }});
         };
         service.restoreFolderFromTrash = function(folderId) {
-            return SessionService.invoke('/journalfolder/restore-folder-from-trash',[{
+            return SessionService.invoke({'/journalfolder/restore-folder-from-trash':{
                 folderId:folderId
-            }]);
+            }});
         };
         service.updateFolder = function(folderId,parentFolderId,name,description,mergeWithParentFolder,serviceContext) {
-            return SessionService.invoke('/journalfolder/update-folder',[{
+            return SessionService.invoke({'/journalfolder/update-folder':{
                 folderId:folderId
                 ,parentFolderId:parentFolderId
                 ,name:name
                 ,description:description
                 ,mergeWithParentFolder:mergeWithParentFolder
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -5541,7 +5452,7 @@
         var service = {};
         // Begin generated service methods
         service.addStructure = function(groupId,structureId,autoStructureId,parentStructureId,nameMap,descriptionMap,xsd,serviceContext) {
-            return SessionService.invoke('/journalstructure/add-structure',[{
+            return SessionService.invoke({'/journalstructure/add-structure':{
                 groupId:groupId
                 ,structureId:structureId
                 ,autoStructureId:autoStructureId
@@ -5550,57 +5461,57 @@
                 ,descriptionMap:descriptionMap
                 ,xsd:xsd
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.copyStructure = function(groupId,oldStructureId,newStructureId,autoStructureId) {
-            return SessionService.invoke('/journalstructure/copy-structure',[{
+            return SessionService.invoke({'/journalstructure/copy-structure':{
                 groupId:groupId
                 ,oldStructureId:oldStructureId
                 ,newStructureId:newStructureId
                 ,autoStructureId:autoStructureId
-            }]);
+            }});
         };
         service.deleteStructure = function(groupId,structureId) {
-            return SessionService.invoke('/journalstructure/delete-structure',[{
+            return SessionService.invoke({'/journalstructure/delete-structure':{
                 groupId:groupId
                 ,structureId:structureId
-            }]);
+            }});
         };
         service.getStructure = function(groupId,structureId) {
-            return SessionService.invoke('/journalstructure/get-structure',[{
+            return SessionService.invoke({'/journalstructure/get-structure':{
                 groupId:groupId
                 ,structureId:structureId
-            }]);
+            }});
         };
         service.getStructure = function(groupId,structureId,includeGlobalStructures) {
-            return SessionService.invoke('/journalstructure/get-structure',[{
+            return SessionService.invoke({'/journalstructure/get-structure':{
                 groupId:groupId
                 ,structureId:structureId
                 ,includeGlobalStructures:includeGlobalStructures
-            }]);
+            }});
         };
         service.getStructures = function(groupId) {
-            return SessionService.invoke('/journalstructure/get-structures',[{
+            return SessionService.invoke({'/journalstructure/get-structures':{
                 groupId:groupId
-            }]);
+            }});
         };
         service.getStructures = function(groupIds) {
-            return SessionService.invoke('/journalstructure/get-structures',[{
+            return SessionService.invoke({'/journalstructure/get-structures':{
                 groupIds:groupIds
-            }]);
+            }});
         };
         service.search = function(companyId,groupIds,keywords,start,end,obc) {
-            return SessionService.invoke('/journalstructure/search',[{
+            return SessionService.invoke({'/journalstructure/search':{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,keywords:keywords
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.search = function(companyId,groupIds,structureId,name,description,andOperator,start,end,obc) {
-            return SessionService.invoke('/journalstructure/search',[{
+            return SessionService.invoke({'/journalstructure/search':{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,structureId:structureId
@@ -5610,27 +5521,27 @@
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.searchCount = function(companyId,groupIds,keywords) {
-            return SessionService.invoke('/journalstructure/search-count',[{
+            return SessionService.invoke({'/journalstructure/search-count':{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,keywords:keywords
-            }]);
+            }});
         };
         service.searchCount = function(companyId,groupIds,structureId,name,description,andOperator) {
-            return SessionService.invoke('/journalstructure/search-count',[{
+            return SessionService.invoke({'/journalstructure/search-count':{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,structureId:structureId
                 ,name:name
                 ,description:description
                 ,andOperator:andOperator
-            }]);
+            }});
         };
         service.updateStructure = function(groupId,structureId,parentStructureId,nameMap,descriptionMap,xsd,serviceContext) {
-            return SessionService.invoke('/journalstructure/update-structure',[{
+            return SessionService.invoke({'/journalstructure/update-structure':{
                 groupId:groupId
                 ,structureId:structureId
                 ,parentStructureId:parentStructureId
@@ -5638,7 +5549,7 @@
                 ,descriptionMap:descriptionMap
                 ,xsd:xsd
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -5653,7 +5564,7 @@
         var service = {};
         // Begin generated service methods
         service.addTemplate = function(groupId,templateId,autoTemplateId,structureId,nameMap,descriptionMap,xsl,formatXsl,langType,cacheable,serviceContext) {
-            return SessionService.invoke('/journaltemplate/add-template',[{
+            return SessionService.invoke({'/journaltemplate/add-template':{
                 groupId:groupId
                 ,templateId:templateId
                 ,autoTemplateId:autoTemplateId
@@ -5665,10 +5576,10 @@
                 ,langType:langType
                 ,cacheable:cacheable
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addTemplate = function(groupId,templateId,autoTemplateId,structureId,nameMap,descriptionMap,xsl,formatXsl,langType,cacheable,smallImage,smallImageURL,smallFile,serviceContext) {
-            return SessionService.invoke('/journaltemplate/add-template',[{
+            return SessionService.invoke({'/journaltemplate/add-template':{
                 groupId:groupId
                 ,templateId:templateId
                 ,autoTemplateId:autoTemplateId
@@ -5683,43 +5594,43 @@
                 ,smallImageURL:smallImageURL
                 ,smallFile:smallFile
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.copyTemplate = function(groupId,oldTemplateId,newTemplateId,autoTemplateId) {
-            return SessionService.invoke('/journaltemplate/copy-template',[{
+            return SessionService.invoke({'/journaltemplate/copy-template':{
                 groupId:groupId
                 ,oldTemplateId:oldTemplateId
                 ,newTemplateId:newTemplateId
                 ,autoTemplateId:autoTemplateId
-            }]);
+            }});
         };
         service.deleteTemplate = function(groupId,templateId) {
-            return SessionService.invoke('/journaltemplate/delete-template',[{
+            return SessionService.invoke({'/journaltemplate/delete-template':{
                 groupId:groupId
                 ,templateId:templateId
-            }]);
+            }});
         };
         service.getStructureTemplates = function(groupId,structureId) {
-            return SessionService.invoke('/journaltemplate/get-structure-templates',[{
+            return SessionService.invoke({'/journaltemplate/get-structure-templates':{
                 groupId:groupId
                 ,structureId:structureId
-            }]);
+            }});
         };
         service.getTemplate = function(groupId,templateId) {
-            return SessionService.invoke('/journaltemplate/get-template',[{
+            return SessionService.invoke({'/journaltemplate/get-template':{
                 groupId:groupId
                 ,templateId:templateId
-            }]);
+            }});
         };
         service.getTemplate = function(groupId,templateId,includeGlobalTemplates) {
-            return SessionService.invoke('/journaltemplate/get-template',[{
+            return SessionService.invoke({'/journaltemplate/get-template':{
                 groupId:groupId
                 ,templateId:templateId
                 ,includeGlobalTemplates:includeGlobalTemplates
-            }]);
+            }});
         };
         service.search = function(companyId,groupIds,templateId,structureId,structureIdComparator,name,description,andOperator,start,end,obc) {
-            return SessionService.invoke('/journaltemplate/search',[{
+            return SessionService.invoke({'/journaltemplate/search':{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,templateId:templateId
@@ -5731,10 +5642,10 @@
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.search = function(companyId,groupIds,keywords,structureId,structureIdComparator,start,end,obc) {
-            return SessionService.invoke('/journaltemplate/search',[{
+            return SessionService.invoke({'/journaltemplate/search':{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,keywords:keywords
@@ -5743,19 +5654,19 @@
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.searchCount = function(companyId,groupIds,keywords,structureId,structureIdComparator) {
-            return SessionService.invoke('/journaltemplate/search-count',[{
+            return SessionService.invoke({'/journaltemplate/search-count':{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,keywords:keywords
                 ,structureId:structureId
                 ,structureIdComparator:structureIdComparator
-            }]);
+            }});
         };
         service.searchCount = function(companyId,groupIds,templateId,structureId,structureIdComparator,name,description,andOperator) {
-            return SessionService.invoke('/journaltemplate/search-count',[{
+            return SessionService.invoke({'/journaltemplate/search-count':{
                 companyId:companyId
                 ,groupIds:groupIds
                 ,templateId:templateId
@@ -5764,10 +5675,10 @@
                 ,name:name
                 ,description:description
                 ,andOperator:andOperator
-            }]);
+            }});
         };
         service.updateTemplate = function(groupId,templateId,structureId,nameMap,descriptionMap,xsl,formatXsl,langType,cacheable,serviceContext) {
-            return SessionService.invoke('/journaltemplate/update-template',[{
+            return SessionService.invoke({'/journaltemplate/update-template':{
                 groupId:groupId
                 ,templateId:templateId
                 ,structureId:structureId
@@ -5778,10 +5689,10 @@
                 ,langType:langType
                 ,cacheable:cacheable
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.updateTemplate = function(groupId,templateId,structureId,nameMap,descriptionMap,xsl,formatXsl,langType,cacheable,smallImage,smallImageURL,smallFile,serviceContext) {
-            return SessionService.invoke('/journaltemplate/update-template',[{
+            return SessionService.invoke({'/journaltemplate/update-template':{
                 groupId:groupId
                 ,templateId:templateId
                 ,structureId:structureId
@@ -5795,7 +5706,7 @@
                 ,smallImageURL:smallImageURL
                 ,smallFile:smallFile
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -5810,7 +5721,7 @@
         var service = {};
         // Begin generated service methods
         service.addLayout = function(groupId,privateLayout,parentLayoutId,name,title,description,type,hidden,friendlyURL,serviceContext) {
-            return SessionService.invoke('/layout/add-layout',[{
+            return SessionService.invoke({'/layout/add-layout':{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,parentLayoutId:parentLayoutId
@@ -5821,10 +5732,10 @@
                 ,hidden:hidden
                 ,friendlyURL:friendlyURL
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addLayout = function(groupId,privateLayout,parentLayoutId,localeNamesMap,localeTitlesMap,descriptionMap,keywordsMap,robotsMap,type,hidden,friendlyURL,serviceContext) {
-            return SessionService.invoke('/layout/add-layout',[{
+            return SessionService.invoke({'/layout/add-layout':{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,parentLayoutId:parentLayoutId
@@ -5837,10 +5748,10 @@
                 ,hidden:hidden
                 ,friendlyURL:friendlyURL
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addLayout = function(groupId,privateLayout,parentLayoutId,localeNamesMap,localeTitlesMap,descriptionMap,keywordsMap,robotsMap,type,typeSettings,hidden,friendlyURLMap,serviceContext) {
-            return SessionService.invoke('/layout/add-layout',[{
+            return SessionService.invoke({'/layout/add-layout':{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,parentLayoutId:parentLayoutId
@@ -5854,60 +5765,60 @@
                 ,hidden:hidden
                 ,friendlyURLMap:friendlyURLMap
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteLayout = function(plid,serviceContext) {
-            return SessionService.invoke('/layout/delete-layout',[{
+            return SessionService.invoke({'/layout/delete-layout':{
                 plid:plid
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteLayout = function(groupId,privateLayout,layoutId,serviceContext) {
-            return SessionService.invoke('/layout/delete-layout',[{
+            return SessionService.invoke({'/layout/delete-layout':{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,layoutId:layoutId
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteTempFileEntry = function(groupId,fileName,tempFolderName) {
-            return SessionService.invoke('/layout/delete-temp-file-entry',[{
+            return SessionService.invoke({'/layout/delete-temp-file-entry':{
                 groupId:groupId
                 ,fileName:fileName
                 ,tempFolderName:tempFolderName
-            }]);
+            }});
         };
         service.exportLayouts = function(groupId,privateLayout,parameterMap,startDate,endDate) {
-            return SessionService.invoke('/layout/export-layouts',[{
+            return SessionService.invoke({'/layout/export-layouts':{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,parameterMap:parameterMap
                 ,startDate:startDate
                 ,endDate:endDate
-            }]);
+            }});
         };
         service.exportLayouts = function(groupId,privateLayout,layoutIds,parameterMap,startDate,endDate) {
-            return SessionService.invoke('/layout/export-layouts',[{
+            return SessionService.invoke({'/layout/export-layouts':{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,layoutIds:layoutIds
                 ,parameterMap:parameterMap
                 ,startDate:startDate
                 ,endDate:endDate
-            }]);
+            }});
         };
         service.exportLayoutsAsFile = function(groupId,privateLayout,layoutIds,parameterMap,startDate,endDate) {
-            return SessionService.invoke('/layout/export-layouts-as-file',[{
+            return SessionService.invoke({'/layout/export-layouts-as-file':{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,layoutIds:layoutIds
                 ,parameterMap:parameterMap
                 ,startDate:startDate
                 ,endDate:endDate
-            }]);
+            }});
         };
         service.exportLayoutsAsFileInBackground = function(taskName,groupId,privateLayout,layoutIds,parameterMap,startDate,endDate,fileName) {
-            return SessionService.invoke('/layout/export-layouts-as-file-in-background',[{
+            return SessionService.invoke({'/layout/export-layouts-as-file-in-background':{
                 taskName:taskName
                 ,groupId:groupId
                 ,privateLayout:privateLayout
@@ -5916,57 +5827,57 @@
                 ,startDate:startDate
                 ,endDate:endDate
                 ,fileName:fileName
-            }]);
+            }});
         };
         service.exportPortletInfo = function(companyId,portletId,parameterMap,startDate,endDate) {
-            return SessionService.invoke('/layout/export-portlet-info',[{
+            return SessionService.invoke({'/layout/export-portlet-info':{
                 companyId:companyId
                 ,portletId:portletId
                 ,parameterMap:parameterMap
                 ,startDate:startDate
                 ,endDate:endDate
-            }]);
+            }});
         };
         service.exportPortletInfo = function(plid,groupId,portletId,parameterMap,startDate,endDate) {
-            return SessionService.invoke('/layout/export-portlet-info',[{
+            return SessionService.invoke({'/layout/export-portlet-info':{
                 plid:plid
                 ,groupId:groupId
                 ,portletId:portletId
                 ,parameterMap:parameterMap
                 ,startDate:startDate
                 ,endDate:endDate
-            }]);
+            }});
         };
         service.exportPortletInfoAsFile = function(portletId,parameterMap,startDate,endDate) {
-            return SessionService.invoke('/layout/export-portlet-info-as-file',[{
+            return SessionService.invoke({'/layout/export-portlet-info-as-file':{
                 portletId:portletId
                 ,parameterMap:parameterMap
                 ,startDate:startDate
                 ,endDate:endDate
-            }]);
+            }});
         };
         service.exportPortletInfoAsFile = function(plid,groupId,portletId,parameterMap,startDate,endDate) {
-            return SessionService.invoke('/layout/export-portlet-info-as-file',[{
+            return SessionService.invoke({'/layout/export-portlet-info-as-file':{
                 plid:plid
                 ,groupId:groupId
                 ,portletId:portletId
                 ,parameterMap:parameterMap
                 ,startDate:startDate
                 ,endDate:endDate
-            }]);
+            }});
         };
         service.exportPortletInfoAsFileInBackground = function(taskName,portletId,parameterMap,startDate,endDate,fileName) {
-            return SessionService.invoke('/layout/export-portlet-info-as-file-in-background',[{
+            return SessionService.invoke({'/layout/export-portlet-info-as-file-in-background':{
                 taskName:taskName
                 ,portletId:portletId
                 ,parameterMap:parameterMap
                 ,startDate:startDate
                 ,endDate:endDate
                 ,fileName:fileName
-            }]);
+            }});
         };
         service.exportPortletInfoAsFileInBackground = function(taskName,plid,groupId,portletId,parameterMap,startDate,endDate,fileName) {
-            return SessionService.invoke('/layout/export-portlet-info-as-file-in-background',[{
+            return SessionService.invoke({'/layout/export-portlet-info-as-file-in-background':{
                 taskName:taskName
                 ,plid:plid
                 ,groupId:groupId
@@ -5975,148 +5886,148 @@
                 ,startDate:startDate
                 ,endDate:endDate
                 ,fileName:fileName
-            }]);
+            }});
         };
         service.getAncestorLayouts = function(plid) {
-            return SessionService.invoke('/layout/get-ancestor-layouts',[{
+            return SessionService.invoke({'/layout/get-ancestor-layouts':{
                 plid:plid
-            }]);
+            }});
         };
         service.getDefaultPlid = function(groupId,scopeGroupId,portletId) {
-            return SessionService.invoke('/layout/get-default-plid',[{
+            return SessionService.invoke({'/layout/get-default-plid':{
                 groupId:groupId
                 ,scopeGroupId:scopeGroupId
                 ,portletId:portletId
-            }]);
+            }});
         };
         service.getDefaultPlid = function(groupId,scopeGroupId,privateLayout,portletId) {
-            return SessionService.invoke('/layout/get-default-plid',[{
+            return SessionService.invoke({'/layout/get-default-plid':{
                 groupId:groupId
                 ,scopeGroupId:scopeGroupId
                 ,privateLayout:privateLayout
                 ,portletId:portletId
-            }]);
+            }});
         };
         service.getLayoutByUuidAndGroupId = function(uuid,groupId,privateLayout) {
-            return SessionService.invoke('/layout/get-layout-by-uuid-and-group-id',[{
+            return SessionService.invoke({'/layout/get-layout-by-uuid-and-group-id':{
                 uuid:uuid
                 ,groupId:groupId
                 ,privateLayout:privateLayout
-            }]);
+            }});
         };
         service.getLayoutName = function(groupId,privateLayout,layoutId,languageId) {
-            return SessionService.invoke('/layout/get-layout-name',[{
+            return SessionService.invoke({'/layout/get-layout-name':{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,layoutId:layoutId
                 ,languageId:languageId
-            }]);
+            }});
         };
         service.getLayoutReferences = function(companyId,portletId,preferencesKey,preferencesValue) {
-            return SessionService.invoke('/layout/get-layout-references',[{
+            return SessionService.invoke({'/layout/get-layout-references':{
                 companyId:companyId
                 ,portletId:portletId
                 ,preferencesKey:preferencesKey
                 ,preferencesValue:preferencesValue
-            }]);
+            }});
         };
         service.getLayouts = function(groupId,privateLayout) {
-            return SessionService.invoke('/layout/get-layouts',[{
+            return SessionService.invoke({'/layout/get-layouts':{
                 groupId:groupId
                 ,privateLayout:privateLayout
-            }]);
+            }});
         };
         service.getLayouts = function(groupId,privateLayout,parentLayoutId) {
-            return SessionService.invoke('/layout/get-layouts',[{
+            return SessionService.invoke({'/layout/get-layouts':{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,parentLayoutId:parentLayoutId
-            }]);
+            }});
         };
         service.getLayouts = function(groupId,privateLayout,parentLayoutId,incomplete,start,end) {
-            return SessionService.invoke('/layout/get-layouts',[{
+            return SessionService.invoke({'/layout/get-layouts':{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,parentLayoutId:parentLayoutId
                 ,incomplete:incomplete
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getLayoutsCount = function(groupId,privateLayout,parentLayoutId) {
-            return SessionService.invoke('/layout/get-layouts-count',[{
+            return SessionService.invoke({'/layout/get-layouts-count':{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,parentLayoutId:parentLayoutId
-            }]);
+            }});
         };
         service.getTempFileEntryNames = function(groupId,tempFolderName) {
-            return SessionService.invoke('/layout/get-temp-file-entry-names',[{
+            return SessionService.invoke({'/layout/get-temp-file-entry-names':{
                 groupId:groupId
                 ,tempFolderName:tempFolderName
-            }]);
+            }});
         };
         service.importLayouts = function(groupId,privateLayout,parameterMap,bytes) {
-            return SessionService.invoke('/layout/import-layouts',[{
+            return SessionService.invoke({'/layout/import-layouts':{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,parameterMap:parameterMap
                 ,bytes:bytes
-            }]);
+            }});
         };
         service.importLayouts = function(groupId,privateLayout,parameterMap,file) {
-            return SessionService.invoke('/layout/import-layouts',[{
+            return SessionService.invoke({'/layout/import-layouts':{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,parameterMap:parameterMap
                 ,file:file
-            }]);
+            }});
         };
         service.importLayoutsInBackground = function(taskName,groupId,privateLayout,parameterMap,file) {
-            return SessionService.invoke('/layout/import-layouts-in-background',[{
+            return SessionService.invoke({'/layout/import-layouts-in-background':{
                 taskName:taskName
                 ,groupId:groupId
                 ,privateLayout:privateLayout
                 ,parameterMap:parameterMap
                 ,file:file
-            }]);
+            }});
         };
         service.importPortletInfo = function(portletId,parameterMap,file) {
-            return SessionService.invoke('/layout/import-portlet-info',[{
+            return SessionService.invoke({'/layout/import-portlet-info':{
                 portletId:portletId
                 ,parameterMap:parameterMap
                 ,file:file
-            }]);
+            }});
         };
         service.importPortletInfo = function(plid,groupId,portletId,parameterMap,file) {
-            return SessionService.invoke('/layout/import-portlet-info',[{
+            return SessionService.invoke({'/layout/import-portlet-info':{
                 plid:plid
                 ,groupId:groupId
                 ,portletId:portletId
                 ,parameterMap:parameterMap
                 ,file:file
-            }]);
+            }});
         };
         service.importPortletInfoInBackground = function(taskName,portletId,parameterMap,file) {
-            return SessionService.invoke('/layout/import-portlet-info-in-background',[{
+            return SessionService.invoke({'/layout/import-portlet-info-in-background':{
                 taskName:taskName
                 ,portletId:portletId
                 ,parameterMap:parameterMap
                 ,file:file
-            }]);
+            }});
         };
         service.importPortletInfoInBackground = function(taskName,plid,groupId,portletId,parameterMap,file) {
-            return SessionService.invoke('/layout/import-portlet-info-in-background',[{
+            return SessionService.invoke({'/layout/import-portlet-info-in-background':{
                 taskName:taskName
                 ,plid:plid
                 ,groupId:groupId
                 ,portletId:portletId
                 ,parameterMap:parameterMap
                 ,file:file
-            }]);
+            }});
         };
         service.schedulePublishToLive = function(sourceGroupId,targetGroupId,privateLayout,layoutIdMap,parameterMap,scope,startDate,endDate,groupName,cronText,schedulerStartDate,schedulerEndDate,description) {
-            return SessionService.invoke('/layout/schedule-publish-to-live',[{
+            return SessionService.invoke({'/layout/schedule-publish-to-live':{
                 sourceGroupId:sourceGroupId
                 ,targetGroupId:targetGroupId
                 ,privateLayout:privateLayout
@@ -6130,10 +6041,10 @@
                 ,schedulerStartDate:schedulerStartDate
                 ,schedulerEndDate:schedulerEndDate
                 ,description:description
-            }]);
+            }});
         };
         service.schedulePublishToRemote = function(sourceGroupId,privateLayout,layoutIdMap,parameterMap,remoteAddress,remotePort,remotePathContext,secureConnection,remoteGroupId,remotePrivateLayout,startDate,endDate,groupName,cronText,schedulerStartDate,schedulerEndDate,description) {
-            return SessionService.invoke('/layout/schedule-publish-to-remote',[{
+            return SessionService.invoke({'/layout/schedule-publish-to-remote':{
                 sourceGroupId:sourceGroupId
                 ,privateLayout:privateLayout
                 ,layoutIdMap:layoutIdMap
@@ -6151,33 +6062,33 @@
                 ,schedulerStartDate:schedulerStartDate
                 ,schedulerEndDate:schedulerEndDate
                 ,description:description
-            }]);
+            }});
         };
         service.setLayouts = function(groupId,privateLayout,parentLayoutId,layoutIds,serviceContext) {
-            return SessionService.invoke('/layout/set-layouts',[{
+            return SessionService.invoke({'/layout/set-layouts':{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,parentLayoutId:parentLayoutId
                 ,layoutIds:layoutIds
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.unschedulePublishToLive = function(groupId,jobName,groupName) {
-            return SessionService.invoke('/layout/unschedule-publish-to-live',[{
+            return SessionService.invoke({'/layout/unschedule-publish-to-live':{
                 groupId:groupId
                 ,jobName:jobName
                 ,groupName:groupName
-            }]);
+            }});
         };
         service.unschedulePublishToRemote = function(groupId,jobName,groupName) {
-            return SessionService.invoke('/layout/unschedule-publish-to-remote',[{
+            return SessionService.invoke({'/layout/unschedule-publish-to-remote':{
                 groupId:groupId
                 ,jobName:jobName
                 ,groupName:groupName
-            }]);
+            }});
         };
         service.updateLayout = function(groupId,privateLayout,layoutId,parentLayoutId,localeNamesMap,localeTitlesMap,descriptionMap,keywordsMap,robotsMap,type,hidden,friendlyURL,iconImage,iconBytes,serviceContext) {
-            return SessionService.invoke('/layout/update-layout',[{
+            return SessionService.invoke({'/layout/update-layout':{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,layoutId:layoutId
@@ -6193,10 +6104,10 @@
                 ,iconImage:iconImage
                 ,iconBytes:iconBytes
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.updateLayout = function(groupId,privateLayout,layoutId,parentLayoutId,localeNamesMap,localeTitlesMap,descriptionMap,keywordsMap,robotsMap,type,hidden,friendlyURLMap,iconImage,iconBytes,serviceContext) {
-            return SessionService.invoke('/layout/update-layout',[{
+            return SessionService.invoke({'/layout/update-layout':{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,layoutId:layoutId
@@ -6212,18 +6123,18 @@
                 ,iconImage:iconImage
                 ,iconBytes:iconBytes
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.updateLayout = function(groupId,privateLayout,layoutId,typeSettings) {
-            return SessionService.invoke('/layout/update-layout',[{
+            return SessionService.invoke({'/layout/update-layout':{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,layoutId:layoutId
                 ,typeSettings:typeSettings
-            }]);
+            }});
         };
         service.updateLookAndFeel = function(groupId,privateLayout,layoutId,themeId,colorSchemeId,css,wapTheme) {
-            return SessionService.invoke('/layout/update-look-and-feel',[{
+            return SessionService.invoke({'/layout/update-look-and-feel':{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,layoutId:layoutId
@@ -6231,84 +6142,84 @@
                 ,colorSchemeId:colorSchemeId
                 ,css:css
                 ,wapTheme:wapTheme
-            }]);
+            }});
         };
         service.updateName = function(plid,name,languageId) {
-            return SessionService.invoke('/layout/update-name',[{
+            return SessionService.invoke({'/layout/update-name':{
                 plid:plid
                 ,name:name
                 ,languageId:languageId
-            }]);
+            }});
         };
         service.updateName = function(groupId,privateLayout,layoutId,name,languageId) {
-            return SessionService.invoke('/layout/update-name',[{
+            return SessionService.invoke({'/layout/update-name':{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,layoutId:layoutId
                 ,name:name
                 ,languageId:languageId
-            }]);
+            }});
         };
         service.updateParentLayoutId = function(plid,parentPlid) {
-            return SessionService.invoke('/layout/update-parent-layout-id',[{
+            return SessionService.invoke({'/layout/update-parent-layout-id':{
                 plid:plid
                 ,parentPlid:parentPlid
-            }]);
+            }});
         };
         service.updateParentLayoutId = function(groupId,privateLayout,layoutId,parentLayoutId) {
-            return SessionService.invoke('/layout/update-parent-layout-id',[{
+            return SessionService.invoke({'/layout/update-parent-layout-id':{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,layoutId:layoutId
                 ,parentLayoutId:parentLayoutId
-            }]);
+            }});
         };
         service.updateParentLayoutIdAndPriority = function(plid,parentPlid,priority) {
-            return SessionService.invoke('/layout/update-parent-layout-id-and-priority',[{
+            return SessionService.invoke({'/layout/update-parent-layout-id-and-priority':{
                 plid:plid
                 ,parentPlid:parentPlid
                 ,priority:priority
-            }]);
+            }});
         };
         service.updatePriority = function(plid,priority) {
-            return SessionService.invoke('/layout/update-priority',[{
+            return SessionService.invoke({'/layout/update-priority':{
                 plid:plid
                 ,priority:priority
-            }]);
+            }});
         };
         service.updatePriority = function(groupId,privateLayout,layoutId,priority) {
-            return SessionService.invoke('/layout/update-priority',[{
+            return SessionService.invoke({'/layout/update-priority':{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,layoutId:layoutId
                 ,priority:priority
-            }]);
+            }});
         };
         service.updatePriority = function(groupId,privateLayout,layoutId,nextLayoutId,previousLayoutId) {
-            return SessionService.invoke('/layout/update-priority',[{
+            return SessionService.invoke({'/layout/update-priority':{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,layoutId:layoutId
                 ,nextLayoutId:nextLayoutId
                 ,previousLayoutId:previousLayoutId
-            }]);
+            }});
         };
         service.validateImportLayoutsFile = function(groupId,privateLayout,parameterMap,file) {
-            return SessionService.invoke('/layout/validate-import-layouts-file',[{
+            return SessionService.invoke({'/layout/validate-import-layouts-file':{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,parameterMap:parameterMap
                 ,file:file
-            }]);
+            }});
         };
         service.validateImportPortletInfo = function(plid,groupId,portletId,parameterMap,file) {
-            return SessionService.invoke('/layout/validate-import-portlet-info',[{
+            return SessionService.invoke({'/layout/validate-import-portlet-info':{
                 plid:plid
                 ,groupId:groupId
                 ,portletId:portletId
                 ,parameterMap:parameterMap
                 ,file:file
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -6323,26 +6234,26 @@
         var service = {};
         // Begin generated service methods
         service.addLayoutBranch = function(layoutRevisionId,name,description,master,serviceContext) {
-            return SessionService.invoke('/layoutbranch/add-layout-branch',[{
+            return SessionService.invoke({'/layoutbranch/add-layout-branch':{
                 layoutRevisionId:layoutRevisionId
                 ,name:name
                 ,description:description
                 ,master:master
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteLayoutBranch = function(layoutBranchId) {
-            return SessionService.invoke('/layoutbranch/delete-layout-branch',[{
+            return SessionService.invoke({'/layoutbranch/delete-layout-branch':{
                 layoutBranchId:layoutBranchId
-            }]);
+            }});
         };
         service.updateLayoutBranch = function(layoutBranchId,name,description,serviceContext) {
-            return SessionService.invoke('/layoutbranch/update-layout-branch',[{
+            return SessionService.invoke({'/layoutbranch/update-layout-branch':{
                 layoutBranchId:layoutBranchId
                 ,name:name
                 ,description:description
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -6357,53 +6268,53 @@
         var service = {};
         // Begin generated service methods
         service.addLayoutPrototype = function(nameMap,description,active) {
-            return SessionService.invoke('/layoutprototype/add-layout-prototype',[{
+            return SessionService.invoke({'/layoutprototype/add-layout-prototype':{
                 nameMap:nameMap
                 ,description:description
                 ,active:active
-            }]);
+            }});
         };
         service.addLayoutPrototype = function(nameMap,description,active,serviceContext) {
-            return SessionService.invoke('/layoutprototype/add-layout-prototype',[{
+            return SessionService.invoke({'/layoutprototype/add-layout-prototype':{
                 nameMap:nameMap
                 ,description:description
                 ,active:active
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteLayoutPrototype = function(layoutPrototypeId) {
-            return SessionService.invoke('/layoutprototype/delete-layout-prototype',[{
+            return SessionService.invoke({'/layoutprototype/delete-layout-prototype':{
                 layoutPrototypeId:layoutPrototypeId
-            }]);
+            }});
         };
         service.getLayoutPrototype = function(layoutPrototypeId) {
-            return SessionService.invoke('/layoutprototype/get-layout-prototype',[{
+            return SessionService.invoke({'/layoutprototype/get-layout-prototype':{
                 layoutPrototypeId:layoutPrototypeId
-            }]);
+            }});
         };
         service.search = function(companyId,active,obc) {
-            return SessionService.invoke('/layoutprototype/search',[{
+            return SessionService.invoke({'/layoutprototype/search':{
                 companyId:companyId
                 ,active:active
                 ,obc:obc
-            }]);
+            }});
         };
         service.updateLayoutPrototype = function(layoutPrototypeId,nameMap,description,active) {
-            return SessionService.invoke('/layoutprototype/update-layout-prototype',[{
+            return SessionService.invoke({'/layoutprototype/update-layout-prototype':{
                 layoutPrototypeId:layoutPrototypeId
                 ,nameMap:nameMap
                 ,description:description
                 ,active:active
-            }]);
+            }});
         };
         service.updateLayoutPrototype = function(layoutPrototypeId,nameMap,description,active,serviceContext) {
-            return SessionService.invoke('/layoutprototype/update-layout-prototype',[{
+            return SessionService.invoke({'/layoutprototype/update-layout-prototype':{
                 layoutPrototypeId:layoutPrototypeId
                 ,nameMap:nameMap
                 ,description:description
                 ,active:active
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -6418,7 +6329,7 @@
         var service = {};
         // Begin generated service methods
         service.addLayoutRevision = function(userId,layoutSetBranchId,layoutBranchId,parentLayoutRevisionId,head,plid,portletPreferencesPlid,privateLayout,name,title,description,keywords,robots,typeSettings,iconImage,iconImageId,themeId,colorSchemeId,wapThemeId,wapColorSchemeId,css,serviceContext) {
-            return SessionService.invoke('/layoutrevision/add-layout-revision',[{
+            return SessionService.invoke({'/layoutrevision/add-layout-revision':{
                 userId:userId
                 ,layoutSetBranchId:layoutSetBranchId
                 ,layoutBranchId:layoutBranchId
@@ -6441,7 +6352,7 @@
                 ,wapColorSchemeId:wapColorSchemeId
                 ,css:css
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -6456,52 +6367,52 @@
         var service = {};
         // Begin generated service methods
         service.updateLayoutSetPrototypeLinkEnabled = function(groupId,privateLayout,layoutSetPrototypeLinkEnabled,layoutSetPrototypeUuid) {
-            return SessionService.invoke('/layoutset/update-layout-set-prototype-link-enabled',[{
+            return SessionService.invoke({'/layoutset/update-layout-set-prototype-link-enabled':{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,layoutSetPrototypeLinkEnabled:layoutSetPrototypeLinkEnabled
                 ,layoutSetPrototypeUuid:layoutSetPrototypeUuid
-            }]);
+            }});
         };
         service.updateLogo = function(groupId,privateLayout,logo,bytes) {
-            return SessionService.invoke('/layoutset/update-logo',[{
+            return SessionService.invoke({'/layoutset/update-logo':{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,logo:logo
                 ,bytes:bytes
-            }]);
+            }});
         };
         service.updateLogo = function(groupId,privateLayout,logo,file) {
-            return SessionService.invoke('/layoutset/update-logo',[{
+            return SessionService.invoke({'/layoutset/update-logo':{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,logo:logo
                 ,file:file
-            }]);
+            }});
         };
         service.updateLookAndFeel = function(groupId,privateLayout,themeId,colorSchemeId,css,wapTheme) {
-            return SessionService.invoke('/layoutset/update-look-and-feel',[{
+            return SessionService.invoke({'/layoutset/update-look-and-feel':{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,themeId:themeId
                 ,colorSchemeId:colorSchemeId
                 ,css:css
                 ,wapTheme:wapTheme
-            }]);
+            }});
         };
         service.updateSettings = function(groupId,privateLayout,settings) {
-            return SessionService.invoke('/layoutset/update-settings',[{
+            return SessionService.invoke({'/layoutset/update-settings':{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,settings:settings
-            }]);
+            }});
         };
         service.updateVirtualHost = function(groupId,privateLayout,virtualHost) {
-            return SessionService.invoke('/layoutset/update-virtual-host',[{
+            return SessionService.invoke({'/layoutset/update-virtual-host':{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,virtualHost:virtualHost
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -6516,7 +6427,7 @@
         var service = {};
         // Begin generated service methods
         service.addLayoutSetBranch = function(groupId,privateLayout,name,description,master,copyLayoutSetBranchId,serviceContext) {
-            return SessionService.invoke('/layoutsetbranch/add-layout-set-branch',[{
+            return SessionService.invoke({'/layoutsetbranch/add-layout-set-branch':{
                 groupId:groupId
                 ,privateLayout:privateLayout
                 ,name:name
@@ -6524,34 +6435,34 @@
                 ,master:master
                 ,copyLayoutSetBranchId:copyLayoutSetBranchId
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteLayoutSetBranch = function(layoutSetBranchId) {
-            return SessionService.invoke('/layoutsetbranch/delete-layout-set-branch',[{
+            return SessionService.invoke({'/layoutsetbranch/delete-layout-set-branch':{
                 layoutSetBranchId:layoutSetBranchId
-            }]);
+            }});
         };
         service.getLayoutSetBranches = function(groupId,privateLayout) {
-            return SessionService.invoke('/layoutsetbranch/get-layout-set-branches',[{
+            return SessionService.invoke({'/layoutsetbranch/get-layout-set-branches':{
                 groupId:groupId
                 ,privateLayout:privateLayout
-            }]);
+            }});
         };
         service.mergeLayoutSetBranch = function(layoutSetBranchId,mergeLayoutSetBranchId,serviceContext) {
-            return SessionService.invoke('/layoutsetbranch/merge-layout-set-branch',[{
+            return SessionService.invoke({'/layoutsetbranch/merge-layout-set-branch':{
                 layoutSetBranchId:layoutSetBranchId
                 ,mergeLayoutSetBranchId:mergeLayoutSetBranchId
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.updateLayoutSetBranch = function(groupId,layoutSetBranchId,name,description,serviceContext) {
-            return SessionService.invoke('/layoutsetbranch/update-layout-set-branch',[{
+            return SessionService.invoke({'/layoutsetbranch/update-layout-set-branch':{
                 groupId:groupId
                 ,layoutSetBranchId:layoutSetBranchId
                 ,name:name
                 ,description:description
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -6566,46 +6477,46 @@
         var service = {};
         // Begin generated service methods
         service.addLayoutSetPrototype = function(nameMap,description,active,layoutsUpdateable,serviceContext) {
-            return SessionService.invoke('/layoutsetprototype/add-layout-set-prototype',[{
+            return SessionService.invoke({'/layoutsetprototype/add-layout-set-prototype':{
                 nameMap:nameMap
                 ,description:description
                 ,active:active
                 ,layoutsUpdateable:layoutsUpdateable
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteLayoutSetPrototype = function(layoutSetPrototypeId) {
-            return SessionService.invoke('/layoutsetprototype/delete-layout-set-prototype',[{
+            return SessionService.invoke({'/layoutsetprototype/delete-layout-set-prototype':{
                 layoutSetPrototypeId:layoutSetPrototypeId
-            }]);
+            }});
         };
         service.getLayoutSetPrototype = function(layoutSetPrototypeId) {
-            return SessionService.invoke('/layoutsetprototype/get-layout-set-prototype',[{
+            return SessionService.invoke({'/layoutsetprototype/get-layout-set-prototype':{
                 layoutSetPrototypeId:layoutSetPrototypeId
-            }]);
+            }});
         };
         service.search = function(companyId,active,obc) {
-            return SessionService.invoke('/layoutsetprototype/search',[{
+            return SessionService.invoke({'/layoutsetprototype/search':{
                 companyId:companyId
                 ,active:active
                 ,obc:obc
-            }]);
+            }});
         };
         service.updateLayoutSetPrototype = function(layoutSetPrototypeId,settings) {
-            return SessionService.invoke('/layoutsetprototype/update-layout-set-prototype',[{
+            return SessionService.invoke({'/layoutsetprototype/update-layout-set-prototype':{
                 layoutSetPrototypeId:layoutSetPrototypeId
                 ,settings:settings
-            }]);
+            }});
         };
         service.updateLayoutSetPrototype = function(layoutSetPrototypeId,nameMap,description,active,layoutsUpdateable,serviceContext) {
-            return SessionService.invoke('/layoutsetprototype/update-layout-set-prototype',[{
+            return SessionService.invoke({'/layoutsetprototype/update-layout-set-prototype':{
                 layoutSetPrototypeId:layoutSetPrototypeId
                 ,nameMap:nameMap
                 ,description:description
                 ,active:active
                 ,layoutsUpdateable:layoutsUpdateable
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -6620,27 +6531,27 @@
         var service = {};
         // Begin generated service methods
         service.getListType = function(listTypeId) {
-            return SessionService.invoke('/listtype/get-list-type',[{
+            return SessionService.invoke({'/listtype/get-list-type':{
                 listTypeId:listTypeId
-            }]);
+            }});
         };
         service.getListTypes = function(type) {
-            return SessionService.invoke('/listtype/get-list-types',[{
+            return SessionService.invoke({'/listtype/get-list-types':{
                 type:type
-            }]);
+            }});
         };
         service.validate = function(listTypeId,type) {
-            return SessionService.invoke('/listtype/validate',[{
+            return SessionService.invoke({'/listtype/validate':{
                 listTypeId:listTypeId
                 ,type:type
-            }]);
+            }});
         };
         service.validate = function(listTypeId,classNameId,type) {
-            return SessionService.invoke('/listtype/validate',[{
+            return SessionService.invoke({'/listtype/validate':{
                 listTypeId:listTypeId
                 ,classNameId:classNameId
                 ,type:type
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -6655,16 +6566,16 @@
         var service = {};
         // Begin generated service methods
         service.addBan = function(banUserId,serviceContext) {
-            return SessionService.invoke('/mbban/add-ban',[{
+            return SessionService.invoke({'/mbban/add-ban':{
                 banUserId:banUserId
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteBan = function(banUserId,serviceContext) {
-            return SessionService.invoke('/mbban/delete-ban',[{
+            return SessionService.invoke({'/mbban/delete-ban':{
                 banUserId:banUserId
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -6679,7 +6590,7 @@
         var service = {};
         // Begin generated service methods
         service.addCategory = function(parentCategoryId,name,description,displayStyle,emailAddress,inProtocol,inServerName,inServerPort,inUseSSL,inUserName,inPassword,inReadInterval,outEmailAddress,outCustom,outServerName,outServerPort,outUseSSL,outUserName,outPassword,mailingListActive,allowAnonymousEmail,serviceContext) {
-            return SessionService.invoke('/mbcategory/add-category',[{
+            return SessionService.invoke({'/mbcategory/add-category':{
                 parentCategoryId:parentCategoryId
                 ,name:name
                 ,description:description
@@ -6702,169 +6613,169 @@
                 ,mailingListActive:mailingListActive
                 ,allowAnonymousEmail:allowAnonymousEmail
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addCategory = function(userId,parentCategoryId,name,description,serviceContext) {
-            return SessionService.invoke('/mbcategory/add-category',[{
+            return SessionService.invoke({'/mbcategory/add-category':{
                 userId:userId
                 ,parentCategoryId:parentCategoryId
                 ,name:name
                 ,description:description
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteCategory = function(categoryId,includeTrashedEntries) {
-            return SessionService.invoke('/mbcategory/delete-category',[{
+            return SessionService.invoke({'/mbcategory/delete-category':{
                 categoryId:categoryId
                 ,includeTrashedEntries:includeTrashedEntries
-            }]);
+            }});
         };
         service.deleteCategory = function(groupId,categoryId) {
-            return SessionService.invoke('/mbcategory/delete-category',[{
+            return SessionService.invoke({'/mbcategory/delete-category':{
                 groupId:groupId
                 ,categoryId:categoryId
-            }]);
+            }});
         };
         service.getCategories = function(groupId) {
-            return SessionService.invoke('/mbcategory/get-categories',[{
+            return SessionService.invoke({'/mbcategory/get-categories':{
                 groupId:groupId
-            }]);
+            }});
         };
         service.getCategories = function(groupId,status) {
-            return SessionService.invoke('/mbcategory/get-categories',[{
+            return SessionService.invoke({'/mbcategory/get-categories':{
                 groupId:groupId
                 ,status:status
-            }]);
+            }});
         };
         service.getCategories = function(groupId,parentCategoryId,start,end) {
-            return SessionService.invoke('/mbcategory/get-categories',[{
+            return SessionService.invoke({'/mbcategory/get-categories':{
                 groupId:groupId
                 ,parentCategoryId:parentCategoryId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getCategories = function(groupId,parentCategoryIds,start,end) {
-            return SessionService.invoke('/mbcategory/get-categories',[{
+            return SessionService.invoke({'/mbcategory/get-categories':{
                 groupId:groupId
                 ,parentCategoryIds:parentCategoryIds
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getCategories = function(groupId,parentCategoryId,status,start,end) {
-            return SessionService.invoke('/mbcategory/get-categories',[{
+            return SessionService.invoke({'/mbcategory/get-categories':{
                 groupId:groupId
                 ,parentCategoryId:parentCategoryId
                 ,status:status
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getCategories = function(groupId,parentCategoryIds,status,start,end) {
-            return SessionService.invoke('/mbcategory/get-categories',[{
+            return SessionService.invoke({'/mbcategory/get-categories':{
                 groupId:groupId
                 ,parentCategoryIds:parentCategoryIds
                 ,status:status
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getCategoriesCount = function(groupId,parentCategoryId) {
-            return SessionService.invoke('/mbcategory/get-categories-count',[{
+            return SessionService.invoke({'/mbcategory/get-categories-count':{
                 groupId:groupId
                 ,parentCategoryId:parentCategoryId
-            }]);
+            }});
         };
         service.getCategoriesCount = function(groupId,parentCategoryIds) {
-            return SessionService.invoke('/mbcategory/get-categories-count',[{
+            return SessionService.invoke({'/mbcategory/get-categories-count':{
                 groupId:groupId
                 ,parentCategoryIds:parentCategoryIds
-            }]);
+            }});
         };
         service.getCategoriesCount = function(groupId,parentCategoryId,status) {
-            return SessionService.invoke('/mbcategory/get-categories-count',[{
+            return SessionService.invoke({'/mbcategory/get-categories-count':{
                 groupId:groupId
                 ,parentCategoryId:parentCategoryId
                 ,status:status
-            }]);
+            }});
         };
         service.getCategoriesCount = function(groupId,parentCategoryIds,status) {
-            return SessionService.invoke('/mbcategory/get-categories-count',[{
+            return SessionService.invoke({'/mbcategory/get-categories-count':{
                 groupId:groupId
                 ,parentCategoryIds:parentCategoryIds
                 ,status:status
-            }]);
+            }});
         };
         service.getCategory = function(categoryId) {
-            return SessionService.invoke('/mbcategory/get-category',[{
+            return SessionService.invoke({'/mbcategory/get-category':{
                 categoryId:categoryId
-            }]);
+            }});
         };
         service.getCategoryIds = function(groupId,categoryId) {
-            return SessionService.invoke('/mbcategory/get-category-ids',[{
+            return SessionService.invoke({'/mbcategory/get-category-ids':{
                 groupId:groupId
                 ,categoryId:categoryId
-            }]);
+            }});
         };
         service.getSubcategoryIds = function(categoryIds,groupId,categoryId) {
-            return SessionService.invoke('/mbcategory/get-subcategory-ids',[{
+            return SessionService.invoke({'/mbcategory/get-subcategory-ids':{
                 categoryIds:categoryIds
                 ,groupId:groupId
                 ,categoryId:categoryId
-            }]);
+            }});
         };
         service.getSubscribedCategories = function(groupId,userId,start,end) {
-            return SessionService.invoke('/mbcategory/get-subscribed-categories',[{
+            return SessionService.invoke({'/mbcategory/get-subscribed-categories':{
                 groupId:groupId
                 ,userId:userId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getSubscribedCategoriesCount = function(groupId,userId) {
-            return SessionService.invoke('/mbcategory/get-subscribed-categories-count',[{
+            return SessionService.invoke({'/mbcategory/get-subscribed-categories-count':{
                 groupId:groupId
                 ,userId:userId
-            }]);
+            }});
         };
         service.moveCategory = function(categoryId,parentCategoryId,mergeWithParentCategory) {
-            return SessionService.invoke('/mbcategory/move-category',[{
+            return SessionService.invoke({'/mbcategory/move-category':{
                 categoryId:categoryId
                 ,parentCategoryId:parentCategoryId
                 ,mergeWithParentCategory:mergeWithParentCategory
-            }]);
+            }});
         };
         service.moveCategoryFromTrash = function(categoryId,newCategoryId) {
-            return SessionService.invoke('/mbcategory/move-category-from-trash',[{
+            return SessionService.invoke({'/mbcategory/move-category-from-trash':{
                 categoryId:categoryId
                 ,newCategoryId:newCategoryId
-            }]);
+            }});
         };
         service.moveCategoryToTrash = function(categoryId) {
-            return SessionService.invoke('/mbcategory/move-category-to-trash',[{
+            return SessionService.invoke({'/mbcategory/move-category-to-trash':{
                 categoryId:categoryId
-            }]);
+            }});
         };
         service.restoreCategoryFromTrash = function(categoryId) {
-            return SessionService.invoke('/mbcategory/restore-category-from-trash',[{
+            return SessionService.invoke({'/mbcategory/restore-category-from-trash':{
                 categoryId:categoryId
-            }]);
+            }});
         };
         service.subscribeCategory = function(groupId,categoryId) {
-            return SessionService.invoke('/mbcategory/subscribe-category',[{
+            return SessionService.invoke({'/mbcategory/subscribe-category':{
                 groupId:groupId
                 ,categoryId:categoryId
-            }]);
+            }});
         };
         service.unsubscribeCategory = function(groupId,categoryId) {
-            return SessionService.invoke('/mbcategory/unsubscribe-category',[{
+            return SessionService.invoke({'/mbcategory/unsubscribe-category':{
                 groupId:groupId
                 ,categoryId:categoryId
-            }]);
+            }});
         };
         service.updateCategory = function(categoryId,parentCategoryId,name,description,displayStyle,emailAddress,inProtocol,inServerName,inServerPort,inUseSSL,inUserName,inPassword,inReadInterval,outEmailAddress,outCustom,outServerName,outServerPort,outUseSSL,outUserName,outPassword,mailingListActive,allowAnonymousEmail,mergeWithParentCategory,serviceContext) {
-            return SessionService.invoke('/mbcategory/update-category',[{
+            return SessionService.invoke({'/mbcategory/update-category':{
                 categoryId:categoryId
                 ,parentCategoryId:parentCategoryId
                 ,name:name
@@ -6889,7 +6800,7 @@
                 ,allowAnonymousEmail:allowAnonymousEmail
                 ,mergeWithParentCategory:mergeWithParentCategory
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -6904,7 +6815,7 @@
         var service = {};
         // Begin generated service methods
         service.addDiscussionMessage = function(groupId,className,classPK,permissionClassName,permissionClassPK,permissionOwnerId,threadId,parentMessageId,subject,body,serviceContext) {
-            return SessionService.invoke('/mbmessage/add-discussion-message',[{
+            return SessionService.invoke({'/mbmessage/add-discussion-message':{
                 groupId:groupId
                 ,className:className
                 ,classPK:classPK
@@ -6916,10 +6827,10 @@
                 ,subject:subject
                 ,body:body
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addMessage = function(groupId,categoryId,subject,body,format,inputStreamOVPs,anonymous,priority,allowPingbacks,serviceContext) {
-            return SessionService.invoke('/mbmessage/add-message',[{
+            return SessionService.invoke({'/mbmessage/add-message':{
                 groupId:groupId
                 ,categoryId:categoryId
                 ,subject:subject
@@ -6930,10 +6841,10 @@
                 ,priority:priority
                 ,allowPingbacks:allowPingbacks
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addMessage = function(groupId,categoryId,threadId,parentMessageId,subject,body,format,inputStreamOVPs,anonymous,priority,allowPingbacks,serviceContext) {
-            return SessionService.invoke('/mbmessage/add-message',[{
+            return SessionService.invoke({'/mbmessage/add-message':{
                 groupId:groupId
                 ,categoryId:categoryId
                 ,threadId:threadId
@@ -6946,18 +6857,18 @@
                 ,priority:priority
                 ,allowPingbacks:allowPingbacks
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addMessage = function(categoryId,subject,body,serviceContext) {
-            return SessionService.invoke('/mbmessage/add-message',[{
+            return SessionService.invoke({'/mbmessage/add-message':{
                 categoryId:categoryId
                 ,subject:subject
                 ,body:body
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addMessage = function(parentMessageId,subject,body,format,inputStreamOVPs,anonymous,priority,allowPingbacks,serviceContext) {
-            return SessionService.invoke('/mbmessage/add-message',[{
+            return SessionService.invoke({'/mbmessage/add-message':{
                 parentMessageId:parentMessageId
                 ,subject:subject
                 ,body:body
@@ -6967,10 +6878,10 @@
                 ,priority:priority
                 ,allowPingbacks:allowPingbacks
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteDiscussionMessage = function(groupId,className,classPK,permissionClassName,permissionClassPK,permissionOwnerId,messageId) {
-            return SessionService.invoke('/mbmessage/delete-discussion-message',[{
+            return SessionService.invoke({'/mbmessage/delete-discussion-message':{
                 groupId:groupId
                 ,className:className
                 ,classPK:classPK
@@ -6978,36 +6889,36 @@
                 ,permissionClassPK:permissionClassPK
                 ,permissionOwnerId:permissionOwnerId
                 ,messageId:messageId
-            }]);
+            }});
         };
         service.deleteMessage = function(messageId) {
-            return SessionService.invoke('/mbmessage/delete-message',[{
+            return SessionService.invoke({'/mbmessage/delete-message':{
                 messageId:messageId
-            }]);
+            }});
         };
         service.deleteMessageAttachments = function(messageId) {
-            return SessionService.invoke('/mbmessage/delete-message-attachments',[{
+            return SessionService.invoke({'/mbmessage/delete-message-attachments':{
                 messageId:messageId
-            }]);
+            }});
         };
         service.getCategoryMessages = function(groupId,categoryId,status,start,end) {
-            return SessionService.invoke('/mbmessage/get-category-messages',[{
+            return SessionService.invoke({'/mbmessage/get-category-messages':{
                 groupId:groupId
                 ,categoryId:categoryId
                 ,status:status
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getCategoryMessagesCount = function(groupId,categoryId,status) {
-            return SessionService.invoke('/mbmessage/get-category-messages-count',[{
+            return SessionService.invoke({'/mbmessage/get-category-messages-count':{
                 groupId:groupId
                 ,categoryId:categoryId
                 ,status:status
-            }]);
+            }});
         };
         service.getCategoryMessagesRss = function(groupId,categoryId,status,max,type,version,displayStyle,feedURL,entryURL,themeDisplay) {
-            return SessionService.invoke('/mbmessage/get-category-messages-rss',[{
+            return SessionService.invoke({'/mbmessage/get-category-messages-rss':{
                 groupId:groupId
                 ,categoryId:categoryId
                 ,status:status
@@ -7018,10 +6929,10 @@
                 ,feedURL:feedURL
                 ,entryURL:entryURL
                 ,themeDisplay:themeDisplay
-            }]);
+            }});
         };
         service.getCompanyMessagesRss = function(companyId,status,max,type,version,displayStyle,feedURL,entryURL,themeDisplay) {
-            return SessionService.invoke('/mbmessage/get-company-messages-rss',[{
+            return SessionService.invoke({'/mbmessage/get-company-messages-rss':{
                 companyId:companyId
                 ,status:status
                 ,max:max
@@ -7031,16 +6942,16 @@
                 ,feedURL:feedURL
                 ,entryURL:entryURL
                 ,themeDisplay:themeDisplay
-            }]);
+            }});
         };
         service.getGroupMessagesCount = function(groupId,status) {
-            return SessionService.invoke('/mbmessage/get-group-messages-count',[{
+            return SessionService.invoke({'/mbmessage/get-group-messages-count':{
                 groupId:groupId
                 ,status:status
-            }]);
+            }});
         };
         service.getGroupMessagesRss = function(groupId,userId,status,max,type,version,displayStyle,feedURL,entryURL,themeDisplay) {
-            return SessionService.invoke('/mbmessage/get-group-messages-rss',[{
+            return SessionService.invoke({'/mbmessage/get-group-messages-rss':{
                 groupId:groupId
                 ,userId:userId
                 ,status:status
@@ -7051,10 +6962,10 @@
                 ,feedURL:feedURL
                 ,entryURL:entryURL
                 ,themeDisplay:themeDisplay
-            }]);
+            }});
         };
         service.getGroupMessagesRss = function(groupId,status,max,type,version,displayStyle,feedURL,entryURL,themeDisplay) {
-            return SessionService.invoke('/mbmessage/get-group-messages-rss',[{
+            return SessionService.invoke({'/mbmessage/get-group-messages-rss':{
                 groupId:groupId
                 ,status:status
                 ,max:max
@@ -7064,48 +6975,48 @@
                 ,feedURL:feedURL
                 ,entryURL:entryURL
                 ,themeDisplay:themeDisplay
-            }]);
+            }});
         };
         service.getMessage = function(messageId) {
-            return SessionService.invoke('/mbmessage/get-message',[{
+            return SessionService.invoke({'/mbmessage/get-message':{
                 messageId:messageId
-            }]);
+            }});
         };
         service.getMessageDisplay = function(messageId,status,threadView,includePrevAndNext) {
-            return SessionService.invoke('/mbmessage/get-message-display',[{
+            return SessionService.invoke({'/mbmessage/get-message-display':{
                 messageId:messageId
                 ,status:status
                 ,threadView:threadView
                 ,includePrevAndNext:includePrevAndNext
-            }]);
+            }});
         };
         service.getThreadAnswersCount = function(groupId,categoryId,threadId) {
-            return SessionService.invoke('/mbmessage/get-thread-answers-count',[{
+            return SessionService.invoke({'/mbmessage/get-thread-answers-count':{
                 groupId:groupId
                 ,categoryId:categoryId
                 ,threadId:threadId
-            }]);
+            }});
         };
         service.getThreadMessages = function(groupId,categoryId,threadId,status,start,end) {
-            return SessionService.invoke('/mbmessage/get-thread-messages',[{
+            return SessionService.invoke({'/mbmessage/get-thread-messages':{
                 groupId:groupId
                 ,categoryId:categoryId
                 ,threadId:threadId
                 ,status:status
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getThreadMessagesCount = function(groupId,categoryId,threadId,status) {
-            return SessionService.invoke('/mbmessage/get-thread-messages-count',[{
+            return SessionService.invoke({'/mbmessage/get-thread-messages-count':{
                 groupId:groupId
                 ,categoryId:categoryId
                 ,threadId:threadId
                 ,status:status
-            }]);
+            }});
         };
         service.getThreadMessagesRss = function(threadId,status,max,type,version,displayStyle,feedURL,entryURL,themeDisplay) {
-            return SessionService.invoke('/mbmessage/get-thread-messages-rss',[{
+            return SessionService.invoke({'/mbmessage/get-thread-messages-rss':{
                 threadId:threadId
                 ,status:status
                 ,max:max
@@ -7115,33 +7026,33 @@
                 ,feedURL:feedURL
                 ,entryURL:entryURL
                 ,themeDisplay:themeDisplay
-            }]);
+            }});
         };
         service.restoreMessageAttachmentFromTrash = function(messageId,fileName) {
-            return SessionService.invoke('/mbmessage/restore-message-attachment-from-trash',[{
+            return SessionService.invoke({'/mbmessage/restore-message-attachment-from-trash':{
                 messageId:messageId
                 ,fileName:fileName
-            }]);
+            }});
         };
         service.subscribeMessage = function(messageId) {
-            return SessionService.invoke('/mbmessage/subscribe-message',[{
+            return SessionService.invoke({'/mbmessage/subscribe-message':{
                 messageId:messageId
-            }]);
+            }});
         };
         service.unsubscribeMessage = function(messageId) {
-            return SessionService.invoke('/mbmessage/unsubscribe-message',[{
+            return SessionService.invoke({'/mbmessage/unsubscribe-message':{
                 messageId:messageId
-            }]);
+            }});
         };
         service.updateAnswer = function(messageId,answer,cascade) {
-            return SessionService.invoke('/mbmessage/update-answer',[{
+            return SessionService.invoke({'/mbmessage/update-answer':{
                 messageId:messageId
                 ,answer:answer
                 ,cascade:cascade
-            }]);
+            }});
         };
         service.updateDiscussionMessage = function(className,classPK,permissionClassName,permissionClassPK,permissionOwnerId,messageId,subject,body,serviceContext) {
-            return SessionService.invoke('/mbmessage/update-discussion-message',[{
+            return SessionService.invoke({'/mbmessage/update-discussion-message':{
                 className:className
                 ,classPK:classPK
                 ,permissionClassName:permissionClassName
@@ -7151,10 +7062,10 @@
                 ,subject:subject
                 ,body:body
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.updateMessage = function(messageId,subject,body,inputStreamOVPs,existingFiles,priority,allowPingbacks,serviceContext) {
-            return SessionService.invoke('/mbmessage/update-message',[{
+            return SessionService.invoke({'/mbmessage/update-message':{
                 messageId:messageId
                 ,subject:subject
                 ,body:body
@@ -7163,7 +7074,7 @@
                 ,priority:priority
                 ,allowPingbacks:allowPingbacks
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -7178,41 +7089,41 @@
         var service = {};
         // Begin generated service methods
         service.deleteThread = function(threadId) {
-            return SessionService.invoke('/mbthread/delete-thread',[{
+            return SessionService.invoke({'/mbthread/delete-thread':{
                 threadId:threadId
-            }]);
+            }});
         };
         service.getGroupThreads = function(groupId,userId,status,start,end) {
-            return SessionService.invoke('/mbthread/get-group-threads',[{
+            return SessionService.invoke({'/mbthread/get-group-threads':{
                 groupId:groupId
                 ,userId:userId
                 ,status:status
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getGroupThreads = function(groupId,userId,modifiedDate,status,start,end) {
-            return SessionService.invoke('/mbthread/get-group-threads',[{
+            return SessionService.invoke({'/mbthread/get-group-threads':{
                 groupId:groupId
                 ,userId:userId
                 ,modifiedDate:modifiedDate
                 ,status:status
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getGroupThreads = function(groupId,userId,status,subscribed,start,end) {
-            return SessionService.invoke('/mbthread/get-group-threads',[{
+            return SessionService.invoke({'/mbthread/get-group-threads':{
                 groupId:groupId
                 ,userId:userId
                 ,status:status
                 ,subscribed:subscribed
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getGroupThreads = function(groupId,userId,status,subscribed,includeAnonymous,start,end) {
-            return SessionService.invoke('/mbthread/get-group-threads',[{
+            return SessionService.invoke({'/mbthread/get-group-threads':{
                 groupId:groupId
                 ,userId:userId
                 ,status:status
@@ -7220,94 +7131,94 @@
                 ,includeAnonymous:includeAnonymous
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getGroupThreadsCount = function(groupId,userId,status) {
-            return SessionService.invoke('/mbthread/get-group-threads-count',[{
+            return SessionService.invoke({'/mbthread/get-group-threads-count':{
                 groupId:groupId
                 ,userId:userId
                 ,status:status
-            }]);
+            }});
         };
         service.getGroupThreadsCount = function(groupId,userId,modifiedDate,status) {
-            return SessionService.invoke('/mbthread/get-group-threads-count',[{
+            return SessionService.invoke({'/mbthread/get-group-threads-count':{
                 groupId:groupId
                 ,userId:userId
                 ,modifiedDate:modifiedDate
                 ,status:status
-            }]);
+            }});
         };
         service.getGroupThreadsCount = function(groupId,userId,status,subscribed) {
-            return SessionService.invoke('/mbthread/get-group-threads-count',[{
+            return SessionService.invoke({'/mbthread/get-group-threads-count':{
                 groupId:groupId
                 ,userId:userId
                 ,status:status
                 ,subscribed:subscribed
-            }]);
+            }});
         };
         service.getGroupThreadsCount = function(groupId,userId,status,subscribed,includeAnonymous) {
-            return SessionService.invoke('/mbthread/get-group-threads-count',[{
+            return SessionService.invoke({'/mbthread/get-group-threads-count':{
                 groupId:groupId
                 ,userId:userId
                 ,status:status
                 ,subscribed:subscribed
                 ,includeAnonymous:includeAnonymous
-            }]);
+            }});
         };
         service.getThreads = function(groupId,categoryId,status,start,end) {
-            return SessionService.invoke('/mbthread/get-threads',[{
+            return SessionService.invoke({'/mbthread/get-threads':{
                 groupId:groupId
                 ,categoryId:categoryId
                 ,status:status
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getThreadsCount = function(groupId,categoryId,status) {
-            return SessionService.invoke('/mbthread/get-threads-count',[{
+            return SessionService.invoke({'/mbthread/get-threads-count':{
                 groupId:groupId
                 ,categoryId:categoryId
                 ,status:status
-            }]);
+            }});
         };
         service.lockThread = function(threadId) {
-            return SessionService.invoke('/mbthread/lock-thread',[{
+            return SessionService.invoke({'/mbthread/lock-thread':{
                 threadId:threadId
-            }]);
+            }});
         };
         service.moveThread = function(categoryId,threadId) {
-            return SessionService.invoke('/mbthread/move-thread',[{
+            return SessionService.invoke({'/mbthread/move-thread':{
                 categoryId:categoryId
                 ,threadId:threadId
-            }]);
+            }});
         };
         service.moveThreadFromTrash = function(categoryId,threadId) {
-            return SessionService.invoke('/mbthread/move-thread-from-trash',[{
+            return SessionService.invoke({'/mbthread/move-thread-from-trash':{
                 categoryId:categoryId
                 ,threadId:threadId
-            }]);
+            }});
         };
         service.moveThreadToTrash = function(threadId) {
-            return SessionService.invoke('/mbthread/move-thread-to-trash',[{
+            return SessionService.invoke({'/mbthread/move-thread-to-trash':{
                 threadId:threadId
-            }]);
+            }});
         };
         service.restoreThreadFromTrash = function(threadId) {
-            return SessionService.invoke('/mbthread/restore-thread-from-trash',[{
+            return SessionService.invoke({'/mbthread/restore-thread-from-trash':{
                 threadId:threadId
-            }]);
+            }});
         };
         service.search = function(groupId,creatorUserId,status,start,end) {
-            return SessionService.invoke('/mbthread/search',[{
+            return SessionService.invoke({'/mbthread/search':{
                 groupId:groupId
                 ,creatorUserId:creatorUserId
                 ,status:status
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.search = function(groupId,creatorUserId,startDate,endDate,status,start,end) {
-            return SessionService.invoke('/mbthread/search',[{
+            return SessionService.invoke({'/mbthread/search':{
                 groupId:groupId
                 ,creatorUserId:creatorUserId
                 ,startDate:startDate
@@ -7315,19 +7226,19 @@
                 ,status:status
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.splitThread = function(messageId,subject,serviceContext) {
-            return SessionService.invoke('/mbthread/split-thread',[{
+            return SessionService.invoke({'/mbthread/split-thread':{
                 messageId:messageId
                 ,subject:subject
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.unlockThread = function(threadId) {
-            return SessionService.invoke('/mbthread/unlock-thread',[{
+            return SessionService.invoke({'/mbthread/unlock-thread':{
                 threadId:threadId
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -7342,59 +7253,59 @@
         var service = {};
         // Begin generated service methods
         service.addAction = function(ruleGroupInstanceId,nameMap,descriptionMap,type,typeSettings,serviceContext) {
-            return SessionService.invoke('/mdraction/add-action',[{
+            return SessionService.invoke({'/mdraction/add-action':{
                 ruleGroupInstanceId:ruleGroupInstanceId
                 ,nameMap:nameMap
                 ,descriptionMap:descriptionMap
                 ,type:type
                 ,typeSettings:typeSettings
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addAction = function(ruleGroupInstanceId,nameMap,descriptionMap,type,typeSettingsProperties,serviceContext) {
-            return SessionService.invoke('/mdraction/add-action',[{
+            return SessionService.invoke({'/mdraction/add-action':{
                 ruleGroupInstanceId:ruleGroupInstanceId
                 ,nameMap:nameMap
                 ,descriptionMap:descriptionMap
                 ,type:type
                 ,typeSettingsProperties:typeSettingsProperties
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteAction = function(actionId) {
-            return SessionService.invoke('/mdraction/delete-action',[{
+            return SessionService.invoke({'/mdraction/delete-action':{
                 actionId:actionId
-            }]);
+            }});
         };
         service.fetchAction = function(actionId) {
-            return SessionService.invoke('/mdraction/fetch-action',[{
+            return SessionService.invoke({'/mdraction/fetch-action':{
                 actionId:actionId
-            }]);
+            }});
         };
         service.getAction = function(actionId) {
-            return SessionService.invoke('/mdraction/get-action',[{
+            return SessionService.invoke({'/mdraction/get-action':{
                 actionId:actionId
-            }]);
+            }});
         };
         service.updateAction = function(actionId,nameMap,descriptionMap,type,typeSettings,serviceContext) {
-            return SessionService.invoke('/mdraction/update-action',[{
+            return SessionService.invoke({'/mdraction/update-action':{
                 actionId:actionId
                 ,nameMap:nameMap
                 ,descriptionMap:descriptionMap
                 ,type:type
                 ,typeSettings:typeSettings
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.updateAction = function(actionId,nameMap,descriptionMap,type,typeSettingsProperties,serviceContext) {
-            return SessionService.invoke('/mdraction/update-action',[{
+            return SessionService.invoke({'/mdraction/update-action':{
                 actionId:actionId
                 ,nameMap:nameMap
                 ,descriptionMap:descriptionMap
                 ,type:type
                 ,typeSettingsProperties:typeSettingsProperties
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -7409,49 +7320,49 @@
         var service = {};
         // Begin generated service methods
         service.addRule = function(ruleGroupId,nameMap,descriptionMap,type,typeSettings,serviceContext) {
-            return SessionService.invoke('/mdrrule/add-rule',[{
+            return SessionService.invoke({'/mdrrule/add-rule':{
                 ruleGroupId:ruleGroupId
                 ,nameMap:nameMap
                 ,descriptionMap:descriptionMap
                 ,type:type
                 ,typeSettings:typeSettings
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteRule = function(ruleId) {
-            return SessionService.invoke('/mdrrule/delete-rule',[{
+            return SessionService.invoke({'/mdrrule/delete-rule':{
                 ruleId:ruleId
-            }]);
+            }});
         };
         service.fetchRule = function(ruleId) {
-            return SessionService.invoke('/mdrrule/fetch-rule',[{
+            return SessionService.invoke({'/mdrrule/fetch-rule':{
                 ruleId:ruleId
-            }]);
+            }});
         };
         service.getRule = function(ruleId) {
-            return SessionService.invoke('/mdrrule/get-rule',[{
+            return SessionService.invoke({'/mdrrule/get-rule':{
                 ruleId:ruleId
-            }]);
+            }});
         };
         service.updateRule = function(ruleId,nameMap,descriptionMap,type,typeSettings,serviceContext) {
-            return SessionService.invoke('/mdrrule/update-rule',[{
+            return SessionService.invoke({'/mdrrule/update-rule':{
                 ruleId:ruleId
                 ,nameMap:nameMap
                 ,descriptionMap:descriptionMap
                 ,type:type
                 ,typeSettings:typeSettings
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.updateRule = function(ruleId,nameMap,descriptionMap,type,typeSettingsProperties,serviceContext) {
-            return SessionService.invoke('/mdrrule/update-rule',[{
+            return SessionService.invoke({'/mdrrule/update-rule':{
                 ruleId:ruleId
                 ,nameMap:nameMap
                 ,descriptionMap:descriptionMap
                 ,type:type
                 ,typeSettingsProperties:typeSettingsProperties
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -7466,42 +7377,42 @@
         var service = {};
         // Begin generated service methods
         service.addRuleGroup = function(groupId,nameMap,descriptionMap,serviceContext) {
-            return SessionService.invoke('/mdrrulegroup/add-rule-group',[{
+            return SessionService.invoke({'/mdrrulegroup/add-rule-group':{
                 groupId:groupId
                 ,nameMap:nameMap
                 ,descriptionMap:descriptionMap
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.copyRuleGroup = function(ruleGroupId,groupId,serviceContext) {
-            return SessionService.invoke('/mdrrulegroup/copy-rule-group',[{
+            return SessionService.invoke({'/mdrrulegroup/copy-rule-group':{
                 ruleGroupId:ruleGroupId
                 ,groupId:groupId
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteRuleGroup = function(ruleGroupId) {
-            return SessionService.invoke('/mdrrulegroup/delete-rule-group',[{
+            return SessionService.invoke({'/mdrrulegroup/delete-rule-group':{
                 ruleGroupId:ruleGroupId
-            }]);
+            }});
         };
         service.fetchRuleGroup = function(ruleGroupId) {
-            return SessionService.invoke('/mdrrulegroup/fetch-rule-group',[{
+            return SessionService.invoke({'/mdrrulegroup/fetch-rule-group':{
                 ruleGroupId:ruleGroupId
-            }]);
+            }});
         };
         service.getRuleGroup = function(ruleGroupId) {
-            return SessionService.invoke('/mdrrulegroup/get-rule-group',[{
+            return SessionService.invoke({'/mdrrulegroup/get-rule-group':{
                 ruleGroupId:ruleGroupId
-            }]);
+            }});
         };
         service.updateRuleGroup = function(ruleGroupId,nameMap,descriptionMap,serviceContext) {
-            return SessionService.invoke('/mdrrulegroup/update-rule-group',[{
+            return SessionService.invoke({'/mdrrulegroup/update-rule-group':{
                 ruleGroupId:ruleGroupId
                 ,nameMap:nameMap
                 ,descriptionMap:descriptionMap
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -7516,49 +7427,49 @@
         var service = {};
         // Begin generated service methods
         service.addRuleGroupInstance = function(groupId,className,classPK,ruleGroupId,serviceContext) {
-            return SessionService.invoke('/mdrrulegroupinstance/add-rule-group-instance',[{
+            return SessionService.invoke({'/mdrrulegroupinstance/add-rule-group-instance':{
                 groupId:groupId
                 ,className:className
                 ,classPK:classPK
                 ,ruleGroupId:ruleGroupId
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addRuleGroupInstance = function(groupId,className,classPK,ruleGroupId,priority,serviceContext) {
-            return SessionService.invoke('/mdrrulegroupinstance/add-rule-group-instance',[{
+            return SessionService.invoke({'/mdrrulegroupinstance/add-rule-group-instance':{
                 groupId:groupId
                 ,className:className
                 ,classPK:classPK
                 ,ruleGroupId:ruleGroupId
                 ,priority:priority
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteRuleGroupInstance = function(ruleGroupInstanceId) {
-            return SessionService.invoke('/mdrrulegroupinstance/delete-rule-group-instance',[{
+            return SessionService.invoke({'/mdrrulegroupinstance/delete-rule-group-instance':{
                 ruleGroupInstanceId:ruleGroupInstanceId
-            }]);
+            }});
         };
         service.getRuleGroupInstances = function(className,classPK,start,end,orderByComparator) {
-            return SessionService.invoke('/mdrrulegroupinstance/get-rule-group-instances',[{
+            return SessionService.invoke({'/mdrrulegroupinstance/get-rule-group-instances':{
                 className:className
                 ,classPK:classPK
                 ,start:start
                 ,end:end
                 ,orderByComparator:orderByComparator
-            }]);
+            }});
         };
         service.getRuleGroupInstancesCount = function(className,classPK) {
-            return SessionService.invoke('/mdrrulegroupinstance/get-rule-group-instances-count',[{
+            return SessionService.invoke({'/mdrrulegroupinstance/get-rule-group-instances-count':{
                 className:className
                 ,classPK:classPK
-            }]);
+            }});
         };
         service.updateRuleGroupInstance = function(ruleGroupInstanceId,priority) {
-            return SessionService.invoke('/mdrrulegroupinstance/update-rule-group-instance',[{
+            return SessionService.invoke({'/mdrrulegroupinstance/update-rule-group-instance':{
                 ruleGroupInstanceId:ruleGroupInstanceId
                 ,priority:priority
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -7573,30 +7484,30 @@
         var service = {};
         // Begin generated service methods
         service.addMembershipRequest = function(groupId,comments,serviceContext) {
-            return SessionService.invoke('/membershiprequest/add-membership-request',[{
+            return SessionService.invoke({'/membershiprequest/add-membership-request':{
                 groupId:groupId
                 ,comments:comments
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteMembershipRequests = function(groupId,statusId) {
-            return SessionService.invoke('/membershiprequest/delete-membership-requests',[{
+            return SessionService.invoke({'/membershiprequest/delete-membership-requests':{
                 groupId:groupId
                 ,statusId:statusId
-            }]);
+            }});
         };
         service.getMembershipRequest = function(membershipRequestId) {
-            return SessionService.invoke('/membershiprequest/get-membership-request',[{
+            return SessionService.invoke({'/membershiprequest/get-membership-request':{
                 membershipRequestId:membershipRequestId
-            }]);
+            }});
         };
         service.updateStatus = function(membershipRequestId,reviewComments,statusId,serviceContext) {
-            return SessionService.invoke('/membershiprequest/update-status',[{
+            return SessionService.invoke({'/membershiprequest/update-status':{
                 membershipRequestId:membershipRequestId
                 ,reviewComments:reviewComments
                 ,statusId:statusId
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -7611,13 +7522,13 @@
         var service = {};
         // Begin generated service methods
         service.addGroupOrganizations = function(groupId,organizationIds) {
-            return SessionService.invoke('/organization/add-group-organizations',[{
+            return SessionService.invoke({'/organization/add-group-organizations':{
                 groupId:groupId
                 ,organizationIds:organizationIds
-            }]);
+            }});
         };
         service.addOrganization = function(parentOrganizationId,name,type,recursable,regionId,countryId,statusId,comments,site,serviceContext) {
-            return SessionService.invoke('/organization/add-organization',[{
+            return SessionService.invoke({'/organization/add-organization':{
                 parentOrganizationId:parentOrganizationId
                 ,name:name
                 ,type:type
@@ -7628,10 +7539,10 @@
                 ,comments:comments
                 ,site:site
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addOrganization = function(parentOrganizationId,name,type,regionId,countryId,statusId,comments,site,addresses,emailAddresses,orgLabors,phones,websites,serviceContext) {
-            return SessionService.invoke('/organization/add-organization',[{
+            return SessionService.invoke({'/organization/add-organization':{
                 parentOrganizationId:parentOrganizationId
                 ,name:name
                 ,type:type
@@ -7646,10 +7557,10 @@
                 ,phones:phones
                 ,websites:websites
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addOrganization = function(parentOrganizationId,name,type,recursable,regionId,countryId,statusId,comments,site,addresses,emailAddresses,orgLabors,phones,websites,serviceContext) {
-            return SessionService.invoke('/organization/add-organization',[{
+            return SessionService.invoke({'/organization/add-organization':{
                 parentOrganizationId:parentOrganizationId
                 ,name:name
                 ,type:type
@@ -7665,10 +7576,10 @@
                 ,phones:phones
                 ,websites:websites
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addOrganization = function(parentOrganizationId,name,type,regionId,countryId,statusId,comments,site,serviceContext) {
-            return SessionService.invoke('/organization/add-organization',[{
+            return SessionService.invoke({'/organization/add-organization':{
                 parentOrganizationId:parentOrganizationId
                 ,name:name
                 ,type:type
@@ -7678,86 +7589,86 @@
                 ,comments:comments
                 ,site:site
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addPasswordPolicyOrganizations = function(passwordPolicyId,organizationIds) {
-            return SessionService.invoke('/organization/add-password-policy-organizations',[{
+            return SessionService.invoke({'/organization/add-password-policy-organizations':{
                 passwordPolicyId:passwordPolicyId
                 ,organizationIds:organizationIds
-            }]);
+            }});
         };
         service.deleteLogo = function(organizationId) {
-            return SessionService.invoke('/organization/delete-logo',[{
+            return SessionService.invoke({'/organization/delete-logo':{
                 organizationId:organizationId
-            }]);
+            }});
         };
         service.deleteOrganization = function(organizationId) {
-            return SessionService.invoke('/organization/delete-organization',[{
+            return SessionService.invoke({'/organization/delete-organization':{
                 organizationId:organizationId
-            }]);
+            }});
         };
         service.getManageableOrganizations = function(actionId,max) {
-            return SessionService.invoke('/organization/get-manageable-organizations',[{
+            return SessionService.invoke({'/organization/get-manageable-organizations':{
                 actionId:actionId
                 ,max:max
-            }]);
+            }});
         };
         service.getOrganization = function(organizationId) {
-            return SessionService.invoke('/organization/get-organization',[{
+            return SessionService.invoke({'/organization/get-organization':{
                 organizationId:organizationId
-            }]);
+            }});
         };
         service.getOrganizationId = function(companyId,name) {
-            return SessionService.invoke('/organization/get-organization-id',[{
+            return SessionService.invoke({'/organization/get-organization-id':{
                 companyId:companyId
                 ,name:name
-            }]);
+            }});
         };
         service.getOrganizations = function(companyId,parentOrganizationId) {
-            return SessionService.invoke('/organization/get-organizations',[{
+            return SessionService.invoke({'/organization/get-organizations':{
                 companyId:companyId
                 ,parentOrganizationId:parentOrganizationId
-            }]);
+            }});
         };
         service.getOrganizations = function(companyId,parentOrganizationId,start,end) {
-            return SessionService.invoke('/organization/get-organizations',[{
+            return SessionService.invoke({'/organization/get-organizations':{
                 companyId:companyId
                 ,parentOrganizationId:parentOrganizationId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getOrganizationsCount = function(companyId,parentOrganizationId) {
-            return SessionService.invoke('/organization/get-organizations-count',[{
+            return SessionService.invoke({'/organization/get-organizations-count':{
                 companyId:companyId
                 ,parentOrganizationId:parentOrganizationId
-            }]);
+            }});
         };
         service.getUserOrganizations = function(userId) {
-            return SessionService.invoke('/organization/get-user-organizations',[{
+            return SessionService.invoke({'/organization/get-user-organizations':{
                 userId:userId
-            }]);
+            }});
         };
         service.setGroupOrganizations = function(groupId,organizationIds) {
-            return SessionService.invoke('/organization/set-group-organizations',[{
+            return SessionService.invoke({'/organization/set-group-organizations':{
                 groupId:groupId
                 ,organizationIds:organizationIds
-            }]);
+            }});
         };
         service.unsetGroupOrganizations = function(groupId,organizationIds) {
-            return SessionService.invoke('/organization/unset-group-organizations',[{
+            return SessionService.invoke({'/organization/unset-group-organizations':{
                 groupId:groupId
                 ,organizationIds:organizationIds
-            }]);
+            }});
         };
         service.unsetPasswordPolicyOrganizations = function(passwordPolicyId,organizationIds) {
-            return SessionService.invoke('/organization/unset-password-policy-organizations',[{
+            return SessionService.invoke({'/organization/unset-password-policy-organizations':{
                 passwordPolicyId:passwordPolicyId
                 ,organizationIds:organizationIds
-            }]);
+            }});
         };
         service.updateOrganization = function(organizationId,parentOrganizationId,name,type,regionId,countryId,statusId,comments,site,serviceContext) {
-            return SessionService.invoke('/organization/update-organization',[{
+            return SessionService.invoke({'/organization/update-organization':{
                 organizationId:organizationId
                 ,parentOrganizationId:parentOrganizationId
                 ,name:name
@@ -7768,10 +7679,10 @@
                 ,comments:comments
                 ,site:site
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.updateOrganization = function(organizationId,parentOrganizationId,name,type,recursable,regionId,countryId,statusId,comments,site,serviceContext) {
-            return SessionService.invoke('/organization/update-organization',[{
+            return SessionService.invoke({'/organization/update-organization':{
                 organizationId:organizationId
                 ,parentOrganizationId:parentOrganizationId
                 ,name:name
@@ -7783,10 +7694,10 @@
                 ,comments:comments
                 ,site:site
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.updateOrganization = function(organizationId,parentOrganizationId,name,type,regionId,countryId,statusId,comments,site,addresses,emailAddresses,orgLabors,phones,websites,serviceContext) {
-            return SessionService.invoke('/organization/update-organization',[{
+            return SessionService.invoke({'/organization/update-organization':{
                 organizationId:organizationId
                 ,parentOrganizationId:parentOrganizationId
                 ,name:name
@@ -7802,10 +7713,10 @@
                 ,phones:phones
                 ,websites:websites
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.updateOrganization = function(organizationId,parentOrganizationId,name,type,recursable,regionId,countryId,statusId,comments,site,addresses,emailAddresses,orgLabors,phones,websites,serviceContext) {
-            return SessionService.invoke('/organization/update-organization',[{
+            return SessionService.invoke({'/organization/update-organization':{
                 organizationId:organizationId
                 ,parentOrganizationId:parentOrganizationId
                 ,name:name
@@ -7822,7 +7733,7 @@
                 ,phones:phones
                 ,websites:websites
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -7837,7 +7748,7 @@
         var service = {};
         // Begin generated service methods
         service.addOrgLabor = function(organizationId,typeId,sunOpen,sunClose,monOpen,monClose,tueOpen,tueClose,wedOpen,wedClose,thuOpen,thuClose,friOpen,friClose,satOpen,satClose) {
-            return SessionService.invoke('/orglabor/add-org-labor',[{
+            return SessionService.invoke({'/orglabor/add-org-labor':{
                 organizationId:organizationId
                 ,typeId:typeId
                 ,sunOpen:sunOpen
@@ -7854,25 +7765,25 @@
                 ,friClose:friClose
                 ,satOpen:satOpen
                 ,satClose:satClose
-            }]);
+            }});
         };
         service.deleteOrgLabor = function(orgLaborId) {
-            return SessionService.invoke('/orglabor/delete-org-labor',[{
+            return SessionService.invoke({'/orglabor/delete-org-labor':{
                 orgLaborId:orgLaborId
-            }]);
+            }});
         };
         service.getOrgLabor = function(orgLaborId) {
-            return SessionService.invoke('/orglabor/get-org-labor',[{
+            return SessionService.invoke({'/orglabor/get-org-labor':{
                 orgLaborId:orgLaborId
-            }]);
+            }});
         };
         service.getOrgLabors = function(organizationId) {
-            return SessionService.invoke('/orglabor/get-org-labors',[{
+            return SessionService.invoke({'/orglabor/get-org-labors':{
                 organizationId:organizationId
-            }]);
+            }});
         };
         service.updateOrgLabor = function(orgLaborId,typeId,sunOpen,sunClose,monOpen,monClose,tueOpen,tueClose,wedOpen,wedClose,thuOpen,thuClose,friOpen,friClose,satOpen,satClose) {
-            return SessionService.invoke('/orglabor/update-org-labor',[{
+            return SessionService.invoke({'/orglabor/update-org-labor':{
                 orgLaborId:orgLaborId
                 ,typeId:typeId
                 ,sunOpen:sunOpen
@@ -7889,7 +7800,7 @@
                 ,friClose:friClose
                 ,satOpen:satOpen
                 ,satClose:satClose
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -7904,7 +7815,7 @@
         var service = {};
         // Begin generated service methods
         service.addPasswordPolicy = function(name,description,changeable,changeRequired,minAge,checkSyntax,allowDictionaryWords,minAlphanumeric,minLength,minLowerCase,minNumbers,minSymbols,minUpperCase,history,historyCount,expireable,maxAge,warningTime,graceLimit,lockout,maxFailure,lockoutDuration,resetFailureCount,resetTicketMaxAge) {
-            return SessionService.invoke('/passwordpolicy/add-password-policy',[{
+            return SessionService.invoke({'/passwordpolicy/add-password-policy':{
                 name:name
                 ,description:description
                 ,changeable:changeable
@@ -7929,10 +7840,10 @@
                 ,lockoutDuration:lockoutDuration
                 ,resetFailureCount:resetFailureCount
                 ,resetTicketMaxAge:resetTicketMaxAge
-            }]);
+            }});
         };
         service.addPasswordPolicy = function(name,description,changeable,changeRequired,minAge,checkSyntax,allowDictionaryWords,minAlphanumeric,minLength,minLowerCase,minNumbers,minSymbols,minUpperCase,regex,history,historyCount,expireable,maxAge,warningTime,graceLimit,lockout,maxFailure,lockoutDuration,resetFailureCount,resetTicketMaxAge,serviceContext) {
-            return SessionService.invoke('/passwordpolicy/add-password-policy',[{
+            return SessionService.invoke({'/passwordpolicy/add-password-policy':{
                 name:name
                 ,description:description
                 ,changeable:changeable
@@ -7959,15 +7870,15 @@
                 ,resetFailureCount:resetFailureCount
                 ,resetTicketMaxAge:resetTicketMaxAge
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deletePasswordPolicy = function(passwordPolicyId) {
-            return SessionService.invoke('/passwordpolicy/delete-password-policy',[{
+            return SessionService.invoke({'/passwordpolicy/delete-password-policy':{
                 passwordPolicyId:passwordPolicyId
-            }]);
+            }});
         };
         service.updatePasswordPolicy = function(passwordPolicyId,name,description,changeable,changeRequired,minAge,checkSyntax,allowDictionaryWords,minAlphanumeric,minLength,minLowerCase,minNumbers,minSymbols,minUpperCase,history,historyCount,expireable,maxAge,warningTime,graceLimit,lockout,maxFailure,lockoutDuration,resetFailureCount,resetTicketMaxAge) {
-            return SessionService.invoke('/passwordpolicy/update-password-policy',[{
+            return SessionService.invoke({'/passwordpolicy/update-password-policy':{
                 passwordPolicyId:passwordPolicyId
                 ,name:name
                 ,description:description
@@ -7993,10 +7904,10 @@
                 ,lockoutDuration:lockoutDuration
                 ,resetFailureCount:resetFailureCount
                 ,resetTicketMaxAge:resetTicketMaxAge
-            }]);
+            }});
         };
         service.updatePasswordPolicy = function(passwordPolicyId,name,description,changeable,changeRequired,minAge,checkSyntax,allowDictionaryWords,minAlphanumeric,minLength,minLowerCase,minNumbers,minSymbols,minUpperCase,regex,history,historyCount,expireable,maxAge,warningTime,graceLimit,lockout,maxFailure,lockoutDuration,resetFailureCount,resetTicketMaxAge,serviceContext) {
-            return SessionService.invoke('/passwordpolicy/update-password-policy',[{
+            return SessionService.invoke({'/passwordpolicy/update-password-policy':{
                 passwordPolicyId:passwordPolicyId
                 ,name:name
                 ,description:description
@@ -8024,7 +7935,7 @@
                 ,resetFailureCount:resetFailureCount
                 ,resetTicketMaxAge:resetTicketMaxAge
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -8039,11 +7950,11 @@
         var service = {};
         // Begin generated service methods
         service.checkPermission = function(groupId,name,primKey) {
-            return SessionService.invoke('/permission/check-permission',[{
+            return SessionService.invoke({'/permission/check-permission':{
                 groupId:groupId
                 ,name:name
                 ,primKey:primKey
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -8058,17 +7969,17 @@
         var service = {};
         // Begin generated service methods
         service.addPhone = function(className,classPK,number,extension,typeId,primary) {
-            return SessionService.invoke('/phone/add-phone',[{
+            return SessionService.invoke({'/phone/add-phone':{
                 className:className
                 ,classPK:classPK
                 ,number:number
                 ,extension:extension
                 ,typeId:typeId
                 ,primary:primary
-            }]);
+            }});
         };
         service.addPhone = function(className,classPK,number,extension,typeId,primary,serviceContext) {
-            return SessionService.invoke('/phone/add-phone',[{
+            return SessionService.invoke({'/phone/add-phone':{
                 className:className
                 ,classPK:classPK
                 ,number:number
@@ -8076,32 +7987,32 @@
                 ,typeId:typeId
                 ,primary:primary
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deletePhone = function(phoneId) {
-            return SessionService.invoke('/phone/delete-phone',[{
+            return SessionService.invoke({'/phone/delete-phone':{
                 phoneId:phoneId
-            }]);
+            }});
         };
         service.getPhone = function(phoneId) {
-            return SessionService.invoke('/phone/get-phone',[{
+            return SessionService.invoke({'/phone/get-phone':{
                 phoneId:phoneId
-            }]);
+            }});
         };
         service.getPhones = function(className,classPK) {
-            return SessionService.invoke('/phone/get-phones',[{
+            return SessionService.invoke({'/phone/get-phones':{
                 className:className
                 ,classPK:classPK
-            }]);
+            }});
         };
         service.updatePhone = function(phoneId,number,extension,typeId,primary) {
-            return SessionService.invoke('/phone/update-phone',[{
+            return SessionService.invoke({'/phone/update-phone':{
                 phoneId:phoneId
                 ,number:number
                 ,extension:extension
                 ,typeId:typeId
                 ,primary:primary
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -8116,13 +8027,13 @@
         var service = {};
         // Begin generated service methods
         service.updatePluginSetting = function(companyId,pluginId,pluginType,roles,active) {
-            return SessionService.invoke('/pluginsetting/update-plugin-setting',[{
+            return SessionService.invoke({'/pluginsetting/update-plugin-setting':{
                 companyId:companyId
                 ,pluginId:pluginId
                 ,pluginType:pluginType
                 ,roles:roles
                 ,active:active
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -8137,7 +8048,7 @@
         var service = {};
         // Begin generated service methods
         service.addQuestion = function(titleMap,descriptionMap,expirationDateMonth,expirationDateDay,expirationDateYear,expirationDateHour,expirationDateMinute,neverExpire,choices,serviceContext) {
-            return SessionService.invoke('/pollsquestion/add-question',[{
+            return SessionService.invoke({'/pollsquestion/add-question':{
                 titleMap:titleMap
                 ,descriptionMap:descriptionMap
                 ,expirationDateMonth:expirationDateMonth
@@ -8148,20 +8059,20 @@
                 ,neverExpire:neverExpire
                 ,choices:choices
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteQuestion = function(questionId) {
-            return SessionService.invoke('/pollsquestion/delete-question',[{
+            return SessionService.invoke({'/pollsquestion/delete-question':{
                 questionId:questionId
-            }]);
+            }});
         };
         service.getQuestion = function(questionId) {
-            return SessionService.invoke('/pollsquestion/get-question',[{
+            return SessionService.invoke({'/pollsquestion/get-question':{
                 questionId:questionId
-            }]);
+            }});
         };
         service.updateQuestion = function(questionId,titleMap,descriptionMap,expirationDateMonth,expirationDateDay,expirationDateYear,expirationDateHour,expirationDateMinute,neverExpire,choices,serviceContext) {
-            return SessionService.invoke('/pollsquestion/update-question',[{
+            return SessionService.invoke({'/pollsquestion/update-question':{
                 questionId:questionId
                 ,titleMap:titleMap
                 ,descriptionMap:descriptionMap
@@ -8173,7 +8084,7 @@
                 ,neverExpire:neverExpire
                 ,choices:choices
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -8188,11 +8099,11 @@
         var service = {};
         // Begin generated service methods
         service.addVote = function(questionId,choiceId,serviceContext) {
-            return SessionService.invoke('/pollsvote/add-vote',[{
+            return SessionService.invoke({'/pollsvote/add-vote':{
                 questionId:questionId
                 ,choiceId:choiceId
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -8207,64 +8118,64 @@
         var service = {};
         // Begin generated service methods
         service.getAutoDeployDirectory = function() {
-            return SessionService.invoke('/portal/get-auto-deploy-directory',[{
+            return SessionService.invoke({'/portal/get-auto-deploy-directory':{
                 
-            }]);
+            }});
         };
         service.getBuildNumber = function() {
-            return SessionService.invoke('/portal/get-build-number',[{
+            return SessionService.invoke({'/portal/get-build-number':{
                 
-            }]);
+            }});
         };
         service.testAddClassNameAndTestTransactionPortletBar_PortalRollback = function(transactionPortletBarText) {
-            return SessionService.invoke('/portal/test-add-class-name-and-test-transaction-portlet-bar_-portal-rollback',[{
+            return SessionService.invoke({'/portal/test-add-class-name-and-test-transaction-portlet-bar_-portal-rollback':{
                 transactionPortletBarText:transactionPortletBarText
-            }]);
+            }});
         };
         service.testAddClassNameAndTestTransactionPortletBar_PortletRollback = function(transactionPortletBarText) {
-            return SessionService.invoke('/portal/test-add-class-name-and-test-transaction-portlet-bar_-portlet-rollback',[{
+            return SessionService.invoke({'/portal/test-add-class-name-and-test-transaction-portlet-bar_-portlet-rollback':{
                 transactionPortletBarText:transactionPortletBarText
-            }]);
+            }});
         };
         service.testAddClassNameAndTestTransactionPortletBar_Success = function(transactionPortletBarText) {
-            return SessionService.invoke('/portal/test-add-class-name-and-test-transaction-portlet-bar_-success',[{
+            return SessionService.invoke({'/portal/test-add-class-name-and-test-transaction-portlet-bar_-success':{
                 transactionPortletBarText:transactionPortletBarText
-            }]);
+            }});
         };
         service.testAddClassName_Rollback = function(classNameValue) {
-            return SessionService.invoke('/portal/test-add-class-name_-rollback',[{
+            return SessionService.invoke({'/portal/test-add-class-name_-rollback':{
                 classNameValue:classNameValue
-            }]);
+            }});
         };
         service.testAddClassName_Success = function(classNameValue) {
-            return SessionService.invoke('/portal/test-add-class-name_-success',[{
+            return SessionService.invoke({'/portal/test-add-class-name_-success':{
                 classNameValue:classNameValue
-            }]);
+            }});
         };
         service.testAutoSyncHibernateSessionStateOnTxCreation = function() {
-            return SessionService.invoke('/portal/test-auto-sync-hibernate-session-state-on-tx-creation',[{
+            return SessionService.invoke({'/portal/test-auto-sync-hibernate-session-state-on-tx-creation':{
                 
-            }]);
+            }});
         };
         service.testDeleteClassName = function() {
-            return SessionService.invoke('/portal/test-delete-class-name',[{
+            return SessionService.invoke({'/portal/test-delete-class-name':{
                 
-            }]);
+            }});
         };
         service.testGetBuildNumber = function() {
-            return SessionService.invoke('/portal/test-get-build-number',[{
+            return SessionService.invoke({'/portal/test-get-build-number':{
                 
-            }]);
+            }});
         };
         service.testGetUserId = function() {
-            return SessionService.invoke('/portal/test-get-user-id',[{
+            return SessionService.invoke({'/portal/test-get-user-id':{
                 
-            }]);
+            }});
         };
         service.testHasClassName = function() {
-            return SessionService.invoke('/portal/test-has-class-name',[{
+            return SessionService.invoke({'/portal/test-has-class-name':{
                 
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -8279,17 +8190,17 @@
         var service = {};
         // Begin generated service methods
         service.getWarPortlets = function() {
-            return SessionService.invoke('/portlet/get-war-portlets',[{
+            return SessionService.invoke({'/portlet/get-war-portlets':{
                 
-            }]);
+            }});
         };
         service.updatePortlet = function(companyId,portletId,roles,active) {
-            return SessionService.invoke('/portlet/update-portlet',[{
+            return SessionService.invoke({'/portlet/update-portlet':{
                 companyId:companyId
                 ,portletId:portletId
                 ,roles:roles
                 ,active:active
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -8304,45 +8215,45 @@
         var service = {};
         // Begin generated service methods
         service.deleteArchivedPreferences = function(portletItemId) {
-            return SessionService.invoke('/portletpreferences/delete-archived-preferences',[{
+            return SessionService.invoke({'/portletpreferences/delete-archived-preferences':{
                 portletItemId:portletItemId
-            }]);
+            }});
         };
         service.restoreArchivedPreferences = function(groupId,layout,portletId,portletItem,preferences) {
-            return SessionService.invoke('/portletpreferences/restore-archived-preferences',[{
+            return SessionService.invoke({'/portletpreferences/restore-archived-preferences':{
                 groupId:groupId
                 ,layout:layout
                 ,portletId:portletId
                 ,portletItem:portletItem
                 ,preferences:preferences
-            }]);
+            }});
         };
         service.restoreArchivedPreferences = function(groupId,layout,portletId,portletItemId,preferences) {
-            return SessionService.invoke('/portletpreferences/restore-archived-preferences',[{
+            return SessionService.invoke({'/portletpreferences/restore-archived-preferences':{
                 groupId:groupId
                 ,layout:layout
                 ,portletId:portletId
                 ,portletItemId:portletItemId
                 ,preferences:preferences
-            }]);
+            }});
         };
         service.restoreArchivedPreferences = function(groupId,name,layout,portletId,preferences) {
-            return SessionService.invoke('/portletpreferences/restore-archived-preferences',[{
+            return SessionService.invoke({'/portletpreferences/restore-archived-preferences':{
                 groupId:groupId
                 ,name:name
                 ,layout:layout
                 ,portletId:portletId
                 ,preferences:preferences
-            }]);
+            }});
         };
         service.updateArchivePreferences = function(userId,groupId,name,portletId,preferences) {
-            return SessionService.invoke('/portletpreferences/update-archive-preferences',[{
+            return SessionService.invoke({'/portletpreferences/update-archive-preferences':{
                 userId:userId
                 ,groupId:groupId
                 ,name:name
                 ,portletId:portletId
                 ,preferences:preferences
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -8357,17 +8268,17 @@
         var service = {};
         // Begin generated service methods
         service.deleteEntry = function(className,classPK) {
-            return SessionService.invoke('/ratingsentry/delete-entry',[{
+            return SessionService.invoke({'/ratingsentry/delete-entry':{
                 className:className
                 ,classPK:classPK
-            }]);
+            }});
         };
         service.updateEntry = function(className,classPK,score) {
-            return SessionService.invoke('/ratingsentry/update-entry',[{
+            return SessionService.invoke({'/ratingsentry/update-entry':{
                 className:className
                 ,classPK:classPK
                 ,score:score
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -8382,50 +8293,50 @@
         var service = {};
         // Begin generated service methods
         service.addRegion = function(countryId,regionCode,name,active) {
-            return SessionService.invoke('/region/add-region',[{
+            return SessionService.invoke({'/region/add-region':{
                 countryId:countryId
                 ,regionCode:regionCode
                 ,name:name
                 ,active:active
-            }]);
+            }});
         };
         service.fetchRegion = function(countryId,regionCode) {
-            return SessionService.invoke('/region/fetch-region',[{
+            return SessionService.invoke({'/region/fetch-region':{
                 countryId:countryId
                 ,regionCode:regionCode
-            }]);
+            }});
         };
         service.getRegion = function(regionId) {
-            return SessionService.invoke('/region/get-region',[{
+            return SessionService.invoke({'/region/get-region':{
                 regionId:regionId
-            }]);
+            }});
         };
         service.getRegion = function(countryId,regionCode) {
-            return SessionService.invoke('/region/get-region',[{
+            return SessionService.invoke({'/region/get-region':{
                 countryId:countryId
                 ,regionCode:regionCode
-            }]);
+            }});
         };
         service.getRegions = function() {
-            return SessionService.invoke('/region/get-regions',[{
+            return SessionService.invoke({'/region/get-regions':{
                 
-            }]);
+            }});
         };
         service.getRegions = function(active) {
-            return SessionService.invoke('/region/get-regions',[{
+            return SessionService.invoke({'/region/get-regions':{
                 active:active
-            }]);
+            }});
         };
         service.getRegions = function(countryId) {
-            return SessionService.invoke('/region/get-regions',[{
+            return SessionService.invoke({'/region/get-regions':{
                 countryId:countryId
-            }]);
+            }});
         };
         service.getRegions = function(countryId,active) {
-            return SessionService.invoke('/region/get-regions',[{
+            return SessionService.invoke({'/region/get-regions':{
                 countryId:countryId
                 ,active:active
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -8440,7 +8351,7 @@
         var service = {};
         // Begin generated service methods
         service.addRepository = function(groupId,classNameId,parentFolderId,name,description,portletId,typeSettingsProperties,serviceContext) {
-            return SessionService.invoke('/repository/add-repository',[{
+            return SessionService.invoke({'/repository/add-repository':{
                 groupId:groupId
                 ,classNameId:classNameId
                 ,parentFolderId:parentFolderId
@@ -8449,69 +8360,69 @@
                 ,portletId:portletId
                 ,typeSettingsProperties:typeSettingsProperties
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.checkRepository = function(repositoryId) {
-            return SessionService.invoke('/repository/check-repository',[{
+            return SessionService.invoke({'/repository/check-repository':{
                 repositoryId:repositoryId
-            }]);
+            }});
         };
         service.deleteRepository = function(repositoryId) {
-            return SessionService.invoke('/repository/delete-repository',[{
+            return SessionService.invoke({'/repository/delete-repository':{
                 repositoryId:repositoryId
-            }]);
+            }});
         };
         service.getLocalRepositoryImpl = function(repositoryId) {
-            return SessionService.invoke('/repository/get-local-repository-impl',[{
+            return SessionService.invoke({'/repository/get-local-repository-impl':{
                 repositoryId:repositoryId
-            }]);
+            }});
         };
         service.getLocalRepositoryImpl = function(folderId,fileEntryId,fileVersionId) {
-            return SessionService.invoke('/repository/get-local-repository-impl',[{
+            return SessionService.invoke({'/repository/get-local-repository-impl':{
                 folderId:folderId
                 ,fileEntryId:fileEntryId
                 ,fileVersionId:fileVersionId
-            }]);
+            }});
         };
         service.getRepository = function(repositoryId) {
-            return SessionService.invoke('/repository/get-repository',[{
+            return SessionService.invoke({'/repository/get-repository':{
                 repositoryId:repositoryId
-            }]);
+            }});
         };
         service.getRepositoryImpl = function(repositoryId) {
-            return SessionService.invoke('/repository/get-repository-impl',[{
+            return SessionService.invoke({'/repository/get-repository-impl':{
                 repositoryId:repositoryId
-            }]);
+            }});
         };
         service.getRepositoryImpl = function(folderId,fileEntryId,fileVersionId) {
-            return SessionService.invoke('/repository/get-repository-impl',[{
+            return SessionService.invoke({'/repository/get-repository-impl':{
                 folderId:folderId
                 ,fileEntryId:fileEntryId
                 ,fileVersionId:fileVersionId
-            }]);
+            }});
         };
         service.getSupportedConfigurations = function(classNameId) {
-            return SessionService.invoke('/repository/get-supported-configurations',[{
+            return SessionService.invoke({'/repository/get-supported-configurations':{
                 classNameId:classNameId
-            }]);
+            }});
         };
         service.getSupportedParameters = function(classNameId,configuration) {
-            return SessionService.invoke('/repository/get-supported-parameters',[{
+            return SessionService.invoke({'/repository/get-supported-parameters':{
                 classNameId:classNameId
                 ,configuration:configuration
-            }]);
+            }});
         };
         service.getTypeSettingsProperties = function(repositoryId) {
-            return SessionService.invoke('/repository/get-type-settings-properties',[{
+            return SessionService.invoke({'/repository/get-type-settings-properties':{
                 repositoryId:repositoryId
-            }]);
+            }});
         };
         service.updateRepository = function(repositoryId,name,description) {
-            return SessionService.invoke('/repository/update-repository',[{
+            return SessionService.invoke({'/repository/update-repository':{
                 repositoryId:repositoryId
                 ,name:name
                 ,description:description
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -8526,109 +8437,109 @@
         var service = {};
         // Begin generated service methods
         service.addCompanyScopePermission = function(scopeGroupId,companyId,name,roleId,actionId) {
-            return SessionService.invoke('/resourceblock/add-company-scope-permission',[{
+            return SessionService.invoke({'/resourceblock/add-company-scope-permission':{
                 scopeGroupId:scopeGroupId
                 ,companyId:companyId
                 ,name:name
                 ,roleId:roleId
                 ,actionId:actionId
-            }]);
+            }});
         };
         service.addGroupScopePermission = function(scopeGroupId,companyId,groupId,name,roleId,actionId) {
-            return SessionService.invoke('/resourceblock/add-group-scope-permission',[{
+            return SessionService.invoke({'/resourceblock/add-group-scope-permission':{
                 scopeGroupId:scopeGroupId
                 ,companyId:companyId
                 ,groupId:groupId
                 ,name:name
                 ,roleId:roleId
                 ,actionId:actionId
-            }]);
+            }});
         };
         service.addIndividualScopePermission = function(companyId,groupId,name,primKey,roleId,actionId) {
-            return SessionService.invoke('/resourceblock/add-individual-scope-permission',[{
+            return SessionService.invoke({'/resourceblock/add-individual-scope-permission':{
                 companyId:companyId
                 ,groupId:groupId
                 ,name:name
                 ,primKey:primKey
                 ,roleId:roleId
                 ,actionId:actionId
-            }]);
+            }});
         };
         service.removeAllGroupScopePermissions = function(scopeGroupId,companyId,name,roleId,actionId) {
-            return SessionService.invoke('/resourceblock/remove-all-group-scope-permissions',[{
+            return SessionService.invoke({'/resourceblock/remove-all-group-scope-permissions':{
                 scopeGroupId:scopeGroupId
                 ,companyId:companyId
                 ,name:name
                 ,roleId:roleId
                 ,actionId:actionId
-            }]);
+            }});
         };
         service.removeCompanyScopePermission = function(scopeGroupId,companyId,name,roleId,actionId) {
-            return SessionService.invoke('/resourceblock/remove-company-scope-permission',[{
+            return SessionService.invoke({'/resourceblock/remove-company-scope-permission':{
                 scopeGroupId:scopeGroupId
                 ,companyId:companyId
                 ,name:name
                 ,roleId:roleId
                 ,actionId:actionId
-            }]);
+            }});
         };
         service.removeGroupScopePermission = function(scopeGroupId,companyId,groupId,name,roleId,actionId) {
-            return SessionService.invoke('/resourceblock/remove-group-scope-permission',[{
+            return SessionService.invoke({'/resourceblock/remove-group-scope-permission':{
                 scopeGroupId:scopeGroupId
                 ,companyId:companyId
                 ,groupId:groupId
                 ,name:name
                 ,roleId:roleId
                 ,actionId:actionId
-            }]);
+            }});
         };
         service.removeIndividualScopePermission = function(companyId,groupId,name,primKey,roleId,actionId) {
-            return SessionService.invoke('/resourceblock/remove-individual-scope-permission',[{
+            return SessionService.invoke({'/resourceblock/remove-individual-scope-permission':{
                 companyId:companyId
                 ,groupId:groupId
                 ,name:name
                 ,primKey:primKey
                 ,roleId:roleId
                 ,actionId:actionId
-            }]);
+            }});
         };
         service.setCompanyScopePermissions = function(scopeGroupId,companyId,name,roleId,actionIds) {
-            return SessionService.invoke('/resourceblock/set-company-scope-permissions',[{
+            return SessionService.invoke({'/resourceblock/set-company-scope-permissions':{
                 scopeGroupId:scopeGroupId
                 ,companyId:companyId
                 ,name:name
                 ,roleId:roleId
                 ,actionIds:actionIds
-            }]);
+            }});
         };
         service.setGroupScopePermissions = function(scopeGroupId,companyId,groupId,name,roleId,actionIds) {
-            return SessionService.invoke('/resourceblock/set-group-scope-permissions',[{
+            return SessionService.invoke({'/resourceblock/set-group-scope-permissions':{
                 scopeGroupId:scopeGroupId
                 ,companyId:companyId
                 ,groupId:groupId
                 ,name:name
                 ,roleId:roleId
                 ,actionIds:actionIds
-            }]);
+            }});
         };
         service.setIndividualScopePermissions = function(companyId,groupId,name,primKey,roleIdsToActionIds) {
-            return SessionService.invoke('/resourceblock/set-individual-scope-permissions',[{
+            return SessionService.invoke({'/resourceblock/set-individual-scope-permissions':{
                 companyId:companyId
                 ,groupId:groupId
                 ,name:name
                 ,primKey:primKey
                 ,roleIdsToActionIds:roleIdsToActionIds
-            }]);
+            }});
         };
         service.setIndividualScopePermissions = function(companyId,groupId,name,primKey,roleId,actionIds) {
-            return SessionService.invoke('/resourceblock/set-individual-scope-permissions',[{
+            return SessionService.invoke({'/resourceblock/set-individual-scope-permissions':{
                 companyId:companyId
                 ,groupId:groupId
                 ,name:name
                 ,primKey:primKey
                 ,roleId:roleId
                 ,actionIds:actionIds
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -8643,7 +8554,7 @@
         var service = {};
         // Begin generated service methods
         service.addResourcePermission = function(groupId,companyId,name,scope,primKey,roleId,actionId) {
-            return SessionService.invoke('/resourcepermission/add-resource-permission',[{
+            return SessionService.invoke({'/resourcepermission/add-resource-permission':{
                 groupId:groupId
                 ,companyId:companyId
                 ,name:name
@@ -8651,10 +8562,10 @@
                 ,primKey:primKey
                 ,roleId:roleId
                 ,actionId:actionId
-            }]);
+            }});
         };
         service.removeResourcePermission = function(groupId,companyId,name,scope,primKey,roleId,actionId) {
-            return SessionService.invoke('/resourcepermission/remove-resource-permission',[{
+            return SessionService.invoke({'/resourcepermission/remove-resource-permission':{
                 groupId:groupId
                 ,companyId:companyId
                 ,name:name
@@ -8662,36 +8573,36 @@
                 ,primKey:primKey
                 ,roleId:roleId
                 ,actionId:actionId
-            }]);
+            }});
         };
         service.removeResourcePermissions = function(groupId,companyId,name,scope,roleId,actionId) {
-            return SessionService.invoke('/resourcepermission/remove-resource-permissions',[{
+            return SessionService.invoke({'/resourcepermission/remove-resource-permissions':{
                 groupId:groupId
                 ,companyId:companyId
                 ,name:name
                 ,scope:scope
                 ,roleId:roleId
                 ,actionId:actionId
-            }]);
+            }});
         };
         service.setIndividualResourcePermissions = function(groupId,companyId,name,primKey,roleIdsToActionIds) {
-            return SessionService.invoke('/resourcepermission/set-individual-resource-permissions',[{
+            return SessionService.invoke({'/resourcepermission/set-individual-resource-permissions':{
                 groupId:groupId
                 ,companyId:companyId
                 ,name:name
                 ,primKey:primKey
                 ,roleIdsToActionIds:roleIdsToActionIds
-            }]);
+            }});
         };
         service.setIndividualResourcePermissions = function(groupId,companyId,name,primKey,roleId,actionIds) {
-            return SessionService.invoke('/resourcepermission/set-individual-resource-permissions',[{
+            return SessionService.invoke({'/resourcepermission/set-individual-resource-permissions':{
                 groupId:groupId
                 ,companyId:companyId
                 ,name:name
                 ,primKey:primKey
                 ,roleId:roleId
                 ,actionIds:actionIds
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -8706,15 +8617,15 @@
         var service = {};
         // Begin generated service methods
         service.addRole = function(name,titleMap,descriptionMap,type) {
-            return SessionService.invoke('/role/add-role',[{
+            return SessionService.invoke({'/role/add-role':{
                 name:name
                 ,titleMap:titleMap
                 ,descriptionMap:descriptionMap
                 ,type:type
-            }]);
+            }});
         };
         service.addRole = function(className,classPK,name,titleMap,descriptionMap,type,subtype,serviceContext) {
-            return SessionService.invoke('/role/add-role',[{
+            return SessionService.invoke({'/role/add-role':{
                 className:className
                 ,classPK:classPK
                 ,name:name
@@ -8723,89 +8634,89 @@
                 ,type:type
                 ,subtype:subtype
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addUserRoles = function(userId,roleIds) {
-            return SessionService.invoke('/role/add-user-roles',[{
+            return SessionService.invoke({'/role/add-user-roles':{
                 userId:userId
                 ,roleIds:roleIds
-            }]);
+            }});
         };
         service.deleteRole = function(roleId) {
-            return SessionService.invoke('/role/delete-role',[{
+            return SessionService.invoke({'/role/delete-role':{
                 roleId:roleId
-            }]);
+            }});
         };
         service.getGroupRoles = function(groupId) {
-            return SessionService.invoke('/role/get-group-roles',[{
+            return SessionService.invoke({'/role/get-group-roles':{
                 groupId:groupId
-            }]);
+            }});
         };
         service.getRole = function(roleId) {
-            return SessionService.invoke('/role/get-role',[{
+            return SessionService.invoke({'/role/get-role':{
                 roleId:roleId
-            }]);
+            }});
         };
         service.getRole = function(companyId,name) {
-            return SessionService.invoke('/role/get-role',[{
+            return SessionService.invoke({'/role/get-role':{
                 companyId:companyId
                 ,name:name
-            }]);
+            }});
         };
         service.getUserGroupGroupRoles = function(userId,groupId) {
-            return SessionService.invoke('/role/get-user-group-group-roles',[{
+            return SessionService.invoke({'/role/get-user-group-group-roles':{
                 userId:userId
                 ,groupId:groupId
-            }]);
+            }});
         };
         service.getUserGroupRoles = function(userId,groupId) {
-            return SessionService.invoke('/role/get-user-group-roles',[{
+            return SessionService.invoke({'/role/get-user-group-roles':{
                 userId:userId
                 ,groupId:groupId
-            }]);
+            }});
         };
         service.getUserRelatedRoles = function(userId,groups) {
-            return SessionService.invoke('/role/get-user-related-roles',[{
+            return SessionService.invoke({'/role/get-user-related-roles':{
                 userId:userId
                 ,groups:groups
-            }]);
+            }});
         };
         service.getUserRoles = function(userId) {
-            return SessionService.invoke('/role/get-user-roles',[{
+            return SessionService.invoke({'/role/get-user-roles':{
                 userId:userId
-            }]);
+            }});
         };
         service.hasUserRole = function(userId,companyId,name,inherited) {
-            return SessionService.invoke('/role/has-user-role',[{
+            return SessionService.invoke({'/role/has-user-role':{
                 userId:userId
                 ,companyId:companyId
                 ,name:name
                 ,inherited:inherited
-            }]);
+            }});
         };
         service.hasUserRoles = function(userId,companyId,names,inherited) {
-            return SessionService.invoke('/role/has-user-roles',[{
+            return SessionService.invoke({'/role/has-user-roles':{
                 userId:userId
                 ,companyId:companyId
                 ,names:names
                 ,inherited:inherited
-            }]);
+            }});
         };
         service.unsetUserRoles = function(userId,roleIds) {
-            return SessionService.invoke('/role/unset-user-roles',[{
+            return SessionService.invoke({'/role/unset-user-roles':{
                 userId:userId
                 ,roleIds:roleIds
-            }]);
+            }});
         };
         service.updateRole = function(roleId,name,titleMap,descriptionMap,subtype,serviceContext) {
-            return SessionService.invoke('/role/update-role',[{
+            return SessionService.invoke({'/role/update-role':{
                 roleId:roleId
                 ,name:name
                 ,titleMap:titleMap
                 ,descriptionMap:descriptionMap
                 ,subtype:subtype
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -8820,46 +8731,46 @@
         var service = {};
         // Begin generated service methods
         service.addFrameworkVersion = function(name,url,active,priority,serviceContext) {
-            return SessionService.invoke('/scframeworkversion/add-framework-version',[{
+            return SessionService.invoke({'/scframeworkversion/add-framework-version':{
                 name:name
                 ,url:url
                 ,active:active
                 ,priority:priority
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteFrameworkVersion = function(frameworkVersionId) {
-            return SessionService.invoke('/scframeworkversion/delete-framework-version',[{
+            return SessionService.invoke({'/scframeworkversion/delete-framework-version':{
                 frameworkVersionId:frameworkVersionId
-            }]);
+            }});
         };
         service.getFrameworkVersion = function(frameworkVersionId) {
-            return SessionService.invoke('/scframeworkversion/get-framework-version',[{
+            return SessionService.invoke({'/scframeworkversion/get-framework-version':{
                 frameworkVersionId:frameworkVersionId
-            }]);
+            }});
         };
         service.getFrameworkVersions = function(groupId,active) {
-            return SessionService.invoke('/scframeworkversion/get-framework-versions',[{
+            return SessionService.invoke({'/scframeworkversion/get-framework-versions':{
                 groupId:groupId
                 ,active:active
-            }]);
+            }});
         };
         service.getFrameworkVersions = function(groupId,active,start,end) {
-            return SessionService.invoke('/scframeworkversion/get-framework-versions',[{
+            return SessionService.invoke({'/scframeworkversion/get-framework-versions':{
                 groupId:groupId
                 ,active:active
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.updateFrameworkVersion = function(frameworkVersionId,name,url,active,priority) {
-            return SessionService.invoke('/scframeworkversion/update-framework-version',[{
+            return SessionService.invoke({'/scframeworkversion/update-framework-version':{
                 frameworkVersionId:frameworkVersionId
                 ,name:name
                 ,url:url
                 ,active:active
                 ,priority:priority
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -8874,33 +8785,33 @@
         var service = {};
         // Begin generated service methods
         service.addLicense = function(name,url,openSource,active,recommended) {
-            return SessionService.invoke('/sclicense/add-license',[{
+            return SessionService.invoke({'/sclicense/add-license':{
                 name:name
                 ,url:url
                 ,openSource:openSource
                 ,active:active
                 ,recommended:recommended
-            }]);
+            }});
         };
         service.deleteLicense = function(licenseId) {
-            return SessionService.invoke('/sclicense/delete-license',[{
+            return SessionService.invoke({'/sclicense/delete-license':{
                 licenseId:licenseId
-            }]);
+            }});
         };
         service.getLicense = function(licenseId) {
-            return SessionService.invoke('/sclicense/get-license',[{
+            return SessionService.invoke({'/sclicense/get-license':{
                 licenseId:licenseId
-            }]);
+            }});
         };
         service.updateLicense = function(licenseId,name,url,openSource,active,recommended) {
-            return SessionService.invoke('/sclicense/update-license',[{
+            return SessionService.invoke({'/sclicense/update-license':{
                 licenseId:licenseId
                 ,name:name
                 ,url:url
                 ,openSource:openSource
                 ,active:active
                 ,recommended:recommended
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -8915,7 +8826,7 @@
         var service = {};
         // Begin generated service methods
         service.addProductEntry = function(name,type,tags,shortDescription,longDescription,pageURL,author,repoGroupId,repoArtifactId,licenseIds,thumbnails,fullImages,serviceContext) {
-            return SessionService.invoke('/scproductentry/add-product-entry',[{
+            return SessionService.invoke({'/scproductentry/add-product-entry':{
                 name:name
                 ,type:type
                 ,tags:tags
@@ -8929,20 +8840,20 @@
                 ,thumbnails:thumbnails
                 ,fullImages:fullImages
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteProductEntry = function(productEntryId) {
-            return SessionService.invoke('/scproductentry/delete-product-entry',[{
+            return SessionService.invoke({'/scproductentry/delete-product-entry':{
                 productEntryId:productEntryId
-            }]);
+            }});
         };
         service.getProductEntry = function(productEntryId) {
-            return SessionService.invoke('/scproductentry/get-product-entry',[{
+            return SessionService.invoke({'/scproductentry/get-product-entry':{
                 productEntryId:productEntryId
-            }]);
+            }});
         };
         service.updateProductEntry = function(productEntryId,name,type,tags,shortDescription,longDescription,pageURL,author,repoGroupId,repoArtifactId,licenseIds,thumbnails,fullImages) {
-            return SessionService.invoke('/scproductentry/update-product-entry',[{
+            return SessionService.invoke({'/scproductentry/update-product-entry':{
                 productEntryId:productEntryId
                 ,name:name
                 ,type:type
@@ -8956,7 +8867,7 @@
                 ,licenseIds:licenseIds
                 ,thumbnails:thumbnails
                 ,fullImages:fullImages
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -8971,7 +8882,7 @@
         var service = {};
         // Begin generated service methods
         service.addProductVersion = function(productEntryId,version,changeLog,downloadPageURL,directDownloadURL,testDirectDownloadURL,repoStoreArtifact,frameworkVersionIds,serviceContext) {
-            return SessionService.invoke('/scproductversion/add-product-version',[{
+            return SessionService.invoke({'/scproductversion/add-product-version':{
                 productEntryId:productEntryId
                 ,version:version
                 ,changeLog:changeLog
@@ -8981,32 +8892,32 @@
                 ,repoStoreArtifact:repoStoreArtifact
                 ,frameworkVersionIds:frameworkVersionIds
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteProductVersion = function(productVersionId) {
-            return SessionService.invoke('/scproductversion/delete-product-version',[{
+            return SessionService.invoke({'/scproductversion/delete-product-version':{
                 productVersionId:productVersionId
-            }]);
+            }});
         };
         service.getProductVersion = function(productVersionId) {
-            return SessionService.invoke('/scproductversion/get-product-version',[{
+            return SessionService.invoke({'/scproductversion/get-product-version':{
                 productVersionId:productVersionId
-            }]);
+            }});
         };
         service.getProductVersions = function(productEntryId,start,end) {
-            return SessionService.invoke('/scproductversion/get-product-versions',[{
+            return SessionService.invoke({'/scproductversion/get-product-versions':{
                 productEntryId:productEntryId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getProductVersionsCount = function(productEntryId) {
-            return SessionService.invoke('/scproductversion/get-product-versions-count',[{
+            return SessionService.invoke({'/scproductversion/get-product-versions-count':{
                 productEntryId:productEntryId
-            }]);
+            }});
         };
         service.updateProductVersion = function(productVersionId,version,changeLog,downloadPageURL,directDownloadURL,testDirectDownloadURL,repoStoreArtifact,frameworkVersionIds) {
-            return SessionService.invoke('/scproductversion/update-product-version',[{
+            return SessionService.invoke({'/scproductversion/update-product-version':{
                 productVersionId:productVersionId
                 ,version:version
                 ,changeLog:changeLog
@@ -9015,7 +8926,7 @@
                 ,testDirectDownloadURL:testDirectDownloadURL
                 ,repoStoreArtifact:repoStoreArtifact
                 ,frameworkVersionIds:frameworkVersionIds
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -9030,58 +8941,58 @@
         var service = {};
         // Begin generated service methods
         service.addCategory = function(parentCategoryId,name,description,serviceContext) {
-            return SessionService.invoke('/shoppingcategory/add-category',[{
+            return SessionService.invoke({'/shoppingcategory/add-category':{
                 parentCategoryId:parentCategoryId
                 ,name:name
                 ,description:description
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteCategory = function(categoryId) {
-            return SessionService.invoke('/shoppingcategory/delete-category',[{
+            return SessionService.invoke({'/shoppingcategory/delete-category':{
                 categoryId:categoryId
-            }]);
+            }});
         };
         service.getCategories = function(groupId) {
-            return SessionService.invoke('/shoppingcategory/get-categories',[{
+            return SessionService.invoke({'/shoppingcategory/get-categories':{
                 groupId:groupId
-            }]);
+            }});
         };
         service.getCategories = function(groupId,parentCategoryId,start,end) {
-            return SessionService.invoke('/shoppingcategory/get-categories',[{
+            return SessionService.invoke({'/shoppingcategory/get-categories':{
                 groupId:groupId
                 ,parentCategoryId:parentCategoryId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getCategoriesCount = function(groupId,parentCategoryId) {
-            return SessionService.invoke('/shoppingcategory/get-categories-count',[{
+            return SessionService.invoke({'/shoppingcategory/get-categories-count':{
                 groupId:groupId
                 ,parentCategoryId:parentCategoryId
-            }]);
+            }});
         };
         service.getCategory = function(categoryId) {
-            return SessionService.invoke('/shoppingcategory/get-category',[{
+            return SessionService.invoke({'/shoppingcategory/get-category':{
                 categoryId:categoryId
-            }]);
+            }});
         };
         service.getSubcategoryIds = function(categoryIds,groupId,categoryId) {
-            return SessionService.invoke('/shoppingcategory/get-subcategory-ids',[{
+            return SessionService.invoke({'/shoppingcategory/get-subcategory-ids':{
                 categoryIds:categoryIds
                 ,groupId:groupId
                 ,categoryId:categoryId
-            }]);
+            }});
         };
         service.updateCategory = function(categoryId,parentCategoryId,name,description,mergeWithParentCategory,serviceContext) {
-            return SessionService.invoke('/shoppingcategory/update-category',[{
+            return SessionService.invoke({'/shoppingcategory/update-category':{
                 categoryId:categoryId
                 ,parentCategoryId:parentCategoryId
                 ,name:name
                 ,description:description
                 ,mergeWithParentCategory:mergeWithParentCategory
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -9096,7 +9007,7 @@
         var service = {};
         // Begin generated service methods
         service.addCoupon = function(code,autoCode,name,description,startDateMonth,startDateDay,startDateYear,startDateHour,startDateMinute,endDateMonth,endDateDay,endDateYear,endDateHour,endDateMinute,neverExpire,active,limitCategories,limitSkus,minOrder,discount,discountType,serviceContext) {
-            return SessionService.invoke('/shoppingcoupon/add-coupon',[{
+            return SessionService.invoke({'/shoppingcoupon/add-coupon':{
                 code:code
                 ,autoCode:autoCode
                 ,name:name
@@ -9119,22 +9030,22 @@
                 ,discount:discount
                 ,discountType:discountType
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteCoupon = function(groupId,couponId) {
-            return SessionService.invoke('/shoppingcoupon/delete-coupon',[{
+            return SessionService.invoke({'/shoppingcoupon/delete-coupon':{
                 groupId:groupId
                 ,couponId:couponId
-            }]);
+            }});
         };
         service.getCoupon = function(groupId,couponId) {
-            return SessionService.invoke('/shoppingcoupon/get-coupon',[{
+            return SessionService.invoke({'/shoppingcoupon/get-coupon':{
                 groupId:groupId
                 ,couponId:couponId
-            }]);
+            }});
         };
         service.search = function(groupId,companyId,code,active,discountType,andOperator,start,end) {
-            return SessionService.invoke('/shoppingcoupon/search',[{
+            return SessionService.invoke({'/shoppingcoupon/search':{
                 groupId:groupId
                 ,companyId:companyId
                 ,code:code
@@ -9143,10 +9054,10 @@
                 ,andOperator:andOperator
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.updateCoupon = function(couponId,name,description,startDateMonth,startDateDay,startDateYear,startDateHour,startDateMinute,endDateMonth,endDateDay,endDateYear,endDateHour,endDateMinute,neverExpire,active,limitCategories,limitSkus,minOrder,discount,discountType,serviceContext) {
-            return SessionService.invoke('/shoppingcoupon/update-coupon',[{
+            return SessionService.invoke({'/shoppingcoupon/update-coupon':{
                 couponId:couponId
                 ,name:name
                 ,description:description
@@ -9168,7 +9079,7 @@
                 ,discount:discount
                 ,discountType:discountType
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -9183,14 +9094,14 @@
         var service = {};
         // Begin generated service methods
         service.addBookItems = function(groupId,categoryId,isbns) {
-            return SessionService.invoke('/shoppingitem/add-book-items',[{
+            return SessionService.invoke({'/shoppingitem/add-book-items':{
                 groupId:groupId
                 ,categoryId:categoryId
                 ,isbns:isbns
-            }]);
+            }});
         };
         service.addItem = function(groupId,categoryId,sku,name,description,properties,fieldsQuantities,requiresShipping,stockQuantity,featured,sale,smallImage,smallImageURL,smallFile,mediumImage,mediumImageURL,mediumFile,largeImage,largeImageURL,largeFile,itemFields,itemPrices,serviceContext) {
-            return SessionService.invoke('/shoppingitem/add-item',[{
+            return SessionService.invoke({'/shoppingitem/add-item':{
                 groupId:groupId
                 ,categoryId:categoryId
                 ,sku:sku
@@ -9214,53 +9125,53 @@
                 ,itemFields:itemFields
                 ,itemPrices:itemPrices
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteItem = function(itemId) {
-            return SessionService.invoke('/shoppingitem/delete-item',[{
+            return SessionService.invoke({'/shoppingitem/delete-item':{
                 itemId:itemId
-            }]);
+            }});
         };
         service.getCategoriesItemsCount = function(groupId,categoryIds) {
-            return SessionService.invoke('/shoppingitem/get-categories-items-count',[{
+            return SessionService.invoke({'/shoppingitem/get-categories-items-count':{
                 groupId:groupId
                 ,categoryIds:categoryIds
-            }]);
+            }});
         };
         service.getItem = function(itemId) {
-            return SessionService.invoke('/shoppingitem/get-item',[{
+            return SessionService.invoke({'/shoppingitem/get-item':{
                 itemId:itemId
-            }]);
+            }});
         };
         service.getItems = function(groupId,categoryId) {
-            return SessionService.invoke('/shoppingitem/get-items',[{
+            return SessionService.invoke({'/shoppingitem/get-items':{
                 groupId:groupId
                 ,categoryId:categoryId
-            }]);
+            }});
         };
         service.getItems = function(groupId,categoryId,start,end,obc) {
-            return SessionService.invoke('/shoppingitem/get-items',[{
+            return SessionService.invoke({'/shoppingitem/get-items':{
                 groupId:groupId
                 ,categoryId:categoryId
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.getItemsCount = function(groupId,categoryId) {
-            return SessionService.invoke('/shoppingitem/get-items-count',[{
+            return SessionService.invoke({'/shoppingitem/get-items-count':{
                 groupId:groupId
                 ,categoryId:categoryId
-            }]);
+            }});
         };
         service.getItemsPrevAndNext = function(itemId,obc) {
-            return SessionService.invoke('/shoppingitem/get-items-prev-and-next',[{
+            return SessionService.invoke({'/shoppingitem/get-items-prev-and-next':{
                 itemId:itemId
                 ,obc:obc
-            }]);
+            }});
         };
         service.updateItem = function(itemId,groupId,categoryId,sku,name,description,properties,fieldsQuantities,requiresShipping,stockQuantity,featured,sale,smallImage,smallImageURL,smallFile,mediumImage,mediumImageURL,mediumFile,largeImage,largeImageURL,largeFile,itemFields,itemPrices,serviceContext) {
-            return SessionService.invoke('/shoppingitem/update-item',[{
+            return SessionService.invoke({'/shoppingitem/update-item':{
                 itemId:itemId
                 ,groupId:groupId
                 ,categoryId:categoryId
@@ -9285,7 +9196,7 @@
                 ,itemFields:itemFields
                 ,itemPrices:itemPrices
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -9300,7 +9211,7 @@
         var service = {};
         // Begin generated service methods
         service.completeOrder = function(groupId,number,ppTxnId,ppPaymentStatus,ppPaymentGross,ppReceiverEmail,ppPayerEmail,serviceContext) {
-            return SessionService.invoke('/shoppingorder/complete-order',[{
+            return SessionService.invoke({'/shoppingorder/complete-order':{
                 groupId:groupId
                 ,number:number
                 ,ppTxnId:ppTxnId
@@ -9309,30 +9220,30 @@
                 ,ppReceiverEmail:ppReceiverEmail
                 ,ppPayerEmail:ppPayerEmail
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteOrder = function(groupId,orderId) {
-            return SessionService.invoke('/shoppingorder/delete-order',[{
+            return SessionService.invoke({'/shoppingorder/delete-order':{
                 groupId:groupId
                 ,orderId:orderId
-            }]);
+            }});
         };
         service.getOrder = function(groupId,orderId) {
-            return SessionService.invoke('/shoppingorder/get-order',[{
+            return SessionService.invoke({'/shoppingorder/get-order':{
                 groupId:groupId
                 ,orderId:orderId
-            }]);
+            }});
         };
         service.sendEmail = function(groupId,orderId,emailType,serviceContext) {
-            return SessionService.invoke('/shoppingorder/send-email',[{
+            return SessionService.invoke({'/shoppingorder/send-email':{
                 groupId:groupId
                 ,orderId:orderId
                 ,emailType:emailType
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.updateOrder = function(groupId,orderId,billingFirstName,billingLastName,billingEmailAddress,billingCompany,billingStreet,billingCity,billingState,billingZip,billingCountry,billingPhone,shipToBilling,shippingFirstName,shippingLastName,shippingEmailAddress,shippingCompany,shippingStreet,shippingCity,shippingState,shippingZip,shippingCountry,shippingPhone,ccName,ccType,ccNumber,ccExpMonth,ccExpYear,ccVerNumber,comments) {
-            return SessionService.invoke('/shoppingorder/update-order',[{
+            return SessionService.invoke({'/shoppingorder/update-order':{
                 groupId:groupId
                 ,orderId:orderId
                 ,billingFirstName:billingFirstName
@@ -9363,10 +9274,10 @@
                 ,ccExpYear:ccExpYear
                 ,ccVerNumber:ccVerNumber
                 ,comments:comments
-            }]);
+            }});
         };
         service.updateOrder = function(groupId,orderId,ppTxnId,ppPaymentStatus,ppPaymentGross,ppReceiverEmail,ppPayerEmail) {
-            return SessionService.invoke('/shoppingorder/update-order',[{
+            return SessionService.invoke({'/shoppingorder/update-order':{
                 groupId:groupId
                 ,orderId:orderId
                 ,ppTxnId:ppTxnId
@@ -9374,7 +9285,7 @@
                 ,ppPaymentGross:ppPaymentGross
                 ,ppReceiverEmail:ppReceiverEmail
                 ,ppPayerEmail:ppPayerEmail
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -9389,199 +9300,199 @@
         var service = {};
         // Begin generated service methods
         service.getActivities = function(className,start,end) {
-            return SessionService.invoke('/socialactivity/get-activities',[{
+            return SessionService.invoke({'/socialactivity/get-activities':{
                 className:className
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getActivities = function(classNameId,start,end) {
-            return SessionService.invoke('/socialactivity/get-activities',[{
+            return SessionService.invoke({'/socialactivity/get-activities':{
                 classNameId:classNameId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getActivities = function(mirrorActivityId,className,classPK,start,end) {
-            return SessionService.invoke('/socialactivity/get-activities',[{
+            return SessionService.invoke({'/socialactivity/get-activities':{
                 mirrorActivityId:mirrorActivityId
                 ,className:className
                 ,classPK:classPK
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getActivities = function(mirrorActivityId,classNameId,classPK,start,end) {
-            return SessionService.invoke('/socialactivity/get-activities',[{
+            return SessionService.invoke({'/socialactivity/get-activities':{
                 mirrorActivityId:mirrorActivityId
                 ,classNameId:classNameId
                 ,classPK:classPK
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getActivitiesCount = function(className) {
-            return SessionService.invoke('/socialactivity/get-activities-count',[{
+            return SessionService.invoke({'/socialactivity/get-activities-count':{
                 className:className
-            }]);
+            }});
         };
         service.getActivitiesCount = function(classNameId) {
-            return SessionService.invoke('/socialactivity/get-activities-count',[{
+            return SessionService.invoke({'/socialactivity/get-activities-count':{
                 classNameId:classNameId
-            }]);
+            }});
         };
         service.getActivitiesCount = function(mirrorActivityId,className,classPK) {
-            return SessionService.invoke('/socialactivity/get-activities-count',[{
+            return SessionService.invoke({'/socialactivity/get-activities-count':{
                 mirrorActivityId:mirrorActivityId
                 ,className:className
                 ,classPK:classPK
-            }]);
+            }});
         };
         service.getActivitiesCount = function(mirrorActivityId,classNameId,classPK) {
-            return SessionService.invoke('/socialactivity/get-activities-count',[{
+            return SessionService.invoke({'/socialactivity/get-activities-count':{
                 mirrorActivityId:mirrorActivityId
                 ,classNameId:classNameId
                 ,classPK:classPK
-            }]);
+            }});
         };
         service.getActivity = function(activityId) {
-            return SessionService.invoke('/socialactivity/get-activity',[{
+            return SessionService.invoke({'/socialactivity/get-activity':{
                 activityId:activityId
-            }]);
+            }});
         };
         service.getActivitySetActivities = function(activitySetId,start,end) {
-            return SessionService.invoke('/socialactivity/get-activity-set-activities',[{
+            return SessionService.invoke({'/socialactivity/get-activity-set-activities':{
                 activitySetId:activitySetId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getGroupActivities = function(groupId,start,end) {
-            return SessionService.invoke('/socialactivity/get-group-activities',[{
+            return SessionService.invoke({'/socialactivity/get-group-activities':{
                 groupId:groupId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getGroupActivitiesCount = function(groupId) {
-            return SessionService.invoke('/socialactivity/get-group-activities-count',[{
+            return SessionService.invoke({'/socialactivity/get-group-activities-count':{
                 groupId:groupId
-            }]);
+            }});
         };
         service.getGroupUsersActivities = function(groupId,start,end) {
-            return SessionService.invoke('/socialactivity/get-group-users-activities',[{
+            return SessionService.invoke({'/socialactivity/get-group-users-activities':{
                 groupId:groupId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getGroupUsersActivitiesCount = function(groupId) {
-            return SessionService.invoke('/socialactivity/get-group-users-activities-count',[{
+            return SessionService.invoke({'/socialactivity/get-group-users-activities-count':{
                 groupId:groupId
-            }]);
+            }});
         };
         service.getMirrorActivity = function(mirrorActivityId) {
-            return SessionService.invoke('/socialactivity/get-mirror-activity',[{
+            return SessionService.invoke({'/socialactivity/get-mirror-activity':{
                 mirrorActivityId:mirrorActivityId
-            }]);
+            }});
         };
         service.getOrganizationActivities = function(organizationId,start,end) {
-            return SessionService.invoke('/socialactivity/get-organization-activities',[{
+            return SessionService.invoke({'/socialactivity/get-organization-activities':{
                 organizationId:organizationId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getOrganizationActivitiesCount = function(organizationId) {
-            return SessionService.invoke('/socialactivity/get-organization-activities-count',[{
+            return SessionService.invoke({'/socialactivity/get-organization-activities-count':{
                 organizationId:organizationId
-            }]);
+            }});
         };
         service.getOrganizationUsersActivities = function(organizationId,start,end) {
-            return SessionService.invoke('/socialactivity/get-organization-users-activities',[{
+            return SessionService.invoke({'/socialactivity/get-organization-users-activities':{
                 organizationId:organizationId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getOrganizationUsersActivitiesCount = function(organizationId) {
-            return SessionService.invoke('/socialactivity/get-organization-users-activities-count',[{
+            return SessionService.invoke({'/socialactivity/get-organization-users-activities-count':{
                 organizationId:organizationId
-            }]);
+            }});
         };
         service.getRelationActivities = function(userId,start,end) {
-            return SessionService.invoke('/socialactivity/get-relation-activities',[{
+            return SessionService.invoke({'/socialactivity/get-relation-activities':{
                 userId:userId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getRelationActivities = function(userId,type,start,end) {
-            return SessionService.invoke('/socialactivity/get-relation-activities',[{
+            return SessionService.invoke({'/socialactivity/get-relation-activities':{
                 userId:userId
                 ,type:type
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getRelationActivitiesCount = function(userId) {
-            return SessionService.invoke('/socialactivity/get-relation-activities-count',[{
+            return SessionService.invoke({'/socialactivity/get-relation-activities-count':{
                 userId:userId
-            }]);
+            }});
         };
         service.getRelationActivitiesCount = function(userId,type) {
-            return SessionService.invoke('/socialactivity/get-relation-activities-count',[{
+            return SessionService.invoke({'/socialactivity/get-relation-activities-count':{
                 userId:userId
                 ,type:type
-            }]);
+            }});
         };
         service.getUserActivities = function(userId,start,end) {
-            return SessionService.invoke('/socialactivity/get-user-activities',[{
+            return SessionService.invoke({'/socialactivity/get-user-activities':{
                 userId:userId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getUserActivitiesCount = function(userId) {
-            return SessionService.invoke('/socialactivity/get-user-activities-count',[{
+            return SessionService.invoke({'/socialactivity/get-user-activities-count':{
                 userId:userId
-            }]);
+            }});
         };
         service.getUserGroupsActivities = function(userId,start,end) {
-            return SessionService.invoke('/socialactivity/get-user-groups-activities',[{
+            return SessionService.invoke({'/socialactivity/get-user-groups-activities':{
                 userId:userId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getUserGroupsActivitiesCount = function(userId) {
-            return SessionService.invoke('/socialactivity/get-user-groups-activities-count',[{
+            return SessionService.invoke({'/socialactivity/get-user-groups-activities-count':{
                 userId:userId
-            }]);
+            }});
         };
         service.getUserGroupsAndOrganizationsActivities = function(userId,start,end) {
-            return SessionService.invoke('/socialactivity/get-user-groups-and-organizations-activities',[{
+            return SessionService.invoke({'/socialactivity/get-user-groups-and-organizations-activities':{
                 userId:userId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getUserGroupsAndOrganizationsActivitiesCount = function(userId) {
-            return SessionService.invoke('/socialactivity/get-user-groups-and-organizations-activities-count',[{
+            return SessionService.invoke({'/socialactivity/get-user-groups-and-organizations-activities-count':{
                 userId:userId
-            }]);
+            }});
         };
         service.getUserOrganizationsActivities = function(userId,start,end) {
-            return SessionService.invoke('/socialactivity/get-user-organizations-activities',[{
+            return SessionService.invoke({'/socialactivity/get-user-organizations-activities':{
                 userId:userId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getUserOrganizationsActivitiesCount = function(userId) {
-            return SessionService.invoke('/socialactivity/get-user-organizations-activities-count',[{
+            return SessionService.invoke({'/socialactivity/get-user-organizations-activities-count':{
                 userId:userId
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -9596,51 +9507,51 @@
         var service = {};
         // Begin generated service methods
         service.getActivityDefinition = function(groupId,className,activityType) {
-            return SessionService.invoke('/socialactivitysetting/get-activity-definition',[{
+            return SessionService.invoke({'/socialactivitysetting/get-activity-definition':{
                 groupId:groupId
                 ,className:className
                 ,activityType:activityType
-            }]);
+            }});
         };
         service.getActivityDefinitions = function(groupId,className) {
-            return SessionService.invoke('/socialactivitysetting/get-activity-definitions',[{
+            return SessionService.invoke({'/socialactivitysetting/get-activity-definitions':{
                 groupId:groupId
                 ,className:className
-            }]);
+            }});
         };
         service.getActivitySettings = function(groupId) {
-            return SessionService.invoke('/socialactivitysetting/get-activity-settings',[{
+            return SessionService.invoke({'/socialactivitysetting/get-activity-settings':{
                 groupId:groupId
-            }]);
+            }});
         };
         service.getJsonActivityDefinitions = function(groupId,className) {
-            return SessionService.invoke('/socialactivitysetting/get-json-activity-definitions',[{
+            return SessionService.invoke({'/socialactivitysetting/get-json-activity-definitions':{
                 groupId:groupId
                 ,className:className
-            }]);
+            }});
         };
         service.updateActivitySetting = function(groupId,className,enabled) {
-            return SessionService.invoke('/socialactivitysetting/update-activity-setting',[{
+            return SessionService.invoke({'/socialactivitysetting/update-activity-setting':{
                 groupId:groupId
                 ,className:className
                 ,enabled:enabled
-            }]);
+            }});
         };
         service.updateActivitySetting = function(groupId,className,activityType,activityCounterDefinition) {
-            return SessionService.invoke('/socialactivitysetting/update-activity-setting',[{
+            return SessionService.invoke({'/socialactivitysetting/update-activity-setting':{
                 groupId:groupId
                 ,className:className
                 ,activityType:activityType
                 ,activityCounterDefinition:activityCounterDefinition
-            }]);
+            }});
         };
         service.updateActivitySettings = function(groupId,className,activityType,activityCounterDefinitions) {
-            return SessionService.invoke('/socialactivitysetting/update-activity-settings',[{
+            return SessionService.invoke({'/socialactivitysetting/update-activity-settings':{
                 groupId:groupId
                 ,className:className
                 ,activityType:activityType
                 ,activityCounterDefinitions:activityCounterDefinitions
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -9655,11 +9566,11 @@
         var service = {};
         // Begin generated service methods
         service.updateRequest = function(requestId,status,themeDisplay) {
-            return SessionService.invoke('/socialrequest/update-request',[{
+            return SessionService.invoke({'/socialrequest/update-request':{
                 requestId:requestId
                 ,status:status
                 ,themeDisplay:themeDisplay
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -9674,36 +9585,36 @@
         var service = {};
         // Begin generated service methods
         service.cleanUpStagingRequest = function(stagingRequestId) {
-            return SessionService.invoke('/staging/clean-up-staging-request',[{
+            return SessionService.invoke({'/staging/clean-up-staging-request':{
                 stagingRequestId:stagingRequestId
-            }]);
+            }});
         };
         service.createStagingRequest = function(groupId,checksum) {
-            return SessionService.invoke('/staging/create-staging-request',[{
+            return SessionService.invoke({'/staging/create-staging-request':{
                 groupId:groupId
                 ,checksum:checksum
-            }]);
+            }});
         };
         service.publishStagingRequest = function(stagingRequestId,privateLayout,parameterMap) {
-            return SessionService.invoke('/staging/publish-staging-request',[{
+            return SessionService.invoke({'/staging/publish-staging-request':{
                 stagingRequestId:stagingRequestId
                 ,privateLayout:privateLayout
                 ,parameterMap:parameterMap
-            }]);
+            }});
         };
         service.updateStagingRequest = function(stagingRequestId,fileName,bytes) {
-            return SessionService.invoke('/staging/update-staging-request',[{
+            return SessionService.invoke({'/staging/update-staging-request':{
                 stagingRequestId:stagingRequestId
                 ,fileName:fileName
                 ,bytes:bytes
-            }]);
+            }});
         };
         service.validateStagingRequest = function(stagingRequestId,privateLayout,parameterMap) {
-            return SessionService.invoke('/staging/validate-staging-request',[{
+            return SessionService.invoke({'/staging/validate-staging-request':{
                 stagingRequestId:stagingRequestId
                 ,privateLayout:privateLayout
                 ,parameterMap:parameterMap
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -9718,56 +9629,56 @@
         var service = {};
         // Begin generated service methods
         service.addTeam = function(groupId,name,description) {
-            return SessionService.invoke('/team/add-team',[{
+            return SessionService.invoke({'/team/add-team':{
                 groupId:groupId
                 ,name:name
                 ,description:description
-            }]);
+            }});
         };
         service.deleteTeam = function(teamId) {
-            return SessionService.invoke('/team/delete-team',[{
+            return SessionService.invoke({'/team/delete-team':{
                 teamId:teamId
-            }]);
+            }});
         };
         service.getGroupTeams = function(groupId) {
-            return SessionService.invoke('/team/get-group-teams',[{
+            return SessionService.invoke({'/team/get-group-teams':{
                 groupId:groupId
-            }]);
+            }});
         };
         service.getTeam = function(teamId) {
-            return SessionService.invoke('/team/get-team',[{
+            return SessionService.invoke({'/team/get-team':{
                 teamId:teamId
-            }]);
+            }});
         };
         service.getTeam = function(groupId,name) {
-            return SessionService.invoke('/team/get-team',[{
+            return SessionService.invoke({'/team/get-team':{
                 groupId:groupId
                 ,name:name
-            }]);
+            }});
         };
         service.getUserTeams = function(userId) {
-            return SessionService.invoke('/team/get-user-teams',[{
+            return SessionService.invoke({'/team/get-user-teams':{
                 userId:userId
-            }]);
+            }});
         };
         service.getUserTeams = function(userId,groupId) {
-            return SessionService.invoke('/team/get-user-teams',[{
+            return SessionService.invoke({'/team/get-user-teams':{
                 userId:userId
                 ,groupId:groupId
-            }]);
+            }});
         };
         service.hasUserTeam = function(userId,teamId) {
-            return SessionService.invoke('/team/has-user-team',[{
+            return SessionService.invoke({'/team/has-user-team':{
                 userId:userId
                 ,teamId:teamId
-            }]);
+            }});
         };
         service.updateTeam = function(teamId,name,description) {
-            return SessionService.invoke('/team/update-team',[{
+            return SessionService.invoke({'/team/update-team':{
                 teamId:teamId
                 ,name:name
                 ,description:description
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -9782,14 +9693,14 @@
         var service = {};
         // Begin generated service methods
         service.getThemes = function(companyId) {
-            return SessionService.invoke('/theme/get-themes',[{
+            return SessionService.invoke({'/theme/get-themes':{
                 companyId:companyId
-            }]);
+            }});
         };
         service.getWarThemes = function() {
-            return SessionService.invoke('/theme/get-war-themes',[{
+            return SessionService.invoke({'/theme/get-war-themes':{
                 
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -9804,58 +9715,58 @@
         var service = {};
         // Begin generated service methods
         service.deleteEntries = function(entryIds) {
-            return SessionService.invoke('/trashentry/delete-entries',[{
+            return SessionService.invoke({'/trashentry/delete-entries':{
                 entryIds:entryIds
-            }]);
+            }});
         };
         service.deleteEntries = function(groupId) {
-            return SessionService.invoke('/trashentry/delete-entries',[{
+            return SessionService.invoke({'/trashentry/delete-entries':{
                 groupId:groupId
-            }]);
+            }});
         };
         service.deleteEntry = function(entryId) {
-            return SessionService.invoke('/trashentry/delete-entry',[{
+            return SessionService.invoke({'/trashentry/delete-entry':{
                 entryId:entryId
-            }]);
+            }});
         };
         service.deleteEntry = function(className,classPK) {
-            return SessionService.invoke('/trashentry/delete-entry',[{
+            return SessionService.invoke({'/trashentry/delete-entry':{
                 className:className
                 ,classPK:classPK
-            }]);
+            }});
         };
         service.getEntries = function(groupId) {
-            return SessionService.invoke('/trashentry/get-entries',[{
+            return SessionService.invoke({'/trashentry/get-entries':{
                 groupId:groupId
-            }]);
+            }});
         };
         service.getEntries = function(groupId,start,end,obc) {
-            return SessionService.invoke('/trashentry/get-entries',[{
+            return SessionService.invoke({'/trashentry/get-entries':{
                 groupId:groupId
                 ,start:start
                 ,end:end
                 ,obc:obc
-            }]);
+            }});
         };
         service.moveEntry = function(className,classPK,destinationContainerModelId,serviceContext) {
-            return SessionService.invoke('/trashentry/move-entry',[{
+            return SessionService.invoke({'/trashentry/move-entry':{
                 className:className
                 ,classPK:classPK
                 ,destinationContainerModelId:destinationContainerModelId
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.restoreEntry = function(entryId) {
-            return SessionService.invoke('/trashentry/restore-entry',[{
+            return SessionService.invoke({'/trashentry/restore-entry':{
                 entryId:entryId
-            }]);
+            }});
         };
         service.restoreEntry = function(entryId,overrideClassPK,name) {
-            return SessionService.invoke('/trashentry/restore-entry',[{
+            return SessionService.invoke({'/trashentry/restore-entry':{
                 entryId:entryId
                 ,overrideClassPK:overrideClassPK
                 ,name:name
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -9870,38 +9781,38 @@
         var service = {};
         // Begin generated service methods
         service.addGroupUsers = function(groupId,userIds,serviceContext) {
-            return SessionService.invoke('/user/add-group-users',[{
+            return SessionService.invoke({'/user/add-group-users':{
                 groupId:groupId
                 ,userIds:userIds
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addOrganizationUsers = function(organizationId,userIds) {
-            return SessionService.invoke('/user/add-organization-users',[{
+            return SessionService.invoke({'/user/add-organization-users':{
                 organizationId:organizationId
                 ,userIds:userIds
-            }]);
+            }});
         };
         service.addPasswordPolicyUsers = function(passwordPolicyId,userIds) {
-            return SessionService.invoke('/user/add-password-policy-users',[{
+            return SessionService.invoke({'/user/add-password-policy-users':{
                 passwordPolicyId:passwordPolicyId
                 ,userIds:userIds
-            }]);
+            }});
         };
         service.addRoleUsers = function(roleId,userIds) {
-            return SessionService.invoke('/user/add-role-users',[{
+            return SessionService.invoke({'/user/add-role-users':{
                 roleId:roleId
                 ,userIds:userIds
-            }]);
+            }});
         };
         service.addTeamUsers = function(teamId,userIds) {
-            return SessionService.invoke('/user/add-team-users',[{
+            return SessionService.invoke({'/user/add-team-users':{
                 teamId:teamId
                 ,userIds:userIds
-            }]);
+            }});
         };
         service.addUser = function(companyId,autoPassword,password1,password2,autoScreenName,screenName,emailAddress,facebookId,openId,locale,firstName,middleName,lastName,prefixId,suffixId,male,birthdayMonth,birthdayDay,birthdayYear,jobTitle,groupIds,organizationIds,roleIds,userGroupIds,sendEmail,serviceContext) {
-            return SessionService.invoke('/user/add-user',[{
+            return SessionService.invoke({'/user/add-user':{
                 companyId:companyId
                 ,autoPassword:autoPassword
                 ,password1:password1
@@ -9928,10 +9839,10 @@
                 ,userGroupIds:userGroupIds
                 ,sendEmail:sendEmail
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addUser = function(companyId,autoPassword,password1,password2,autoScreenName,screenName,emailAddress,facebookId,openId,locale,firstName,middleName,lastName,prefixId,suffixId,male,birthdayMonth,birthdayDay,birthdayYear,jobTitle,groupIds,organizationIds,roleIds,userGroupIds,addresses,emailAddresses,phones,websites,announcementsDelivers,sendEmail,serviceContext) {
-            return SessionService.invoke('/user/add-user',[{
+            return SessionService.invoke({'/user/add-user':{
                 companyId:companyId
                 ,autoPassword:autoPassword
                 ,password1:password1
@@ -9963,16 +9874,16 @@
                 ,announcementsDelivers:announcementsDelivers
                 ,sendEmail:sendEmail
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addUserGroupUsers = function(userGroupId,userIds) {
-            return SessionService.invoke('/user/add-user-group-users',[{
+            return SessionService.invoke({'/user/add-user-group-users':{
                 userGroupId:userGroupId
                 ,userIds:userIds
-            }]);
+            }});
         };
         service.addUserWithWorkflow = function(companyId,autoPassword,password1,password2,autoScreenName,screenName,emailAddress,facebookId,openId,locale,firstName,middleName,lastName,prefixId,suffixId,male,birthdayMonth,birthdayDay,birthdayYear,jobTitle,groupIds,organizationIds,roleIds,userGroupIds,sendEmail,serviceContext) {
-            return SessionService.invoke('/user/add-user-with-workflow',[{
+            return SessionService.invoke({'/user/add-user-with-workflow':{
                 companyId:companyId
                 ,autoPassword:autoPassword
                 ,password1:password1
@@ -9999,10 +9910,10 @@
                 ,userGroupIds:userGroupIds
                 ,sendEmail:sendEmail
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addUserWithWorkflow = function(companyId,autoPassword,password1,password2,autoScreenName,screenName,emailAddress,facebookId,openId,locale,firstName,middleName,lastName,prefixId,suffixId,male,birthdayMonth,birthdayDay,birthdayYear,jobTitle,groupIds,organizationIds,roleIds,userGroupIds,addresses,emailAddresses,phones,websites,announcementsDelivers,sendEmail,serviceContext) {
-            return SessionService.invoke('/user/add-user-with-workflow',[{
+            return SessionService.invoke({'/user/add-user-with-workflow':{
                 companyId:companyId
                 ,autoPassword:autoPassword
                 ,password1:password1
@@ -10034,187 +9945,187 @@
                 ,announcementsDelivers:announcementsDelivers
                 ,sendEmail:sendEmail
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deletePortrait = function(userId) {
-            return SessionService.invoke('/user/delete-portrait',[{
+            return SessionService.invoke({'/user/delete-portrait':{
                 userId:userId
-            }]);
+            }});
         };
         service.deleteRoleUser = function(roleId,userId) {
-            return SessionService.invoke('/user/delete-role-user',[{
+            return SessionService.invoke({'/user/delete-role-user':{
                 roleId:roleId
                 ,userId:userId
-            }]);
+            }});
         };
         service.deleteUser = function(userId) {
-            return SessionService.invoke('/user/delete-user',[{
+            return SessionService.invoke({'/user/delete-user':{
                 userId:userId
-            }]);
+            }});
         };
         service.getCompanyUsers = function(companyId,start,end) {
-            return SessionService.invoke('/user/get-company-users',[{
+            return SessionService.invoke({'/user/get-company-users':{
                 companyId:companyId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getCompanyUsersCount = function(companyId) {
-            return SessionService.invoke('/user/get-company-users-count',[{
+            return SessionService.invoke({'/user/get-company-users-count':{
                 companyId:companyId
-            }]);
+            }});
         };
         service.getGroupUserIds = function(groupId) {
-            return SessionService.invoke('/user/get-group-user-ids',[{
+            return SessionService.invoke({'/user/get-group-user-ids':{
                 groupId:groupId
-            }]);
+            }});
         };
         service.getGroupUsers = function(groupId) {
-            return SessionService.invoke('/user/get-group-users',[{
+            return SessionService.invoke({'/user/get-group-users':{
                 groupId:groupId
-            }]);
+            }});
         };
         service.getOrganizationUserIds = function(organizationId) {
-            return SessionService.invoke('/user/get-organization-user-ids',[{
+            return SessionService.invoke({'/user/get-organization-user-ids':{
                 organizationId:organizationId
-            }]);
+            }});
         };
         service.getOrganizationUsers = function(organizationId) {
-            return SessionService.invoke('/user/get-organization-users',[{
+            return SessionService.invoke({'/user/get-organization-users':{
                 organizationId:organizationId
-            }]);
+            }});
         };
         service.getRoleUserIds = function(roleId) {
-            return SessionService.invoke('/user/get-role-user-ids',[{
+            return SessionService.invoke({'/user/get-role-user-ids':{
                 roleId:roleId
-            }]);
+            }});
         };
         service.getUserByEmailAddress = function(companyId,emailAddress) {
-            return SessionService.invoke('/user/get-user-by-email-address',[{
+            return SessionService.invoke({'/user/get-user-by-email-address':{
                 companyId:companyId
                 ,emailAddress:emailAddress
-            }]);
+            }});
         };
         service.getUserById = function(userId) {
-            return SessionService.invoke('/user/get-user-by-id',[{
+            return SessionService.invoke({'/user/get-user-by-id':{
                 userId:userId
-            }]);
+            }});
         };
         service.getUserByScreenName = function(companyId,screenName) {
-            return SessionService.invoke('/user/get-user-by-screen-name',[{
+            return SessionService.invoke({'/user/get-user-by-screen-name':{
                 companyId:companyId
                 ,screenName:screenName
-            }]);
+            }});
         };
         service.getUserGroupUsers = function(userGroupId) {
-            return SessionService.invoke('/user/get-user-group-users',[{
+            return SessionService.invoke({'/user/get-user-group-users':{
                 userGroupId:userGroupId
-            }]);
+            }});
         };
         service.getUserIdByEmailAddress = function(companyId,emailAddress) {
-            return SessionService.invoke('/user/get-user-id-by-email-address',[{
+            return SessionService.invoke({'/user/get-user-id-by-email-address':{
                 companyId:companyId
                 ,emailAddress:emailAddress
-            }]);
+            }});
         };
         service.getUserIdByScreenName = function(companyId,screenName) {
-            return SessionService.invoke('/user/get-user-id-by-screen-name',[{
+            return SessionService.invoke({'/user/get-user-id-by-screen-name':{
                 companyId:companyId
                 ,screenName:screenName
-            }]);
+            }});
         };
         service.hasGroupUser = function(groupId,userId) {
-            return SessionService.invoke('/user/has-group-user',[{
+            return SessionService.invoke({'/user/has-group-user':{
                 groupId:groupId
                 ,userId:userId
-            }]);
+            }});
         };
         service.hasRoleUser = function(roleId,userId) {
-            return SessionService.invoke('/user/has-role-user',[{
+            return SessionService.invoke({'/user/has-role-user':{
                 roleId:roleId
                 ,userId:userId
-            }]);
+            }});
         };
         service.hasRoleUser = function(companyId,name,userId,inherited) {
-            return SessionService.invoke('/user/has-role-user',[{
+            return SessionService.invoke({'/user/has-role-user':{
                 companyId:companyId
                 ,name:name
                 ,userId:userId
                 ,inherited:inherited
-            }]);
+            }});
         };
         service.setRoleUsers = function(roleId,userIds) {
-            return SessionService.invoke('/user/set-role-users',[{
+            return SessionService.invoke({'/user/set-role-users':{
                 roleId:roleId
                 ,userIds:userIds
-            }]);
+            }});
         };
         service.setUserGroupUsers = function(userGroupId,userIds) {
-            return SessionService.invoke('/user/set-user-group-users',[{
+            return SessionService.invoke({'/user/set-user-group-users':{
                 userGroupId:userGroupId
                 ,userIds:userIds
-            }]);
+            }});
         };
         service.unsetGroupTeamsUsers = function(groupId,userIds) {
-            return SessionService.invoke('/user/unset-group-teams-users',[{
+            return SessionService.invoke({'/user/unset-group-teams-users':{
                 groupId:groupId
                 ,userIds:userIds
-            }]);
+            }});
         };
         service.unsetGroupUsers = function(groupId,userIds,serviceContext) {
-            return SessionService.invoke('/user/unset-group-users',[{
+            return SessionService.invoke({'/user/unset-group-users':{
                 groupId:groupId
                 ,userIds:userIds
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.unsetOrganizationUsers = function(organizationId,userIds) {
-            return SessionService.invoke('/user/unset-organization-users',[{
+            return SessionService.invoke({'/user/unset-organization-users':{
                 organizationId:organizationId
                 ,userIds:userIds
-            }]);
+            }});
         };
         service.unsetPasswordPolicyUsers = function(passwordPolicyId,userIds) {
-            return SessionService.invoke('/user/unset-password-policy-users',[{
+            return SessionService.invoke({'/user/unset-password-policy-users':{
                 passwordPolicyId:passwordPolicyId
                 ,userIds:userIds
-            }]);
+            }});
         };
         service.unsetRoleUsers = function(roleId,userIds) {
-            return SessionService.invoke('/user/unset-role-users',[{
+            return SessionService.invoke({'/user/unset-role-users':{
                 roleId:roleId
                 ,userIds:userIds
-            }]);
+            }});
         };
         service.unsetTeamUsers = function(teamId,userIds) {
-            return SessionService.invoke('/user/unset-team-users',[{
+            return SessionService.invoke({'/user/unset-team-users':{
                 teamId:teamId
                 ,userIds:userIds
-            }]);
+            }});
         };
         service.unsetUserGroupUsers = function(userGroupId,userIds) {
-            return SessionService.invoke('/user/unset-user-group-users',[{
+            return SessionService.invoke({'/user/unset-user-group-users':{
                 userGroupId:userGroupId
                 ,userIds:userIds
-            }]);
+            }});
         };
         service.updateAgreedToTermsOfUse = function(userId,agreedToTermsOfUse) {
-            return SessionService.invoke('/user/update-agreed-to-terms-of-use',[{
+            return SessionService.invoke({'/user/update-agreed-to-terms-of-use':{
                 userId:userId
                 ,agreedToTermsOfUse:agreedToTermsOfUse
-            }]);
+            }});
         };
         service.updateEmailAddress = function(userId,password,emailAddress1,emailAddress2,serviceContext) {
-            return SessionService.invoke('/user/update-email-address',[{
+            return SessionService.invoke({'/user/update-email-address':{
                 userId:userId
                 ,password:password
                 ,emailAddress1:emailAddress1
                 ,emailAddress2:emailAddress2
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.updateIncompleteUser = function(companyId,autoPassword,password1,password2,autoScreenName,screenName,emailAddress,facebookId,openId,locale,firstName,middleName,lastName,prefixId,suffixId,male,birthdayMonth,birthdayDay,birthdayYear,jobTitle,updateUserInformation,sendEmail,serviceContext) {
-            return SessionService.invoke('/user/update-incomplete-user',[{
+            return SessionService.invoke({'/user/update-incomplete-user':{
                 companyId:companyId
                 ,autoPassword:autoPassword
                 ,password1:password1
@@ -10238,69 +10149,69 @@
                 ,updateUserInformation:updateUserInformation
                 ,sendEmail:sendEmail
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.updateLockoutById = function(userId,lockout) {
-            return SessionService.invoke('/user/update-lockout-by-id',[{
+            return SessionService.invoke({'/user/update-lockout-by-id':{
                 userId:userId
                 ,lockout:lockout
-            }]);
+            }});
         };
         service.updateOpenId = function(userId,openId) {
-            return SessionService.invoke('/user/update-open-id',[{
+            return SessionService.invoke({'/user/update-open-id':{
                 userId:userId
                 ,openId:openId
-            }]);
+            }});
         };
         service.updateOrganizations = function(userId,organizationIds,serviceContext) {
-            return SessionService.invoke('/user/update-organizations',[{
+            return SessionService.invoke({'/user/update-organizations':{
                 userId:userId
                 ,organizationIds:organizationIds
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.updatePassword = function(userId,password1,password2,passwordReset) {
-            return SessionService.invoke('/user/update-password',[{
+            return SessionService.invoke({'/user/update-password':{
                 userId:userId
                 ,password1:password1
                 ,password2:password2
                 ,passwordReset:passwordReset
-            }]);
+            }});
         };
         service.updatePortrait = function(userId,bytes) {
-            return SessionService.invoke('/user/update-portrait',[{
+            return SessionService.invoke({'/user/update-portrait':{
                 userId:userId
                 ,bytes:bytes
-            }]);
+            }});
         };
         service.updateReminderQuery = function(userId,question,answer) {
-            return SessionService.invoke('/user/update-reminder-query',[{
+            return SessionService.invoke({'/user/update-reminder-query':{
                 userId:userId
                 ,question:question
                 ,answer:answer
-            }]);
+            }});
         };
         service.updateScreenName = function(userId,screenName) {
-            return SessionService.invoke('/user/update-screen-name',[{
+            return SessionService.invoke({'/user/update-screen-name':{
                 userId:userId
                 ,screenName:screenName
-            }]);
+            }});
         };
         service.updateStatus = function(userId,status) {
-            return SessionService.invoke('/user/update-status',[{
+            return SessionService.invoke({'/user/update-status':{
                 userId:userId
                 ,status:status
-            }]);
+            }});
         };
         service.updateStatus = function(userId,status,serviceContext) {
-            return SessionService.invoke('/user/update-status',[{
+            return SessionService.invoke({'/user/update-status':{
                 userId:userId
                 ,status:status
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.updateUser = function(userId,oldPassword,newPassword1,newPassword2,passwordReset,reminderQueryQuestion,reminderQueryAnswer,screenName,emailAddress,facebookId,openId,languageId,timeZoneId,greeting,comments,firstName,middleName,lastName,prefixId,suffixId,male,birthdayMonth,birthdayDay,birthdayYear,smsSn,aimSn,facebookSn,icqSn,jabberSn,msnSn,mySpaceSn,skypeSn,twitterSn,ymSn,jobTitle,groupIds,organizationIds,roleIds,userGroupRoles,userGroupIds,serviceContext) {
-            return SessionService.invoke('/user/update-user',[{
+            return SessionService.invoke({'/user/update-user':{
                 userId:userId
                 ,oldPassword:oldPassword
                 ,newPassword1:newPassword1
@@ -10342,10 +10253,10 @@
                 ,userGroupRoles:userGroupRoles
                 ,userGroupIds:userGroupIds
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.updateUser = function(userId,oldPassword,newPassword1,newPassword2,passwordReset,reminderQueryQuestion,reminderQueryAnswer,screenName,emailAddress,facebookId,openId,languageId,timeZoneId,greeting,comments,firstName,middleName,lastName,prefixId,suffixId,male,birthdayMonth,birthdayDay,birthdayYear,smsSn,aimSn,facebookSn,icqSn,jabberSn,msnSn,mySpaceSn,skypeSn,twitterSn,ymSn,jobTitle,groupIds,organizationIds,roleIds,userGroupRoles,userGroupIds,addresses,emailAddresses,phones,websites,announcementsDelivers,serviceContext) {
-            return SessionService.invoke('/user/update-user',[{
+            return SessionService.invoke({'/user/update-user':{
                 userId:userId
                 ,oldPassword:oldPassword
                 ,newPassword1:newPassword1
@@ -10392,7 +10303,7 @@
                 ,websites:websites
                 ,announcementsDelivers:announcementsDelivers
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -10407,76 +10318,76 @@
         var service = {};
         // Begin generated service methods
         service.addGroupUserGroups = function(groupId,userGroupIds) {
-            return SessionService.invoke('/usergroup/add-group-user-groups',[{
+            return SessionService.invoke({'/usergroup/add-group-user-groups':{
                 groupId:groupId
                 ,userGroupIds:userGroupIds
-            }]);
+            }});
         };
         service.addTeamUserGroups = function(teamId,userGroupIds) {
-            return SessionService.invoke('/usergroup/add-team-user-groups',[{
+            return SessionService.invoke({'/usergroup/add-team-user-groups':{
                 teamId:teamId
                 ,userGroupIds:userGroupIds
-            }]);
+            }});
         };
         service.addUserGroup = function(name,description) {
-            return SessionService.invoke('/usergroup/add-user-group',[{
+            return SessionService.invoke({'/usergroup/add-user-group':{
                 name:name
                 ,description:description
-            }]);
+            }});
         };
         service.addUserGroup = function(name,description,serviceContext) {
-            return SessionService.invoke('/usergroup/add-user-group',[{
+            return SessionService.invoke({'/usergroup/add-user-group':{
                 name:name
                 ,description:description
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteUserGroup = function(userGroupId) {
-            return SessionService.invoke('/usergroup/delete-user-group',[{
+            return SessionService.invoke({'/usergroup/delete-user-group':{
                 userGroupId:userGroupId
-            }]);
+            }});
         };
         service.getUserGroup = function(name) {
-            return SessionService.invoke('/usergroup/get-user-group',[{
+            return SessionService.invoke({'/usergroup/get-user-group':{
                 name:name
-            }]);
+            }});
         };
         service.getUserGroup = function(userGroupId) {
-            return SessionService.invoke('/usergroup/get-user-group',[{
+            return SessionService.invoke({'/usergroup/get-user-group':{
                 userGroupId:userGroupId
-            }]);
+            }});
         };
         service.getUserUserGroups = function(userId) {
-            return SessionService.invoke('/usergroup/get-user-user-groups',[{
+            return SessionService.invoke({'/usergroup/get-user-user-groups':{
                 userId:userId
-            }]);
+            }});
         };
         service.unsetGroupUserGroups = function(groupId,userGroupIds) {
-            return SessionService.invoke('/usergroup/unset-group-user-groups',[{
+            return SessionService.invoke({'/usergroup/unset-group-user-groups':{
                 groupId:groupId
                 ,userGroupIds:userGroupIds
-            }]);
+            }});
         };
         service.unsetTeamUserGroups = function(teamId,userGroupIds) {
-            return SessionService.invoke('/usergroup/unset-team-user-groups',[{
+            return SessionService.invoke({'/usergroup/unset-team-user-groups':{
                 teamId:teamId
                 ,userGroupIds:userGroupIds
-            }]);
+            }});
         };
         service.updateUserGroup = function(userGroupId,name,description) {
-            return SessionService.invoke('/usergroup/update-user-group',[{
+            return SessionService.invoke({'/usergroup/update-user-group':{
                 userGroupId:userGroupId
                 ,name:name
                 ,description:description
-            }]);
+            }});
         };
         service.updateUserGroup = function(userGroupId,name,description,serviceContext) {
-            return SessionService.invoke('/usergroup/update-user-group',[{
+            return SessionService.invoke({'/usergroup/update-user-group':{
                 userGroupId:userGroupId
                 ,name:name
                 ,description:description
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -10491,32 +10402,32 @@
         var service = {};
         // Begin generated service methods
         service.addUserGroupGroupRoles = function(userGroupId,groupId,roleIds) {
-            return SessionService.invoke('/usergroupgrouprole/add-user-group-group-roles',[{
+            return SessionService.invoke({'/usergroupgrouprole/add-user-group-group-roles':{
                 userGroupId:userGroupId
                 ,groupId:groupId
                 ,roleIds:roleIds
-            }]);
+            }});
         };
         service.addUserGroupGroupRoles = function(userGroupIds,groupId,roleId) {
-            return SessionService.invoke('/usergroupgrouprole/add-user-group-group-roles',[{
+            return SessionService.invoke({'/usergroupgrouprole/add-user-group-group-roles':{
                 userGroupIds:userGroupIds
                 ,groupId:groupId
                 ,roleId:roleId
-            }]);
+            }});
         };
         service.deleteUserGroupGroupRoles = function(userGroupId,groupId,roleIds) {
-            return SessionService.invoke('/usergroupgrouprole/delete-user-group-group-roles',[{
+            return SessionService.invoke({'/usergroupgrouprole/delete-user-group-group-roles':{
                 userGroupId:userGroupId
                 ,groupId:groupId
                 ,roleIds:roleIds
-            }]);
+            }});
         };
         service.deleteUserGroupGroupRoles = function(userGroupIds,groupId,roleId) {
-            return SessionService.invoke('/usergroupgrouprole/delete-user-group-group-roles',[{
+            return SessionService.invoke({'/usergroupgrouprole/delete-user-group-group-roles':{
                 userGroupIds:userGroupIds
                 ,groupId:groupId
                 ,roleId:roleId
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -10531,32 +10442,32 @@
         var service = {};
         // Begin generated service methods
         service.addUserGroupRoles = function(userId,groupId,roleIds) {
-            return SessionService.invoke('/usergrouprole/add-user-group-roles',[{
+            return SessionService.invoke({'/usergrouprole/add-user-group-roles':{
                 userId:userId
                 ,groupId:groupId
                 ,roleIds:roleIds
-            }]);
+            }});
         };
         service.addUserGroupRoles = function(userIds,groupId,roleId) {
-            return SessionService.invoke('/usergrouprole/add-user-group-roles',[{
+            return SessionService.invoke({'/usergrouprole/add-user-group-roles':{
                 userIds:userIds
                 ,groupId:groupId
                 ,roleId:roleId
-            }]);
+            }});
         };
         service.deleteUserGroupRoles = function(userId,groupId,roleIds) {
-            return SessionService.invoke('/usergrouprole/delete-user-group-roles',[{
+            return SessionService.invoke({'/usergrouprole/delete-user-group-roles':{
                 userId:userId
                 ,groupId:groupId
                 ,roleIds:roleIds
-            }]);
+            }});
         };
         service.deleteUserGroupRoles = function(userIds,groupId,roleId) {
-            return SessionService.invoke('/usergrouprole/delete-user-group-roles',[{
+            return SessionService.invoke({'/usergrouprole/delete-user-group-roles':{
                 userIds:userIds
                 ,groupId:groupId
                 ,roleId:roleId
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -10571,47 +10482,47 @@
         var service = {};
         // Begin generated service methods
         service.addWebsite = function(className,classPK,url,typeId,primary) {
-            return SessionService.invoke('/website/add-website',[{
+            return SessionService.invoke({'/website/add-website':{
                 className:className
                 ,classPK:classPK
                 ,url:url
                 ,typeId:typeId
                 ,primary:primary
-            }]);
+            }});
         };
         service.addWebsite = function(className,classPK,url,typeId,primary,serviceContext) {
-            return SessionService.invoke('/website/add-website',[{
+            return SessionService.invoke({'/website/add-website':{
                 className:className
                 ,classPK:classPK
                 ,url:url
                 ,typeId:typeId
                 ,primary:primary
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteWebsite = function(websiteId) {
-            return SessionService.invoke('/website/delete-website',[{
+            return SessionService.invoke({'/website/delete-website':{
                 websiteId:websiteId
-            }]);
+            }});
         };
         service.getWebsite = function(websiteId) {
-            return SessionService.invoke('/website/get-website',[{
+            return SessionService.invoke({'/website/get-website':{
                 websiteId:websiteId
-            }]);
+            }});
         };
         service.getWebsites = function(className,classPK) {
-            return SessionService.invoke('/website/get-websites',[{
+            return SessionService.invoke({'/website/get-websites':{
                 className:className
                 ,classPK:classPK
-            }]);
+            }});
         };
         service.updateWebsite = function(websiteId,url,typeId,primary) {
-            return SessionService.invoke('/website/update-website',[{
+            return SessionService.invoke({'/website/update-website':{
                 websiteId:websiteId
                 ,url:url
                 ,typeId:typeId
                 ,primary:primary
-            }]);
+            }});
         };
         
         // End generated service methods
@@ -10626,92 +10537,92 @@
         var service = {};
         // Begin generated service methods
         service.addNode = function(name,description,serviceContext) {
-            return SessionService.invoke('/wikinode/add-node',[{
+            return SessionService.invoke({'/wikinode/add-node':{
                 name:name
                 ,description:description
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteNode = function(nodeId) {
-            return SessionService.invoke('/wikinode/delete-node',[{
+            return SessionService.invoke({'/wikinode/delete-node':{
                 nodeId:nodeId
-            }]);
+            }});
         };
         service.getNode = function(nodeId) {
-            return SessionService.invoke('/wikinode/get-node',[{
+            return SessionService.invoke({'/wikinode/get-node':{
                 nodeId:nodeId
-            }]);
+            }});
         };
         service.getNode = function(groupId,name) {
-            return SessionService.invoke('/wikinode/get-node',[{
+            return SessionService.invoke({'/wikinode/get-node':{
                 groupId:groupId
                 ,name:name
-            }]);
+            }});
         };
         service.getNodes = function(groupId) {
-            return SessionService.invoke('/wikinode/get-nodes',[{
+            return SessionService.invoke({'/wikinode/get-nodes':{
                 groupId:groupId
-            }]);
+            }});
         };
         service.getNodes = function(groupId,status) {
-            return SessionService.invoke('/wikinode/get-nodes',[{
+            return SessionService.invoke({'/wikinode/get-nodes':{
                 groupId:groupId
                 ,status:status
-            }]);
+            }});
         };
         service.getNodes = function(groupId,start,end) {
-            return SessionService.invoke('/wikinode/get-nodes',[{
+            return SessionService.invoke({'/wikinode/get-nodes':{
                 groupId:groupId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getNodes = function(groupId,status,start,end) {
-            return SessionService.invoke('/wikinode/get-nodes',[{
+            return SessionService.invoke({'/wikinode/get-nodes':{
                 groupId:groupId
                 ,status:status
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getNodesCount = function(groupId) {
-            return SessionService.invoke('/wikinode/get-nodes-count',[{
+            return SessionService.invoke({'/wikinode/get-nodes-count':{
                 groupId:groupId
-            }]);
+            }});
         };
         service.getNodesCount = function(groupId,status) {
-            return SessionService.invoke('/wikinode/get-nodes-count',[{
+            return SessionService.invoke({'/wikinode/get-nodes-count':{
                 groupId:groupId
                 ,status:status
-            }]);
+            }});
         };
         service.moveNodeToTrash = function(nodeId) {
-            return SessionService.invoke('/wikinode/move-node-to-trash',[{
+            return SessionService.invoke({'/wikinode/move-node-to-trash':{
                 nodeId:nodeId
-            }]);
+            }});
         };
         service.restoreNodeFromTrash = function(nodeId) {
-            return SessionService.invoke('/wikinode/restore-node-from-trash',[{
+            return SessionService.invoke({'/wikinode/restore-node-from-trash':{
                 nodeId:nodeId
-            }]);
+            }});
         };
         service.subscribeNode = function(nodeId) {
-            return SessionService.invoke('/wikinode/subscribe-node',[{
+            return SessionService.invoke({'/wikinode/subscribe-node':{
                 nodeId:nodeId
-            }]);
+            }});
         };
         service.unsubscribeNode = function(nodeId) {
-            return SessionService.invoke('/wikinode/unsubscribe-node',[{
+            return SessionService.invoke({'/wikinode/unsubscribe-node':{
                 nodeId:nodeId
-            }]);
+            }});
         };
         service.updateNode = function(nodeId,name,description,serviceContext) {
-            return SessionService.invoke('/wikinode/update-node',[{
+            return SessionService.invoke({'/wikinode/update-node':{
                 nodeId:nodeId
                 ,name:name
                 ,description:description
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods

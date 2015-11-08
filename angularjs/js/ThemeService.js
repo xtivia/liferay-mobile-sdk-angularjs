@@ -6,14 +6,14 @@
         var service = {};
         // Begin generated service methods
         service.getThemes = function(companyId) {
-            return SessionService.invoke('/theme/get-themes',[{
+            return SessionService.invoke({'/theme/get-themes':{
                 companyId:companyId
-            }]);
+            }});
         };
         service.getWarThemes = function() {
-            return SessionService.invoke('/theme/get-war-themes',[{
+            return SessionService.invoke({'/theme/get-war-themes':{
                 
-            }]);
+            }});
         };
         
         // End generated service methods
