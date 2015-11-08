@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addCoupon = function(code,autoCode,name,description,startDateMonth,startDateDay,startDateYear,startDateHour,startDateMinute,endDateMonth,endDateDay,endDateYear,endDateHour,endDateMinute,neverExpire,active,limitCategories,limitSkus,minOrder,discount,discountType,serviceContext) {
-            return SessionService.invoke('/shoppingcoupon/add-coupon',[{
+            return SessionService.invoke({'/shoppingcoupon/add-coupon':{
                 code:code
                 ,autoCode:autoCode
                 ,name:name
@@ -29,22 +29,22 @@
                 ,discount:discount
                 ,discountType:discountType
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteCoupon = function(groupId,couponId) {
-            return SessionService.invoke('/shoppingcoupon/delete-coupon',[{
+            return SessionService.invoke({'/shoppingcoupon/delete-coupon':{
                 groupId:groupId
                 ,couponId:couponId
-            }]);
+            }});
         };
         service.getCoupon = function(groupId,couponId) {
-            return SessionService.invoke('/shoppingcoupon/get-coupon',[{
+            return SessionService.invoke({'/shoppingcoupon/get-coupon':{
                 groupId:groupId
                 ,couponId:couponId
-            }]);
+            }});
         };
         service.search = function(groupId,companyId,code,active,discountType,andOperator,start,end) {
-            return SessionService.invoke('/shoppingcoupon/search',[{
+            return SessionService.invoke({'/shoppingcoupon/search':{
                 groupId:groupId
                 ,companyId:companyId
                 ,code:code
@@ -53,10 +53,10 @@
                 ,andOperator:andOperator
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.updateCoupon = function(couponId,name,description,startDateMonth,startDateDay,startDateYear,startDateHour,startDateMinute,endDateMonth,endDateDay,endDateYear,endDateHour,endDateMinute,neverExpire,active,limitCategories,limitSkus,minOrder,discount,discountType,serviceContext) {
-            return SessionService.invoke('/shoppingcoupon/update-coupon',[{
+            return SessionService.invoke({'/shoppingcoupon/update-coupon':{
                 couponId:couponId
                 ,name:name
                 ,description:description
@@ -78,7 +78,7 @@
                 ,discount:discount
                 ,discountType:discountType
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods

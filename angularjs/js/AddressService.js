@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addAddress = function(className,classPK,street1,street2,street3,city,zip,regionId,countryId,typeId,mailing,primary) {
-            return SessionService.invoke('/address/add-address',[{
+            return SessionService.invoke({'/address/add-address':{
                 className:className
                 ,classPK:classPK
                 ,street1:street1
@@ -19,10 +19,10 @@
                 ,typeId:typeId
                 ,mailing:mailing
                 ,primary:primary
-            }]);
+            }});
         };
         service.addAddress = function(className,classPK,street1,street2,street3,city,zip,regionId,countryId,typeId,mailing,primary,serviceContext) {
-            return SessionService.invoke('/address/add-address',[{
+            return SessionService.invoke({'/address/add-address':{
                 className:className
                 ,classPK:classPK
                 ,street1:street1
@@ -36,26 +36,26 @@
                 ,mailing:mailing
                 ,primary:primary
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteAddress = function(addressId) {
-            return SessionService.invoke('/address/delete-address',[{
+            return SessionService.invoke({'/address/delete-address':{
                 addressId:addressId
-            }]);
+            }});
         };
         service.getAddress = function(addressId) {
-            return SessionService.invoke('/address/get-address',[{
+            return SessionService.invoke({'/address/get-address':{
                 addressId:addressId
-            }]);
+            }});
         };
         service.getAddresses = function(className,classPK) {
-            return SessionService.invoke('/address/get-addresses',[{
+            return SessionService.invoke({'/address/get-addresses':{
                 className:className
                 ,classPK:classPK
-            }]);
+            }});
         };
         service.updateAddress = function(addressId,street1,street2,street3,city,zip,regionId,countryId,typeId,mailing,primary) {
-            return SessionService.invoke('/address/update-address',[{
+            return SessionService.invoke({'/address/update-address':{
                 addressId:addressId
                 ,street1:street1
                 ,street2:street2
@@ -67,7 +67,7 @@
                 ,typeId:typeId
                 ,mailing:mailing
                 ,primary:primary
-            }]);
+            }});
         };
         
         // End generated service methods

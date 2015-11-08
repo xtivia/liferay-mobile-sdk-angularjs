@@ -6,19 +6,19 @@
         var service = {};
         // Begin generated service methods
         service.fetchClassName = function(value) {
-            return SessionService.invoke('/classname/fetch-class-name',[{
+            return SessionService.invoke({'/classname/fetch-class-name':{
                 value:value
-            }]);
+            }});
         };
         service.fetchClassNameId = function(clazz) {
-            return SessionService.invoke('/classname/fetch-class-name-id',[{
+            return SessionService.invoke({'/classname/fetch-class-name-id':{
                 clazz:clazz
-            }]);
+            }});
         };
         service.fetchClassNameId = function(value) {
-            return SessionService.invoke('/classname/fetch-class-name-id',[{
+            return SessionService.invoke({'/classname/fetch-class-name-id':{
                 value:value
-            }]);
+            }});
         };
         
         // End generated service methods
