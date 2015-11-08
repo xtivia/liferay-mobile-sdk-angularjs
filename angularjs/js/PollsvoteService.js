@@ -6,11 +6,11 @@
         var service = {};
         // Begin generated service methods
         service.addVote = function(questionId,choiceId,serviceContext) {
-            return SessionService.invoke('/pollsvote/add-vote',[{
+            return SessionService.invoke({'/pollsvote/add-vote':{
                 questionId:questionId
                 ,choiceId:choiceId
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods

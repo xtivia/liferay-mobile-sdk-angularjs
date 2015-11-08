@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addEntry = function(className,classPK,reporterEmailAddress,reportedUserId,contentTitle,contentURL,reason,serviceContext) {
-            return SessionService.invoke('/flagsentry/add-entry',[{
+            return SessionService.invoke({'/flagsentry/add-entry':{
                 className:className
                 ,classPK:classPK
                 ,reporterEmailAddress:reporterEmailAddress
@@ -15,7 +15,7 @@
                 ,contentURL:contentURL
                 ,reason:reason
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods

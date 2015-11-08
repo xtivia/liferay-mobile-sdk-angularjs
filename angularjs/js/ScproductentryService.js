@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addProductEntry = function(name,type,tags,shortDescription,longDescription,pageURL,author,repoGroupId,repoArtifactId,licenseIds,thumbnails,fullImages,serviceContext) {
-            return SessionService.invoke('/scproductentry/add-product-entry',[{
+            return SessionService.invoke({'/scproductentry/add-product-entry':{
                 name:name
                 ,type:type
                 ,tags:tags
@@ -20,20 +20,20 @@
                 ,thumbnails:thumbnails
                 ,fullImages:fullImages
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteProductEntry = function(productEntryId) {
-            return SessionService.invoke('/scproductentry/delete-product-entry',[{
+            return SessionService.invoke({'/scproductentry/delete-product-entry':{
                 productEntryId:productEntryId
-            }]);
+            }});
         };
         service.getProductEntry = function(productEntryId) {
-            return SessionService.invoke('/scproductentry/get-product-entry',[{
+            return SessionService.invoke({'/scproductentry/get-product-entry':{
                 productEntryId:productEntryId
-            }]);
+            }});
         };
         service.updateProductEntry = function(productEntryId,name,type,tags,shortDescription,longDescription,pageURL,author,repoGroupId,repoArtifactId,licenseIds,thumbnails,fullImages) {
-            return SessionService.invoke('/scproductentry/update-product-entry',[{
+            return SessionService.invoke({'/scproductentry/update-product-entry':{
                 productEntryId:productEntryId
                 ,name:name
                 ,type:type
@@ -47,7 +47,7 @@
                 ,licenseIds:licenseIds
                 ,thumbnails:thumbnails
                 ,fullImages:fullImages
-            }]);
+            }});
         };
         
         // End generated service methods

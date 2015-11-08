@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addPasswordPolicy = function(name,description,changeable,changeRequired,minAge,checkSyntax,allowDictionaryWords,minAlphanumeric,minLength,minLowerCase,minNumbers,minSymbols,minUpperCase,history,historyCount,expireable,maxAge,warningTime,graceLimit,lockout,maxFailure,lockoutDuration,resetFailureCount,resetTicketMaxAge) {
-            return SessionService.invoke('/passwordpolicy/add-password-policy',[{
+            return SessionService.invoke({'/passwordpolicy/add-password-policy':{
                 name:name
                 ,description:description
                 ,changeable:changeable
@@ -31,10 +31,10 @@
                 ,lockoutDuration:lockoutDuration
                 ,resetFailureCount:resetFailureCount
                 ,resetTicketMaxAge:resetTicketMaxAge
-            }]);
+            }});
         };
         service.addPasswordPolicy = function(name,description,changeable,changeRequired,minAge,checkSyntax,allowDictionaryWords,minAlphanumeric,minLength,minLowerCase,minNumbers,minSymbols,minUpperCase,regex,history,historyCount,expireable,maxAge,warningTime,graceLimit,lockout,maxFailure,lockoutDuration,resetFailureCount,resetTicketMaxAge,serviceContext) {
-            return SessionService.invoke('/passwordpolicy/add-password-policy',[{
+            return SessionService.invoke({'/passwordpolicy/add-password-policy':{
                 name:name
                 ,description:description
                 ,changeable:changeable
@@ -61,15 +61,15 @@
                 ,resetFailureCount:resetFailureCount
                 ,resetTicketMaxAge:resetTicketMaxAge
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deletePasswordPolicy = function(passwordPolicyId) {
-            return SessionService.invoke('/passwordpolicy/delete-password-policy',[{
+            return SessionService.invoke({'/passwordpolicy/delete-password-policy':{
                 passwordPolicyId:passwordPolicyId
-            }]);
+            }});
         };
         service.updatePasswordPolicy = function(passwordPolicyId,name,description,changeable,changeRequired,minAge,checkSyntax,allowDictionaryWords,minAlphanumeric,minLength,minLowerCase,minNumbers,minSymbols,minUpperCase,history,historyCount,expireable,maxAge,warningTime,graceLimit,lockout,maxFailure,lockoutDuration,resetFailureCount,resetTicketMaxAge) {
-            return SessionService.invoke('/passwordpolicy/update-password-policy',[{
+            return SessionService.invoke({'/passwordpolicy/update-password-policy':{
                 passwordPolicyId:passwordPolicyId
                 ,name:name
                 ,description:description
@@ -95,10 +95,10 @@
                 ,lockoutDuration:lockoutDuration
                 ,resetFailureCount:resetFailureCount
                 ,resetTicketMaxAge:resetTicketMaxAge
-            }]);
+            }});
         };
         service.updatePasswordPolicy = function(passwordPolicyId,name,description,changeable,changeRequired,minAge,checkSyntax,allowDictionaryWords,minAlphanumeric,minLength,minLowerCase,minNumbers,minSymbols,minUpperCase,regex,history,historyCount,expireable,maxAge,warningTime,graceLimit,lockout,maxFailure,lockoutDuration,resetFailureCount,resetTicketMaxAge,serviceContext) {
-            return SessionService.invoke('/passwordpolicy/update-password-policy',[{
+            return SessionService.invoke({'/passwordpolicy/update-password-policy':{
                 passwordPolicyId:passwordPolicyId
                 ,name:name
                 ,description:description
@@ -126,7 +126,7 @@
                 ,resetFailureCount:resetFailureCount
                 ,resetTicketMaxAge:resetTicketMaxAge
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods

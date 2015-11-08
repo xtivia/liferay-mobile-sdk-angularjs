@@ -6,7 +6,7 @@
         var service = {};
         // Begin generated service methods
         service.addCategory = function(parentCategoryId,name,description,displayStyle,emailAddress,inProtocol,inServerName,inServerPort,inUseSSL,inUserName,inPassword,inReadInterval,outEmailAddress,outCustom,outServerName,outServerPort,outUseSSL,outUserName,outPassword,mailingListActive,allowAnonymousEmail,serviceContext) {
-            return SessionService.invoke('/mbcategory/add-category',[{
+            return SessionService.invoke({'/mbcategory/add-category':{
                 parentCategoryId:parentCategoryId
                 ,name:name
                 ,description:description
@@ -29,169 +29,169 @@
                 ,mailingListActive:mailingListActive
                 ,allowAnonymousEmail:allowAnonymousEmail
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.addCategory = function(userId,parentCategoryId,name,description,serviceContext) {
-            return SessionService.invoke('/mbcategory/add-category',[{
+            return SessionService.invoke({'/mbcategory/add-category':{
                 userId:userId
                 ,parentCategoryId:parentCategoryId
                 ,name:name
                 ,description:description
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         service.deleteCategory = function(categoryId,includeTrashedEntries) {
-            return SessionService.invoke('/mbcategory/delete-category',[{
+            return SessionService.invoke({'/mbcategory/delete-category':{
                 categoryId:categoryId
                 ,includeTrashedEntries:includeTrashedEntries
-            }]);
+            }});
         };
         service.deleteCategory = function(groupId,categoryId) {
-            return SessionService.invoke('/mbcategory/delete-category',[{
+            return SessionService.invoke({'/mbcategory/delete-category':{
                 groupId:groupId
                 ,categoryId:categoryId
-            }]);
+            }});
         };
         service.getCategories = function(groupId) {
-            return SessionService.invoke('/mbcategory/get-categories',[{
+            return SessionService.invoke({'/mbcategory/get-categories':{
                 groupId:groupId
-            }]);
+            }});
         };
         service.getCategories = function(groupId,status) {
-            return SessionService.invoke('/mbcategory/get-categories',[{
+            return SessionService.invoke({'/mbcategory/get-categories':{
                 groupId:groupId
                 ,status:status
-            }]);
+            }});
         };
         service.getCategories = function(groupId,parentCategoryId,start,end) {
-            return SessionService.invoke('/mbcategory/get-categories',[{
+            return SessionService.invoke({'/mbcategory/get-categories':{
                 groupId:groupId
                 ,parentCategoryId:parentCategoryId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getCategories = function(groupId,parentCategoryIds,start,end) {
-            return SessionService.invoke('/mbcategory/get-categories',[{
+            return SessionService.invoke({'/mbcategory/get-categories':{
                 groupId:groupId
                 ,parentCategoryIds:parentCategoryIds
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getCategories = function(groupId,parentCategoryId,status,start,end) {
-            return SessionService.invoke('/mbcategory/get-categories',[{
+            return SessionService.invoke({'/mbcategory/get-categories':{
                 groupId:groupId
                 ,parentCategoryId:parentCategoryId
                 ,status:status
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getCategories = function(groupId,parentCategoryIds,status,start,end) {
-            return SessionService.invoke('/mbcategory/get-categories',[{
+            return SessionService.invoke({'/mbcategory/get-categories':{
                 groupId:groupId
                 ,parentCategoryIds:parentCategoryIds
                 ,status:status
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getCategoriesCount = function(groupId,parentCategoryId) {
-            return SessionService.invoke('/mbcategory/get-categories-count',[{
+            return SessionService.invoke({'/mbcategory/get-categories-count':{
                 groupId:groupId
                 ,parentCategoryId:parentCategoryId
-            }]);
+            }});
         };
         service.getCategoriesCount = function(groupId,parentCategoryIds) {
-            return SessionService.invoke('/mbcategory/get-categories-count',[{
+            return SessionService.invoke({'/mbcategory/get-categories-count':{
                 groupId:groupId
                 ,parentCategoryIds:parentCategoryIds
-            }]);
+            }});
         };
         service.getCategoriesCount = function(groupId,parentCategoryId,status) {
-            return SessionService.invoke('/mbcategory/get-categories-count',[{
+            return SessionService.invoke({'/mbcategory/get-categories-count':{
                 groupId:groupId
                 ,parentCategoryId:parentCategoryId
                 ,status:status
-            }]);
+            }});
         };
         service.getCategoriesCount = function(groupId,parentCategoryIds,status) {
-            return SessionService.invoke('/mbcategory/get-categories-count',[{
+            return SessionService.invoke({'/mbcategory/get-categories-count':{
                 groupId:groupId
                 ,parentCategoryIds:parentCategoryIds
                 ,status:status
-            }]);
+            }});
         };
         service.getCategory = function(categoryId) {
-            return SessionService.invoke('/mbcategory/get-category',[{
+            return SessionService.invoke({'/mbcategory/get-category':{
                 categoryId:categoryId
-            }]);
+            }});
         };
         service.getCategoryIds = function(groupId,categoryId) {
-            return SessionService.invoke('/mbcategory/get-category-ids',[{
+            return SessionService.invoke({'/mbcategory/get-category-ids':{
                 groupId:groupId
                 ,categoryId:categoryId
-            }]);
+            }});
         };
         service.getSubcategoryIds = function(categoryIds,groupId,categoryId) {
-            return SessionService.invoke('/mbcategory/get-subcategory-ids',[{
+            return SessionService.invoke({'/mbcategory/get-subcategory-ids':{
                 categoryIds:categoryIds
                 ,groupId:groupId
                 ,categoryId:categoryId
-            }]);
+            }});
         };
         service.getSubscribedCategories = function(groupId,userId,start,end) {
-            return SessionService.invoke('/mbcategory/get-subscribed-categories',[{
+            return SessionService.invoke({'/mbcategory/get-subscribed-categories':{
                 groupId:groupId
                 ,userId:userId
                 ,start:start
                 ,end:end
-            }]);
+            }});
         };
         service.getSubscribedCategoriesCount = function(groupId,userId) {
-            return SessionService.invoke('/mbcategory/get-subscribed-categories-count',[{
+            return SessionService.invoke({'/mbcategory/get-subscribed-categories-count':{
                 groupId:groupId
                 ,userId:userId
-            }]);
+            }});
         };
         service.moveCategory = function(categoryId,parentCategoryId,mergeWithParentCategory) {
-            return SessionService.invoke('/mbcategory/move-category',[{
+            return SessionService.invoke({'/mbcategory/move-category':{
                 categoryId:categoryId
                 ,parentCategoryId:parentCategoryId
                 ,mergeWithParentCategory:mergeWithParentCategory
-            }]);
+            }});
         };
         service.moveCategoryFromTrash = function(categoryId,newCategoryId) {
-            return SessionService.invoke('/mbcategory/move-category-from-trash',[{
+            return SessionService.invoke({'/mbcategory/move-category-from-trash':{
                 categoryId:categoryId
                 ,newCategoryId:newCategoryId
-            }]);
+            }});
         };
         service.moveCategoryToTrash = function(categoryId) {
-            return SessionService.invoke('/mbcategory/move-category-to-trash',[{
+            return SessionService.invoke({'/mbcategory/move-category-to-trash':{
                 categoryId:categoryId
-            }]);
+            }});
         };
         service.restoreCategoryFromTrash = function(categoryId) {
-            return SessionService.invoke('/mbcategory/restore-category-from-trash',[{
+            return SessionService.invoke({'/mbcategory/restore-category-from-trash':{
                 categoryId:categoryId
-            }]);
+            }});
         };
         service.subscribeCategory = function(groupId,categoryId) {
-            return SessionService.invoke('/mbcategory/subscribe-category',[{
+            return SessionService.invoke({'/mbcategory/subscribe-category':{
                 groupId:groupId
                 ,categoryId:categoryId
-            }]);
+            }});
         };
         service.unsubscribeCategory = function(groupId,categoryId) {
-            return SessionService.invoke('/mbcategory/unsubscribe-category',[{
+            return SessionService.invoke({'/mbcategory/unsubscribe-category':{
                 groupId:groupId
                 ,categoryId:categoryId
-            }]);
+            }});
         };
         service.updateCategory = function(categoryId,parentCategoryId,name,description,displayStyle,emailAddress,inProtocol,inServerName,inServerPort,inUseSSL,inUserName,inPassword,inReadInterval,outEmailAddress,outCustom,outServerName,outServerPort,outUseSSL,outUserName,outPassword,mailingListActive,allowAnonymousEmail,mergeWithParentCategory,serviceContext) {
-            return SessionService.invoke('/mbcategory/update-category',[{
+            return SessionService.invoke({'/mbcategory/update-category':{
                 categoryId:categoryId
                 ,parentCategoryId:parentCategoryId
                 ,name:name
@@ -216,7 +216,7 @@
                 ,allowAnonymousEmail:allowAnonymousEmail
                 ,mergeWithParentCategory:mergeWithParentCategory
                 ,serviceContext:serviceContext
-            }]);
+            }});
         };
         
         // End generated service methods
