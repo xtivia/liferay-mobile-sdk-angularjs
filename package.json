@@ -1,8 +1,21 @@
 {
   "name": "liferay-mobile-sdk-angularjs",
-  "version": "0.0.1",
-  "description": "Generate AngularJS services for Liferay SDK Sercvices and Custom Services based on Lifray SDK",
+  "version": "0.2.0",
+  "description": "Generate AngularJS services for Liferay SDK Services and Custom Services based on Lifray SDK",
   "main": "src/index.js",
+  "keywords": [
+    "liferay",
+    "angularjs",
+    "mobile",
+    "framework",
+    "web",
+    "js",
+    "front-end"
+  ],
+  "homepage": "http://www.xtivia.com",
+  "author": {"name":"Donald Lamar Davis II","email":"ddavis@xtivia.com","url":"https://blogs.xtivia.com/donald-lamar-davis-ii"},
+  "bugs": { "url": "https://github.com/ddavis2xtivia/liferay-mobile-sdk-angularjs/issues" },
+  "license": "SEE LICENSE IN LICENSE",
   "dependencies": {
     "gulp": "^3.9.0",
     "gulp-jasmine": "^2.1.0",

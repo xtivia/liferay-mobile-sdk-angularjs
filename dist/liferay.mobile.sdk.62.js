@@ -6,7 +6,6 @@
 })();
 (function() {
     'use strict';
-    // Used only for the BottomSheetExample
     angular
         .module('mobile.sdk.v62')
     ;
@@ -208,7 +207,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('AddressService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -284,7 +283,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('AnnouncementsdeliveryService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -305,7 +304,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('AnnouncementsentryService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -395,7 +394,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('AnnouncementsflagService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -424,7 +423,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('AssetcategoryService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -648,7 +647,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('AssetcategorypropertyService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -690,7 +689,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('AssetentryService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -813,7 +812,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('AssettagService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -987,7 +986,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('AssettagpropertyService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -1029,7 +1028,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('AssetvocabularyService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -1192,7 +1191,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('BackgroundtaskService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -1216,7 +1215,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('BlogsentryService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -1376,7 +1375,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('BookmarksentryService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -1548,7 +1547,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('BookmarksfolderService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -1724,7 +1723,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('ClassnameService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -1751,7 +1750,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('CompanyService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -1832,7 +1831,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('ContactService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -1864,7 +1863,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('CountryService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -1931,7 +1930,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('DdlrecordService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -2004,7 +2003,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('DdlrecordsetService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -2108,7 +2107,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('DdmstructureService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -2298,7 +2297,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('DdmtemplateService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -2578,7 +2577,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('DlappService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -3400,7 +3399,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('DlfileentryService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -3716,7 +3715,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('DlfileentrytypeService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -3818,7 +3817,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('DlfileshortcutService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -3856,7 +3855,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('DlfileversionService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -3890,7 +3889,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('DlfolderService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -4149,7 +4148,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('EmailaddressService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -4204,7 +4203,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('ExpandocolumnService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -4257,7 +4256,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('ExpandovalueService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -4315,7 +4314,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('FlagsentryService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -4339,7 +4338,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('GroupService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -4627,7 +4626,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('ImageService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -4644,7 +4643,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('JournalarticleService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -5281,7 +5280,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('JournalfeedService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -5358,7 +5357,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('JournalfolderService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -5536,7 +5535,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('JournalstructureService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -5648,7 +5647,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('JournaltemplateService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -5805,7 +5804,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('LayoutService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -6318,7 +6317,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('LayoutbranchService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -6352,7 +6351,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('LayoutprototypeService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -6413,7 +6412,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('LayoutrevisionService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -6451,7 +6450,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('LayoutsetService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -6511,7 +6510,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('LayoutsetbranchService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -6561,7 +6560,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('LayoutsetprototypeService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -6615,7 +6614,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('ListtypeService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -6650,7 +6649,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('MbbanService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -6674,7 +6673,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('MbcategoryService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -6899,7 +6898,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('MbmessageService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -7173,7 +7172,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('MbthreadService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -7337,7 +7336,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('MdractionService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -7404,7 +7403,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('MdrruleService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -7461,7 +7460,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('MdrrulegroupService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -7511,7 +7510,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('MdrrulegroupinstanceService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -7568,7 +7567,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('MembershiprequestService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -7606,7 +7605,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('OrganizationService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -7832,7 +7831,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('OrglaborService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -7899,7 +7898,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('PasswordpolicyService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -8034,7 +8033,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('PermissionService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -8053,7 +8052,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('PhoneService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -8111,7 +8110,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('PluginsettingService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -8132,7 +8131,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('PollsquestionService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -8183,7 +8182,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('PollsvoteService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -8202,7 +8201,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('PortalService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -8274,7 +8273,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('PortletService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -8299,7 +8298,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('PortletpreferencesService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -8352,7 +8351,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('RatingsentryService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -8377,7 +8376,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('RegionService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -8435,7 +8434,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('RepositoryService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -8521,7 +8520,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('ResourceblockService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -8638,7 +8637,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('ResourcepermissionService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -8701,7 +8700,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('RoleService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -8815,7 +8814,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('ScframeworkversionService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -8869,7 +8868,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('SclicenseService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -8910,7 +8909,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('ScproductentryService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -8966,7 +8965,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('ScproductversionService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -9025,7 +9024,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('ShoppingcategoryService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -9091,7 +9090,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('ShoppingcouponService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -9178,7 +9177,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('ShoppingitemService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -9295,7 +9294,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('ShoppingorderService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -9384,7 +9383,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('SocialactivityService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -9591,7 +9590,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('SocialactivitysettingService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -9650,7 +9649,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('SocialrequestService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -9669,7 +9668,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('StagingService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -9713,7 +9712,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('TeamService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -9777,7 +9776,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('ThemeService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -9799,7 +9798,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('TrashentryService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -9865,7 +9864,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('UserService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -10402,7 +10401,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('UsergroupService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -10486,7 +10485,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('UsergroupgrouproleService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -10526,7 +10525,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('UsergrouproleService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -10566,7 +10565,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('WebsiteService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -10621,7 +10620,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('WikinodeService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
@@ -10710,6 +10709,354 @@
                 nodeId:nodeId
                 ,name:name
                 ,description:description
+                ,serviceContext:serviceContext
+            }});
+        };
+        
+        // End generated service methods
+        return service;
+    }])
+})();
+(function() {
+    'use strict';
+    angular
+    .module('mobile.sdk.v62')
+    .factory('WikipageService', ['SessionService', function (SessionService) {
+        var service = {};
+        // Begin generated service methods
+        service.addPage = function(nodeId,title,content,summary,minorEdit,serviceContext) {
+            return SessionService.invoke({'/wikipage/add-page':{
+                nodeId:nodeId
+                ,title:title
+                ,content:content
+                ,summary:summary
+                ,minorEdit:minorEdit
+                ,serviceContext:serviceContext
+            }});
+        };
+        service.addPage = function(nodeId,title,content,summary,minorEdit,format,parentTitle,redirectTitle,serviceContext) {
+            return SessionService.invoke({'/wikipage/add-page':{
+                nodeId:nodeId
+                ,title:title
+                ,content:content
+                ,summary:summary
+                ,minorEdit:minorEdit
+                ,format:format
+                ,parentTitle:parentTitle
+                ,redirectTitle:redirectTitle
+                ,serviceContext:serviceContext
+            }});
+        };
+        service.addPageAttachment = function(nodeId,title,fileName,file,mimeType) {
+            return SessionService.invoke({'/wikipage/add-page-attachment':{
+                nodeId:nodeId
+                ,title:title
+                ,fileName:fileName
+                ,file:file
+                ,mimeType:mimeType
+            }});
+        };
+        service.addPageAttachments = function(nodeId,title,inputStreamOVPs) {
+            return SessionService.invoke({'/wikipage/add-page-attachments':{
+                nodeId:nodeId
+                ,title:title
+                ,inputStreamOVPs:inputStreamOVPs
+            }});
+        };
+        service.changeParent = function(nodeId,title,newParentTitle,serviceContext) {
+            return SessionService.invoke({'/wikipage/change-parent':{
+                nodeId:nodeId
+                ,title:title
+                ,newParentTitle:newParentTitle
+                ,serviceContext:serviceContext
+            }});
+        };
+        service.copyPageAttachments = function(templateNodeId,templateTitle,nodeId,title) {
+            return SessionService.invoke({'/wikipage/copy-page-attachments':{
+                templateNodeId:templateNodeId
+                ,templateTitle:templateTitle
+                ,nodeId:nodeId
+                ,title:title
+            }});
+        };
+        service.deletePage = function(nodeId,title) {
+            return SessionService.invoke({'/wikipage/delete-page':{
+                nodeId:nodeId
+                ,title:title
+            }});
+        };
+        service.deletePage = function(nodeId,title,version) {
+            return SessionService.invoke({'/wikipage/delete-page':{
+                nodeId:nodeId
+                ,title:title
+                ,version:version
+            }});
+        };
+        service.deletePageAttachment = function(nodeId,title,fileName) {
+            return SessionService.invoke({'/wikipage/delete-page-attachment':{
+                nodeId:nodeId
+                ,title:title
+                ,fileName:fileName
+            }});
+        };
+        service.deletePageAttachments = function(nodeId,title) {
+            return SessionService.invoke({'/wikipage/delete-page-attachments':{
+                nodeId:nodeId
+                ,title:title
+            }});
+        };
+        service.deleteTempPageAttachment = function(nodeId,fileName,tempFolderName) {
+            return SessionService.invoke({'/wikipage/delete-temp-page-attachment':{
+                nodeId:nodeId
+                ,fileName:fileName
+                ,tempFolderName:tempFolderName
+            }});
+        };
+        service.deleteTrashPageAttachments = function(nodeId,title) {
+            return SessionService.invoke({'/wikipage/delete-trash-page-attachments':{
+                nodeId:nodeId
+                ,title:title
+            }});
+        };
+        service.discardDraft = function(nodeId,title,version) {
+            return SessionService.invoke({'/wikipage/discard-draft':{
+                nodeId:nodeId
+                ,title:title
+                ,version:version
+            }});
+        };
+        service.getChildren = function(groupId,nodeId,head,parentTitle) {
+            return SessionService.invoke({'/wikipage/get-children':{
+                groupId:groupId
+                ,nodeId:nodeId
+                ,head:head
+                ,parentTitle:parentTitle
+            }});
+        };
+        service.getDraftPage = function(nodeId,title) {
+            return SessionService.invoke({'/wikipage/get-draft-page':{
+                nodeId:nodeId
+                ,title:title
+            }});
+        };
+        service.getNodePages = function(nodeId,max) {
+            return SessionService.invoke({'/wikipage/get-node-pages':{
+                nodeId:nodeId
+                ,max:max
+            }});
+        };
+        service.getNodePagesRss = function(nodeId,max,type,version,displayStyle,feedURL,entryURL) {
+            return SessionService.invoke({'/wikipage/get-node-pages-rss':{
+                nodeId:nodeId
+                ,max:max
+                ,type:type
+                ,version:version
+                ,displayStyle:displayStyle
+                ,feedURL:feedURL
+                ,entryURL:entryURL
+            }});
+        };
+        service.getNodePagesRss = function(nodeId,max,type,version,displayStyle,feedURL,entryURL,attachmentURLPrefix) {
+            return SessionService.invoke({'/wikipage/get-node-pages-rss':{
+                nodeId:nodeId
+                ,max:max
+                ,type:type
+                ,version:version
+                ,displayStyle:displayStyle
+                ,feedURL:feedURL
+                ,entryURL:entryURL
+                ,attachmentURLPrefix:attachmentURLPrefix
+            }});
+        };
+        service.getOrphans = function(groupId,nodeId) {
+            return SessionService.invoke({'/wikipage/get-orphans':{
+                groupId:groupId
+                ,nodeId:nodeId
+            }});
+        };
+        service.getPage = function(nodeId,title) {
+            return SessionService.invoke({'/wikipage/get-page':{
+                nodeId:nodeId
+                ,title:title
+            }});
+        };
+        service.getPage = function(groupId,nodeId,title) {
+            return SessionService.invoke({'/wikipage/get-page':{
+                groupId:groupId
+                ,nodeId:nodeId
+                ,title:title
+            }});
+        };
+        service.getPage = function(nodeId,title,head) {
+            return SessionService.invoke({'/wikipage/get-page':{
+                nodeId:nodeId
+                ,title:title
+                ,head:head
+            }});
+        };
+        service.getPage = function(nodeId,title,version) {
+            return SessionService.invoke({'/wikipage/get-page':{
+                nodeId:nodeId
+                ,title:title
+                ,version:version
+            }});
+        };
+        service.getPages = function(groupId,userId,nodeId,status,start,end) {
+            return SessionService.invoke({'/wikipage/get-pages':{
+                groupId:groupId
+                ,userId:userId
+                ,nodeId:nodeId
+                ,status:status
+                ,start:start
+                ,end:end
+            }});
+        };
+        service.getPages = function(groupId,nodeId,head,status,start,end,obc) {
+            return SessionService.invoke({'/wikipage/get-pages':{
+                groupId:groupId
+                ,nodeId:nodeId
+                ,head:head
+                ,status:status
+                ,start:start
+                ,end:end
+                ,obc:obc
+            }});
+        };
+        service.getPagesCount = function(groupId,nodeId,head) {
+            return SessionService.invoke({'/wikipage/get-pages-count':{
+                groupId:groupId
+                ,nodeId:nodeId
+                ,head:head
+            }});
+        };
+        service.getPagesCount = function(groupId,userId,nodeId,status) {
+            return SessionService.invoke({'/wikipage/get-pages-count':{
+                groupId:groupId
+                ,userId:userId
+                ,nodeId:nodeId
+                ,status:status
+            }});
+        };
+        service.getPagesRss = function(companyId,nodeId,title,max,type,version,displayStyle,feedURL,entryURL,locale) {
+            return SessionService.invoke({'/wikipage/get-pages-rss':{
+                companyId:companyId
+                ,nodeId:nodeId
+                ,title:title
+                ,max:max
+                ,type:type
+                ,version:version
+                ,displayStyle:displayStyle
+                ,feedURL:feedURL
+                ,entryURL:entryURL
+                ,locale:locale
+            }});
+        };
+        service.getPagesRss = function(companyId,nodeId,title,max,type,version,displayStyle,feedURL,entryURL,attachmentURLPrefix,locale) {
+            return SessionService.invoke({'/wikipage/get-pages-rss':{
+                companyId:companyId
+                ,nodeId:nodeId
+                ,title:title
+                ,max:max
+                ,type:type
+                ,version:version
+                ,displayStyle:displayStyle
+                ,feedURL:feedURL
+                ,entryURL:entryURL
+                ,attachmentURLPrefix:attachmentURLPrefix
+                ,locale:locale
+            }});
+        };
+        service.getRecentChanges = function(groupId,nodeId,start,end) {
+            return SessionService.invoke({'/wikipage/get-recent-changes':{
+                groupId:groupId
+                ,nodeId:nodeId
+                ,start:start
+                ,end:end
+            }});
+        };
+        service.getRecentChangesCount = function(groupId,nodeId) {
+            return SessionService.invoke({'/wikipage/get-recent-changes-count':{
+                groupId:groupId
+                ,nodeId:nodeId
+            }});
+        };
+        service.getTempPageAttachmentNames = function(nodeId,tempFolderName) {
+            return SessionService.invoke({'/wikipage/get-temp-page-attachment-names':{
+                nodeId:nodeId
+                ,tempFolderName:tempFolderName
+            }});
+        };
+        service.movePage = function(nodeId,title,newTitle,serviceContext) {
+            return SessionService.invoke({'/wikipage/move-page':{
+                nodeId:nodeId
+                ,title:title
+                ,newTitle:newTitle
+                ,serviceContext:serviceContext
+            }});
+        };
+        service.movePageAttachmentToTrash = function(nodeId,title,fileName) {
+            return SessionService.invoke({'/wikipage/move-page-attachment-to-trash':{
+                nodeId:nodeId
+                ,title:title
+                ,fileName:fileName
+            }});
+        };
+        service.movePageToTrash = function(nodeId,title) {
+            return SessionService.invoke({'/wikipage/move-page-to-trash':{
+                nodeId:nodeId
+                ,title:title
+            }});
+        };
+        service.movePageToTrash = function(nodeId,title,version) {
+            return SessionService.invoke({'/wikipage/move-page-to-trash':{
+                nodeId:nodeId
+                ,title:title
+                ,version:version
+            }});
+        };
+        service.restorePageAttachmentFromTrash = function(nodeId,title,fileName) {
+            return SessionService.invoke({'/wikipage/restore-page-attachment-from-trash':{
+                nodeId:nodeId
+                ,title:title
+                ,fileName:fileName
+            }});
+        };
+        service.restorePageFromTrash = function(resourcePrimKey) {
+            return SessionService.invoke({'/wikipage/restore-page-from-trash':{
+                resourcePrimKey:resourcePrimKey
+            }});
+        };
+        service.revertPage = function(nodeId,title,version,serviceContext) {
+            return SessionService.invoke({'/wikipage/revert-page':{
+                nodeId:nodeId
+                ,title:title
+                ,version:version
+                ,serviceContext:serviceContext
+            }});
+        };
+        service.subscribePage = function(nodeId,title) {
+            return SessionService.invoke({'/wikipage/subscribe-page':{
+                nodeId:nodeId
+                ,title:title
+            }});
+        };
+        service.unsubscribePage = function(nodeId,title) {
+            return SessionService.invoke({'/wikipage/unsubscribe-page':{
+                nodeId:nodeId
+                ,title:title
+            }});
+        };
+        service.updatePage = function(nodeId,title,version,content,summary,minorEdit,format,parentTitle,redirectTitle,serviceContext) {
+            return SessionService.invoke({'/wikipage/update-page':{
+                nodeId:nodeId
+                ,title:title
+                ,version:version
+                ,content:content
+                ,summary:summary
+                ,minorEdit:minorEdit
+                ,format:format
+                ,parentTitle:parentTitle
+                ,redirectTitle:redirectTitle
                 ,serviceContext:serviceContext
             }});
         };

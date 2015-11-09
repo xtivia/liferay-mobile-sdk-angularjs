@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var concat = require('gulp-concat');
 var del = require('del');
-var builder = require('./src/index')({server:'http://liferaydemo.xtivia.com',root:'./angularjs'});
+var builder = require('./src/index.js')({server:'http://liferaydemo.xtivia.com',root:'./angularjs'});
 
 gulp.task('clean', function() {
     return del(['./angularjs/js/*.js','./angularjs/json/*.json']);

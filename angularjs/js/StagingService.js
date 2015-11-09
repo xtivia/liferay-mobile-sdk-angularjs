@@ -1,7 +1,7 @@
 (function() {
     'use strict';
     angular
-    .module('.v62')
+    .module('mobile.sdk.v62')
     .factory('StagingService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
