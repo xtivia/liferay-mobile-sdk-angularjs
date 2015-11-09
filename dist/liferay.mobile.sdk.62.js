@@ -6,7 +6,6 @@
 })();
 (function() {
     'use strict';
-    // Used only for the BottomSheetExample
     angular
         .module('mobile.sdk.v62')
     ;
@@ -302,7 +301,96 @@
         return service;
     }])
 })();
-
+(function() {
+    'use strict';
+    angular
+    .module('mobile.sdk.v62')
+    .factory('AnnouncementsentryService', ['SessionService', function (SessionService) {
+        var service = {};
+        // Begin generated service methods
+        service.addEntry = function(plid,classNameId,classPK,title,content,url,type,displayDateMonth,displayDateDay,displayDateYear,displayDateHour,displayDateMinute,expirationDateMonth,expirationDateDay,expirationDateYear,expirationDateHour,expirationDateMinute,priority,alert) {
+            return SessionService.invoke({'/announcementsentry/add-entry':{
+                plid:plid
+                ,classNameId:classNameId
+                ,classPK:classPK
+                ,title:title
+                ,content:content
+                ,url:url
+                ,type:type
+                ,displayDateMonth:displayDateMonth
+                ,displayDateDay:displayDateDay
+                ,displayDateYear:displayDateYear
+                ,displayDateHour:displayDateHour
+                ,displayDateMinute:displayDateMinute
+                ,expirationDateMonth:expirationDateMonth
+                ,expirationDateDay:expirationDateDay
+                ,expirationDateYear:expirationDateYear
+                ,expirationDateHour:expirationDateHour
+                ,expirationDateMinute:expirationDateMinute
+                ,priority:priority
+                ,alert:alert
+            }});
+        };
+        service.addEntry = function(plid,classNameId,classPK,title,content,url,type,displayDateMonth,displayDateDay,displayDateYear,displayDateHour,displayDateMinute,displayImmediately,expirationDateMonth,expirationDateDay,expirationDateYear,expirationDateHour,expirationDateMinute,priority,alert) {
+            return SessionService.invoke({'/announcementsentry/add-entry':{
+                plid:plid
+                ,classNameId:classNameId
+                ,classPK:classPK
+                ,title:title
+                ,content:content
+                ,url:url
+                ,type:type
+                ,displayDateMonth:displayDateMonth
+                ,displayDateDay:displayDateDay
+                ,displayDateYear:displayDateYear
+                ,displayDateHour:displayDateHour
+                ,displayDateMinute:displayDateMinute
+                ,displayImmediately:displayImmediately
+                ,expirationDateMonth:expirationDateMonth
+                ,expirationDateDay:expirationDateDay
+                ,expirationDateYear:expirationDateYear
+                ,expirationDateHour:expirationDateHour
+                ,expirationDateMinute:expirationDateMinute
+                ,priority:priority
+                ,alert:alert
+            }});
+        };
+        service.deleteEntry = function(entryId) {
+            return SessionService.invoke({'/announcementsentry/delete-entry':{
+                entryId:entryId
+            }});
+        };
+        service.getEntry = function(entryId) {
+            return SessionService.invoke({'/announcementsentry/get-entry':{
+                entryId:entryId
+            }});
+        };
+        service.updateEntry = function(entryId,title,content,url,type,displayDateMonth,displayDateDay,displayDateYear,displayDateHour,displayDateMinute,displayImmediately,expirationDateMonth,expirationDateDay,expirationDateYear,expirationDateHour,expirationDateMinute,priority) {
+            return SessionService.invoke({'/announcementsentry/update-entry':{
+                entryId:entryId
+                ,title:title
+                ,content:content
+                ,url:url
+                ,type:type
+                ,displayDateMonth:displayDateMonth
+                ,displayDateDay:displayDateDay
+                ,displayDateYear:displayDateYear
+                ,displayDateHour:displayDateHour
+                ,displayDateMinute:displayDateMinute
+                ,displayImmediately:displayImmediately
+                ,expirationDateMonth:expirationDateMonth
+                ,expirationDateDay:expirationDateDay
+                ,expirationDateYear:expirationDateYear
+                ,expirationDateHour:expirationDateHour
+                ,expirationDateMinute:expirationDateMinute
+                ,priority:priority
+            }});
+        };
+        
+        // End generated service methods
+        return service;
+    }])
+})();
 (function() {
     'use strict';
     angular
@@ -10621,6 +10709,354 @@
                 nodeId:nodeId
                 ,name:name
                 ,description:description
+                ,serviceContext:serviceContext
+            }});
+        };
+        
+        // End generated service methods
+        return service;
+    }])
+})();
+(function() {
+    'use strict';
+    angular
+    .module('mobile.sdk.v62')
+    .factory('WikipageService', ['SessionService', function (SessionService) {
+        var service = {};
+        // Begin generated service methods
+        service.addPage = function(nodeId,title,content,summary,minorEdit,serviceContext) {
+            return SessionService.invoke({'/wikipage/add-page':{
+                nodeId:nodeId
+                ,title:title
+                ,content:content
+                ,summary:summary
+                ,minorEdit:minorEdit
+                ,serviceContext:serviceContext
+            }});
+        };
+        service.addPage = function(nodeId,title,content,summary,minorEdit,format,parentTitle,redirectTitle,serviceContext) {
+            return SessionService.invoke({'/wikipage/add-page':{
+                nodeId:nodeId
+                ,title:title
+                ,content:content
+                ,summary:summary
+                ,minorEdit:minorEdit
+                ,format:format
+                ,parentTitle:parentTitle
+                ,redirectTitle:redirectTitle
+                ,serviceContext:serviceContext
+            }});
+        };
+        service.addPageAttachment = function(nodeId,title,fileName,file,mimeType) {
+            return SessionService.invoke({'/wikipage/add-page-attachment':{
+                nodeId:nodeId
+                ,title:title
+                ,fileName:fileName
+                ,file:file
+                ,mimeType:mimeType
+            }});
+        };
+        service.addPageAttachments = function(nodeId,title,inputStreamOVPs) {
+            return SessionService.invoke({'/wikipage/add-page-attachments':{
+                nodeId:nodeId
+                ,title:title
+                ,inputStreamOVPs:inputStreamOVPs
+            }});
+        };
+        service.changeParent = function(nodeId,title,newParentTitle,serviceContext) {
+            return SessionService.invoke({'/wikipage/change-parent':{
+                nodeId:nodeId
+                ,title:title
+                ,newParentTitle:newParentTitle
+                ,serviceContext:serviceContext
+            }});
+        };
+        service.copyPageAttachments = function(templateNodeId,templateTitle,nodeId,title) {
+            return SessionService.invoke({'/wikipage/copy-page-attachments':{
+                templateNodeId:templateNodeId
+                ,templateTitle:templateTitle
+                ,nodeId:nodeId
+                ,title:title
+            }});
+        };
+        service.deletePage = function(nodeId,title) {
+            return SessionService.invoke({'/wikipage/delete-page':{
+                nodeId:nodeId
+                ,title:title
+            }});
+        };
+        service.deletePage = function(nodeId,title,version) {
+            return SessionService.invoke({'/wikipage/delete-page':{
+                nodeId:nodeId
+                ,title:title
+                ,version:version
+            }});
+        };
+        service.deletePageAttachment = function(nodeId,title,fileName) {
+            return SessionService.invoke({'/wikipage/delete-page-attachment':{
+                nodeId:nodeId
+                ,title:title
+                ,fileName:fileName
+            }});
+        };
+        service.deletePageAttachments = function(nodeId,title) {
+            return SessionService.invoke({'/wikipage/delete-page-attachments':{
+                nodeId:nodeId
+                ,title:title
+            }});
+        };
+        service.deleteTempPageAttachment = function(nodeId,fileName,tempFolderName) {
+            return SessionService.invoke({'/wikipage/delete-temp-page-attachment':{
+                nodeId:nodeId
+                ,fileName:fileName
+                ,tempFolderName:tempFolderName
+            }});
+        };
+        service.deleteTrashPageAttachments = function(nodeId,title) {
+            return SessionService.invoke({'/wikipage/delete-trash-page-attachments':{
+                nodeId:nodeId
+                ,title:title
+            }});
+        };
+        service.discardDraft = function(nodeId,title,version) {
+            return SessionService.invoke({'/wikipage/discard-draft':{
+                nodeId:nodeId
+                ,title:title
+                ,version:version
+            }});
+        };
+        service.getChildren = function(groupId,nodeId,head,parentTitle) {
+            return SessionService.invoke({'/wikipage/get-children':{
+                groupId:groupId
+                ,nodeId:nodeId
+                ,head:head
+                ,parentTitle:parentTitle
+            }});
+        };
+        service.getDraftPage = function(nodeId,title) {
+            return SessionService.invoke({'/wikipage/get-draft-page':{
+                nodeId:nodeId
+                ,title:title
+            }});
+        };
+        service.getNodePages = function(nodeId,max) {
+            return SessionService.invoke({'/wikipage/get-node-pages':{
+                nodeId:nodeId
+                ,max:max
+            }});
+        };
+        service.getNodePagesRss = function(nodeId,max,type,version,displayStyle,feedURL,entryURL) {
+            return SessionService.invoke({'/wikipage/get-node-pages-rss':{
+                nodeId:nodeId
+                ,max:max
+                ,type:type
+                ,version:version
+                ,displayStyle:displayStyle
+                ,feedURL:feedURL
+                ,entryURL:entryURL
+            }});
+        };
+        service.getNodePagesRss = function(nodeId,max,type,version,displayStyle,feedURL,entryURL,attachmentURLPrefix) {
+            return SessionService.invoke({'/wikipage/get-node-pages-rss':{
+                nodeId:nodeId
+                ,max:max
+                ,type:type
+                ,version:version
+                ,displayStyle:displayStyle
+                ,feedURL:feedURL
+                ,entryURL:entryURL
+                ,attachmentURLPrefix:attachmentURLPrefix
+            }});
+        };
+        service.getOrphans = function(groupId,nodeId) {
+            return SessionService.invoke({'/wikipage/get-orphans':{
+                groupId:groupId
+                ,nodeId:nodeId
+            }});
+        };
+        service.getPage = function(nodeId,title) {
+            return SessionService.invoke({'/wikipage/get-page':{
+                nodeId:nodeId
+                ,title:title
+            }});
+        };
+        service.getPage = function(groupId,nodeId,title) {
+            return SessionService.invoke({'/wikipage/get-page':{
+                groupId:groupId
+                ,nodeId:nodeId
+                ,title:title
+            }});
+        };
+        service.getPage = function(nodeId,title,head) {
+            return SessionService.invoke({'/wikipage/get-page':{
+                nodeId:nodeId
+                ,title:title
+                ,head:head
+            }});
+        };
+        service.getPage = function(nodeId,title,version) {
+            return SessionService.invoke({'/wikipage/get-page':{
+                nodeId:nodeId
+                ,title:title
+                ,version:version
+            }});
+        };
+        service.getPages = function(groupId,userId,nodeId,status,start,end) {
+            return SessionService.invoke({'/wikipage/get-pages':{
+                groupId:groupId
+                ,userId:userId
+                ,nodeId:nodeId
+                ,status:status
+                ,start:start
+                ,end:end
+            }});
+        };
+        service.getPages = function(groupId,nodeId,head,status,start,end,obc) {
+            return SessionService.invoke({'/wikipage/get-pages':{
+                groupId:groupId
+                ,nodeId:nodeId
+                ,head:head
+                ,status:status
+                ,start:start
+                ,end:end
+                ,obc:obc
+            }});
+        };
+        service.getPagesCount = function(groupId,nodeId,head) {
+            return SessionService.invoke({'/wikipage/get-pages-count':{
+                groupId:groupId
+                ,nodeId:nodeId
+                ,head:head
+            }});
+        };
+        service.getPagesCount = function(groupId,userId,nodeId,status) {
+            return SessionService.invoke({'/wikipage/get-pages-count':{
+                groupId:groupId
+                ,userId:userId
+                ,nodeId:nodeId
+                ,status:status
+            }});
+        };
+        service.getPagesRss = function(companyId,nodeId,title,max,type,version,displayStyle,feedURL,entryURL,locale) {
+            return SessionService.invoke({'/wikipage/get-pages-rss':{
+                companyId:companyId
+                ,nodeId:nodeId
+                ,title:title
+                ,max:max
+                ,type:type
+                ,version:version
+                ,displayStyle:displayStyle
+                ,feedURL:feedURL
+                ,entryURL:entryURL
+                ,locale:locale
+            }});
+        };
+        service.getPagesRss = function(companyId,nodeId,title,max,type,version,displayStyle,feedURL,entryURL,attachmentURLPrefix,locale) {
+            return SessionService.invoke({'/wikipage/get-pages-rss':{
+                companyId:companyId
+                ,nodeId:nodeId
+                ,title:title
+                ,max:max
+                ,type:type
+                ,version:version
+                ,displayStyle:displayStyle
+                ,feedURL:feedURL
+                ,entryURL:entryURL
+                ,attachmentURLPrefix:attachmentURLPrefix
+                ,locale:locale
+            }});
+        };
+        service.getRecentChanges = function(groupId,nodeId,start,end) {
+            return SessionService.invoke({'/wikipage/get-recent-changes':{
+                groupId:groupId
+                ,nodeId:nodeId
+                ,start:start
+                ,end:end
+            }});
+        };
+        service.getRecentChangesCount = function(groupId,nodeId) {
+            return SessionService.invoke({'/wikipage/get-recent-changes-count':{
+                groupId:groupId
+                ,nodeId:nodeId
+            }});
+        };
+        service.getTempPageAttachmentNames = function(nodeId,tempFolderName) {
+            return SessionService.invoke({'/wikipage/get-temp-page-attachment-names':{
+                nodeId:nodeId
+                ,tempFolderName:tempFolderName
+            }});
+        };
+        service.movePage = function(nodeId,title,newTitle,serviceContext) {
+            return SessionService.invoke({'/wikipage/move-page':{
+                nodeId:nodeId
+                ,title:title
+                ,newTitle:newTitle
+                ,serviceContext:serviceContext
+            }});
+        };
+        service.movePageAttachmentToTrash = function(nodeId,title,fileName) {
+            return SessionService.invoke({'/wikipage/move-page-attachment-to-trash':{
+                nodeId:nodeId
+                ,title:title
+                ,fileName:fileName
+            }});
+        };
+        service.movePageToTrash = function(nodeId,title) {
+            return SessionService.invoke({'/wikipage/move-page-to-trash':{
+                nodeId:nodeId
+                ,title:title
+            }});
+        };
+        service.movePageToTrash = function(nodeId,title,version) {
+            return SessionService.invoke({'/wikipage/move-page-to-trash':{
+                nodeId:nodeId
+                ,title:title
+                ,version:version
+            }});
+        };
+        service.restorePageAttachmentFromTrash = function(nodeId,title,fileName) {
+            return SessionService.invoke({'/wikipage/restore-page-attachment-from-trash':{
+                nodeId:nodeId
+                ,title:title
+                ,fileName:fileName
+            }});
+        };
+        service.restorePageFromTrash = function(resourcePrimKey) {
+            return SessionService.invoke({'/wikipage/restore-page-from-trash':{
+                resourcePrimKey:resourcePrimKey
+            }});
+        };
+        service.revertPage = function(nodeId,title,version,serviceContext) {
+            return SessionService.invoke({'/wikipage/revert-page':{
+                nodeId:nodeId
+                ,title:title
+                ,version:version
+                ,serviceContext:serviceContext
+            }});
+        };
+        service.subscribePage = function(nodeId,title) {
+            return SessionService.invoke({'/wikipage/subscribe-page':{
+                nodeId:nodeId
+                ,title:title
+            }});
+        };
+        service.unsubscribePage = function(nodeId,title) {
+            return SessionService.invoke({'/wikipage/unsubscribe-page':{
+                nodeId:nodeId
+                ,title:title
+            }});
+        };
+        service.updatePage = function(nodeId,title,version,content,summary,minorEdit,format,parentTitle,redirectTitle,serviceContext) {
+            return SessionService.invoke({'/wikipage/update-page':{
+                nodeId:nodeId
+                ,title:title
+                ,version:version
+                ,content:content
+                ,summary:summary
+                ,minorEdit:minorEdit
+                ,format:format
+                ,parentTitle:parentTitle
+                ,redirectTitle:redirectTitle
                 ,serviceContext:serviceContext
             }});
         };
