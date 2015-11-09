@@ -1,1 +1,0 @@
-{"name":"PermissionService","version":"62","module":"mobile.sdk","methods":[{"serviceName":"PermissionService","method":"POST","path":"/permission/check-permission","parameters":[{"name":"groupId","type":"long"},{"name":"name","type":"string"},{"name":"primKey","type":"string"}],"actionName":"checkPermission"}]}

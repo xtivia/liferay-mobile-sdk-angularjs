@@ -1,1 +1,0 @@
-{"name":"PollsvoteService","version":"62","module":"mobile.sdk","methods":[{"serviceName":"PollsvoteService","method":"POST","path":"/pollsvote/add-vote","parameters":[{"name":"questionId","type":"long"},{"name":"choiceId","type":"long"},{"name":"serviceContext","type":"object<com.liferay.portal.service.ServiceContext>"}],"actionName":"addVote"}]}
