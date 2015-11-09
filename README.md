@@ -52,7 +52,7 @@ In example above the SigninService is the included API for authentication from a
 It is not required to call this service if the current session on the remote server is already authenticated via another mechanism.
 
 Another portion of the above example calls a service called PortraitService. This is an angular service that uses 
-existing functionality provided by the mobile sdk in conjunction with a custom service created for the applicaiton.
+existing functionality provided by the mobile sdk in conjunction with a custom service created for the application.
 
 ```
     (function() {
