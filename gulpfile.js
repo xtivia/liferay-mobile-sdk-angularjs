@@ -1,20 +1,22 @@
 var gulp = require('gulp');
-var jasmine = require('gulp-jasmine');
 var concat = require('gulp-concat');
+var del = require('del');
+var builder = require('./src/index.js')({server:'http://liferaydemo.xtivia.com',root:'./angularjs'});
 
-gulp.task('jasmine', function() {
-    return gulp.src('spec/nodejs/*.js')
-        .pipe(jasmine({verbose:true, includeStackTrace: true}));
+gulp.task('clean', function() {
+    return del(['./angularjs/js/*.js','./angularjs/json/*.json']);
 });
 
-gulp.task('package',['jasmine'],function() {
-   return gulp.src(['js/sdk.62.module.js','js/sdk.62.config.js','js/sdk.62.service.js','angularjs/js/*.js'])
-       .pipe(concat('liferay.mobile.sdk.62.js'))
-       .pipe(gulp.dest('./dist'));
+gulp.task('clean-dist',['clean'], function() {
+    return del(['./dist/*']);
 });
 
-gulp.task('watch', function () {
-    gulp.watch(['src/*.js','spec/nodejs/*.js'], ['jasmine']);
+gulp.task('builder',['clean'], function() {
+    return builder.generate();
 });
 
-gulp.task('default',['watch']);
+gulp.task('default',['builder'], function() {
+    return gulp.src(['./js/sdk.62.module.js','./js/sdk.62.config.js','./js/sdk.62.service.js','./angularjs/**/*.js'])
+            .pipe(concat('liferay.mobile.sdk.62.js'))
+            .pipe(gulp.dest('./dist'));
+});

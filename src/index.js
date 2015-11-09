@@ -44,17 +44,28 @@ function jsMethodName(action) {
 function Builder(options) {
     this.options = options||{};
     this.options.server = this.options.server||'http://localhost:8080';
+    this.options.context = this.options.context||'';
+    this.options.moduleName = this.options.moduleName||'mobile.sdk';
     this.options.root = this.options.root|| './angularjs';
     this.options.actionsDir = this.options.actionsDir||'/json';
     this.options.jsDir = this.options.jsDir||'/js';
     this.options.version = this.options.version||'62';
-    this.options.templatesDir = this.options.templatesDir||'./templates';
+    this.options.templatesDir = this.options.templatesDir||__dirname+'/../templates';
+    this.options.filter = this.options.filter||'';
 
 }
 
 Builder.prototype.discover = function() {
     var deferred = $q.defer();
-    http.get({url:this.options.server+'/api/jsonws?discover=/*'},function(err,res) {
+    var filter = this.options.filter;
+    var context = this.options.context;
+    if(filter!=='') {
+        filter = '/'+filter;
+    }
+    if(context!=='') {
+        context = '/'+context;
+    }
+    http.get({url:this.options.server+context+'/api/jsonws?discover='+filter+'/*'},function(err,res) {
         if(err) {
             return deferred.reject(err);
         }
@@ -67,7 +78,7 @@ Builder.prototype.parseAll = function(actions) {
     var self = this;
     var actionsDir = self.options.root+self.options.actionsDir;
     mkdirp.sync(actionsDir);
-    var serviceMethods = {name:'',version:self.options.version,methods:[]};
+    var serviceMethods = {name:'',version:self.options.version,module:self.options.moduleName,methods:[]};
     for(var i =0; i<actions.length;i++) {
         var action = actions[i];
         var serviceName = jsServiceName(action);
@@ -75,7 +86,7 @@ Builder.prototype.parseAll = function(actions) {
             if(serviceMethods.methods.length>0) {
                 fs.writeFileSync(actionsDir+'/'+serviceMethods.name+'.json',JSON.stringify(serviceMethods));
             }
-            serviceMethods = {name:serviceName,version:self.options.version,methods:[]};
+            serviceMethods = {name:serviceName,version:self.options.version,module:self.options.moduleName,methods:[]};
         }
         serviceMethods.methods.push({
             serviceName:serviceName,
@@ -85,6 +96,9 @@ Builder.prototype.parseAll = function(actions) {
             actionName:jsMethodName(action)
         });
     }
+    if(serviceMethods.methods.length>0) {
+        fs.writeFileSync(actionsDir+'/'+serviceMethods.name+'.json',JSON.stringify(serviceMethods));
+    }
 };
 
 Builder.prototype.generate = function() {
@@ -92,13 +106,18 @@ Builder.prototype.generate = function() {
     var deferred = $q.defer();
     self.discover().then(function(res){
         self.parseAll(res.actions);
-        gulp.src(self.options.root+self.options.actionsDir+'/*.json')
-            .pipe(wrap({src:self.options.templatesDir+'/service.txt'},null,{options:{engine:'handlebars'}}))
+        return gulp.src(self.options.root+self.options.actionsDir+'/*.json')
+            .pipe(wrap({src:self.options.templatesDir+'/service.txt'}))
             .pipe(rename(function(path) {
                 path.extname = '.js';
             }))
-            .pipe(gulp.dest(self.options.root+self.options.jsDir));
-        deferred.resolve();
+            .pipe(gulp.dest(self.options.root+self.options.jsDir))
+            .on('finish',function() {
+                deferred.resolve();
+            })
+            .on('error',function(err) {
+               deferred.reject(err);
+            });
     },function(err) {
         deferred.reject(err);
     });
