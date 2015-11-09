@@ -1,7 +1,7 @@
 (function() {
     'use strict';
     angular
-    .module('mobile.sdk.v62')
+    .module('.v62')
     .factory('RoleService', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
