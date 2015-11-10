@@ -5,10 +5,10 @@
     .factory('<%= contents.name %>', ['SessionService', function (SessionService) {
         var service = {};
         // Begin generated service methods
-        <%_.forEach(contents.methods,function(method){%>service.<%=method.actionName%> = function(<%var c=false;_.forEach(method.parameters,function(parameter) {if(c){%>,<%};c=true;%><%=parameter.name%><%});%>) {
+        <%_.forOwn(contents.methods,function(method,key){%>service.<%=method.actionName%> = function(<%var c=false;_.forEach(method.parameters,function(parameter) {if(c){%>,<%};c=true;%><%=parameter.name%><%});%>) {
             return SessionService.invoke({'<%=method.path%>':{
                 <%var c=false;_.forEach(method.parameters,function(parameter) {if(c){%>
-                ,<%};c=true;%><%=parameter.name%>:<%=parameter.name%><%});%>
+                ,<%};c=true;%><%=parameter.name%>:<%=parameter.name%> // <%= parameter.type %><%});%>
             }});
         };
         <%});%>

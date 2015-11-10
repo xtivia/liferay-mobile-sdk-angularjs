@@ -28,7 +28,17 @@ function jsServiceName(action) {
     return name;
 }
 
-function jsMethodName(action) {
+function polyMorphMethodName(name,methods) {
+    var temp = name;
+    var iter = 1;
+    while(methods[temp]) {
+        temp = name+'_'+iter;
+        iter+=1;
+    }
+    return temp;
+}
+
+function jsMethodName(action,methods) {
     var name = action.path.match(actionNameEx);
     if(name) {
         if(name instanceof Array&&name.length>1) {
@@ -37,6 +47,7 @@ function jsMethodName(action) {
         name = name.replace(actionNameDashEx,function uppercase(s){
             return s[1].toUpperCase();
         });
+        name = polyMorphMethodName(name,methods);
     }
     return name;
 }
@@ -78,25 +89,26 @@ Builder.prototype.parseAll = function(actions) {
     var self = this;
     var actionsDir = self.options.root+self.options.actionsDir;
     mkdirp.sync(actionsDir);
-    var serviceMethods = {name:'',version:self.options.version,module:self.options.moduleName,methods:[]};
+    var serviceMethods = {name:'',version:self.options.version,module:self.options.moduleName,methods:{}};
     for(var i =0; i<actions.length;i++) {
         var action = actions[i];
         var serviceName = jsServiceName(action);
         if(serviceMethods.name !== serviceName) {
-            if(serviceMethods.methods.length>0) {
+            if(Object.keys(serviceMethods.methods).length) {
                 fs.writeFileSync(actionsDir+'/'+serviceMethods.name+'.json',JSON.stringify(serviceMethods));
             }
-            serviceMethods = {name:serviceName,version:self.options.version,module:self.options.moduleName,methods:[]};
+            serviceMethods = {name:serviceName,version:self.options.version,module:self.options.moduleName,methods:{}};
         }
-        serviceMethods.methods.push({
+        var actionName = jsMethodName(action,serviceMethods.methods);
+        serviceMethods.methods[actionName] = {
             serviceName:serviceName,
             method:action.method,
             path:action.path,
             parameters:action.parameters,
-            actionName:jsMethodName(action)
-        });
+            actionName:actionName
+        };
     }
-    if(serviceMethods.methods.length>0) {
+    if(Object.keys(serviceMethods.methods).length) {
         fs.writeFileSync(actionsDir+'/'+serviceMethods.name+'.json',JSON.stringify(serviceMethods));
     }
 };
@@ -108,6 +120,10 @@ Builder.prototype.generate = function() {
         self.parseAll(res.actions);
         return gulp.src(self.options.root+self.options.actionsDir+'/*.json')
             .pipe(wrap({src:self.options.templatesDir+'/service.txt'}))
+            .on('error',function(err) {
+                console.error(err);
+                deferred.reject(err);
+            })
             .pipe(rename(function(path) {
                 path.extname = '.js';
             }))
@@ -116,7 +132,8 @@ Builder.prototype.generate = function() {
                 deferred.resolve();
             })
             .on('error',function(err) {
-               deferred.reject(err);
+                console.error(err);
+                deferred.reject(err);
             });
     },function(err) {
         deferred.reject(err);
