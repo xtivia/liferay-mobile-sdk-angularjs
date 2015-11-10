@@ -52,6 +52,14 @@ function jsMethodName(action,methods) {
     return name;
 }
 
+function contextActionPath(action,context) {
+    var path = action.path;
+    if(path&&context!=='') {
+        path = '/'+context+'.'+path.substring(1);
+    }
+    return path;
+}
+
 function Builder(options) {
     this.options = options||{};
     this.options.server = this.options.server||'http://localhost:8080';
@@ -100,10 +108,11 @@ Builder.prototype.parseAll = function(actions) {
             serviceMethods = {name:serviceName,version:self.options.version,module:self.options.moduleName,methods:{}};
         }
         var actionName = jsMethodName(action,serviceMethods.methods);
+        var actionPath = contextActionPath(action,self.options.context);
         serviceMethods.methods[actionName] = {
             serviceName:serviceName,
             method:action.method,
-            path:action.path,
+            path:actionPath,
             parameters:action.parameters,
             actionName:actionName
         };
