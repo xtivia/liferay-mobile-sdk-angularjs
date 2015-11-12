@@ -15,7 +15,7 @@
 
     angular
         .module('mobile.sdk.v62')
-        .factory('SessionService', ['Base64','$cookieStore','$http','$q',function(Base64,$cookieStore,$http,$q) {
+        .factory('SessionService', ['Base64','$cookies','$http','$q',function(Base64,$cookies,$http,$q) {
             var factory = this;
             var service = {};
 
@@ -30,17 +30,27 @@
             service.setCredentials = function (username, password) {
                 var authdata = Base64.encode(username + ':' + password);
                 $http.defaults.headers.common['Authorization'] = 'Basic ' + authdata; // jshint ignore:line
-                $cookieStore.put('globals', {
+                $cookies.putObject('globals', {
                     currentUser: {
                         username: username,
+                        authtype: factory.authenticationTypes.BASIC,
                         authdata: authdata
                     }
                 });
             };
 
             service.clearCredentials = function () {
-                $cookieStore.remove('globals');
+                $cookies.remove('globals');
                 $http.defaults.headers.common.Authorization = 'Basic ';
+            };
+
+            service.getCredentials = function () {
+                var globals = $cookies.getObject('globals');
+                if(globals) {
+                    $http.defaults.headers.common['Authorization'] = 'Basic ' + globals.currentUser.authdata; // jshint ignore:line
+                    return globals.currentUser;
+                }
+                return {};
             };
 
             service.invoke = function (command) {
@@ -186,6 +196,23 @@
                         });
                     });
                 }
+            };
+
+            service.signinWithCookie = function() {
+                var currentUser = SessionService.getCredentials();
+                return $q(function(resolve, reject) {
+                    GroupService.getUserSites().then(function(resp){
+                        var site = resp[0];
+                        UserService.getUserByEmailAddress(site.companyId,currentUser.username)
+                            .then(function(resp) {
+                                resolve(resp);
+                            },function(err) {
+                                reject(err);
+                            });
+                    },function(err){
+                        reject(err);
+                    });
+                });
             };
 
             return service;

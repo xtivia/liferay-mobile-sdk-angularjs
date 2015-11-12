@@ -1,6 +1,6 @@
 {
   "name": "liferay-mobile-sdk-angularjs",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "Generate AngularJS services for Liferay SDK Services and Custom Services based on Lifray SDK",
   "main": "src/index.js",
   "keywords": [

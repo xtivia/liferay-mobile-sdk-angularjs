@@ -2,5 +2,5 @@
     'use strict';
 
     angular
-        .module('mobile.sdk.v62', []);
+        .module('mobile.sdk.v62', ['ngCookies']);
 })();
